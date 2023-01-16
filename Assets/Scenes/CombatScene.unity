@@ -666,7 +666,7 @@ MonoBehaviour:
   team: enemy
   bounty: 0
   health: 2
-  baseMoveSpeed: 3
+  baseMoveSpeed: 5
 --- !u!54 &2128280794
 Rigidbody:
   m_ObjectHideFlags: 0
