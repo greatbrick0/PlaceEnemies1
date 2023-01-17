@@ -12,6 +12,7 @@ public class LockedAbility : Abilty
     protected override void SetVars()
     {
         cooldownTime = 5.0f;
+        effectiveRange = 0.1f;
     }
 
     public override bool Use(Vector3 targetPosition)

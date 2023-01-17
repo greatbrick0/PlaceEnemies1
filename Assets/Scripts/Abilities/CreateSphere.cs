@@ -16,6 +16,7 @@ public class CreateSphere : Abilty
     {
         spherePrefab = Resources.Load<GameObject>("Sphere");
         cooldownTime = 1.0f;
+        effectiveRange = 30.0f;
     }
 
     public override bool Use(Vector3 targetPosition)
