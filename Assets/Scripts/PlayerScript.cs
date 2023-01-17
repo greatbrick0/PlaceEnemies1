@@ -9,25 +9,27 @@ public class PlayerScript : CombatBody
 {
     private PlayerInput inputComponent;
     private Vector3 inputVector = Vector3.zero;
-    //[SerializeField]
     private InputAction movementInput;
+    private Camera cam;
 
     new public void Release()
     {
         inputComponent.enabled = true;
+        cam = transform.GetChild(1).GetComponent<Camera>();
     }
 
     new private void Start()
     {
         base.Start();
         team = "player";
-        abilityList.Add(new LockedAbility());
-        abilityList.Add(new LockedAbility());
+        abilityList.Add(new CreateSphere(gameObject));
+        abilityList.Add(new LockedAbility(gameObject));
     }
 
-    private void Update()
+    new private void Update()
     {
-        //rb.velocity = FindInputVector() * moveSpeed;
+        base.Update();
+
         inputVector = new Vector3(movementInput.ReadValue<Vector2>().x, 0, movementInput.ReadValue<Vector2>().y);
         rb.velocity = inputVector * moveSpeed;
 
@@ -54,11 +56,11 @@ public class PlayerScript : CombatBody
 
     void OnFirstAbility()
     {
-        abilityList[0].Use();
+        abilityList[0].Use(Vector3.zero);
     }
 
     void OnSecondAbility()
     {
-        abilityList[0].Use();
+        abilityList[1].Use(transform.position);
     }
 }
