@@ -14,6 +14,7 @@ public class PlayerScript : CombatBody
 
     new public void Release()
     {
+        base.Release();
         inputComponent.enabled = true;
         cam = transform.GetChild(1).GetComponent<Camera>();
     }
@@ -32,14 +33,6 @@ public class PlayerScript : CombatBody
 
         inputVector = new Vector3(movementInput.ReadValue<Vector2>().x, 0, movementInput.ReadValue<Vector2>().y);
         rb.velocity = inputVector * moveSpeed;
-
-        if (!inputComponent.enabled)
-        {
-            if (released)
-            {
-                inputComponent.enabled = true;
-            }
-        }
     }
 
     private void OnEnable()
