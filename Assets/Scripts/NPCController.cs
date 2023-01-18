@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCController : CombatBody
+public abstract class NPCController : CombatBody
 {
-    protected List<GameObject> targetList;
+    protected List<GameObject> targetList = new List<GameObject>();
 
     [SerializeField]
     private float targetDetectionRadius = 30.0f;
@@ -17,12 +17,20 @@ public class NPCController : CombatBody
         targetDetector.radius = targetDetectionRadius;
     }
 
-    protected virtual void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.GetComponent<CombatBody>() != null)
+        if(targetList.Count <= 20)
         {
-            targetList.Add(other.gameObject);
+            if (other.gameObject.GetComponent<CombatBody>() != null)
+            {
+                if (FilterTarget(other.gameObject))
+                {
+                    targetList.Add(other.gameObject);
+                }
+            }
         }
     }
+
+    protected abstract bool FilterTarget(GameObject potentialTarget);
 
 }
