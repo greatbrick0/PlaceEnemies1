@@ -50,6 +50,12 @@ public class PlayerScript : CombatBody
         movementInput.Disable();
     }
 
+    public void PackPlayer()
+    {
+        released = false;
+        inputComponent.enabled = false;
+    }
+
     void OnFirstAbility()
     {
         abilityList[0].Use(Vector3.zero);
