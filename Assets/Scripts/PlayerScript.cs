@@ -10,6 +10,7 @@ public class PlayerScript : CombatBody
     private PlayerInput inputComponent;
     private Vector3 inputVector = Vector3.zero;
     private InputAction movementInput;
+    [SerializeField]
     private Camera cam;
 
     new public void Release()
@@ -35,11 +36,13 @@ public class PlayerScript : CombatBody
 
         inputVector = new Vector3(movementInput.ReadValue<Vector2>().x, 0, movementInput.ReadValue<Vector2>().y);
         rb.velocity = inputVector * moveSpeed;
+
         transform.LookAt(new Vector3(3, 0, 1));
     }
 
     private void OnEnable()
     {
+        cam = Camera.main;
         inputComponent = GetComponent<PlayerInput>();
         movementInput = inputComponent.actions.FindAction("Move");
         movementInput.Enable();
@@ -53,7 +56,7 @@ public class PlayerScript : CombatBody
     public void PackPlayer()
     {
         released = false;
-        inputComponent.enabled = false;
+        //inputComponent.enabled = false;
     }
 
     void OnFirstAbility()
