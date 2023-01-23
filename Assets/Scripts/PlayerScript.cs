@@ -37,7 +37,9 @@ public class PlayerScript : CombatBody
         inputVector = new Vector3(movementInput.ReadValue<Vector2>().x, 0, movementInput.ReadValue<Vector2>().y);
         rb.velocity = inputVector * moveSpeed;
 
-        transform.LookAt(new Vector3(3, 0, 1));
+        Ray ray = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
+        transform.LookAt(ray.GetPoint(56));
+        //transform.LookAt(new Vector3(3, 0, 1));
     }
 
     private void OnEnable()
