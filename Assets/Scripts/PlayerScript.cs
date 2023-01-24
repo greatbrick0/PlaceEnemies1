@@ -40,11 +40,10 @@ public class PlayerScript : CombatBody
         rb.velocity = inputVector * moveSpeed;
 
         mouseRay = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
-        if(Physics.Raycast(cam.transform.position, mouseRay.direction, out hitData))
+        if(Physics.Raycast(cam.transform.position, mouseRay.direction, out hitData, 80.0f, 1 << 9))
         {
             transform.LookAt(hitData.point);
         }
-        //transform.LookAt(new Vector3(3, 0, 1));
     }
 
     private void OnEnable()
