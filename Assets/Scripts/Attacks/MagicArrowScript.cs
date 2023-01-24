@@ -9,12 +9,8 @@ public class MagicArrowScript : Attack
         return hitTarget.team != this.team;
     }
 
-    protected override void Apply()
+    protected override void Apply(CombatBody recentHit)
     {
-        foreach(CombatBody target in hitList) //this passes through enemies, doing damage to each
-        {
-            target.Hurt(power);
-            hitList.Clear();
-        }
+        recentHit.Hurt(power);
     }
 }

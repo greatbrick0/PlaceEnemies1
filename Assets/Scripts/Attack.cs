@@ -28,7 +28,8 @@ public abstract class Attack : MonoBehaviour
     protected virtual void Update()
     {
         Age();
-        transform.Translate(moveDirection.normalized * speed * Time.deltaTime);
+        //transform.Translate(moveDirection.normalized * speed * Time.deltaTime);
+        transform.position += moveDirection.normalized * speed * Time.deltaTime;
     }
 
     protected void Age()
@@ -45,25 +46,36 @@ public abstract class Attack : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    protected void CompleteAttack() //for when an attack has been used up. ex: a bullet disappears after damaging one enemy.
+    protected virtual void CompleteAttack() //for when an attack has been used up. ex: a bullet disappears after damaging one enemy.
     {
         Destroy(this.gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.GetComponent<CombatBody>() != null)
+        if(other.gameObject.GetComponent<CombatBody>() == null)
         {
-            if (FilterHitTarget(other.gameObject.GetComponent<CombatBody>()))
-            {
-                hitList.Add(other.gameObject.GetComponent<CombatBody>());
-                Apply();
-            }
+            return;
+        }
+        else if (hitList.Contains(other.gameObject.GetComponent<CombatBody>()))
+        {
+            return;
+        }
+
+        if (FilterHitTarget(other.gameObject.GetComponent<CombatBody>()))
+        {
+            hitList.Add(other.gameObject.GetComponent<CombatBody>());
+            Apply(other.gameObject.GetComponent<CombatBody>());
         }
     }
 
     protected abstract bool FilterHitTarget(CombatBody hitTarget);
 
-    protected abstract void Apply(); //used to apply damage, healing, or other effects to the targets
+    protected abstract void Apply(CombatBody recentHit); //used to apply damage, healing, or other effects to the targets
+
+    public void FaceForward()
+    {
+        transform.LookAt(transform.position + moveDirection);
+    }
 
 }

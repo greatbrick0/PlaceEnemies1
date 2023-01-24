@@ -66,7 +66,7 @@ MonoBehaviour:
   released: 0
   team: enemy
   bounty: 5
-  health: 2
+  health: 40
   baseMoveSpeed: 3
   targetDetectionRadius: 30
 --- !u!135 &7965983472719064248

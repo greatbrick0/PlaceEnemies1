@@ -15,8 +15,8 @@ public class MagicArrowAbility : Abilty
     protected override void SetVars()
     {
         arrowPrefab = Resources.Load<GameObject>("Attacks/MagicArrow");
-        cooldownTime = 0.2f;
-        effectiveRange = 10.0f;
+        cooldownTime = 4.0f;
+        effectiveRange = 15.0f;
         description = "Shoot an arrow that passes through enemies.";
     }
 
@@ -39,5 +39,7 @@ public class MagicArrowAbility : Abilty
         arrowRef = user.GetComponent<CombatBody>().Instantiater(arrowPrefab, user.transform.parent);
         arrowRef.transform.position = user.transform.position;
         arrowRef.transform.GetComponent<MagicArrowScript>().moveDirection = targetPosition - user.transform.position;
+        arrowRef.transform.GetComponent<MagicArrowScript>().team = user.GetComponent<CombatBody>().team;
+        arrowRef.transform.GetComponent<MagicArrowScript>().FaceForward();
     }
 }

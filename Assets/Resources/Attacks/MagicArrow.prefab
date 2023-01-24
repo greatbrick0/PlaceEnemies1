@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: enemy
-  speed: 20
+  speed: 30
   moveDirection: {x: 0, y: 0, z: 1}
   lifetime: 0.5
   power: 10
