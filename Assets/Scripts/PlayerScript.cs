@@ -12,6 +12,8 @@ public class PlayerScript : CombatBody
     private InputAction movementInput;
     [SerializeField]
     private Camera cam;
+    private RaycastHit hitData;
+    private Ray mouseRay;
 
     new public void Release()
     {
@@ -37,8 +39,11 @@ public class PlayerScript : CombatBody
         inputVector = new Vector3(movementInput.ReadValue<Vector2>().x, 0, movementInput.ReadValue<Vector2>().y);
         rb.velocity = inputVector * moveSpeed;
 
-        Ray ray = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
-        transform.LookAt(ray.GetPoint(56));
+        mouseRay = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
+        if(Physics.Raycast(cam.transform.position, mouseRay.direction, out hitData))
+        {
+            transform.LookAt(hitData.point);
+        }
         //transform.LookAt(new Vector3(3, 0, 1));
     }
 

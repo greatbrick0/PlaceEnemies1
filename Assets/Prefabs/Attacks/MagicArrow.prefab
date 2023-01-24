@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9159844377764210305}
   - component: {fileID: 9159844377764210306}
   - component: {fileID: 9159844377764210307}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MagicArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
