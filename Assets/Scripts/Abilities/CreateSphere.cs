@@ -17,6 +17,7 @@ public class CreateSphere : Abilty
         spherePrefab = Resources.Load<GameObject>("Sphere");
         cooldownTime = 1.0f;
         effectiveRange = 30.0f;
+        description = "This is a testing ability.";
     }
 
     public override bool Use(Vector3 targetPosition)

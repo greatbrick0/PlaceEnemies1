@@ -30,6 +30,7 @@ public class PlayerScript : CombatBody
         base.Start();
 
         team = "player";
+        abilityList[0] = new MagicArrowAbility(gameObject);
         abilityList.Add(new CreateSphere(gameObject));
         abilityList.Add(new LockedAbility(gameObject));
     }
@@ -71,11 +72,11 @@ public class PlayerScript : CombatBody
 
     void OnFirstAbility()
     {
-        abilityList[0].Use(Vector3.zero);
+        abilityList[0].Use(hitData.point);
     }
 
     void OnSecondAbility()
     {
-        abilityList[1].Use(transform.position);
+        abilityList[1].Use(hitData.point);
     }
 }

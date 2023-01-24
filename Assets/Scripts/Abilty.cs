@@ -13,7 +13,7 @@ public abstract class Abilty
     public float effectiveRange { get; protected set; }
     //effectie range is not automatically accurate 
     //effective range is meant to be read by AI so it knows how to use each ability
-    public string description = "This is a test ability.";
+    public string description = "No description";
 
     public abstract bool Use(Vector3 targetPosition);
 
