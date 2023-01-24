@@ -15,6 +15,8 @@ public class PlayerScript : CombatBody
     private RaycastHit hitData;
     private Ray mouseRay;
 
+    public LayerMask layerMask;
+
     new public void Release()
     {
         base.Release();
@@ -43,7 +45,9 @@ public class PlayerScript : CombatBody
         if(Physics.Raycast(cam.transform.position, mouseRay.direction, out hitData, 80.0f, 1 << 9))
         {
             transform.LookAt(hitData.point);
+            //Debug.DrawRay(hitData.point, Vector3.down * 10, Color.white);
         }
+        transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
     }
 
     private void OnEnable()
