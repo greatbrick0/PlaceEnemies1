@@ -17,6 +17,8 @@ public abstract class CombatBody : Placeable
     [SerializeField]
     protected float baseMoveSpeed = 3.0f;
     protected float moveSpeed;
+    protected Vector3 controlledVelocity;
+    public Vector3 forcedVelocity;
     [SerializeField]
     protected List<Abilty> abilityList;
 
@@ -48,6 +50,7 @@ public abstract class CombatBody : Placeable
 
     protected virtual void Update()
     {
+        rb.velocity = controlledVelocity + forcedVelocity;
         UpdateCooldowns(Time.deltaTime);
     }
 
@@ -74,5 +77,21 @@ public abstract class CombatBody : Placeable
     protected virtual void Die()
     {
         Destroy(this.gameObject);
+    }
+
+    protected virtual void UseAbility(int abilityIndex, Vector3 pos)
+    {
+        if(abilityIndex >= abilityList.Count)
+        {
+            return;
+        }
+
+        if (abilityList[abilityIndex].Use(pos))
+        {
+            if(transform.GetChild(0).GetComponent<Animationcontroller>() != null)
+            {
+                transform.GetChild(0).GetComponent<Animationcontroller>().AbilityUsed();
+            }
+        }
     }
 }

@@ -37,18 +37,17 @@ public class PlayerScript : CombatBody
 
     protected override void Update()
     {
-        base.Update();
-
         inputVector = new Vector3(movementInput.ReadValue<Vector2>().x, 0, movementInput.ReadValue<Vector2>().y);
-        rb.velocity = inputVector * moveSpeed;
+        controlledVelocity = inputVector * moveSpeed;
 
         mouseRay = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
         if(Physics.Raycast(cam.transform.position, mouseRay.direction, out hitData, 80.0f, 1 << 9))
         {
             transform.LookAt(hitData.point);
-            //Debug.DrawRay(hitData.point, Vector3.down * 10, Color.white);
         }
         transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
+
+        base.Update();
     }
 
     private void OnEnable()
@@ -67,16 +66,16 @@ public class PlayerScript : CombatBody
     public void PackPlayer()
     {
         released = false;
-        //inputComponent.enabled = false;
+        inputComponent.enabled = false;
     }
 
     void OnFirstAbility()
     {
-        abilityList[0].Use(hitData.point);
+        UseAbility(0, hitData.point);
     }
 
     void OnSecondAbility()
     {
-        abilityList[1].Use(hitData.point);
+        UseAbility(1, hitData.point);
     }
 }
