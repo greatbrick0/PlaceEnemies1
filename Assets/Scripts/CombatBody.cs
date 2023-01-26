@@ -20,7 +20,7 @@ public abstract class CombatBody : Placeable
     [SerializeField]
     protected List<Abilty> abilityList;
 
-    protected void Start()
+    protected virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;

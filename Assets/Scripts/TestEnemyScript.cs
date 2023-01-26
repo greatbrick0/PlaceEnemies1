@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class TestEnemyScript : NPCController
 {
-    new private void Start()
+    protected override void Start()
     {
         base.Start();
 
         abilityList[0] = new CreateSphere(gameObject);
     }
 
-    new private void Update()
+    protected override void Update()
     {
         base.Update();
 

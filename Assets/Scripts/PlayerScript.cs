@@ -17,7 +17,7 @@ public class PlayerScript : CombatBody
 
     public LayerMask layerMask;
 
-    new public void Release()
+    public override void Release()
     {
         base.Release();
 
@@ -25,7 +25,7 @@ public class PlayerScript : CombatBody
         cam = transform.GetChild(1).GetComponent<Camera>();
     }
 
-    new private void Start()
+    protected override void Start()
     {
         base.Start();
 
@@ -35,7 +35,7 @@ public class PlayerScript : CombatBody
         abilityList.Add(new LockedAbility(gameObject));
     }
 
-    new private void Update()
+    protected override void Update()
     {
         base.Update();
 
