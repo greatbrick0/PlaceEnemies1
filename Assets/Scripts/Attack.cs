@@ -57,7 +57,11 @@ public abstract class Attack : MonoBehaviour
         {
             return;
         }
-        else if (hitList.Contains(other.gameObject.GetComponent<CombatBody>()))
+        if (other.isTrigger)
+        {
+            return;
+        }
+        if (hitList.Contains(other.gameObject.GetComponent<CombatBody>()))
         {
             return;
         }
