@@ -38,11 +38,15 @@ public abstract class CombatBody : Placeable
         int previousHealth = health;
 
         health -= Mathf.Max(damageAmount, 0);
+        if(health <= 0)
+        {
+            Die();
+        }
 
         return Mathf.Max(previousHealth - health, 0);
     }
 
-    protected void Update()
+    protected virtual void Update()
     {
         UpdateCooldowns(Time.deltaTime);
     }
@@ -65,5 +69,10 @@ public abstract class CombatBody : Placeable
     public GameObject Instantiater(GameObject prefab, Transform prefabParent)
     {
         return Instantiate(prefab, prefabParent);
+    }
+
+    protected virtual void Die()
+    {
+        Destroy(this.gameObject);
     }
 }
