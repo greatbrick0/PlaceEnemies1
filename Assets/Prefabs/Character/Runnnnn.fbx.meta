@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 4b09275c9eea1604098238e70c36a9bf
 ModelImporter:
-  serializedVersion: 20200
+  serializedVersion: 21300
   internalIDToNameTable:
   - first:
       74: -887982601649841707
@@ -17,6 +17,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -75,6 +76,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -86,6 +88,7 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
+    optimizeBones: 1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -407,7 +410,8 @@ ModelImporter:
     - name: breast.L_end
       parentName: breast.L
       position: {x: -3.306195e-10, y: 0.003652258, z: -2.6542693e-10}
-      rotation: {x: 0.000000043655742, y: -0.00000003480818, z: -0.000000007654307, w: 1}
+      rotation: {x: 0.000000043655742, y: -0.00000003480818, z: -0.000000007654307,
+        w: 1}
       scale: {x: 1, y: 1.0000001, z: 1.0000001}
     - name: breast.R
       parentName: spine.003
@@ -417,7 +421,8 @@ ModelImporter:
     - name: breast.R_end
       parentName: breast.R
       position: {x: -1.3504177e-10, y: 0.0036522578, z: 0.0000000010430813}
-      rotation: {x: 0.0000000020954753, y: 0.000000042258762, z: -0.000000004831236, w: 1}
+      rotation: {x: 0.0000000020954753, y: 0.000000042258762, z: -0.000000004831236,
+        w: 1}
       scale: {x: 1, y: 0.99999994, z: 1}
     - name: pelvis.L
       parentName: spine
@@ -427,7 +432,8 @@ ModelImporter:
     - name: pelvis.L_end
       parentName: pelvis.L
       position: {x: -3.352761e-10, y: 0.0057171965, z: -5.9604643e-10}
-      rotation: {x: -0.000000042840846, y: 0.0000000018626454, z: -0.000000046566136, w: 1}
+      rotation: {x: -0.000000042840846, y: 0.0000000018626454, z: -0.000000046566136,
+        w: 1}
       scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
     - name: pelvis.R
       parentName: spine
@@ -437,7 +443,8 @@ ModelImporter:
     - name: pelvis.R_end
       parentName: pelvis.R
       position: {x: -4.4703483e-10, y: 0.0057171974, z: -3.352761e-10}
-      rotation: {x: -0.0000000037252896, y: -0.00000009313225, z: 0.000000044703484, w: 1}
+      rotation: {x: -0.0000000037252896, y: -0.00000009313225, z: 0.000000044703484,
+        w: 1}
       scale: {x: 1, y: 1, z: 1.0000001}
     - name: thigh.L
       parentName: spine
@@ -462,7 +469,8 @@ ModelImporter:
     - name: toe.L_end
       parentName: toe.L
       position: {x: -1.4901161e-10, y: 0.0036636933, z: 2.561137e-10}
-      rotation: {x: -0.000000011386875, y: -0.000000037543945, z: 0.000000010244549, w: 1}
+      rotation: {x: -0.000000011386875, y: -0.000000037543945, z: 0.000000010244549,
+        w: 1}
       scale: {x: 0.9999999, y: 0.99999994, z: 0.9999999}
     - name: heel.02.L
       parentName: foot.L
@@ -472,7 +480,8 @@ ModelImporter:
     - name: heel.02.L_end
       parentName: heel.02.L
       position: {x: -5.9604643e-10, y: 0.0020989967, z: 0.000000002027955}
-      rotation: {x: -0.0000017080457, y: -0.000000060557795, z: -0.00000008777716, w: 1}
+      rotation: {x: -0.0000017080457, y: -0.000000060557795, z: -0.00000008777716,
+        w: 1}
       scale: {x: 1, y: 0.99999994, z: 1}
     - name: thigh.R
       parentName: spine
@@ -527,6 +536,7 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

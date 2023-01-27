@@ -71,7 +71,7 @@ public class PlayerScript : CombatBody
 
     void OnFirstAbility()
     {
-        UseAbility(0, hitData.point);
+        UseAbility(0, hitData.point);       
     }
 
     void OnSecondAbility()

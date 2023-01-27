@@ -20,12 +20,23 @@ public class Animationcontroller : MonoBehaviour
     void Update()
     {
         parentIsMoving = transform.parent.GetComponent<Rigidbody>().velocity.magnitude >= 0.1f;
+        
 
-        animator.SetFloat(blendValue, Input.GetKey(KeyCode.W) ? 1 : 0);
+        Vector3 localVelocity = transform.InverseTransformDirection(transform.parent.GetComponent<Rigidbody>().velocity);
+        //Converts global velocity vector to a local vector
+        float forawrdVelocity = localVelocity.z;
+        //Players total local forward velocity = forwardVelocity, can be used for dash animations or being slowed
+        animator.SetFloat(blendValue, forawrdVelocity >= 0.1f ? 1 : 0);
+        //if forward velocity is greater than or equal to 0.1f, blendValue is set to 1, else its set to 0
+
+
+        
         if (Input.GetButtonDown("Fire1"))
         {
             animator.SetTrigger("Trigger2");
         }
+        //If statement for ability demo - will remove after
+
     }
 
     //called from the parent CombatBody when an ability is successfully used
