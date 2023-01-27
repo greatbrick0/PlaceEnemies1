@@ -15,7 +15,7 @@ public class CreateSphere : Abilty
     protected override void SetVars()
     {
         spherePrefab = Resources.Load<GameObject>("Sphere");
-        cooldownTime = 1.0f;
+        cooldownTime = 6.0f;
         effectiveRange = 30.0f;
         description = "This is a testing ability.";
     }

@@ -8,8 +8,9 @@ public abstract class Abilty
 {
     protected GameObject user;
     protected bool offCooldown = true;
-    protected float cooldownTime = 1.0f;
+    public float cooldownTime { get; protected set; }
     public float remainingCooldown = 0.0f;
+    
     public float effectiveRange { get; protected set; }
     //effectie range is not automatically accurate 
     //effective range is meant to be read by AI so it knows how to use each ability
@@ -30,7 +31,7 @@ public abstract class Abilty
         offCooldown = true;
     }
 
-    protected void EnableCooldown()
+    public void EnableCooldown()
     {
         offCooldown = false;
         remainingCooldown = cooldownTime;

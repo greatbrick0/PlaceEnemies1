@@ -8,7 +8,11 @@ public class TestEnemyScript : NPCController
     {
         base.Start();
 
-        abilityList[0] = new CreateSphere(gameObject);
+        abilityList[0] = new MagicArrowAbility(gameObject);
+        foreach (Abilty abilty in abilityList)
+        {
+            abilty.EnableCooldown();
+        }
     }
 
     protected override void Update()
@@ -19,6 +23,7 @@ public class TestEnemyScript : NPCController
         {
             transform.LookAt(targetList[0].transform.position);
             rb.velocity = Vector3.zero;
+            UseAbility(0, targetList[0].transform.position);
         }
         else
         {

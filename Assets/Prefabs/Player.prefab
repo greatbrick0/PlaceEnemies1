@@ -84,6 +84,7 @@ MonoBehaviour:
   bounty: 0
   health: 30
   baseMoveSpeed: 5
+  forcedVelocity: {x: 0, y: 0, z: 0}
   cam: {fileID: 0}
   layerMask:
     serializedVersion: 2
@@ -377,6 +378,11 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9009147241557508798, guid: e5e2cae7384ff754ebd156ea9bd6ee2d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59ff9ad3f7091f24b9dea3fa05f2a9ab, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5e2cae7384ff754ebd156ea9bd6ee2d, type: 3}
 --- !u!1 &4838598717223409512 stripped
@@ -397,6 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a865eb1cedc47fa41893ea73beb5c53a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentIsMoving: 0
 --- !u!4 &5219099436842700242 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e5e2cae7384ff754ebd156ea9bd6ee2d,

@@ -29,14 +29,6 @@ public class Animationcontroller : MonoBehaviour
         animator.SetFloat(blendValue, forawrdVelocity >= 0.1f ? 1 : 0);
         //if forward velocity is greater than or equal to 0.1f, blendValue is set to 1, else its set to 0
 
-
-        
-        if (Input.GetButtonDown("Fire1"))
-        {
-            animator.SetTrigger("Trigger2");
-        }
-        //If statement for ability demo - will remove after
-
     }
 
     //called from the parent CombatBody when an ability is successfully used
@@ -44,6 +36,6 @@ public class Animationcontroller : MonoBehaviour
     //this function is not called if the ability is used while on cooldown, or fails for some other reason
     public void AbilityUsed(int abilityType=0) 
     {
-
+        animator.SetTrigger("Trigger2");
     }
 }
