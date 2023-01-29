@@ -50,8 +50,15 @@ public abstract class CombatBody : Placeable
 
     protected virtual void Update()
     {
-        rb.velocity = controlledVelocity + forcedVelocity;
-        UpdateCooldowns(Time.deltaTime);
+        if (released)
+        {
+            rb.velocity = controlledVelocity + forcedVelocity;
+            UpdateCooldowns(Time.deltaTime);
+        }
+        else
+        {
+            rb.velocity = Vector3.zero;
+        }
     }
 
     private void UpdateCooldowns(float delta)
@@ -81,6 +88,10 @@ public abstract class CombatBody : Placeable
 
     protected virtual void UseAbility(int abilityIndex, Vector3 pos)
     {
+        if (!released)
+        {
+            return;
+        }
         if(abilityIndex >= abilityList.Count)
         {
             return;

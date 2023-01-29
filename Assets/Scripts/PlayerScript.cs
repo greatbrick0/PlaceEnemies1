@@ -22,7 +22,6 @@ public class PlayerScript : CombatBody
         base.Release();
 
         inputComponent.enabled = true;
-        cam = transform.GetChild(1).GetComponent<Camera>();
     }
 
     protected override void Start()
@@ -37,15 +36,18 @@ public class PlayerScript : CombatBody
 
     protected override void Update()
     {
-        inputVector = new Vector3(movementInput.ReadValue<Vector2>().x, 0, movementInput.ReadValue<Vector2>().y);
-        controlledVelocity = inputVector * moveSpeed;
-
-        mouseRay = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
-        if(Physics.Raycast(cam.transform.position, mouseRay.direction, out hitData, 80.0f, 1 << 9))
+        if (released)
         {
-            transform.LookAt(hitData.point);
+            inputVector = new Vector3(movementInput.ReadValue<Vector2>().x, 0, movementInput.ReadValue<Vector2>().y);
+            controlledVelocity = inputVector * moveSpeed;
+
+            mouseRay = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
+            if (Physics.Raycast(cam.transform.position, mouseRay.direction, out hitData, 80.0f, 1 << 9))
+            {
+                transform.LookAt(hitData.point);
+            }
+            transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
         }
-        transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
 
         base.Update();
     }
@@ -77,5 +79,10 @@ public class PlayerScript : CombatBody
     void OnSecondAbility()
     {
         UseAbility(1, hitData.point);
+    }
+
+    public void SetCameraRef(Camera newCam)
+    {
+        cam = newCam;
     }
 }

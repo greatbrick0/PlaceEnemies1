@@ -17,20 +17,23 @@ public class TestEnemyScript : NPCController
 
     protected override void Update()
     {
-        base.Update();
+        if (released)
+        {
+            targetList = CleanTargetList();
+            if (targetList.Count > 0) //different enemies can have different movement or pathfinding
+            {
+                transform.LookAt(targetList[0].transform.position);
+                rb.velocity = Vector3.zero;
+                UseAbility(0, targetList[0].transform.position);
+            }
+            else
+            {
+                transform.eulerAngles = Vector3.zero;
+                rb.velocity = Vector3.zero;
+            }
+        }
 
-        targetList = CleanTargetList();
-        if(targetList.Count > 0) //different enemies can have different movement or pathfinding
-        {
-            transform.LookAt(targetList[0].transform.position);
-            rb.velocity = Vector3.zero;
-            UseAbility(0, targetList[0].transform.position);
-        }
-        else
-        {
-            transform.eulerAngles = Vector3.zero;
-            rb.velocity = Vector3.zero;
-        }
+        base.Update();
     }
 
     protected override bool FilterTarget(GameObject potentialTarget)

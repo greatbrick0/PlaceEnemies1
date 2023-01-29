@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6644624614402215561}
   - component: {fileID: 6644624614402215562}
   - component: {fileID: 6644624614402215560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   released: 0
-  team: enemy
+  team: player
   bounty: 0
   health: 30
   baseMoveSpeed: 5
