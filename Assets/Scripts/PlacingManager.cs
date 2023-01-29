@@ -21,11 +21,13 @@ public class PlacingManager : MonoBehaviour
         groundHolderRef.transform.GetChild(0).GetComponent<GroundScript>().AttachObject(playerRef);
 
         cam.followTarget = groundHolderRef.transform;
+        cam.offset = new Vector3(0, 45, -45);
     }
 
     public void StartCombat()
     {
         cam.followTarget = playerRef.transform;
+        cam.offset = new Vector3(0, 25, -25);
         ReleaseAllTiles();
     }
 

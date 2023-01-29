@@ -12,28 +12,27 @@ public class GroundScript : MonoBehaviour
     {
         if (isHolding)
         {
-            if (heldObject.GetComponent<CombatBody>())
-            {
-                heldObject.GetComponent<CombatBody>().Release();
-            }
+            heldObject.GetComponent<Placeable>().Release();
         }
     }
 
     public bool AttachObject(GameObject newObject)
     {
-        if(!isHolding)
-        {
-            heldObject = newObject;
-            newObject.transform.position = transform.position;
-            newObject.transform.eulerAngles = new Vector3(0, 180, 0);
-            AffectObject();
-            isHolding = true;
-            return true;
-        }
-        else
+        if (isHolding)
         {
             return false;
         }
+        if(newObject.GetComponent<Placeable>() == null)
+        {
+            return false;
+        }
+
+        heldObject = newObject;
+        newObject.transform.position = transform.position;
+        newObject.transform.eulerAngles = new Vector3(0, 180, 0);
+        AffectObject();
+        isHolding = true;
+        return true;
     }
 
     protected virtual void AffectObject()
