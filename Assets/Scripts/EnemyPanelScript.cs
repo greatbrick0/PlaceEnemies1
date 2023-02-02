@@ -21,6 +21,8 @@ public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
     private Vector2 hoverOffset = Vector2.up * 20;
     [SerializeField]
     private Vector2 draggedOffset = Vector2.down * 180;
+    [SerializeField]
+    private Vector2 hideOffset = Vector2.down * 500;
     private Vector2 defaultPos = Vector2.zero;
 
     private float timeHovered = 0.0f;
@@ -37,6 +39,7 @@ public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
         defaultPos = transform.localPosition;
         hoverOffset = hoverOffset + defaultPos;
         draggedOffset = draggedOffset + defaultPos;
+        hideOffset = hideOffset + defaultPos;
     }
 
     private void Update()
