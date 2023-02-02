@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5056235716722218645}
   - component: {fileID: 5056235716722218644}
   - component: {fileID: 1457773770268731373}
-  - component: {fileID: 5177958505749342093}
   m_Layer: 11
   m_Name: GroundTile
   m_TagString: Ground
@@ -61,18 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heldObject: {fileID: 0}
---- !u!114 &5177958505749342093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5056235716722218642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78d641e0ef2869446bbbcd8287fcc1d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  isHolding: 0
 --- !u!1001 &1151358860560421003
 PrefabInstance:
   m_ObjectHideFlags: 0

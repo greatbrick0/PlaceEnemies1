@@ -3,46 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class GroundHelper : MonoBehaviour
-{
-    public void ResetPosition()
-    {
-        transform.position = Vector3.zero;
-    }
-
-    public void ResetRotation()
-    {
-        transform.eulerAngles = Vector3.zero;
-    }
-
-    public void ForceRelease()
-    {
-        if(GetComponent<GroundScript>() != null)
-        {
-            gameObject.GetComponent<GroundScript>().ReleaseObject();
-        }
-    }
-
-    public void MoveForward(float length)
-    {
-        transform.position += transform.forward * length;
-    }
-
-    public void RotateClockwise(float angle)
-    {
-        transform.eulerAngles += Vector3.up * angle;
-    }
-}
-
-[CustomEditor(typeof(GroundHelper))]
+[CustomEditor(typeof(GroundScript))]
 public class GroundEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
 
-        GUILayout.Label("Debugging");
-        GroundHelper myScript = (GroundHelper)target;
+        GUILayout.Label("\nDebugging");
+        GroundScript myScript = (GroundScript)target;
         if (GUILayout.Button("Force Release"))
             myScript.ForceRelease();
 

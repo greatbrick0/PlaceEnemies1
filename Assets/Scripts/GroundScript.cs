@@ -39,4 +39,34 @@ public class GroundScript : MonoBehaviour
     {
 
     }
+
+    #region Helper Functions
+    public void ResetPosition()
+    {
+        transform.position = Vector3.zero;
+    }
+
+    public void ResetRotation()
+    {
+        transform.eulerAngles = Vector3.zero;
+    }
+
+    public void ForceRelease()
+    {
+        if (GetComponent<GroundScript>() != null)
+        {
+            gameObject.GetComponent<GroundScript>().ReleaseObject();
+        }
+    }
+
+    public void MoveForward(float length)
+    {
+        transform.position += transform.forward * length;
+    }
+
+    public void RotateClockwise(float angle)
+    {
+        transform.eulerAngles += Vector3.up * angle;
+    }
+    #endregion
 }
