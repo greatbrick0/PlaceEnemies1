@@ -1,11 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlacingManager : MonoBehaviour
 {
     [SerializeField]
     private CameraScript cam;
+    private Camera unityCam;
+    private RaycastHit hitData;
+    private Ray mouseRay;
+    private Vector2 currentMousePos;
+    [SerializeField]
+    private GameObject mousePlaneRef;
+    [SerializeField]
+    private Vector3 mousePlaneUpperPos = Vector3.up;
 
     [SerializeField]
     private GameObject playerPrefab;
@@ -13,6 +22,8 @@ public class PlacingManager : MonoBehaviour
 
     [SerializeField]
     private GameObject groundHolderRef;
+    [SerializeField]
+    private SlotHolderScript slotHolderRef;
 
     private void Start()
     {
@@ -22,12 +33,21 @@ public class PlacingManager : MonoBehaviour
 
         cam.followTarget = groundHolderRef.transform;
         cam.offset = new Vector3(-5, 45, -48);
+        unityCam = cam.GetComponent<Camera>();
+    }
+
+    private void Update()
+    {
+        currentMousePos = Mouse.current.position.ReadValue();
+        mouseRay = unityCam.ScreenPointToRay(currentMousePos);
+        Physics.Raycast(cam.transform.position, mouseRay.direction, out hitData, 100.0f, 1 << 9);
     }
 
     public void StartCombat()
     {
         cam.followTarget = playerRef.transform;
         cam.offset = new Vector3(0, 25, -25);
+        mousePlaneRef.transform.position = mousePlaneUpperPos;
         ReleaseAllTiles();
     }
 
@@ -36,6 +56,14 @@ public class PlacingManager : MonoBehaviour
         for(int ii = 0; ii < groundHolderRef.transform.childCount; ii++)
         {
             groundHolderRef.transform.GetChild(ii).GetComponent<GroundScript>().ReleaseObject();
+        }
+    }
+
+    public void DraggingPanel(Vector2 panelEdge)
+    {
+        if (hitData.collider.gameObject.GetComponent<GroundScript>() != null)
+        {
+            hitData.collider.gameObject.GetComponent<GroundScript>().Raise();
         }
     }
 }

@@ -26,12 +26,9 @@ public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
     private Vector2 defaultPos = Vector2.zero;
 
     private float timeHovered = 0.0f;
-    [SerializeField]
     private bool currentlyHovered = false;
     private float timeDragging = 0.0f;
-    [SerializeField]
     private bool currentlyDragging = false;
-    [SerializeField]
     private bool currentlyClicked = false;
 
     private void Start()
@@ -55,6 +52,7 @@ public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
             timeDragging += 1.0f * Time.deltaTime;
             transform.localPosition = Vector2.Lerp(hoverOffset, draggedOffset, Mathf.Min(Mathf.Sqrt(timeDragging * 8), 1));
             transform.localScale = Vector2.Lerp(hoverSize, Vector2.one, Mathf.Min(Mathf.Sqrt(timeDragging * 8), 1));
+            transform.parent.parent.GetComponent<SlotHolderScript>().DraggingPanel(transform.GetChild(0).position);
         }
         else
         {

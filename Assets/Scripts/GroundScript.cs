@@ -8,6 +8,26 @@ public class GroundScript : MonoBehaviour
     [SerializeField]
     private bool isHolding = false;
 
+    private bool isRaised = false;
+    [SerializeField]
+    private Vector3 raiseOffset = Vector3.up * 0.5f;
+    [SerializeField]
+    private Vector3 defualtVisualPos = Vector3.zero;
+
+
+    private void Update()
+    {
+        if (isRaised)
+        {
+            transform.GetChild(0).localPosition = defualtVisualPos + raiseOffset;
+            isRaised = false;
+        }
+        else
+        {
+            transform.GetChild(0).localPosition = defualtVisualPos;
+        }
+    }
+
     public virtual void ReleaseObject()
     {
         if (isHolding)
@@ -38,6 +58,12 @@ public class GroundScript : MonoBehaviour
     protected virtual void AffectObject()
     {
 
+    }
+
+    public bool Raise()
+    {
+        isRaised = !isHolding;
+        return isRaised;
     }
 
     #region Helper Functions

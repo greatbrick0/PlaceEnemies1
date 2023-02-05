@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 188113612}
+  - component: {fileID: 188113613}
   m_Layer: 5
   m_Name: SlotHolder
   m_TagString: Untagged
@@ -162,6 +163,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 600}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &188113613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188113611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71cf94fead78ae4a910c3cdcb3813c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  managerRef: {fileID: 586905832}
 --- !u!1001 &230725965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -479,9 +493,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 628120436}
+  mousePlaneRef: {fileID: 999648887}
+  mousePlaneUpperPos: {x: 0, y: -0.1, z: 0}
   playerPrefab: {fileID: 6644624614402215557, guid: 3d204ff1fb9595b40a31a12bdaa6391b,
     type: 3}
   groundHolderRef: {fileID: 1817536930}
+  slotHolderRef: {fileID: 188113613}
 --- !u!4 &586905833
 Transform:
   m_ObjectHideFlags: 0
@@ -1238,8 +1255,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999648887}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.1, z: 0}
-  m_LocalScale: {x: 8, y: 0.2, z: 8}
+  m_LocalPosition: {x: 0, y: -0.8, z: 0}
+  m_LocalScale: {x: 10, y: 0.2, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
