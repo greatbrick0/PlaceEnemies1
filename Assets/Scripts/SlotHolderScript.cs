@@ -11,4 +11,9 @@ public class SlotHolderScript : MonoBehaviour
     {
         managerRef.DraggingPanel(panelEdge);
     }
+
+    public bool ReleaseDrag(GameObject placeObject)
+    {
+        return managerRef.ReleaseDrag(placeObject);
+    }
 }

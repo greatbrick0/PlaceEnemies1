@@ -5,13 +5,14 @@ using UnityEngine.EventSystems;
 
 public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
+    SlotHolderScript slotHolderRef;
     [SerializeField]
     public PlacingManager managerRef;
     [SerializeField]
     public GameObject linkedObject;
     [SerializeField]
     private int maxUses = 2;
-    private int remainingUses = 2;
+    private int remainingUses;
 
     [SerializeField]
     private string objectDescription = "";
@@ -30,9 +31,12 @@ public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
     private float timeDragging = 0.0f;
     private bool currentlyDragging = false;
     private bool currentlyClicked = false;
+    private bool validToUse = true;
 
     private void Start()
     {
+        slotHolderRef = transform.parent.parent.GetComponent<SlotHolderScript>();
+        remainingUses = maxUses;
         defaultPos = transform.localPosition;
         hoverOffset = hoverOffset + defaultPos;
         draggedOffset = draggedOffset + defaultPos;
@@ -52,7 +56,7 @@ public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
             timeDragging += 1.0f * Time.deltaTime;
             transform.localPosition = Vector2.Lerp(hoverOffset, draggedOffset, Mathf.Min(Mathf.Sqrt(timeDragging * 8), 1));
             transform.localScale = Vector2.Lerp(hoverSize, Vector2.one, Mathf.Min(Mathf.Sqrt(timeDragging * 8), 1));
-            transform.parent.parent.GetComponent<SlotHolderScript>().DraggingPanel(transform.GetChild(0).position);
+            slotHolderRef.DraggingPanel(transform.GetChild(0).position);
         }
         else
         {
@@ -64,7 +68,7 @@ public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        currentlyHovered = true;
+        currentlyHovered = validToUse;
         currentlyDragging = false;
     }
 
@@ -77,13 +81,31 @@ public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        currentlyClicked = true;
+        currentlyClicked = validToUse;
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        PlaceObjectAttempt();
         currentlyClicked = false;
         currentlyDragging = false;
         timeDragging = 0.0f;
+    }
+
+    private void PlaceObjectAttempt()
+    {
+        if (!currentlyDragging)
+        {
+            return;
+        }
+
+        if (slotHolderRef.ReleaseDrag(linkedObject))
+        {
+            remainingUses--;
+            if (remainingUses <= 0)
+            {
+                validToUse = false;
+            }
+        }
     }
 }

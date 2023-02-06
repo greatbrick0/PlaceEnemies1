@@ -10,6 +10,7 @@ public class PlacingManager : MonoBehaviour
     private Camera unityCam;
     private RaycastHit hitData;
     private Ray mouseRay;
+    private GameObject mouseHitObject;
     private Vector2 currentMousePos;
     [SerializeField]
     private GameObject mousePlaneRef;
@@ -41,6 +42,7 @@ public class PlacingManager : MonoBehaviour
         currentMousePos = Mouse.current.position.ReadValue();
         mouseRay = unityCam.ScreenPointToRay(currentMousePos);
         Physics.Raycast(cam.transform.position, mouseRay.direction, out hitData, 100.0f, 1 << 9);
+        mouseHitObject = hitData.collider.gameObject;
     }
 
     public void StartCombat()
@@ -61,9 +63,24 @@ public class PlacingManager : MonoBehaviour
 
     public void DraggingPanel(Vector2 panelEdge)
     {
-        if (hitData.collider.gameObject.GetComponent<GroundScript>() != null)
+        if (mouseHitObject.GetComponent<GroundScript>() != null)
         {
-            hitData.collider.gameObject.GetComponent<GroundScript>().Raise();
+            mouseHitObject.GetComponent<GroundScript>().Raise();
         }
+    }
+
+    public bool ReleaseDrag(GameObject placeObject)
+    {
+        if (mouseHitObject.GetComponent<GroundScript>() == null)
+        {
+            return false;
+        }
+
+        if (!mouseHitObject.GetComponent<GroundScript>().FilterObject(placeObject))
+        {
+            return false;
+        }
+
+        return mouseHitObject.GetComponent<GroundScript>().AttachObject(Instantiate(placeObject, transform.parent));
     }
 }
