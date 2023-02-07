@@ -60,15 +60,17 @@ public abstract class Attack : MonoBehaviour
         {
             return;
         }
-        if (hitList.Contains(other.gameObject.GetComponent<CombatBody>()))
+        CombatBody otherCombatBody = other.gameObject.GetComponent<CombatBody>();
+        if (hitList.Contains(otherCombatBody))
         {
             return;
         }
+        print(other.gameObject.name);
 
-        if (FilterHitTarget(other.gameObject.GetComponent<CombatBody>()))
+        if (FilterHitTarget(otherCombatBody))
         {
-            hitList.Add(other.gameObject.GetComponent<CombatBody>());
-            Apply(other.gameObject.GetComponent<CombatBody>());
+            hitList.Add(otherCombatBody);
+            Apply(otherCombatBody);
         }
     }
 

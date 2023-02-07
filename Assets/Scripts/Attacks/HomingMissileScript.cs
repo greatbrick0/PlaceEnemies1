@@ -26,10 +26,7 @@ public class HomingMissileScript : Attack
 
         if(hasValidHomingTarget)
         {
-            if (Vector3.SqrMagnitude(moveDirection + (homingTarget.transform.position - transform.position).normalized) <= 2.0f)
-            {
-                moveDirection += (homingTarget.transform.position - transform.position).normalized;
-            }
+            moveDirection = Vector3.Lerp(moveDirection, (homingTarget.transform.position - transform.position).normalized, 0.01f);
             FaceForward();
         }
 

@@ -7,8 +7,17 @@ public class ExtraCollider : MonoBehaviour
 {
     [SerializeField]
     int siblingIndex = 0;
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnEnable()
     {
-        transform.parent.SendMessage("ExtraCollision"+siblingIndex.ToString()+"Enter", collision.gameObject);
+        gameObject.GetComponent<Collider>().isTrigger = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.isTrigger)
+        {
+            transform.parent.SendMessage("ExtraCollision" + siblingIndex.ToString() + "Enter", other.gameObject);
+        }
     }
 }
