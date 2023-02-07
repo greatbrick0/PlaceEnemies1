@@ -30,7 +30,7 @@ public class PlayerScript : CombatBody
 
         team = "player";
         abilityList[0] = new MagicArrowAbility(gameObject);
-        abilityList.Add(new MagicArrowAbility(gameObject));
+        abilityList.Add(new HommingMissileAbility(gameObject));
         abilityList.Add(new LockedAbility(gameObject));
     }
 

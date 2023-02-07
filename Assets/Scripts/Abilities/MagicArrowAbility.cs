@@ -24,7 +24,7 @@ public class MagicArrowAbility : Abilty
     {
         if(offCooldown)
         {
-            MakeSphere(targetPosition);
+            MakeProjectile(targetPosition);
             EnableCooldown();
             return true;
         }
@@ -34,7 +34,7 @@ public class MagicArrowAbility : Abilty
         }
     }
 
-    private void MakeSphere(Vector3 targetPosition)
+    private void MakeProjectile(Vector3 targetPosition)
     {
         arrowRef = user.GetComponent<CombatBody>().Instantiater(arrowPrefab, user.transform.parent);
         arrowRef.transform.position = user.transform.position;

@@ -6,6 +6,7 @@ public class HomingMissileScript : Attack
 {
     private List<CombatBody> detectedTargets = new List<CombatBody>();
     private CombatBody homingTarget;
+    private bool hasValidHomingTarget = false;
 
     protected override void Apply(CombatBody recentHit)
     {
@@ -22,8 +23,17 @@ public class HomingMissileScript : Attack
     {
         detectedTargets = ClearInvalidTargets(detectedTargets);
         homingTarget = GetNewTarget(detectedTargets);
-        //if(moveDirection + ())
-        FaceForward();
+
+        if(hasValidHomingTarget)
+        {
+            if (Vector3.SqrMagnitude(moveDirection + (homingTarget.transform.position - transform.position).normalized) <= 2.0f)
+            {
+                moveDirection += (homingTarget.transform.position - transform.position).normalized;
+            }
+            FaceForward();
+        }
+
+        base.Update();
     }
 
     public void ExtraCollision0Enter(GameObject detectedObject)
@@ -45,6 +55,7 @@ public class HomingMissileScript : Attack
 
         if (homingTargets.Count == 0)
         {
+            hasValidHomingTarget = false;
             return null;
         }
 
@@ -65,6 +76,7 @@ public class HomingMissileScript : Attack
                 }
             }
         }
+        hasValidHomingTarget = true;
         return newHomingTarget;
     }
 

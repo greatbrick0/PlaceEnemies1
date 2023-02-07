@@ -30,6 +30,8 @@ public class PlacingManager : MonoBehaviour
 
     private void Start()
     {
+        mouseHitObject = mousePlaneRef;
+
         playerRef = Instantiate(playerPrefab, transform.parent);
         playerRef.GetComponent<PlayerScript>().SetCameraRef(cam.GetComponent<Camera>());
         groundHolderRef.transform.GetChild(0).GetComponent<GroundScript>().AttachObject(playerRef);
