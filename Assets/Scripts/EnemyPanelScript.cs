@@ -31,6 +31,7 @@ public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
     private float timeDragging = 0.0f;
     private bool currentlyDragging = false;
     private bool currentlyClicked = false;
+    private bool currentlyHiding = false;
     private bool validToUse = true;
 
     private void Start()
@@ -56,12 +57,16 @@ public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
             timeDragging += 1.0f * Time.deltaTime;
             transform.localPosition = Vector2.Lerp(hoverOffset, draggedOffset, Mathf.Min(Mathf.Sqrt(timeDragging * 8), 1));
             transform.localScale = Vector2.Lerp(hoverSize, Vector2.one, Mathf.Min(Mathf.Sqrt(timeDragging * 8), 1));
-            slotHolderRef.DraggingPanel(transform.GetChild(0).position);
+            slotHolderRef.DraggingPanel(transform.GetChild(0).position, timeDragging);
         }
         else
         {
-            transform.localPosition = defaultPos;
-            transform.localScale = Vector2.one;
+            if (!currentlyHiding)
+            {
+                transform.localPosition = defaultPos;
+                transform.localScale = Vector2.one;
+            }
+            currentlyHiding = false;
         }
         
     }
@@ -106,6 +111,16 @@ public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
             {
                 validToUse = false;
             }
+        }
+    }
+
+    public void SlideOffScreen(float timeSinceStart, int index)
+    {
+        if (!currentlyHovered && !currentlyDragging)
+        {
+            currentlyHiding = true;
+            print(index + " " + timeSinceStart + " ");
+            transform.localPosition = Vector2.Lerp(defaultPos, hideOffset, Mathf.Min(Mathf.Sqrt(timeSinceStart * 4), 1));
         }
     }
 }
