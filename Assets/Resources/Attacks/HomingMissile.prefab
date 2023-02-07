@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5670650171481846255}
   - component: {fileID: 2737088991835256190}
   - component: {fileID: 7748365998738967748}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 9159844377764210305}
   - component: {fileID: 5259529950112509460}
   - component: {fileID: 1736011949718271239}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HomingMissile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: enemy
-  speed: 13
+  speed: 10
   moveDirection: {x: 0, y: 0, z: 1}
-  lifetime: 20
+  lifetime: 1.5
   power: 3
+  homingPower: 6
