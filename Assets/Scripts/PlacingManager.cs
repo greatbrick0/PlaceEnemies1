@@ -13,6 +13,8 @@ public class PlacingManager : MonoBehaviour
     private GameObject mouseHitObject;
     private Vector2 currentMousePos;
     [SerializeField]
+    private Vector3 placingModeCamPos = Vector3.up * 30 + Vector3.back * 30;
+    [SerializeField]
     private GameObject mousePlaneRef;
     [SerializeField]
     private Vector3 mousePlaneUpperPos = Vector3.up;
@@ -33,7 +35,7 @@ public class PlacingManager : MonoBehaviour
         groundHolderRef.transform.GetChild(0).GetComponent<GroundScript>().AttachObject(playerRef);
 
         cam.followTarget = groundHolderRef.transform;
-        cam.offset = new Vector3(-5, 45, -48);
+        cam.offset = placingModeCamPos;
         unityCam = cam.GetComponent<Camera>();
     }
 
@@ -41,7 +43,7 @@ public class PlacingManager : MonoBehaviour
     {
         currentMousePos = Mouse.current.position.ReadValue();
         mouseRay = unityCam.ScreenPointToRay(currentMousePos);
-        Physics.Raycast(cam.transform.position, mouseRay.direction, out hitData, 100.0f, 1 << 9);
+        Physics.Raycast(cam.transform.position, mouseRay.direction, out hitData, 150.0f, 1 << 9);
         mouseHitObject = hitData.collider.gameObject;
     }
 
