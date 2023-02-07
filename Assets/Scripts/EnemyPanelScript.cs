@@ -119,7 +119,6 @@ public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
         if (!currentlyHovered && !currentlyDragging)
         {
             currentlyHiding = true;
-            print(index + " " + timeSinceStart + " ");
             transform.localPosition = Vector2.Lerp(defaultPos, hideOffset, Mathf.Min(Mathf.Sqrt(timeSinceStart * 4), 1));
         }
     }
