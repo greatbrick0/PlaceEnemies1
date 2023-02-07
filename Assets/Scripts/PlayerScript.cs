@@ -42,7 +42,7 @@ public class PlayerScript : CombatBody
             controlledVelocity = inputVector * moveSpeed;
 
             mouseRay = cam.ScreenPointToRay(Mouse.current.position.ReadValue());
-            if (Physics.Raycast(cam.transform.position, mouseRay.direction, out hitData, 80.0f, 1 << 9))
+            if (Physics.Raycast(cam.transform.position, mouseRay.direction, out hitData, 100.0f, 1 << 9))
             {
                 transform.LookAt(hitData.point);
             }
