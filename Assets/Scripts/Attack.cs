@@ -28,7 +28,6 @@ public abstract class Attack : MonoBehaviour
     protected virtual void Update()
     {
         Age();
-        //transform.Translate(moveDirection.normalized * speed * Time.deltaTime);
         transform.position += moveDirection.normalized * speed * Time.deltaTime;
     }
 
