@@ -7,6 +7,8 @@ public class HomingMissileScript : Attack
     private List<CombatBody> detectedTargets = new List<CombatBody>();
     private CombatBody homingTarget;
     private bool hasValidHomingTarget = false;
+    [SerializeField]
+    float homingPower = 8.0f;
 
     protected override void Apply(CombatBody recentHit)
     {
@@ -26,7 +28,7 @@ public class HomingMissileScript : Attack
 
         if(hasValidHomingTarget)
         {
-            moveDirection = Vector3.Lerp(moveDirection, (homingTarget.transform.position - transform.position).normalized, 0.01f);
+            moveDirection = Vector3.Lerp(moveDirection, (homingTarget.transform.position - transform.position), homingPower * Time.deltaTime);
             FaceForward();
         }
 

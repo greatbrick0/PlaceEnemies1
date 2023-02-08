@@ -52,7 +52,7 @@ public abstract class Attack : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.GetComponent<CombatBody>() == null)
+        if (other.gameObject.GetComponent<CombatBody>() == null)
         {
             return;
         }
@@ -65,7 +65,6 @@ public abstract class Attack : MonoBehaviour
         {
             return;
         }
-        print(other.gameObject.name);
 
         if (FilterHitTarget(otherCombatBody))
         {
