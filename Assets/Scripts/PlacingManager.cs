@@ -15,6 +15,8 @@ public class PlacingManager : MonoBehaviour
     [SerializeField]
     private Vector3 placingModeCamPos = Vector3.up * 30 + Vector3.back * 30;
     [SerializeField]
+    private Vector3 combatModeCamPos;
+    [SerializeField]
     private GameObject mousePlaneRef;
     [SerializeField]
     private Vector3 mousePlaneUpperPos = Vector3.up;
@@ -52,7 +54,7 @@ public class PlacingManager : MonoBehaviour
     public void StartCombat()
     {
         cam.followTarget = playerRef.transform;
-        cam.offset = new Vector3(0, 25, -25);
+        cam.offset = combatModeCamPos;
         mousePlaneRef.transform.position = mousePlaneUpperPos;
         ReleaseAllTiles();
     }
