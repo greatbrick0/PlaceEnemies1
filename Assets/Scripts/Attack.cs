@@ -13,7 +13,7 @@ public abstract class Attack : MonoBehaviour
     [SerializeField]
     public float lifetime = 20.0f;
     protected float age = 0.0f;
-    [SerializeField]
+    [SerializeField] [Min(0)]
     public int power = 10; //used as the amount of damage to deal, healing applied, or any other primary stat
 
     protected Collider hitbox;

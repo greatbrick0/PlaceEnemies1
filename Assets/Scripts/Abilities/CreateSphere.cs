@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CreateSphere : Abilty
+public class CreateSphere : Ability
 {
     GameObject spherePrefab;
     GameObject sphereRef;

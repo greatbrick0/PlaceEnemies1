@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HommingMissileAbility : Abilty
+public class HomingMissileAbility : Ability
 {
     GameObject homingPrefab;
     GameObject homingRef;
 
-    public HommingMissileAbility(GameObject _user) : base(_user)
+    public HomingMissileAbility(GameObject _user = null) : base(_user)
     {
 
     }
@@ -18,6 +18,7 @@ public class HommingMissileAbility : Abilty
         cooldownTime = 2.0f;
         effectiveRange = 15.0f;
         description = "Shoot a hand that moves towards enemies.";
+        displayName = "Ghost Hands";
     }
 
     public override bool Use(Vector3 targetPosition)

@@ -20,14 +20,14 @@ public abstract class CombatBody : Placeable
     protected Vector3 controlledVelocity;
     public Vector3 forcedVelocity;
     [SerializeField]
-    protected List<Abilty> abilityList;
+    protected List<Ability> abilityList;
 
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         moveSpeed = baseMoveSpeed;
-        abilityList = new List<Abilty> { new LockedAbility(gameObject) };
+        abilityList = new List<Ability> { new LockedAbility(gameObject) };
     }
 
     public override void Release()
@@ -63,7 +63,7 @@ public abstract class CombatBody : Placeable
 
     private void UpdateCooldowns(float delta)
     {
-        foreach(Abilty ii in abilityList)
+        foreach(Ability ii in abilityList)
         {
             if(ii.remainingCooldown > 0.0f)
             {

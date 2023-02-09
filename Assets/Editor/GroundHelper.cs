@@ -9,9 +9,9 @@ public class GroundEditor : Editor
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
+        GroundScript myScript = (GroundScript)target;
 
         GUILayout.Label("\nDebugging");
-        GroundScript myScript = (GroundScript)target;
         if (GUILayout.Button("Force Release"))
             myScript.ForceRelease();
 

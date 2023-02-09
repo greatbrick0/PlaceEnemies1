@@ -9,7 +9,7 @@ public class TestEnemyScript : NPCController
         base.Start();
 
         abilityList[0] = new MagicArrowAbility(gameObject);
-        foreach (Abilty abilty in abilityList)
+        foreach (Ability abilty in abilityList)
         {
             abilty.EnableCooldown();
         }
