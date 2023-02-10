@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 [Serializable]
-public abstract class Ability
+public abstract class Ability : ScriptableObject
 {
     protected GameObject user;
 
@@ -15,7 +15,7 @@ public abstract class Ability
     [NonSerialized]
     public float remainingCooldown = 0.0f;
     
-    [SerializeField][field: Min(0.1f)]
+    [field: SerializeField][field: Min(0.1f)]
     public float effectiveRange { get; protected set; }
     //effective range is not automatically accurate 
     //effective range is meant to be read by AI so that it knows how to use each ability
