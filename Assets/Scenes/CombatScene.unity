@@ -915,9 +915,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f68da333fad59124b94033ca77f365e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackToAdd: {fileID: 9159844377764210428, guid: e8c8252d68ab3e24db8fe02ef7b67236,
-    type: 3}
-  attackName: Piercing Arrow
+  attackEntries:
+  - entryName: PiercingArrow
+    entryGameObject: {fileID: 9159844377764210428, guid: e8c8252d68ab3e24db8fe02ef7b67236,
+      type: 3}
+  - entryName: GhostHand
+    entryGameObject: {fileID: 9159844377764210428, guid: 5069d2fd6e4b636409f7889f21487795,
+      type: 3}
 --- !u!1 &603187657
 GameObject:
   m_ObjectHideFlags: 0
