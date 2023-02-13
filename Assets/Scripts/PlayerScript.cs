@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerScript : CombatBody
 {
+    [SerializeField]
+    private CombatUIBrain combatUIC;
     private PlayerInput inputComponent;
     private Vector3 inputVector = Vector3.zero;
     private InputAction movementInput;
@@ -20,7 +22,8 @@ public class PlayerScript : CombatBody
     public override void Release()
     {
         base.Release();
-
+        //Best place i saw to place this. maybe it can be moved idk... -Ethan
+        combatUIC = GameObject.Find("CombatUI").GetComponent<CombatUIBrain>();
         inputComponent.enabled = true;
     }
 
@@ -73,12 +76,21 @@ public class PlayerScript : CombatBody
 
     void OnFirstAbility()
     {
-        UseAbility(0, hitData.point);       
+        UseAbility(0, hitData.point);
+       
     }
 
     void OnSecondAbility()
     {
         UseAbility(1, hitData.point);
+ 
+    }
+
+    protected override void UseAbility(int abilityIndex, Vector3 pos)
+    {
+        base.UseAbility(abilityIndex, pos);
+        if (combatUIC != null)
+          combatUIC.TriggerAbility(abilityIndex);
     }
 
     public void SetCameraRef(Camera newCam)

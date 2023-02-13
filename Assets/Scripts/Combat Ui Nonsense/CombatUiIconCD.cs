@@ -1,18 +1,89 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CombatUiIconCD : MonoBehaviour
 {
+    [SerializeField]
+    private Image ImageCooldown;
+    [SerializeField]
+    private Image offCooldownGlow;
+
+
+
+    //is it on cooldown?
+    private bool isCooldown = false;
+    [SerializeField]
+    private float cooldownTimer;
+
+    //This counts UP, not DOWN (im sorry.)
+    private float timeOnCooldown;
+
     // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-        
+        ImageCooldown.fillAmount = 0.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        applyCooldown();
+    }
+
+    void applyCooldown()
+    {
+        if (isCooldown)
+        {
+            timeOnCooldown += Time.deltaTime;
+
+            if (timeOnCooldown >= cooldownTimer)
+            {
+                isCooldown = false;
+                ImageCooldown.fillAmount = 0.0f;
+                offCooldownGlow.gameObject.SetActive(true);
+            }
+            else
+            {
+                ImageCooldown.fillAmount = timeOnCooldown / cooldownTimer;
+            }
+            
+        }
         
+        
+    }    
+
+    public void UseSpell()
+    {
+        if (isCooldown)
+        {
+            return;
+        }
+        isCooldown = true;
+        timeOnCooldown = 0.0f;
+        offCooldownGlow.gameObject.SetActive(!isCooldown);
+    }
+
+    public void CooldownHardReset()
+    {
+        timeOnCooldown = 0.0f;
+        isCooldown = false;
+
+    }
+
+    
+    //For flat changes (im assuming you wouldnt code a status effect to be +2.5 seconds, but eh
+    public void CooldownTimeManipulate(int changeVal)
+    {
+        cooldownTimer += changeVal;
+    }
+
+
+    //for percent changes (Assuming that making the cooldown take twice as long would be changeVal=2
+    public void CooldownTimeManipulate(float changeVal)
+    {
+        cooldownTimer *= changeVal;
     }
 }
