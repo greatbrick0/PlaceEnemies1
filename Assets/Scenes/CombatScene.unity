@@ -859,6 +859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 586905833}
   - component: {fileID: 586905832}
+  - component: {fileID: 586905834}
   m_Layer: 0
   m_Name: ArenaSceneManager
   m_TagString: Untagged
@@ -902,6 +903,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &586905834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586905831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f68da333fad59124b94033ca77f365e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackEntries:
+  - entryName: Sphere
+    entryGameObject: {fileID: 6461912419007584524, guid: 3b1bf2c1c5d420e47875910fa4c3b9b3,
+      type: 3}
+  - entryName: PiercingArrow
+    entryGameObject: {fileID: 9159844377764210428, guid: e8c8252d68ab3e24db8fe02ef7b67236,
+      type: 3}
+  - entryName: GhostHand
+    entryGameObject: {fileID: 9159844377764210428, guid: 5069d2fd6e4b636409f7889f21487795,
+      type: 3}
 --- !u!1 &603187657
 GameObject:
   m_ObjectHideFlags: 0
@@ -14774,6 +14797,26 @@ PrefabInstance:
     - target: {fileID: 5278063312921407106, guid: 900695cbe84cd7649a6dff40d0e6de87,
         type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278063312921407109, guid: 900695cbe84cd7649a6dff40d0e6de87,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278063312921407109, guid: 900695cbe84cd7649a6dff40d0e6de87,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278063312921407109, guid: 900695cbe84cd7649a6dff40d0e6de87,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000008742278
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278063312921407109, guid: 900695cbe84cd7649a6dff40d0e6de87,
+        type: 3}
+      propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5333503887477860095, guid: 900695cbe84cd7649a6dff40d0e6de87,

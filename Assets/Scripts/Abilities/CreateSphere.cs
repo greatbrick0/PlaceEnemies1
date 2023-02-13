@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CreateSphere : Abilty
+public class CreateSphere : Ability
 {
     GameObject spherePrefab;
     GameObject sphereRef;
@@ -14,7 +14,7 @@ public class CreateSphere : Abilty
 
     protected override void SetVars()
     {
-        spherePrefab = Resources.Load<GameObject>("Sphere");
+        spherePrefab = AttackDict.attacks["Sphere"];
         cooldownTime = 6.0f;
         effectiveRange = 30.0f;
         description = "This is a testing ability.";

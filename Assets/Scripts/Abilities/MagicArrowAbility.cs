@@ -2,22 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagicArrowAbility : Abilty
+public class MagicArrowAbility : Ability
 {
     GameObject arrowPrefab;
     GameObject arrowRef;
 
-    public MagicArrowAbility(GameObject _user) : base(_user)
+    public MagicArrowAbility(GameObject _user = null) : base(_user)
     {
 
     }
 
     protected override void SetVars()
     {
-        arrowPrefab = Resources.Load<GameObject>("Attacks/MagicArrow");
+        arrowPrefab = AttackDict.attacks["PiercingArrow"];
         cooldownTime = 3.5f;
         effectiveRange = 15.0f;
         description = "Shoot an arrow that passes through enemies.";
+        displayName = "Piercing Arrow";
     }
 
     public override bool Use(Vector3 targetPosition)

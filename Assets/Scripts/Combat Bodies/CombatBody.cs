@@ -20,14 +20,18 @@ public abstract class CombatBody : Placeable
     protected Vector3 controlledVelocity;
     public Vector3 forcedVelocity;
     [SerializeField]
-    protected List<Abilty> abilityList;
+    protected List<Ability> abilityList;
+    [SerializeField]
+    public List<StatusEffect> effectList = new List<StatusEffect>();
+    private List<StatusEffect> timedEffects = new List<StatusEffect>();
+    private List<StatusEffect> movementEffects = new List<StatusEffect>();
 
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         moveSpeed = baseMoveSpeed;
-        abilityList = new List<Abilty> { new LockedAbility(gameObject) };
+        abilityList = new List<Ability> { new LockedAbility(gameObject) };
     }
 
     public override void Release()
@@ -54,6 +58,7 @@ public abstract class CombatBody : Placeable
         {
             rb.velocity = controlledVelocity + forcedVelocity;
             UpdateCooldowns(Time.deltaTime);
+            UpdateEffectTimes(Time.deltaTime);
         }
         else
         {
@@ -63,7 +68,7 @@ public abstract class CombatBody : Placeable
 
     private void UpdateCooldowns(float delta)
     {
-        foreach(Abilty ii in abilityList)
+        foreach(Ability ii in abilityList)
         {
             if(ii.remainingCooldown > 0.0f)
             {
@@ -104,5 +109,58 @@ public abstract class CombatBody : Placeable
                 transform.GetChild(0).GetComponent<Animationcontroller>().AbilityUsed();
             }
         }
+    }
+
+    public void AddStatusEffect(StatusEffect newEffectType) //not done
+    {
+        StatusEffect previousEffect = CheckForDuplicateEffects(newEffectType.effectName);
+
+        if (previousEffect == null || newEffectType.behaviour == StatusEffect.DuplicateBahviours.Ignore)
+        {
+            InstantiateEffect(newEffectType);
+            return;
+        }
+        else if(newEffectType.behaviour == StatusEffect.DuplicateBahviours.Overwrite)
+        {
+
+        }
+    }
+
+    private void InstantiateEffect(StatusEffect effect)
+    {
+        StatusEffect newEffect = Instantiate(effect);
+
+        effectList.Add(newEffect);
+        if (newEffect.hasDuration) timedEffects.Add(newEffect);
+        if (newEffect.affectsMoveSpeed)
+        {
+            movementEffects.Add(newEffect);
+        }
+    }
+
+    private void UpdateEffectTimes(float delta)
+    {
+        for(int ii = 0; ii < timedEffects.Count; ii++)
+        {
+            timedEffects[ii].IncreaseTime(delta);
+        }
+    }
+
+    public void RemoveEffectFromLists(StatusEffect effectToRemove) //not done
+    {
+        effectList.Remove(effectToRemove);
+
+    }
+
+    private StatusEffect CheckForDuplicateEffects(string newEffectType)
+    {
+        for(int ii = 0; ii < effectList.Count; ii++)
+        {
+            if(effectList[ii].effectName == newEffectType)
+            {
+                return effectList[ii];
+            }
+        }
+        return null;
     }
 }
