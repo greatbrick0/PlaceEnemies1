@@ -15,8 +15,6 @@ public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
     private int remainingUses;
 
     [SerializeField]
-    private string objectDescription = "";
-    [SerializeField]
     private Vector2 hoverSize = Vector2.one * 1.1f;
     [SerializeField]
     private Vector2 hoverOffset = Vector2.up * 20;
