@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewAbility", menuName = "Abilities/Magic Arrow")]
 public class MagicArrowAbility : Ability
 {
     GameObject arrowPrefab;

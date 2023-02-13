@@ -21,6 +21,10 @@ public abstract class CombatBody : Placeable
     public Vector3 forcedVelocity;
     [SerializeField]
     protected List<Ability> abilityList;
+    [SerializeField]
+    public List<StatusEffect> effectList = new List<StatusEffect>();
+    private List<StatusEffect> timedEffects = new List<StatusEffect>();
+    private List<StatusEffect> movementEffects = new List<StatusEffect>();
 
     protected virtual void Start()
     {
@@ -54,6 +58,7 @@ public abstract class CombatBody : Placeable
         {
             rb.velocity = controlledVelocity + forcedVelocity;
             UpdateCooldowns(Time.deltaTime);
+            UpdateEffectTimes(Time.deltaTime);
         }
         else
         {
@@ -104,5 +109,31 @@ public abstract class CombatBody : Placeable
                 transform.GetChild(0).GetComponent<Animationcontroller>().AbilityUsed();
             }
         }
+    }
+
+    public void AddStatusEffect(StatusEffect newEffectType) //not done
+    {
+        StatusEffect newEffect = Instantiate(newEffectType);
+
+        effectList.Add(newEffect);
+        if (newEffect.hasDuration) timedEffects.Add(newEffect);
+        if (newEffect.affectsMoveSpeed)
+        {
+            movementEffects.Add(newEffect);
+        }
+    }
+
+    private void UpdateEffectTimes(float delta)
+    {
+        for(int ii = 0; ii < timedEffects.Count; ii++)
+        {
+            timedEffects[ii].IncreaseTime(delta);
+        }
+    }
+
+    public void RemoveEffectFromLists(StatusEffect effectToRemove) //not done
+    {
+        effectList.Remove(effectToRemove);
+
     }
 }

@@ -14,8 +14,9 @@ public abstract class Ability
     public float cooldownTime { get; protected set; }
     [NonSerialized]
     public float remainingCooldown = 0.0f;
-    
-    [field: SerializeField][field: Min(0.1f)]
+
+    [field: SerializeField]
+    [field: Min(0.01f)]
     public float effectiveRange { get; protected set; }
     //effective range is not automatically accurate 
     //effective range is meant to be read by AI so that it knows how to use each ability
