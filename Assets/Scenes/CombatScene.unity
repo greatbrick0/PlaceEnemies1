@@ -915,9 +915,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f68da333fad59124b94033ca77f365e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackToAdd: {fileID: 9159844377764210428, guid: e8c8252d68ab3e24db8fe02ef7b67236,
-    type: 3}
-  attackName: Piercing Arrow
+  attackEntries:
+  - entryName: Sphere
+    entryGameObject: {fileID: 6461912419007584524, guid: 3b1bf2c1c5d420e47875910fa4c3b9b3,
+      type: 3}
+  - entryName: PiercingArrow
+    entryGameObject: {fileID: 9159844377764210428, guid: e8c8252d68ab3e24db8fe02ef7b67236,
+      type: 3}
+  - entryName: GhostHand
+    entryGameObject: {fileID: 9159844377764210428, guid: 5069d2fd6e4b636409f7889f21487795,
+      type: 3}
 --- !u!1 &603187657
 GameObject:
   m_ObjectHideFlags: 0
@@ -14790,6 +14797,26 @@ PrefabInstance:
     - target: {fileID: 5278063312921407106, guid: 900695cbe84cd7649a6dff40d0e6de87,
         type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278063312921407109, guid: 900695cbe84cd7649a6dff40d0e6de87,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278063312921407109, guid: 900695cbe84cd7649a6dff40d0e6de87,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278063312921407109, guid: 900695cbe84cd7649a6dff40d0e6de87,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000008742278
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278063312921407109, guid: 900695cbe84cd7649a6dff40d0e6de87,
+        type: 3}
+      propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5333503887477860095, guid: 900695cbe84cd7649a6dff40d0e6de87,

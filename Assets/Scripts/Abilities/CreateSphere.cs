@@ -14,7 +14,7 @@ public class CreateSphere : Ability
 
     protected override void SetVars()
     {
-        spherePrefab = Resources.Load<GameObject>("Sphere");
+        spherePrefab = AttackDict.attacks["Sphere"];
         cooldownTime = 6.0f;
         effectiveRange = 30.0f;
         description = "This is a testing ability.";

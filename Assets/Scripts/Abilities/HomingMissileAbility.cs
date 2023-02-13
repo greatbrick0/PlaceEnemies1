@@ -14,7 +14,7 @@ public class HomingMissileAbility : Ability
 
     protected override void SetVars()
     {
-        homingPrefab = Resources.Load<GameObject>("Attacks/HomingMissile");
+        homingPrefab = AttackDict.attacks["GhostHand"];
         cooldownTime = 2.0f;
         effectiveRange = 15.0f;
         description = "Shoot a hand that moves towards enemies.";

@@ -14,7 +14,7 @@ public class MagicArrowAbility : Ability
 
     protected override void SetVars()
     {
-        arrowPrefab = Resources.Load<GameObject>("Attacks/MagicArrow");
+        arrowPrefab = AttackDict.attacks["PiercingArrow"];
         cooldownTime = 3.5f;
         effectiveRange = 15.0f;
         description = "Shoot an arrow that passes through enemies.";
