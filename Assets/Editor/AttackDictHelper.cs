@@ -14,21 +14,21 @@ public class AttackDictEditor : Editor
         DrawDefaultInspector();
         AttackDict myScript = (AttackDict)target;
 
-        if (GUILayout.Button("Add Attack"))
-        {
-            numberOfAttacks = myScript.AddAttack();
-            mostRecentName = myScript.mostRecentName;
-        }
+        //if (GUILayout.Button("Add Attack"))
+        //{
+        //    numberOfAttacks = myScript.AddAttack();
+        //    mostRecentName = myScript.mostRecentName;
+        //}
 
-        GUILayout.Label("Most Recent Attack: " + mostRecentName);
-        GUILayout.Label("Number Of Attacks: " + numberOfAttacks);
+        //GUILayout.Label("Most Recent Attack: " + mostRecentName);
+        //GUILayout.Label("Number Of Attacks: " + numberOfAttacks);
 
-        GUILayout.Label("");
-        if (GUILayout.Button("Clear All"))
-        {
-            myScript.ClearDict();
-            mostRecentName = myScript.mostRecentName;
-            numberOfAttacks = 0;
-        }
+        //GUILayout.Label("");
+        //if (GUILayout.Button("Clear All"))
+        //{
+        //    myScript.ClearDict();
+        //    mostRecentName = myScript.mostRecentName;
+        //    numberOfAttacks = 0;
+        //}
     }
 }

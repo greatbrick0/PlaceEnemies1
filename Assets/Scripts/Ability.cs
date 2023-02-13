@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 [Serializable]
-public abstract class Ability : ScriptableObject
+public abstract class Ability
 {
     protected GameObject user;
 

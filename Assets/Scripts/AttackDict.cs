@@ -5,25 +5,23 @@ using UnityEngine;
 
 public class AttackDict : MonoBehaviour
 {
+    [Serializable]
+    public class AttackDictEntry
+    {
+        public string entryName = "";
+        [SerializeField]
+        public GameObject entryGameObject;
+    }
+    [SerializeField]
+    public List<AttackDictEntry> attackEntries = new List<AttackDictEntry>();
+
     public static Dictionary<string, GameObject> attacks = new Dictionary<string, GameObject>();
 
-    [SerializeField]
-    private GameObject attackToAdd;
-    [SerializeField]
-    private string attackName;
-
-    public string mostRecentName { get; private set; } = "None";
-
-    public int AddAttack()
+    private void OnEnable()
     {
-        attacks.Add(attackName, attackToAdd);
-        mostRecentName = attackName;
-        return attacks.Count;
-    }
-
-    public void ClearDict()
-    {
-        attacks.Clear();
-        mostRecentName = "None";
+        for(int ii = 0; ii < attackEntries.Count; ii++)
+        {
+            attacks.Add(attackEntries[ii].entryName, attackEntries[ii].entryGameObject);
+        }
     }
 }
