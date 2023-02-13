@@ -113,7 +113,22 @@ public abstract class CombatBody : Placeable
 
     public void AddStatusEffect(StatusEffect newEffectType) //not done
     {
-        StatusEffect newEffect = Instantiate(newEffectType);
+        StatusEffect previousEffect = CheckForDuplicateEffects(newEffectType.effectName);
+
+        if (previousEffect == null || newEffectType.behaviour == StatusEffect.DuplicateBahviours.Ignore)
+        {
+            InstantiateEffect(newEffectType);
+            return;
+        }
+        else if(newEffectType.behaviour == StatusEffect.DuplicateBahviours.Overwrite)
+        {
+
+        }
+    }
+
+    private void InstantiateEffect(StatusEffect effect)
+    {
+        StatusEffect newEffect = Instantiate(effect);
 
         effectList.Add(newEffect);
         if (newEffect.hasDuration) timedEffects.Add(newEffect);
@@ -135,5 +150,17 @@ public abstract class CombatBody : Placeable
     {
         effectList.Remove(effectToRemove);
 
+    }
+
+    private StatusEffect CheckForDuplicateEffects(string newEffectType)
+    {
+        for(int ii = 0; ii < effectList.Count; ii++)
+        {
+            if(effectList[ii].effectName == newEffectType)
+            {
+                return effectList[ii];
+            }
+        }
+        return null;
     }
 }

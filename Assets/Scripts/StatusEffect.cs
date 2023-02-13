@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewAbility", menuName = "Abilities/Magic Arrow")]
 public abstract class StatusEffect : ScriptableObject
 {
     [SerializeField]
@@ -11,13 +10,14 @@ public abstract class StatusEffect : ScriptableObject
     public string effectName { get; protected set; } = "";
     public enum DuplicateBahviours
     {
-        Preserve=0,
-        Overwrite=1,
-        RefreshTime=2,
-        IncreaseIntensity=3,
-        SumIntensity=4,
-        SumTime=5,
-        SumVars=6
+        Ignore,
+        Preserve,
+        Overwrite,
+        RefreshTime,
+        IncreaseIntensity,
+        SumIntensity,
+        SumTime,
+        SumVars
     }
     public DuplicateBahviours behaviour { get; protected set; } = DuplicateBahviours.RefreshTime;
     [SerializeField]
@@ -40,7 +40,10 @@ public abstract class StatusEffect : ScriptableObject
         hostListIndex = newIndex;
     }
 
-    protected abstract void ApplyAffect();
+    protected virtual float ApplyMovementAffect(float previousMoveSpeed)
+    {
+        return previousMoveSpeed;
+    }
     
     public virtual void IncreaseTime(float timePassed)
     {
