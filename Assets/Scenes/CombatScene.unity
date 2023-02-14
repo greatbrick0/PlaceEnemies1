@@ -4577,7 +4577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpellIDList:
   - {fileID: -1440874532, guid: 09319eeabb223b048bce2ab6b90d404d, type: 3}
-  - {fileID: -608041831, guid: 2c60018f4519db34b8f27b9f0595e4fb, type: 3}
+  - {fileID: -804362234, guid: 2c60018f4519db34b8f27b9f0595e4fb, type: 3}
   - {fileID: -159464579, guid: 09319eeabb223b048bce2ab6b90d404d, type: 3}
 --- !u!23 &9671079927487969
 MeshRenderer:
