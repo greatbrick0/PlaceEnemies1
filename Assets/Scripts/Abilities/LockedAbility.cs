@@ -14,6 +14,7 @@ public class LockedAbility : Ability
         cooldownTime = 5.0f;
         effectiveRange = 0.1f;
         description = "This ability is locked.";
+        ID = 0;
     }
 
     public override bool Use(Vector3 targetPosition)

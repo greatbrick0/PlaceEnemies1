@@ -19,6 +19,7 @@ public class HomingMissileAbility : Ability
         effectiveRange = 15.0f;
         description = "Shoot a hand that moves towards enemies.";
         displayName = "Ghost Hands";
+        ID = 2;
     }
 
     public override bool Use(Vector3 targetPosition)

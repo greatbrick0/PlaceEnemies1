@@ -26,6 +26,7 @@ public abstract class Ability
     [TextArea]
     public string description = "No description";
 
+    public int ID = -1;
     public abstract bool Use(Vector3 targetPosition);
 
     protected abstract void SetVars();
