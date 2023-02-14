@@ -4,43 +4,43 @@ using UnityEngine;
 
 public abstract class StatusEffect : ScriptableObject
 {
-    [SerializeField]
+    [field: SerializeField]
     public Sprite icon { get; private set; }
-    [SerializeField]
+    [field: SerializeField]
     public string effectName { get; protected set; } = "";
     public enum DuplicateBahviours
     {
-        Ignore,
-        Preserve,
-        Overwrite,
-        RefreshTime,
-        IncreaseIntensity,
-        SumIntensity,
-        SumTime,
-        SumVars
+        Share, //share lets multiple effects stay on the host
+        Preserve, //preserve prevents any new effects from being added if one already exists
+        Overwrite, //overwrite completely replaces the previous effect
+        RefreshTime, //refresh time resets the age of the existing effect
+        SumTime, //sum time stacks the lifetime of the new effect onto the existing effect
+        MultiplyIntensity, //multiply intensity multiplies the intensity of the new and existing effects
+        SumIntensity, //sum intensity adds the intensity of the new and existing effects
     }
+    [field: SerializeField]
     public DuplicateBahviours behaviour { get; protected set; } = DuplicateBahviours.RefreshTime;
     [SerializeField]
-    protected float intensity = 1.0f;
+    public float intensity = 1.0f;
 
-    [SerializeField]
+    [field: SerializeField]
     public bool affectsMoveSpeed { get; protected set; } = false;
-    [SerializeField]
+    [field: SerializeField]
     public bool hasDuration { get; protected set; } = true;
+    [HideInInspector]
     public float age = 0.0f;
-    [SerializeField]
+    [field: SerializeField] [field: Min(0)]
     public float lifeTime { get; protected set; } = 3.0f;
 
     protected CombatBody host;
     public int hostListIndex { get; private set; }
 
-    public void SetHost(CombatBody newHost, int newIndex)
+    public void SetHost(CombatBody newHost)
     {
         host = newHost;
-        hostListIndex = newIndex;
     }
 
-    protected virtual float ApplyMovementAffect(float previousMoveSpeed)
+    public virtual float ApplyMovementAffect(float previousMoveSpeed)
     {
         return previousMoveSpeed;
     }
@@ -54,8 +54,14 @@ public abstract class StatusEffect : ScriptableObject
         }
     }
 
-    protected virtual void RemoveEffect()
+    public virtual void RemoveEffect()
     {
+        host.RemoveEffectFromLists(this);
         Destroy(this);
+    }
+
+    public void IncreaseLifetime(float addedTime)
+    {
+        lifeTime += addedTime;
     }
 }

@@ -111,19 +111,44 @@ public abstract class CombatBody : Placeable
         }
     }
 
-    public void AddStatusEffect(StatusEffect newEffectType) //not done
+    //someone please clean this function, im too tired
+    public void AddStatusEffect(StatusEffect newEffectType)
     {
+        if (newEffectType.behaviour == StatusEffect.DuplicateBahviours.Preserve) return;
+
         StatusEffect previousEffect = CheckForDuplicateEffects(newEffectType.effectName);
 
-        if (previousEffect == null || newEffectType.behaviour == StatusEffect.DuplicateBahviours.Ignore)
+        if (previousEffect == null || newEffectType.behaviour == StatusEffect.DuplicateBahviours.Share)
         {
             InstantiateEffect(newEffectType);
-            return;
         }
-        else if(newEffectType.behaviour == StatusEffect.DuplicateBahviours.Overwrite)
+        else if (previousEffect == null && newEffectType.behaviour == StatusEffect.DuplicateBahviours.Preserve)
         {
-
+            InstantiateEffect(newEffectType);
         }
+        else if (newEffectType.behaviour == StatusEffect.DuplicateBahviours.Overwrite)
+        {
+            previousEffect.RemoveEffect();
+            Instantiate(newEffectType);
+        }
+        else if (newEffectType.behaviour == StatusEffect.DuplicateBahviours.RefreshTime)
+        {
+            previousEffect.age = 0.0f;
+        }
+        else if (newEffectType.behaviour == StatusEffect.DuplicateBahviours.SumTime)
+        {
+            previousEffect.IncreaseTime(newEffectType.lifeTime);
+        }
+        else if (newEffectType.behaviour == StatusEffect.DuplicateBahviours.MultiplyIntensity)
+        {
+            previousEffect.intensity *= newEffectType.intensity;
+        }
+        else if (newEffectType.behaviour == StatusEffect.DuplicateBahviours.SumIntensity)
+        {
+            previousEffect.intensity += newEffectType.intensity;
+        }
+
+        if (newEffectType.affectsMoveSpeed) moveSpeed = CalculateMoveSpeed();
     }
 
     private void InstantiateEffect(StatusEffect effect)
@@ -146,10 +171,15 @@ public abstract class CombatBody : Placeable
         }
     }
 
-    public void RemoveEffectFromLists(StatusEffect effectToRemove) //not done
+    public void RemoveEffectFromLists(StatusEffect effectToRemove)
     {
         effectList.Remove(effectToRemove);
-
+        if (effectToRemove.hasDuration) timedEffects.Remove(effectToRemove);
+        if (effectToRemove.affectsMoveSpeed)
+        {
+            movementEffects.Remove(effectToRemove);
+            moveSpeed = CalculateMoveSpeed();
+        }
     }
 
     private StatusEffect CheckForDuplicateEffects(string newEffectType)
@@ -162,5 +192,17 @@ public abstract class CombatBody : Placeable
             }
         }
         return null;
+    }
+
+    private float CalculateMoveSpeed()
+    {
+        float calculatedSpeed = baseMoveSpeed;
+
+        for(int ii = 0; ii < movementEffects.Count; ii++)
+        {
+            calculatedSpeed = movementEffects[ii].ApplyMovementAffect(calculatedSpeed);
+        }
+
+        return calculatedSpeed;
     }
 }
