@@ -51,4 +51,12 @@ public class CombatUIBrain : MonoBehaviour
     {
         _abilities[abilityFromList].GetComponent<CombatUiIconCD>().UseSpell();
     }
+
+    public void CycleUI(int cycleNum)
+    {
+        for(int ii = 0; ii < transform.parent.childCount; ii++)
+        {
+            transform.parent.GetChild(ii).gameObject.SetActive(ii == cycleNum);
+        }
+    }
 }
