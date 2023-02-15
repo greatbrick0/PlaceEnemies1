@@ -23,13 +23,13 @@ public class TestEnemyScript : NPCController
             if (targetList.Count > 0) //different enemies can have different movement or pathfinding
             {
                 transform.LookAt(targetList[0].transform.position);
-                rb.velocity = Vector3.zero;
+                controlledVelocity = Vector3.zero * moveSpeed;
                 UseAbility(0, targetList[0].transform.position);
             }
             else
             {
                 transform.eulerAngles = Vector3.zero;
-                rb.velocity = Vector3.zero;
+                controlledVelocity = Vector3.zero * moveSpeed;
             }
         }
 

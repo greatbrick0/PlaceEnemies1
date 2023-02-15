@@ -32,7 +32,7 @@ public abstract class StatusEffect : ScriptableObject
     [field: SerializeField] [field: Min(0)]
     public float lifeTime { get; protected set; } = 3.0f;
 
-    protected CombatBody host;
+    public CombatBody host { get; private set; }
     public int hostListIndex { get; private set; }
 
     public void SetHost(CombatBody newHost)
@@ -43,6 +43,11 @@ public abstract class StatusEffect : ScriptableObject
     public virtual float ApplyMovementAffect(float previousMoveSpeed)
     {
         return previousMoveSpeed;
+    }
+
+    public virtual void ApplyInitialAffect() 
+    {
+
     }
     
     public virtual void IncreaseTime(float timePassed)

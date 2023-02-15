@@ -38,7 +38,7 @@ public class PlayerScript : CombatBody
         team = "player";
         abilityList[0] = new MagicArrowAbility(gameObject);
         abilityList.Add(new HomingMissileAbility(gameObject));
-        abilityList.Add(new LockedAbility(gameObject));
+        abilityList.Add(new ShacklesAbility(gameObject));
     }
 
     protected override void Update()
@@ -81,13 +81,16 @@ public class PlayerScript : CombatBody
     void OnFirstAbility()
     {
         UseAbility(0, hitData.point);
-       
     }
 
     void OnSecondAbility()
     {
         UseAbility(1, hitData.point);
- 
+    }
+
+    void OnThirdAbility()
+    {
+        UseAbility(2, hitData.point);
     }
 
     protected override void UseAbility(int abilityIndex, Vector3 pos)

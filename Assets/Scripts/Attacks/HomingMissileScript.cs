@@ -13,7 +13,7 @@ public class HomingMissileScript : Attack
     protected override void Apply(CombatBody recentHit)
     {
         recentHit.Hurt(power);
-        Destroy(this.gameObject);
+        CompleteAttack();
     }
 
     protected override bool FilterHitTarget(CombatBody hitTarget)
