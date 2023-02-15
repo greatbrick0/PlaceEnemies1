@@ -1089,6 +1089,9 @@ MonoBehaviour:
   - entryName: GhostHand
     entryGameObject: {fileID: 9159844377764210428, guid: 5069d2fd6e4b636409f7889f21487795,
       type: 3}
+  - entryName: Shackles
+    entryGameObject: {fileID: 9159844377764210428, guid: 3659bd1ac1ba63b46bf29de93da14a7e,
+      type: 3}
 --- !u!1 &603187657
 GameObject:
   m_ObjectHideFlags: 0
@@ -4577,8 +4580,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpellIDList:
   - {fileID: -1440874532, guid: 09319eeabb223b048bce2ab6b90d404d, type: 3}
-  - {fileID: -804362234, guid: 2c60018f4519db34b8f27b9f0595e4fb, type: 3}
+  - {fileID: -1440874532, guid: 09319eeabb223b048bce2ab6b90d404d, type: 3}
   - {fileID: -159464579, guid: 09319eeabb223b048bce2ab6b90d404d, type: 3}
+  - {fileID: 1197551539, guid: 09319eeabb223b048bce2ab6b90d404d, type: 3}
 --- !u!23 &9671079927487969
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14913,6 +14917,21 @@ PrefabInstance:
     - target: {fileID: 1086538517488611378, guid: 900695cbe84cd7649a6dff40d0e6de87,
         type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086538517488611381, guid: 900695cbe84cd7649a6dff40d0e6de87,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086538517488611381, guid: 900695cbe84cd7649a6dff40d0e6de87,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000008742278
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086538517488611381, guid: 900695cbe84cd7649a6dff40d0e6de87,
+        type: 3}
+      propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1086538517558261239, guid: 900695cbe84cd7649a6dff40d0e6de87,
