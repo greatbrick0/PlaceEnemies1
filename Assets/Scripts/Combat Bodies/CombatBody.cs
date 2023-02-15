@@ -18,7 +18,9 @@ public abstract class CombatBody : Placeable
     protected float baseMoveSpeed = 3.0f;
     protected float moveSpeed;
     protected Vector3 controlledVelocity;
+    public int sourcesPreventingMovement = 0;
     public Vector3 forcedVelocity;
+    public int sourcesPreventingAbilities = 0;
     [SerializeField]
     protected List<Ability> abilityList;
     [SerializeField]
@@ -56,7 +58,7 @@ public abstract class CombatBody : Placeable
     {
         if (released)
         {
-            rb.velocity = controlledVelocity + forcedVelocity;
+            rb.velocity = (sourcesPreventingMovement == 0 ? controlledVelocity : Vector3.zero) + forcedVelocity;
             UpdateCooldowns(Time.deltaTime);
             UpdateEffectTimes(Time.deltaTime);
         }
@@ -93,14 +95,9 @@ public abstract class CombatBody : Placeable
 
     protected virtual void UseAbility(int abilityIndex, Vector3 pos)
     {
-        if (!released)
-        {
-            return;
-        }
-        if(abilityIndex >= abilityList.Count)
-        {
-            return;
-        }
+        if (!released) return;
+        if (sourcesPreventingAbilities > 0) return;
+        if (abilityIndex >= abilityList.Count) return;
 
         if (abilityList[abilityIndex].Use(pos))
         {
@@ -155,12 +152,11 @@ public abstract class CombatBody : Placeable
     {
         StatusEffect newEffect = Instantiate(effect);
 
+        newEffect.SetHost(gameObject.GetComponent<CombatBody>());
         effectList.Add(newEffect);
         if (newEffect.hasDuration) timedEffects.Add(newEffect);
-        if (newEffect.affectsMoveSpeed)
-        {
-            movementEffects.Add(newEffect);
-        }
+        if (newEffect.affectsMoveSpeed) movementEffects.Add(newEffect);
+        newEffect.ApplyInitialAffect();
     }
 
     private void UpdateEffectTimes(float delta)

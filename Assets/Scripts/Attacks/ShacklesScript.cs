@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ShacklesScript : Attack
 {
+    [SerializeField]
+    public StatusEffect shacklesEffect;
+
     protected override bool FilterHitTarget(CombatBody hitTarget)
     {
         return hitTarget.team != this.team;
@@ -12,6 +15,7 @@ public class ShacklesScript : Attack
     protected override void Apply(CombatBody recentHit)
     {
         recentHit.Hurt(power);
+        recentHit.AddStatusEffect(shacklesEffect);
         CompleteAttack();
     }
 }
