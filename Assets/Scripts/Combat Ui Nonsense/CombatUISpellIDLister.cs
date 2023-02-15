@@ -12,11 +12,15 @@ public class CombatUISpellIDLister : MonoBehaviour
     
     public Sprite GetSpellIcon(int spellID)
     {
-        if (SpellIDList[spellID] != null)
+        if(spellID >= SpellIDList.Count)
         {
-            return SpellIDList[spellID];
+            return SpellIDList[0];
         }
-        return SpellIDList[0];
+        if (SpellIDList[spellID] == null)
+        {
+            return SpellIDList[0];
+        }
+        return SpellIDList[spellID];
     }
     
 }
