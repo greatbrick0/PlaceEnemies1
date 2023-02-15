@@ -23,9 +23,10 @@ public class PlayerScript : CombatBody
     {
         base.Release();
         //Best place i saw to place this. maybe it can be moved idk... -Ethan
+       
+            combatUIC = GameObject.Find("CombatUI").GetComponent<CombatUIBrain>();
         if (combatUIC != null)
         {
-            combatUIC = GameObject.Find("CombatUI").GetComponent<CombatUIBrain>();
             combatUIC.ConnectSpellList(abilityList);
         }
         inputComponent.enabled = true;

@@ -40,7 +40,7 @@ public class CombatUIBrain : MonoBehaviour
     public void ConnectSpellList(List<Ability> PlayerSpellList)
     {
         for (int i = 0; i < PlayerSpellList.Count; i++) 
-        {  
+        {
             _abilities[i].GetComponent<CombatUiIconCD>().ChangeSpellIcon(_spellListForIcon.GetSpellIcon(PlayerSpellList[i].ID));
             _abilities[i].GetComponent<CombatUiIconCD>().CooldownTimeManipulate(PlayerSpellList[i].cooldownTime);
         }
