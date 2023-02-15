@@ -74,10 +74,6 @@ public class CombatUiIconCD : MonoBehaviour
         isCooldown = false;
 
     }
-
-    
-    
-
    
     public void CooldownTimeManipulate(float changeVal)
     {
