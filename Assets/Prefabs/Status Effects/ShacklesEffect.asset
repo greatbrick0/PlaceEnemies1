@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ShacklesEffect
   m_EditorClassIdentifier: 
   <icon>k__BackingField: {fileID: 0}
-  <effectName>k__BackingField: 
+  <effectName>k__BackingField: Shackles
   <behaviour>k__BackingField: 3
   intensity: 1
   <affectsMoveSpeed>k__BackingField: 0

@@ -19,6 +19,6 @@ MonoBehaviour:
   <affectsMoveSpeed>k__BackingField: 0
   <hasDuration>k__BackingField: 1
   age: 0
-  <lifeTime>k__BackingField: 3
+  <lifeTime>k__BackingField: 1.5
   preventsMovement: 1
-  preventsAbilities: 0
+  preventsAbilities: 1
