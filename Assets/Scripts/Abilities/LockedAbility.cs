@@ -13,8 +13,14 @@ public class LockedAbility : Ability
     {
         cooldownTime = 5.0f;
         effectiveRange = 0.1f;
-        description = "This ability is locked.";
+        SetDisplayVars();
         ID = 0;
+    }
+
+    public override void SetDisplayVars()
+    {
+        description = "This ability is locked.";
+        displayName = "Locked";
     }
 
     public override bool Use(Vector3 targetPosition)

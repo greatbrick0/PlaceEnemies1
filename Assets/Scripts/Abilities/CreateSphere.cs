@@ -17,7 +17,13 @@ public class CreateSphere : Ability
         spherePrefab = AttackDict.attacks["Sphere"];
         cooldownTime = 6.0f;
         effectiveRange = 30.0f;
+        SetDisplayVars();
+    }
+
+    public override void SetDisplayVars()
+    {
         description = "This is a testing ability.";
+        displayName = "Create Sphere";
     }
 
     public override bool Use(Vector3 targetPosition)

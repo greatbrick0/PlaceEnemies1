@@ -17,10 +17,14 @@ public class MagicArrowAbility : Ability
         arrowPrefab = AttackDict.attacks["PiercingArrow"];
         cooldownTime = 3.5f;
         effectiveRange = 15.0f;
+        SetDisplayVars();
+        ID = 1;
+    }
+
+    public override void SetDisplayVars()
+    {
         description = "Shoot an arrow that passes through enemies.";
         displayName = "Piercing Arrow";
-        ID = 1;
-
     }
 
     public override bool Use(Vector3 targetPosition)

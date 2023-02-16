@@ -17,10 +17,15 @@ public class ShacklesAbility : Ability
         shacklesPrefab = AttackDict.attacks["Shackles"];
         cooldownTime = 3.0f;
         effectiveRange = 12.0f;
-        description = "Shoot a set of shackles that prevent an enemy from moving for a short time.";
-        displayName = "Shackles";
+        SetDisplayVars();
         ID = 3;
 
+    }
+
+    public override void SetDisplayVars()
+    {
+        description = "Shoot a set of shackles that prevent an enemy from moving for a short time.";
+        displayName = "Shackles";
     }
 
     public override bool Use(Vector3 targetPosition)

@@ -17,9 +17,14 @@ public class HomingMissileAbility : Ability
         homingPrefab = AttackDict.attacks["GhostHand"];
         cooldownTime = 2.0f;
         effectiveRange = 15.0f;
-        description = "Shoot a hand that moves towards enemies.";
-        displayName = "Ghost Hands";
+        SetDisplayVars();
         ID = 2;
+    }
+
+    public override void SetDisplayVars()
+    {
+        description = "Shoot hands that home in on nearby enemies.";
+        displayName = "Ghost Hands";
     }
 
     public override bool Use(Vector3 targetPosition)

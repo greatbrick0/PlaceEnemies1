@@ -21,15 +21,15 @@ public abstract class Ability
     //effective range is not automatically accurate 
     //effective range is meant to be read by AI so that it knows how to use each ability
 
-    [field: SerializeField]
     public string displayName { get; protected set; } = "";
-    [TextArea]
-    public string description = "No description";
+    public string description { get; protected set; } = "No description";
 
     public int ID = -1;
     public abstract bool Use(Vector3 targetPosition);
 
     protected abstract void SetVars();
+
+    public abstract void SetDisplayVars();
 
     public Ability(GameObject _user = null)
     {

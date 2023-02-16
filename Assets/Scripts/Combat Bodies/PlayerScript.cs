@@ -94,6 +94,11 @@ public class PlayerScript : CombatBody
         UseAbility(2, hitData.point);
     }
 
+    void OnFourthAbility()
+    {
+        UseAbility(2, hitData.point);
+    }
+
     protected override void UseAbility(int abilityIndex, Vector3 pos)
     {
         base.UseAbility(abilityIndex, pos);

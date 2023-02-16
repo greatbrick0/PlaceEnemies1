@@ -15,7 +15,7 @@ public class AttackDict : MonoBehaviour
     [SerializeField]
     public List<AttackDictEntry> attackEntries = new List<AttackDictEntry>();
 
-    public static Dictionary<string, GameObject> attacks = new Dictionary<string, GameObject>();
+    public static Dictionary<string, GameObject> attacks { get; private set; } = new Dictionary<string, GameObject>();
 
     private void OnEnable()
     {
