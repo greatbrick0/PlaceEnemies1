@@ -13,6 +13,7 @@ public class SpellHolder : MonoBehaviour
 
     [SerializeField]
     private Vector2 originalPos = Vector2.zero;
+    public Vector2 equippedPos = Vector2.zero;
     [SerializeField]
     private string abilityName = "";
     [SerializeField]
