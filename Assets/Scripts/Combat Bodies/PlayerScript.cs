@@ -20,11 +20,6 @@ public class PlayerScript : CombatBody
 
     public LayerMask layerMask;
 
-
-    //animator
-    private Animator animator;
-    //
-
     public override void Release()
     {
         base.Release();
@@ -40,9 +35,6 @@ public class PlayerScript : CombatBody
 
     protected override void Start()
     {
-        //get component
-        animator = GetComponent<Animator>();
-        //
         base.Start();
 
         team = "player";
@@ -87,29 +79,17 @@ public class PlayerScript : CombatBody
 
     void OnFirstAbility()
     {
-        //sets attack1 trigger
-        animator.SetTrigger("Attack1");
-        //
         UseAbility(0, hitData.point);
-     
     }
 
     void OnSecondAbility()
     {
-        //
-        animator.SetTrigger("Attack1");
-        //
         UseAbility(1, hitData.point);
-
     }
 
     void OnThirdAbility()
     {
-        //
-        animator.SetTrigger("Attack1");
-        //
         UseAbility(2, hitData.point);
-     
     }
 
     void OnFourthAbility()
