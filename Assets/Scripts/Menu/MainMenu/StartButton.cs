@@ -7,6 +7,6 @@ public class StartButton : MonoBehaviour
 {
     public void LoadCombatScene()
     {
-        SceneManager.LoadScene("CombatScene");
+        SceneManager.LoadScene("TimelineScene");
     }
 }
