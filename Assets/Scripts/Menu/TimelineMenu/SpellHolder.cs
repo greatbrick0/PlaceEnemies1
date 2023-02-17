@@ -14,11 +14,14 @@ public class SpellHolder : MonoBehaviour
     [SerializeField]
     private Vector2 originalPos = Vector2.zero;
     public Vector2 equippedPos = Vector2.zero;
+
     [SerializeField]
     private string abilityName = "";
     [SerializeField]
     [TextArea]
     private string abilityDescription = "";
+    [SerializeField]
+    public string spellTypeGroup { get; private set; } = "rgb";
 
     private HolderGroup holderGroupRef;
     private Vector2 mousePos = Vector2.zero;

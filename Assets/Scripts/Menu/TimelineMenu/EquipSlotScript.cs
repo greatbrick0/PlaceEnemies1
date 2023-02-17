@@ -15,6 +15,9 @@ public class EquipSlotScript : MonoBehaviour
     [SerializeField]
     private Vector2 hoverBounds = Vector2.one * 100;
 
+    [SerializeField]
+    private string acceptedSpellTypeGroup = "rgb";
+    
     public SpellHolder heldSpell;
 
     private void Start()
@@ -47,6 +50,8 @@ public class EquipSlotScript : MonoBehaviour
 
     public bool AttemptAttachSpell(SpellHolder spell)
     {
+        if (spell.spellTypeGroup != acceptedSpellTypeGroup) return false;
+
         if(spell.equippedSlotRef == null)
         {
             RemoveSpell();
@@ -54,8 +59,8 @@ public class EquipSlotScript : MonoBehaviour
             return true;
         }
         if(spell.equippedSlotRef != this)
-        {
-            return false; //swap with sibling
+        { //swap with sibling
+            return false; //currently not supported
         }
         else
         {
