@@ -22,7 +22,7 @@ public abstract class CombatBody : Placeable
     public Vector3 forcedVelocity;
     public int sourcesPreventingAbilities = 0;
     [SerializeField]
-    protected List<Ability> abilityList;
+    protected List<Ability> abilityList = new List<Ability>();
     [SerializeField]
     public List<StatusEffect> effectList = new List<StatusEffect>();
     private List<StatusEffect> timedEffects = new List<StatusEffect>();
@@ -33,7 +33,7 @@ public abstract class CombatBody : Placeable
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         moveSpeed = baseMoveSpeed;
-        abilityList = new List<Ability> { new LockedAbility(gameObject) };
+        if (abilityList.Count <= 0) abilityList.Add(new LockedAbility(gameObject));
     }
 
     public override void Release()

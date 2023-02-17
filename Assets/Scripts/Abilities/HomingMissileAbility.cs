@@ -19,6 +19,7 @@ public class HomingMissileAbility : Ability
         effectiveRange = 15.0f;
         SetDisplayVars();
         ID = 2;
+        colour = ColourTypes.Green;
     }
 
     public override void SetDisplayVars()

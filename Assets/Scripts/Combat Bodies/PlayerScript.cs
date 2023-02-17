@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Reflection;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -45,9 +46,6 @@ public class PlayerScript : CombatBody
         base.Start();
 
         team = "player";
-        abilityList[0] = new MagicArrowAbility(gameObject);
-        abilityList.Add(new HomingMissileAbility(gameObject));
-        abilityList.Add(new ShacklesAbility(gameObject));
     }
 
     protected override void Update()
@@ -129,5 +127,22 @@ public class PlayerScript : CombatBody
     public void SetCameraRef(Camera newCam)
     {
         cam = newCam;
+    }
+
+    public void SetAbilities(List<Ability> newAbilities)
+    {
+        ConstructorInfo constructor;
+        for (int ii = 0; ii < newAbilities.Count; ii++)
+        {
+            constructor = newAbilities[ii].GetType().GetConstructor(new Type[] { typeof(GameObject) });
+            abilityList.Add((Ability)constructor.Invoke(new object[] { gameObject }));
+        }
+    }
+
+    public void SetDefaultAbilities()
+    {
+        abilityList[0] = new MagicArrowAbility(gameObject);
+        abilityList.Add(new HomingMissileAbility(gameObject));
+        abilityList.Add(new ShacklesAbility(gameObject));
     }
 }
