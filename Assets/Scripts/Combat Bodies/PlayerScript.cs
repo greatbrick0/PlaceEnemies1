@@ -109,7 +109,7 @@ public class PlayerScript : CombatBody
         cam = newCam;
     }
 
-    public void SetAbilities(List<Ability> newAbilities)
+    public void SetAbilities(List<Ability> newAbilities) //black magic, NO touchy
     {
         ConstructorInfo constructor;
         for (int ii = 0; ii < newAbilities.Count; ii++)
