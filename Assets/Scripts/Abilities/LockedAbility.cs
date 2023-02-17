@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LockedAbility : Ability
 {
-    public LockedAbility(GameObject _user) : base(_user)
+    public LockedAbility(GameObject _user = null) : base(_user)
     {
 
     }

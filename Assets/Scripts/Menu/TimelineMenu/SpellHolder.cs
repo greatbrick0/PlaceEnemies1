@@ -9,7 +9,7 @@ public class SpellHolder : MonoBehaviour
     [SerializeField]
     private int abilityRefIndex = 0;
     [SerializeField]
-    private Ability abilityRef;
+    public Ability abilityRef { get; private set; }
 
     [SerializeField]
     private Vector2 originalPos = Vector2.zero;
@@ -20,12 +20,16 @@ public class SpellHolder : MonoBehaviour
     [TextArea]
     private string abilityDescription = "";
 
+    private HolderGroup holderGroupRef;
+    private Vector2 mousePos = Vector2.zero;
     private bool currentlyDragged = false;
-    private bool equipped = false;
+    public bool equipped = false;
+    public EquipSlotScript equippedSlotRef;
 
     private void Start()
     {
-        originalPos = transform.localPosition;
+        holderGroupRef = transform.parent.GetComponent<HolderGroup>();
+        originalPos = transform.position;
         abilityRef = EveryAbilityDict.abilityDict[abilityRefIndex];
         abilityRef.SetDisplayVars();
         abilityName = abilityRef.displayName;
@@ -36,31 +40,35 @@ public class SpellHolder : MonoBehaviour
     {
         if (currentlyDragged)
         {
-            transform.position = Mouse.current.position.ReadValue();
+            mousePos = Mouse.current.position.ReadValue();
+            transform.position = mousePos;
+            holderGroupRef.SendDragInfo(mousePos);
         }
         else
         {
-            if (!equipped)
-            {
-                transform.localPosition = originalPos;
-            }
+            transform.position = equipped ? equippedPos : originalPos;
         }
     }
 
     public void BeginDrag()
     {
-        currentlyDragged = true;
-        transform.SetAsLastSibling();
-        transform.parent.SetAsLastSibling();
+        if (!equipped)
+        {
+            currentlyDragged = true;
+            transform.SetAsLastSibling();
+            transform.parent.SetAsLastSibling();
+        }
     }
 
     public void EndDrag()
     {
         currentlyDragged = false;
+        mousePos = Mouse.current.position.ReadValue();
+        holderGroupRef.SendEndDrag(mousePos, this);
     }
 
     public void SendDescription()
     {
-        transform.parent.GetComponent<HolderGroup>().DisplayDescription(abilityDescription, abilityName);
+        holderGroupRef.DisplayDescription(abilityDescription, abilityName);
     }
 }
