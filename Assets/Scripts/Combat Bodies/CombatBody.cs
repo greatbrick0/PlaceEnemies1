@@ -6,34 +6,45 @@ using UnityEngine;
 public abstract class CombatBody : Placeable
 {
     protected Rigidbody rb;
+
     [SerializeField]
     protected bool released = false;
+
     [SerializeField]
     public string team = "enemy";
     [SerializeField]
     int bounty = 0;
+
     [SerializeField]
     protected int health = 2;
+
     [SerializeField]
     protected float baseMoveSpeed = 3.0f;
     protected float moveSpeed;
+
     protected Vector3 controlledVelocity;
     public int sourcesPreventingMovement = 0;
     public Vector3 forcedVelocity;
     public int sourcesPreventingAbilities = 0;
     [SerializeField]
-    protected List<Ability> abilityList;
+    protected List<Ability> abilityList = new List<Ability>();
+
     [SerializeField]
     public List<StatusEffect> effectList = new List<StatusEffect>();
     private List<StatusEffect> timedEffects = new List<StatusEffect>();
     private List<StatusEffect> movementEffects = new List<StatusEffect>();
 
+    //animator
+    private Animator animator;
+    //
+
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        animator = GetComponent<Animator>();
         moveSpeed = baseMoveSpeed;
-        abilityList = new List<Ability> { new LockedAbility(gameObject) };
+        if (abilityList.Count <= 0) abilityList.Add(new LockedAbility(gameObject));
     }
 
     public override void Release()
@@ -101,7 +112,12 @@ public abstract class CombatBody : Placeable
 
         if (abilityList[abilityIndex].Use(pos))
         {
-            if(transform.GetChild(0).GetComponent<Animationcontroller>() != null)
+            if(animator != null)
+            {
+                //sets attack1 trigger
+                animator.SetTrigger("Attack1");
+            }
+            else if (transform.GetChild(0).GetComponent<Animationcontroller>() != null)
             {
                 transform.GetChild(0).GetComponent<Animationcontroller>().AbilityUsed();
             }

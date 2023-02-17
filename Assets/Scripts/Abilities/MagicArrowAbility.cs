@@ -19,6 +19,7 @@ public class MagicArrowAbility : Ability
         effectiveRange = 15.0f;
         SetDisplayVars();
         ID = 1;
+        colour = ColourTypes.Red;
     }
 
     public override void SetDisplayVars()

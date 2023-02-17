@@ -24,6 +24,16 @@ public abstract class Ability
     public string displayName { get; protected set; } = "";
     public string description { get; protected set; } = "No description";
 
+    public enum ColourTypes
+    {
+        NA,
+        Red,
+        Green,
+        Blue,
+        White
+    }
+    public ColourTypes colour { get; protected set; } = ColourTypes.NA;
+
     public int ID = -1;
     public abstract bool Use(Vector3 targetPosition);
 
@@ -47,5 +57,11 @@ public abstract class Ability
     {
         offCooldown = false;
         remainingCooldown = cooldownTime;
+    }
+
+    public void ManualInit(GameObject _user)
+    {
+        user = _user;
+        SetVars();
     }
 }

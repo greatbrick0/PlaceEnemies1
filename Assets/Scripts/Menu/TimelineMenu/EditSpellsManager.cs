@@ -9,9 +9,16 @@ public class EditSpellsManager : MonoBehaviour
 
     private void Start()
     {
-        for(int ii = 0; ii < 4; ii++)
+        if(SessionDataManager.playerLoadOut.Count > 0)
         {
-            currentLoadOut.Add(new LockedAbility());
+            currentLoadOut = SessionDataManager.playerLoadOut;
+        }
+        else
+        {
+            for (int ii = 0; ii < 4; ii++)
+            {
+                currentLoadOut.Add(new LockedAbility());
+            }
         }
 
         for (int ii = 0; ii < loadOutSlots.Count; ii++)
@@ -38,5 +45,11 @@ public class EditSpellsManager : MonoBehaviour
                 loadOutSlots[ii].AttemptAttachSpell(spellHolderRef);
             }
         }
+    }
+
+    public void SaveLoadout()
+    {
+        SessionDataManager.playerLoadOut = currentLoadOut;
+        print("loadout saved");
     }
 }

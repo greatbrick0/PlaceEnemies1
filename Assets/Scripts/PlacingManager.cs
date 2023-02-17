@@ -7,6 +7,7 @@ public class PlacingManager : MonoBehaviour
 {
     [SerializeField]
     private CameraScript cam;
+    [SerializeField]
     private Camera unityCam;
     private RaycastHit hitData;
     private Ray mouseRay;
@@ -37,6 +38,14 @@ public class PlacingManager : MonoBehaviour
         playerRef = Instantiate(playerPrefab, transform.parent);
         playerRef.GetComponent<PlayerScript>().SetCameraRef(cam.GetComponent<Camera>());
         groundHolderRef.transform.GetChild(0).GetComponent<GroundScript>().AttachObject(playerRef);
+        if(SessionDataManager.playerLoadOut.Count > 0)
+        {
+            playerRef.GetComponent<PlayerScript>().SetAbilities(SessionDataManager.playerLoadOut);
+        }
+        else
+        {
+            playerRef.GetComponent<PlayerScript>().SetDefaultAbilities();
+        }
 
         cam.followTarget = groundHolderRef.transform;
         cam.offset = placingModeCamPos;

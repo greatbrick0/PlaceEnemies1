@@ -11,5 +11,6 @@ public class EveryAbilityDict : MonoBehaviour
         abilityDict.Add(new MagicArrowAbility());
         abilityDict.Add(new HomingMissileAbility());
         abilityDict.Add(new ShacklesAbility());
+        abilityDict.Add(new BoulderAbility());
     }
 }

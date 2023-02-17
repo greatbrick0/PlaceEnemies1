@@ -19,7 +19,7 @@ public class ShacklesAbility : Ability
         effectiveRange = 12.0f;
         SetDisplayVars();
         ID = 3;
-
+        colour = ColourTypes.Blue;
     }
 
     public override void SetDisplayVars()
