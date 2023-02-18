@@ -104,11 +104,11 @@ public abstract class CombatBody : Placeable
         Destroy(this.gameObject);
     }
 
-    protected virtual void UseAbility(int abilityIndex, Vector3 pos)
+    protected virtual bool UseAbility(int abilityIndex, Vector3 pos)
     {
-        if (!released) return;
-        if (sourcesPreventingAbilities > 0) return;
-        if (abilityIndex >= abilityList.Count) return;
+        if (!released) return false;
+        if (sourcesPreventingAbilities > 0) return false;
+        if (abilityIndex >= abilityList.Count) return false;
 
         if (abilityList[abilityIndex].Use(pos))
         {
@@ -121,6 +121,11 @@ public abstract class CombatBody : Placeable
             {
                 transform.GetChild(0).GetComponent<Animationcontroller>().AbilityUsed();
             }
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 

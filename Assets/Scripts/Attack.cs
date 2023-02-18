@@ -5,16 +5,21 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public abstract class Attack : MonoBehaviour
 {
-    [SerializeField]
+    [HideInInspector]
     public string team = "enemy";
     [SerializeField]
+    [Tooltip("The units per second the projectile will travel at. One hexagon tile is 4 units in diameter.")]
     public float speed = 10.0f;
+    [HideInInspector]
     public Vector3 moveDirection = Vector3.forward;
     [SerializeField]
+    [Tooltip("The amount of seconds the projectile will live before destroying itself.")]
     public float lifetime = 20.0f;
     protected float age = 0.0f;
-    [SerializeField] [Min(0)]
-    public int power = 10; //used as the amount of damage to deal, healing applied, or any other primary stat
+    [SerializeField]
+    [Min(0)]
+    [Tooltip("The amount of damage, healing applied, or any other primary stat.")]
+    public int power = 10;
 
     protected Collider hitbox;
     protected List<CombatBody> hitList = new List<CombatBody>();

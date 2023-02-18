@@ -18,6 +18,7 @@ public class CreateSphere : Ability
         cooldownTime = 6.0f;
         effectiveRange = 30.0f;
         SetDisplayVars();
+        colour = ColourTypes.NA;
     }
 
     public override void SetDisplayVars()

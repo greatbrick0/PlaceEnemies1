@@ -15,6 +15,7 @@ public class LockedAbility : Ability
         effectiveRange = 0.1f;
         SetDisplayVars();
         ID = 0;
+        colour = ColourTypes.NA;
     }
 
     public override void SetDisplayVars()
@@ -25,15 +26,7 @@ public class LockedAbility : Ability
 
     public override bool Use(Vector3 targetPosition)
     {
-        if (offCooldown) 
-        {
-            Debug.Log("Ability locked");
-            EnableCooldown();
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        Debug.Log("Ability locked");
+        return false;
     }
 }

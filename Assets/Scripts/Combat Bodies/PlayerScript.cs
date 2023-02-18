@@ -94,14 +94,15 @@ public class PlayerScript : CombatBody
 
     void OnFourthAbility()
     {
-        UseAbility(2, hitData.point);
+        UseAbility(3, hitData.point);
     }
 
-    protected override void UseAbility(int abilityIndex, Vector3 pos)
+    protected override bool UseAbility(int abilityIndex, Vector3 pos)
     {
-        base.UseAbility(abilityIndex, pos);
-        if (combatUIC != null)
+        bool success = base.UseAbility(abilityIndex, pos);
+        if (success && combatUIC != null)
           combatUIC.TriggerAbility(abilityIndex);
+        return success;
     }
 
     public void SetCameraRef(Camera newCam)
@@ -117,12 +118,24 @@ public class PlayerScript : CombatBody
             constructor = newAbilities[ii].GetType().GetConstructor(new Type[] { typeof(GameObject) });
             abilityList.Add((Ability)constructor.Invoke(new object[] { gameObject }));
         }
+
+        FillRemainingAbilities();
     }
 
     public void SetDefaultAbilities()
     {
-        abilityList[0] = new MagicArrowAbility(gameObject);
+        abilityList.Add(new MagicArrowAbility(gameObject));
         abilityList.Add(new HomingMissileAbility(gameObject));
         abilityList.Add(new ShacklesAbility(gameObject));
+
+        FillRemainingAbilities();
+    }
+
+    private void FillRemainingAbilities()
+    {
+        for(int ii = abilityList.Count; ii < 4; ii++)
+        {
+            abilityList.Add(new LockedAbility(gameObject));
+        }
     }
 }

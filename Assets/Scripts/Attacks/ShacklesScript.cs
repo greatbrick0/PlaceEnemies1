@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShacklesScript : Attack
 {
     [SerializeField]
+    [Tooltip("The reference to the effect appied on hit.")]
     public StatusEffect shacklesEffect;
 
     protected override bool FilterHitTarget(CombatBody hitTarget)

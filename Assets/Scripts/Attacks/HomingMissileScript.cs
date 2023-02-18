@@ -7,7 +7,7 @@ public class HomingMissileScript : Attack
     private List<CombatBody> detectedTargets = new List<CombatBody>();
     private CombatBody homingTarget;
     private bool hasValidHomingTarget = false;
-    [SerializeField]
+    [SerializeField] [Tooltip("The speed that the projectile will rotate towards its target.")]
     float homingPower = 8.0f;
 
     protected override void Apply(CombatBody recentHit)
