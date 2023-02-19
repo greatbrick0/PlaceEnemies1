@@ -23,6 +23,8 @@ public abstract class Attack : MonoBehaviour
 
     protected Collider hitbox;
     protected List<CombatBody> hitList = new List<CombatBody>();
+    [HideInInspector]
+    public bool canHit = true;
 
     protected virtual void Start()
     {
@@ -52,24 +54,18 @@ public abstract class Attack : MonoBehaviour
 
     protected virtual void CompleteAttack() //for when an attack has been used up. ex: a bullet disappears after damaging one enemy.
     {
+        canHit = false;
         Destroy(this.gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<CombatBody>() == null)
-        {
-            return;
-        }
-        if (other.isTrigger)
-        {
-            return;
-        }
+        if (!canHit) return;
+        if (other.gameObject.GetComponent<CombatBody>() == null) return;
+        if (other.isTrigger) return;
+
         CombatBody otherCombatBody = other.gameObject.GetComponent<CombatBody>();
-        if (hitList.Contains(otherCombatBody))
-        {
-            return;
-        }
+        if (hitList.Contains(otherCombatBody)) return;
 
         if (FilterHitTarget(otherCombatBody))
         {
