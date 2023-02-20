@@ -124,7 +124,7 @@ public class PlayerScript : CombatBody
 
     public void SetDefaultAbilities()
     {
-        abilityList.Add(new MagicArrowAbility(gameObject));
+        abilityList.Add(new GravityAbility(gameObject));
         abilityList.Add(new HomingMissileAbility(gameObject));
         abilityList.Add(new ShacklesAbility(gameObject));
 

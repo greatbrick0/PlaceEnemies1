@@ -46,8 +46,8 @@ public class MagicArrowAbility : Ability
     {
         arrowRef = user.GetComponent<CombatBody>().Instantiater(arrowPrefab, user.transform.parent);
         arrowRef.transform.position = user.transform.position;
-        arrowRef.transform.GetComponent<MagicArrowScript>().moveDirection = targetPosition - user.transform.position;
-        arrowRef.transform.GetComponent<MagicArrowScript>().team = user.GetComponent<CombatBody>().team;
-        arrowRef.transform.GetComponent<MagicArrowScript>().FaceForward();
+        arrowRef.GetComponent<MagicArrowScript>().moveDirection = targetPosition - user.transform.position;
+        arrowRef.GetComponent<MagicArrowScript>().team = user.GetComponent<CombatBody>().team;
+        arrowRef.GetComponent<MagicArrowScript>().FaceForward();
     }
 }

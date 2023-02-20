@@ -46,8 +46,8 @@ public class ShacklesAbility : Ability
     {
         shacklesRef = user.GetComponent<CombatBody>().Instantiater(shacklesPrefab, user.transform.parent);
         shacklesRef.transform.position = user.transform.position;
-        shacklesRef.transform.GetComponent<ShacklesScript>().moveDirection = targetPosition - user.transform.position;
-        shacklesRef.transform.GetComponent<ShacklesScript>().team = user.GetComponent<CombatBody>().team;
-        shacklesRef.transform.GetComponent<ShacklesScript>().FaceForward();
+        shacklesRef.GetComponent<ShacklesScript>().moveDirection = targetPosition - user.transform.position;
+        shacklesRef.GetComponent<ShacklesScript>().team = user.GetComponent<CombatBody>().team;
+        shacklesRef.GetComponent<ShacklesScript>().FaceForward();
     }
 }

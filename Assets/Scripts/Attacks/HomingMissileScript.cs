@@ -37,14 +37,9 @@ public class HomingMissileScript : Attack
 
     public void ExtraCollision0Enter(GameObject detectedObject)
     {
-        if(detectedObject.GetComponent<CombatBody>() == null)
-        {
-            return;
-        }
-        if(detectedObject.GetComponent<CombatBody>().team == this.team)
-        {
-            return;
-        }
+        if(detectedObject.GetComponent<CombatBody>() == null) return;
+        if (!FilterHitTarget(detectedObject.GetComponent<CombatBody>())) return;
+
         detectedTargets.Add(detectedObject.GetComponent<CombatBody>());
     }
 
