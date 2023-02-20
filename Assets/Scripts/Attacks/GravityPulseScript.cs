@@ -11,6 +11,13 @@ public class GravityPulseScript : Attack
     [Tooltip("The reference to the effect appied to the user.")]
     public StatusEffect costEffect;
 
+    protected override void Start()
+    {
+        base.Start();
+
+        pullEffect = Instantiate(pullEffect);
+    }
+
     protected override bool FilterHitTarget(CombatBody hitTarget)
     {
         return hitTarget.team != this.team;
