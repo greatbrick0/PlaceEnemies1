@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GravityCost
   m_EditorClassIdentifier: 
   <icon>k__BackingField: {fileID: 0}
-  <effectName>k__BackingField: 
+  <effectName>k__BackingField: GravityCost
   <behaviour>k__BackingField: 3
   intensity: 0.4
   <affectsMoveSpeed>k__BackingField: 1

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: GravityStun
   m_EditorClassIdentifier: 
   <icon>k__BackingField: {fileID: 0}
-  <effectName>k__BackingField: 
+  <effectName>k__BackingField: GravityStun
   <behaviour>k__BackingField: 3
   intensity: 1
   <affectsMoveSpeed>k__BackingField: 0
   <hasDuration>k__BackingField: 1
   age: 0
-  <lifeTime>k__BackingField: 3
+  <lifeTime>k__BackingField: 1.5
   preventsMovement: 1
   preventsAbilities: 1

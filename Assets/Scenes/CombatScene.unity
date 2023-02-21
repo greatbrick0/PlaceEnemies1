@@ -1099,6 +1099,10 @@ MonoBehaviour:
   - entryName: GravityPulse
     entryGameObject: {fileID: 9159844377764210428, guid: 77f018690cea8514a90436f482642980,
       type: 3}
+  enemyAttackEntries:
+  - entryName: BasicDemonBall
+    entryGameObject: {fileID: 9159844377764210428, guid: b214c12139ec2f34f89bbbf9e53e343a,
+      type: 3}
 --- !u!1 &603187657
 GameObject:
   m_ObjectHideFlags: 0

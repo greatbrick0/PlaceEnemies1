@@ -30,7 +30,8 @@ public abstract class Ability
         Red,
         Green,
         Blue,
-        White
+        White,
+        Demon
     }
     public ColourTypes colour { get; protected set; } = ColourTypes.NA;
 

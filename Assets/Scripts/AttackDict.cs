@@ -14,6 +14,7 @@ public class AttackDict : MonoBehaviour
     }
     [SerializeField]
     public List<AttackDictEntry> attackEntries = new List<AttackDictEntry>();
+    public List<AttackDictEntry> enemyAttackEntries = new List<AttackDictEntry>();
 
     public static Dictionary<string, GameObject> attacks { get; private set; } = new Dictionary<string, GameObject>();
 
@@ -22,6 +23,10 @@ public class AttackDict : MonoBehaviour
         for(int ii = 0; ii < attackEntries.Count; ii++)
         {
             attacks.Add(attackEntries[ii].entryName, attackEntries[ii].entryGameObject);
+        }
+        for (int ii = 0; ii < enemyAttackEntries.Count; ii++)
+        {
+            attacks.Add(enemyAttackEntries[ii].entryName, enemyAttackEntries[ii].entryGameObject);
         }
     }
 }
