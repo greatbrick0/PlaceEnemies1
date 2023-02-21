@@ -46,8 +46,7 @@ public class GravityAbility : Ability
     {
         pulseRef = user.GetComponent<CombatBody>().Instantiater(pulsePrefab, user.transform.parent);
         pulseRef.transform.position = user.transform.position;
-        pulseRef.GetComponent<GravityPulseScript>().moveDirection = Vector3.zero;
-        pulseRef.GetComponent<GravityPulseScript>().team = user.GetComponent<CombatBody>().team;
+        pulseRef.GetComponent<Attack>().team = user.GetComponent<CombatBody>().team;
         user.GetComponent<CombatBody>().AddStatusEffect(pulseRef.GetComponent<GravityPulseScript>().costEffect);
     }
 }

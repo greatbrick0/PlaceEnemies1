@@ -46,8 +46,8 @@ public class BoulderAbility : Ability
     {
         boulderRef = user.GetComponent<CombatBody>().Instantiater(boulderPrefab, user.transform.parent);
         boulderRef.transform.position = user.transform.position;
-        boulderRef.GetComponent<BoulderScript>().moveDirection = targetPosition - user.transform.position;
-        boulderRef.GetComponent<BoulderScript>().team = user.GetComponent<CombatBody>().team;
-        boulderRef.GetComponent<BoulderScript>().FaceForward();
+        boulderRef.GetComponent<Attack>().moveDirection = targetPosition - user.transform.position;
+        boulderRef.GetComponent<Attack>().team = user.GetComponent<CombatBody>().team;
+        boulderRef.GetComponent<Attack>().FaceForward();
     }
 }

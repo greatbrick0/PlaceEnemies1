@@ -46,8 +46,8 @@ public class HomingMissileAbility : Ability
     {
         homingRef = user.GetComponent<CombatBody>().Instantiater(homingPrefab, user.transform.parent);
         homingRef.transform.position = user.transform.position;
-        homingRef.GetComponent<HomingMissileScript>().moveDirection = targetPosition - user.transform.position;
-        homingRef.GetComponent<HomingMissileScript>().team = user.GetComponent<CombatBody>().team;
-        homingRef.GetComponent<HomingMissileScript>().FaceForward();
+        homingRef.GetComponent<Attack>().moveDirection = targetPosition - user.transform.position;
+        homingRef.GetComponent<Attack>().team = user.GetComponent<CombatBody>().team;
+        homingRef.GetComponent<Attack>().FaceForward();
     }
 }
