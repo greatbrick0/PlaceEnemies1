@@ -5173,7 +5173,7 @@ MonoBehaviour:
   released: 0
   team: player
   bounty: 0
-  health: 30
+  health: 5
   baseMoveSpeed: 5
   sourcesPreventingMovement: 0
   forcedVelocity: {x: 0, y: 0, z: 0}

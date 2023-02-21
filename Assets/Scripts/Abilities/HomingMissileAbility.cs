@@ -7,6 +7,10 @@ public class HomingMissileAbility : Ability
     GameObject homingPrefab;
     GameObject homingRef;
 
+    public int projectileCount = 1;
+    public float timeBetweenShots = 1.0f;
+    public float degreesFromStraight = 0.0f;
+
     public HomingMissileAbility(GameObject _user = null) : base(_user)
     {
 
@@ -20,6 +24,9 @@ public class HomingMissileAbility : Ability
         SetDisplayVars();
         ID = 2;
         colour = ColourTypes.Green;
+        projectileCount = 2;
+        timeBetweenShots = 0.2f;
+        degreesFromStraight = 15;
     }
 
     public override void SetDisplayVars()
@@ -32,7 +39,8 @@ public class HomingMissileAbility : Ability
     {
         if (offCooldown)
         {
-            MakeProjectile(targetPosition);
+            user.GetComponent<CombatBody>().StopAllCoroutines();
+            user.GetComponent<CombatBody>().StartCoroutine(MakeMultipleProjectiles(targetPosition));
             EnableCooldown();
             return true;
         }
@@ -46,8 +54,19 @@ public class HomingMissileAbility : Ability
     {
         homingRef = user.GetComponent<CombatBody>().Instantiater(homingPrefab, user.transform.parent);
         homingRef.transform.position = user.transform.position;
-        homingRef.GetComponent<Attack>().moveDirection = targetPosition - user.transform.position;
+        homingRef.GetComponent<Attack>().moveDirection = targetPosition;
         homingRef.GetComponent<Attack>().team = user.GetComponent<CombatBody>().team;
         homingRef.GetComponent<Attack>().FaceForward();
+    }
+
+    IEnumerator MakeMultipleProjectiles(Vector3 targetPosition)
+    {
+        Vector3 newDirection = (targetPosition - user.transform.position).normalized;
+
+        for (int ii = 0; ii < projectileCount; ii++)
+        {
+            MakeProjectile(Quaternion.Euler(0, Mathf.Pow(-1, ii) * degreesFromStraight, 0) * newDirection);
+            yield return new WaitForSeconds(timeBetweenShots);
+        }
     }
 }
