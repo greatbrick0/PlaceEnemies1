@@ -31,6 +31,11 @@ public class PlacingManager : MonoBehaviour
     [SerializeField]
     private SlotHolderScript slotHolderRef;
 
+    private bool combatStarted = false;
+    public int remainingEnemies = 0;
+    public int cardsPlaced = 0;
+    public int minimumCardsPlaced = 3;
+
     private void Start()
     {
         mouseHitObject = mousePlaneRef;
@@ -58,10 +63,20 @@ public class PlacingManager : MonoBehaviour
         mouseRay = unityCam.ScreenPointToRay(currentMousePos);
         Physics.Raycast(cam.transform.position, mouseRay.direction, out hitData, 150.0f, 1 << 9);
         mouseHitObject = hitData.collider.gameObject;
+
+        if (combatStarted)
+        {
+            if(remainingEnemies == 0)
+            {
+                playerRef.GetComponent<PlayerScript>().PackPlayer();
+                print("Player defeated all enemies, end combat");
+            }
+        }
     }
 
     public void StartCombat()
     {
+        combatStarted = true;
         cam.followTarget = playerRef.transform;
         cam.offset = combatModeCamPos;
         mousePlaneRef.transform.position = mousePlaneUpperPos;
@@ -84,18 +99,14 @@ public class PlacingManager : MonoBehaviour
         }
     }
 
-    public bool ReleaseDrag(GameObject placeObject)
+    public bool ReleaseDrag(GameObject placeObject, int enemyCount)
     {
-        if (mouseHitObject.GetComponent<GroundScript>() == null)
-        {
-            return false;
-        }
+        if (mouseHitObject.GetComponent<GroundScript>() == null) return false;
+        if (!mouseHitObject.GetComponent<GroundScript>().FilterObject(placeObject)) return false;
 
-        if (!mouseHitObject.GetComponent<GroundScript>().FilterObject(placeObject))
-        {
-            return false;
-        }
-
-        return mouseHitObject.GetComponent<GroundScript>().AttachObject(Instantiate(placeObject, transform.parent));
+        bool output = mouseHitObject.GetComponent<GroundScript>().AttachObject(Instantiate(placeObject, transform.parent));
+        cardsPlaced += output ? 1 : 0;
+        enemyCount += output ? enemyCount : 0;
+        return output;
     }
 }

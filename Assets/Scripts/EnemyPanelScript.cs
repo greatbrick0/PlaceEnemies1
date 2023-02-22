@@ -11,6 +11,8 @@ public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
     [SerializeField]
     public GameObject linkedObject;
     [SerializeField]
+    private int enemyAmount = 1;
+    [SerializeField]
     private int maxUses = 2;
     private int remainingUses;
 
@@ -102,7 +104,7 @@ public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
             return;
         }
 
-        if (slotHolderRef.ReleaseDrag(linkedObject))
+        if (slotHolderRef.ReleaseDrag(linkedObject, enemyAmount))
         {
             remainingUses--;
             if (remainingUses <= 0)

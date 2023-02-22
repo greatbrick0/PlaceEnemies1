@@ -75,6 +75,7 @@ public class PlayerScript : CombatBody
     {
         released = false;
         inputComponent.enabled = false;
+        SessionDataManager.savedPlayerHealth = health;
     }
 
     void OnFirstAbility()

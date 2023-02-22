@@ -34,6 +34,7 @@ public abstract class Ability
         Demon
     }
     public ColourTypes colour { get; protected set; } = ColourTypes.NA;
+    public int upgradeLevel { get; protected set; } = 1;
 
     public int ID = -1;
     public abstract bool Use(Vector3 targetPosition);

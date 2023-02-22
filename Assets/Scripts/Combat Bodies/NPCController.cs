@@ -33,4 +33,9 @@ public abstract class NPCController : CombatBody
 
     protected abstract bool FilterTarget(GameObject potentialTarget);
 
+    protected override void Die()
+    {
+        // find refrence to manager script and lower remaining enemies count by 1
+        base.Die();
+    }
 }

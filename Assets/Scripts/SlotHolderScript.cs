@@ -17,8 +17,8 @@ public class SlotHolderScript : MonoBehaviour
         }
     }
 
-    public bool ReleaseDrag(GameObject placeObject)
+    public bool ReleaseDrag(GameObject placeObject, int enemyCount)
     {
-        return managerRef.ReleaseDrag(placeObject);
+        return managerRef.ReleaseDrag(placeObject, enemyCount);
     }
 }
