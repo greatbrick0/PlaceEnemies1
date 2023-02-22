@@ -1398,6 +1398,9 @@ MonoBehaviour:
     type: 3}
   groundHolderRef: {fileID: 1817536930}
   slotHolderRef: {fileID: 188113613}
+  remainingEnemies: 0
+  cardsPlaced: 0
+  minimumCardsPlaced: 3
 --- !u!4 &586905833
 Transform:
   m_ObjectHideFlags: 0
