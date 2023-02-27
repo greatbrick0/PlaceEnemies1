@@ -34,9 +34,7 @@ public abstract class CombatBody : Placeable
     private List<StatusEffect> timedEffects = new List<StatusEffect>();
     private List<StatusEffect> movementEffects = new List<StatusEffect>();
 
-    //animator
     private Animator animator;
-    //
 
     protected virtual void Start()
     {
@@ -63,6 +61,11 @@ public abstract class CombatBody : Placeable
         }
 
         return Mathf.Max(previousHealth - health, 0);
+    }
+
+    public void SetHealth(int newHealth)
+    {
+        if (newHealth > 0) health = newHealth;
     }
 
     protected virtual void Update()

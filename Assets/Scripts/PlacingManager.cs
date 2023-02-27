@@ -26,6 +26,7 @@ public class PlacingManager : MonoBehaviour
     [SerializeField]
     private GameObject playerPrefab;
     private GameObject playerRef;
+    private PlayerScript playerScriptRef;
 
     [SerializeField]
     private GameObject groundHolderRef;
@@ -42,16 +43,19 @@ public class PlacingManager : MonoBehaviour
         mouseHitObject = mousePlaneRef;
 
         playerRef = Instantiate(playerPrefab, transform.parent);
-        playerRef.GetComponent<PlayerScript>().SetCameraRef(cam.GetComponent<Camera>());
+        playerScriptRef = playerRef.GetComponent<PlayerScript>();
+        playerScriptRef.SetCameraRef(cam.GetComponent<Camera>());
         groundHolderRef.transform.GetChild(0).GetComponent<GroundScript>().AttachObject(playerRef);
         if(SessionDataManager.playerLoadOut.Count > 0)
         {
-            playerRef.GetComponent<PlayerScript>().SetAbilities(SessionDataManager.playerLoadOut);
+            playerScriptRef.SetAbilities(SessionDataManager.playerLoadOut);
         }
         else
         {
-            playerRef.GetComponent<PlayerScript>().SetDefaultAbilities();
+            playerScriptRef.SetDefaultAbilities();
         }
+        playerScriptRef.SetHealth(SessionDataManager.savedPlayerHealth != 0 ? SessionDataManager.savedPlayerHealth : 6);
+
 
         cam.followTarget = groundHolderRef.transform;
         cam.offset = placingModeCamPos;

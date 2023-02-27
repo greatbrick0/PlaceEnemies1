@@ -20,13 +20,16 @@ public class AttackDict : MonoBehaviour
 
     private void OnEnable()
     {
-        for(int ii = 0; ii < attackEntries.Count; ii++)
+        if(attacks.Count == 0)
         {
-            attacks.Add(attackEntries[ii].entryName, attackEntries[ii].entryGameObject);
-        }
-        for (int ii = 0; ii < enemyAttackEntries.Count; ii++)
-        {
-            attacks.Add(enemyAttackEntries[ii].entryName, enemyAttackEntries[ii].entryGameObject);
+            for (int ii = 0; ii < attackEntries.Count; ii++)
+            {
+                attacks.Add(attackEntries[ii].entryName, attackEntries[ii].entryGameObject);
+            }
+            for (int ii = 0; ii < enemyAttackEntries.Count; ii++)
+            {
+                attacks.Add(enemyAttackEntries[ii].entryName, enemyAttackEntries[ii].entryGameObject);
+            }
         }
     }
 }

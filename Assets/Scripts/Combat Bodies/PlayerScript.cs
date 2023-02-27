@@ -24,7 +24,7 @@ public class PlayerScript : CombatBody
     {
         base.Release();
        
-            combatUIC = GameObject.Find("CombatUI").GetComponent<CombatUIBrain>();
+        combatUIC = GameObject.Find("CombatUI").GetComponent<CombatUIBrain>();
         if (combatUIC != null)
         {
             combatUIC.ConnectSpellList(abilityList);
@@ -101,8 +101,7 @@ public class PlayerScript : CombatBody
     protected override bool UseAbility(int abilityIndex, Vector3 pos)
     {
         bool success = base.UseAbility(abilityIndex, pos);
-        if (success && combatUIC != null)
-          combatUIC.TriggerAbility(abilityIndex);
+        if (success && combatUIC != null) combatUIC.TriggerAbility(abilityIndex);
         return success;
     }
 
@@ -142,7 +141,7 @@ public class PlayerScript : CombatBody
 
     public override int Hurt(int damageAmount = 1) //Is this fine? i dont see a problem. slap me ig -Ethan.
     {
-        combatUIC.HealthUpdate(health-damageAmount);
+        if (combatUIC != null) combatUIC.HealthUpdate(health-damageAmount);
         return base.Hurt(damageAmount);
     }
 }
