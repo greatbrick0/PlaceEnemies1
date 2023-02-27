@@ -34,14 +34,18 @@ public class PlacingManager : MonoBehaviour
     private SlotHolderScript slotHolderRef;
 
     private bool combatStarted = false;
-    public int remainingEnemies = 0;
-    public int cardsPlaced = 0;
-    public int minimumCardsPlaced = 3;
+    [field: SerializeField]
+    public int remainingEnemies { get; private set; } = 0;
+    [field: SerializeField]
+    public int cardsPlaced { get; private set; } = 0;
+    [field: SerializeField]
+    public int minimumCardsPlaced { get; private set; } = 3;
 
     private void Start()
     {
         mouseHitObject = mousePlaneRef;
 
+        #region Initializing the Player
         playerRef = Instantiate(playerPrefab, transform.parent);
         playerScriptRef = playerRef.GetComponent<PlayerScript>();
         playerScriptRef.SetCameraRef(cam.GetComponent<Camera>());
@@ -55,7 +59,7 @@ public class PlacingManager : MonoBehaviour
             playerScriptRef.SetDefaultAbilities();
         }
         playerScriptRef.SetHealth(SessionDataManager.savedPlayerHealth != 0 ? SessionDataManager.savedPlayerHealth : 6);
-
+        #endregion
 
         cam.followTarget = groundHolderRef.transform;
         cam.offset = placingModeCamPos;
