@@ -64,15 +64,6 @@ public class PlacingManager : MonoBehaviour
         mouseRay = unityCam.ScreenPointToRay(currentMousePos);
         Physics.Raycast(cam.transform.position, mouseRay.direction, out hitData, 150.0f, 1 << 9);
         mouseHitObject = hitData.collider.gameObject != null ? hitData.collider.gameObject : mousePlaneRef; //this line usually gives errors
-
-        if (combatStarted)
-        {
-            if(remainingEnemies == 0)
-            {
-                playerRef.GetComponent<PlayerScript>().PackPlayer();
-                print("Player defeated all enemies, end combat");
-            }
-        }
     }
 
     public void StartCombat()
@@ -109,6 +100,21 @@ public class PlacingManager : MonoBehaviour
         cardsPlaced += output ? 1 : 0;
         remainingEnemies += output ? enemyCount : 0;
         return output;
+    }
+
+    public void DecrementEnemyCount()
+    {
+        remainingEnemies--;
+
+        if (combatStarted)
+        {
+            if (remainingEnemies == 0)
+            {
+                playerRef.GetComponent<PlayerScript>().PackPlayer();
+                print("Player defeated all enemies, end combat");
+                SwitchToTimeLineScene();
+            }
+        }
     }
 
     public void SwitchToTimeLineScene()

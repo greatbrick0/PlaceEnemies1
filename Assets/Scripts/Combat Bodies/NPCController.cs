@@ -35,7 +35,10 @@ public abstract class NPCController : CombatBody
 
     protected override void Die()
     {
-        // find refrence to manager script and lower remaining enemies count by 1
+        if(team == "enemy")
+        {
+            // find refrence to manager script and lower remaining enemies count by 1
+        }
         base.Die();
     }
 }
