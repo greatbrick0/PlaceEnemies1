@@ -28,14 +28,14 @@ public class CombatUIBrain : MonoBehaviour
     {
         //_scoreValue.AddScore(increaseAmount);
     }
-    public void TakeDamage()
+    public void TakeDamage() //outdated.
     {
-        //_healthUI.RecieveDamage();
+        _healthUI.GetComponent<HealthVisualManager>().TakeDamage();
     }
 
-    public void HealthOverride(int NewHealthTotal)
+    public void HealthUpdate(int x)
     {
-        //_healthUI.SetHealth = NewHealthTotal;
+        _healthUI.GetComponent<HealthVisualManager>().SetHealth(x); 
     }
     public void ConnectSpellList(List<Ability> PlayerSpellList)
     {

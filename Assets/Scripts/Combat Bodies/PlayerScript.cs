@@ -23,12 +23,12 @@ public class PlayerScript : CombatBody
     public override void Release()
     {
         base.Release();
-        //Best place i saw to place this. maybe it can be moved idk... -Ethan
        
             combatUIC = GameObject.Find("CombatUI").GetComponent<CombatUIBrain>();
         if (combatUIC != null)
         {
             combatUIC.ConnectSpellList(abilityList);
+            combatUIC.HealthUpdate(base.health);
         }
         inputComponent.enabled = true;
     }
@@ -138,5 +138,11 @@ public class PlayerScript : CombatBody
         {
             abilityList.Add(new LockedAbility(gameObject));
         }
+    }
+
+    public override int Hurt(int damageAmount = 1) //Is this fine? i dont see a problem. slap me ig -Ethan.
+    {
+        combatUIC.HealthUpdate(health-damageAmount);
+        return base.Hurt(damageAmount);
     }
 }
