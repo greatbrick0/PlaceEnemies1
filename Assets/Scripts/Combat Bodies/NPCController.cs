@@ -37,7 +37,8 @@ public abstract class NPCController : CombatBody
     {
         if(team == "enemy")
         {
-            // find refrence to manager script and lower remaining enemies count by 1
+            GameObject managerRef = GameObject.Find("/ArenaSceneManager"); //i dont like this line
+            if (managerRef != null) managerRef.GetComponent<PlacingManager>().DecrementEnemyCount();
         }
         base.Die();
     }

@@ -68,6 +68,8 @@ public class PlacingManager : MonoBehaviour
 
     public void StartCombat()
     {
+        if (cardsPlaced < minimumCardsPlaced) return;
+
         combatStarted = true;
         cam.followTarget = playerRef.transform;
         cam.offset = combatModeCamPos;
@@ -85,10 +87,9 @@ public class PlacingManager : MonoBehaviour
 
     public void DraggingPanel(Vector2 panelEdge)
     {
-        if (mouseHitObject.GetComponent<GroundScript>() != null)
-        {
-            mouseHitObject.GetComponent<GroundScript>().Raise();
-        }
+        if (mouseHitObject.GetComponent<GroundScript>() == null) return; 
+
+        mouseHitObject.GetComponent<GroundScript>().Raise();
     }
 
     public bool ReleaseDrag(GameObject placeObject, int enemyCount)
@@ -105,20 +106,21 @@ public class PlacingManager : MonoBehaviour
     public void DecrementEnemyCount()
     {
         remainingEnemies--;
-
-        if (combatStarted)
-        {
-            if (remainingEnemies == 0)
-            {
-                playerRef.GetComponent<PlayerScript>().PackPlayer();
-                print("Player defeated all enemies, end combat");
-                SwitchToTimeLineScene();
-            }
-        }
+        CheckForVictory();
     }
 
     public void SwitchToTimeLineScene()
     {
         SceneManager.LoadScene("TimelineScene");
+    }
+
+    private void CheckForVictory()
+    {
+        if (!combatStarted) return;
+        if (remainingEnemies != 0) return;
+
+        print("Player defeated all enemies, end combat");
+        playerRef.GetComponent<PlayerScript>().PackPlayer();
+        SwitchToTimeLineScene();
     }
 }
