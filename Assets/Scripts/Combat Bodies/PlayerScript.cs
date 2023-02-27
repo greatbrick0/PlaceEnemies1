@@ -127,7 +127,7 @@ public class PlayerScript : CombatBody
     {
         abilityList.Add(new GravityAbility(gameObject));
         abilityList.Add(new HomingMissileAbility(gameObject));
-        abilityList.Add(new ShacklesAbility(gameObject));
+        abilityList.Add(new BoulderAbility(gameObject));
 
         FillRemainingAbilities();
     }

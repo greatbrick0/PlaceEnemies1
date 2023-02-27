@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlacingManager : MonoBehaviour
 {
@@ -62,7 +63,7 @@ public class PlacingManager : MonoBehaviour
         currentMousePos = Mouse.current.position.ReadValue();
         mouseRay = unityCam.ScreenPointToRay(currentMousePos);
         Physics.Raycast(cam.transform.position, mouseRay.direction, out hitData, 150.0f, 1 << 9);
-        mouseHitObject = hitData.collider.gameObject;
+        mouseHitObject = hitData.collider.gameObject != null ? hitData.collider.gameObject : mousePlaneRef; //this line usually gives errors
 
         if (combatStarted)
         {
@@ -106,7 +107,12 @@ public class PlacingManager : MonoBehaviour
 
         bool output = mouseHitObject.GetComponent<GroundScript>().AttachObject(Instantiate(placeObject, transform.parent));
         cardsPlaced += output ? 1 : 0;
-        enemyCount += output ? enemyCount : 0;
+        remainingEnemies += output ? enemyCount : 0;
         return output;
+    }
+
+    public void SwitchToTimeLineScene()
+    {
+        SceneManager.LoadScene("TimelineScene");
     }
 }
