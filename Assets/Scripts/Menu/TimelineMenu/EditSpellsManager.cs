@@ -7,9 +7,21 @@ public class EditSpellsManager : MonoBehaviour
     public List<Ability> currentLoadOut = new List<Ability>();
     public List<EquipSlotScript> loadOutSlots = new List<EquipSlotScript>();
 
+    private void OnEnable()
+    {
+        SessionDataManager.playerLoadOut.Add(new MagicArrowAbility());
+        SessionDataManager.playerLoadOut.Add(new BoulderAbility());
+        SessionDataManager.playerLoadOut.Add(new HomingMissileAbility());
+
+        for (int ii = 0; ii < loadOutSlots.Count; ii++)
+        {
+            loadOutSlots[ii].managerRef = this;
+        }
+    }
+
     private void Start()
     {
-        if(SessionDataManager.playerLoadOut.Count > 0)
+        if (SessionDataManager.playerLoadOut.Count > 0)
         {
             currentLoadOut = SessionDataManager.playerLoadOut;
         }
@@ -51,5 +63,12 @@ public class EditSpellsManager : MonoBehaviour
     {
         SessionDataManager.playerLoadOut = currentLoadOut;
         print("loadout saved");
+    }
+
+    public void InitializeSlot(SpellHolder spellHolderRef, int holderIndex)
+    {
+        if (loadOutSlots[holderIndex].heldSpell != null) return;
+
+        loadOutSlots[holderIndex].AttemptAttachSpell(spellHolderRef);
     }
 }

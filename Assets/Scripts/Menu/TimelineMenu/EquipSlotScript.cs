@@ -38,7 +38,7 @@ public class EquipSlotScript : MonoBehaviour
         spell.equippedPos = spellHolderPostion;
         spell.equippedSlotRef = this;
         heldSpell = spell;
-        managerRef.currentLoadOut[siblingIndex] = heldSpell.abilityRef;
+        //managerRef.currentLoadOut[siblingIndex] = heldSpell.abilityRef;
     }
 
     private void RemoveSpell()

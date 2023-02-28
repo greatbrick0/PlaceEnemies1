@@ -23,4 +23,9 @@ public class HolderGroup : MonoBehaviour
     {
         managerRef.EndDrag(mousePos, spellHolderRef);
     }
+
+    public void SendSlotInitialization(SpellHolder spellHolderRef, int holderIndex)
+    {
+        managerRef.InitializeSlot(spellHolderRef, holderIndex);
+    }
 }

@@ -33,10 +33,25 @@ public class SpellHolder : MonoBehaviour
     {
         holderGroupRef = transform.parent.GetComponent<HolderGroup>();
         originalPos = transform.position;
+
+        #region Initialize Ability Reference
         abilityRef = EveryAbilityDict.abilityDict[abilityRefIndex];
         abilityRef.SetDisplayVars();
         abilityName = abilityRef.displayName;
         abilityDescription = abilityRef.description;
+        #endregion
+
+        if(SessionDataManager.playerLoadOut.Count > 0)
+        {
+            for (int ii = 0; ii < SessionDataManager.playerLoadOut.Count; ii++)
+            {
+                if (abilityRef.GetType() == SessionDataManager.playerLoadOut[ii].GetType())
+                {
+                    holderGroupRef.SendSlotInitialization(this, ii);
+                    break;
+                }
+            }
+        }
     }
 
     private void Update()
