@@ -1461,9 +1461,9 @@ MonoBehaviour:
     type: 3}
   groundHolderRef: {fileID: 1817536930}
   slotHolderRef: {fileID: 188113613}
-  remainingEnemies: 0
-  cardsPlaced: 0
-  minimumCardsPlaced: 3
+  <remainingEnemies>k__BackingField: 0
+  <cardsPlaced>k__BackingField: 0
+  <minimumCardsPlaced>k__BackingField: 3
 --- !u!4 &586905833
 Transform:
   m_ObjectHideFlags: 0
@@ -16470,6 +16470,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GroundHolder1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278063312826332030, guid: 900695cbe84cd7649a6dff40d0e6de87,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5278063312826332030, guid: 900695cbe84cd7649a6dff40d0e6de87,
         type: 3}
