@@ -81,6 +81,11 @@ public abstract class CombatBody : Placeable
             rb.velocity = Vector3.zero;
         }
     }
+    private void CalculateControlledVelocity(Vector3 desiredVelocity) 
+    {
+
+    }
+
 
     private void UpdateCooldowns(float delta)
     {
