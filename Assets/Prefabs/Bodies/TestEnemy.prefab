@@ -69,7 +69,12 @@ MonoBehaviour:
   bounty: 5
   health: 20
   baseMoveSpeed: 3
+  timeToFullSpeed: 0.5
+  timeToFullStop: 0.3
+  sourcesPreventingMovement: 0
   forcedVelocity: {x: 0, y: 0, z: 0}
+  sourcesPreventingAbilities: 0
+  effectList: []
   targetDetectionRadius: 30
 --- !u!135 &7965983472719064248
 SphereCollider:

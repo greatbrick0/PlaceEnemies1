@@ -20,9 +20,14 @@ public abstract class CombatBody : Placeable
 
     [SerializeField]
     protected float baseMoveSpeed = 3.0f;
-    protected float moveSpeed;
+    public float moveSpeed { get; protected set; }
+    [SerializeField]
+    private float timeToFullSpeed = 0.3f;
+    [SerializeField]
+    private float timeToFullStop = 0.3f;
 
-    protected Vector3 controlledVelocity;
+    public Vector3 controlledVelocity { get; protected set; }
+    private Vector3 previousControlledVelocity;
     public int sourcesPreventingMovement = 0;
     public Vector3 forcedVelocity;
     public int sourcesPreventingAbilities = 0;
@@ -72,7 +77,7 @@ public abstract class CombatBody : Placeable
     {
         if (released)
         {
-            rb.velocity = (sourcesPreventingMovement == 0 ? controlledVelocity : Vector3.zero) + forcedVelocity;
+            CalculateMovement(Time.deltaTime);
             UpdateCooldowns(Time.deltaTime);
             UpdateEffectTimes(Time.deltaTime);
         }
@@ -81,11 +86,30 @@ public abstract class CombatBody : Placeable
             rb.velocity = Vector3.zero;
         }
     }
-    private void CalculateControlledVelocity(Vector3 desiredVelocity) 
-    {
 
+    private void CalculateMovement(float delta)
+    {
+        previousControlledVelocity = CalculateControlledAcceleration(controlledVelocity, previousControlledVelocity, delta);
+        rb.velocity = (sourcesPreventingMovement == 0 ? previousControlledVelocity : Vector3.zero) + forcedVelocity;
     }
 
+    private Vector3 CalculateControlledAcceleration(Vector3 desiredVelocity, Vector3 currentVelocity, float delta) 
+    {
+        if (desiredVelocity == currentVelocity) return currentVelocity;
+        
+        if(desiredVelocity.magnitude != 0)
+        {
+            currentVelocity += desiredVelocity.normalized * (moveSpeed / timeToFullSpeed) * delta;
+            currentVelocity = Vector3.ClampMagnitude(currentVelocity, moveSpeed);
+        }
+        else
+        {
+            currentVelocity -= currentVelocity.normalized * (moveSpeed / timeToFullStop) * delta;
+            if (currentVelocity.magnitude < 0.05f) currentVelocity = Vector3.zero;
+        }
+
+        return currentVelocity;
+    }
 
     private void UpdateCooldowns(float delta)
     {
