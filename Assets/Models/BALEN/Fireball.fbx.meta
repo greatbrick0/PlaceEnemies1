@@ -43,7 +43,7 @@ ModelImporter:
       name: Fireball
       takeName: BalenRig.001|BalenRig.001Action
       internalID: 0
-      firstFrame: 0
+      firstFrame: 7
       lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0
@@ -812,7 +812,8 @@ ModelImporter:
     - name: f_index.03.L_end
       parentName: f_index.03.L
       position: {x: -1.4901161e-10, y: 0.00057852326, z: -1.4901161e-10}
-      rotation: {x: 0.00000005960463, y: -0.000000026077027, z: 0.000000002793967, w: 1}
+      rotation: {x: 0.00000005960463, y: -0.000000026077027, z: 0.000000002793967,
+        w: 1}
       scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
     - name: thumb.01.L
       parentName: palm.01.L
@@ -857,7 +858,8 @@ ModelImporter:
     - name: f_middle.03.L_end
       parentName: f_middle.03.L
       position: {x: -5.9604643e-10, y: 0.0006630288, z: -4.4703483e-10}
-      rotation: {x: -0.000000022351735, y: -0.00000008940694, z: -0.0000001774169, w: 1}
+      rotation: {x: -0.000000022351735, y: -0.00000008940694, z: -0.0000001774169,
+        w: 1}
       scale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
     - name: palm.03.L
       parentName: hand.L
@@ -972,7 +974,8 @@ ModelImporter:
     - name: thumb.03.R_end
       parentName: thumb.03.R
       position: {x: 4.4703483e-10, y: 0.000527101, z: -7.4505804e-11}
-      rotation: {x: 0.000000021420409, y: -0.00000016274855, z: 0.00000009308492, w: 1}
+      rotation: {x: 0.000000021420409, y: -0.00000016274855, z: 0.00000009308492,
+        w: 1}
       scale: {x: 1.0000004, y: 1.0000004, z: 1.0000001}
     - name: palm.02.R
       parentName: hand.R
@@ -997,7 +1000,8 @@ ModelImporter:
     - name: f_middle.03.R_end
       parentName: f_middle.03.R
       position: {x: 5.9604643e-10, y: 0.0006630286, z: -1.4901161e-10}
-      rotation: {x: 0.000000007450577, y: 0.000000029802308, z: -0.00000007916238, w: 1}
+      rotation: {x: 0.000000007450577, y: 0.000000029802308, z: -0.00000007916238,
+        w: 1}
       scale: {x: 0.99999994, y: 0.9999998, z: 1}
     - name: palm.03.R
       parentName: hand.R
@@ -1047,7 +1051,8 @@ ModelImporter:
     - name: f_pinky.03.R_end
       parentName: f_pinky.03.R
       position: {x: 0.0000000017881393, y: 0.00042137026, z: -4.4703483e-10}
-      rotation: {x: -0.00000010430808, y: 0.000000050291394, z: 0.00000005750914, w: 1}
+      rotation: {x: -0.00000010430808, y: 0.000000050291394, z: 0.00000005750914,
+        w: 1}
       scale: {x: 0.99999976, y: 1.0000001, z: 1.0000004}
     - name: breast.L
       parentName: spine.003
@@ -1077,7 +1082,8 @@ ModelImporter:
     - name: pelvis.L_end
       parentName: pelvis.L
       position: {x: 1.4901161e-10, y: 0.0049109445, z: -2.7939677e-11}
-      rotation: {x: 0.000000059604645, y: -0.000000059604645, z: 0.000000067055225, w: 1}
+      rotation: {x: 0.000000059604645, y: -0.000000059604645, z: 0.000000067055225,
+        w: 1}
       scale: {x: 1.0000001, y: 1, z: 1.0000002}
     - name: pelvis.R
       parentName: spine
