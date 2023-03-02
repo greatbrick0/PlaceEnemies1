@@ -22,6 +22,7 @@ public class PlacingManager : MonoBehaviour
     private GameObject mousePlaneRef;
     [SerializeField]
     private Vector3 mousePlaneUpperPos = Vector3.up;
+    
 
     [SerializeField]
     private GameObject playerPrefab;
@@ -32,6 +33,8 @@ public class PlacingManager : MonoBehaviour
     private GameObject groundHolderRef;
     [SerializeField]
     private SlotHolderScript slotHolderRef;
+    [SerializeField]
+    private GameObject VicFadeRef;
 
     private bool combatStarted = false;
     [field: SerializeField]
@@ -68,7 +71,7 @@ public class PlacingManager : MonoBehaviour
 
     private void Update()
     {
-        currentMousePos = Mouse.current.position.ReadValue();
+        currentMousePos = Mouse.current.position.ReadValue() != null ? Mouse.current.position.ReadValue() : Vector2.zero;
         mouseRay = unityCam.ScreenPointToRay(currentMousePos);
         Physics.Raycast(cam.transform.position, mouseRay.direction, out hitData, 150.0f, 1 << 9);
         mouseHitObject = hitData.collider.gameObject != null ? hitData.collider.gameObject : mousePlaneRef; //this line usually gives errors
@@ -124,11 +127,26 @@ public class PlacingManager : MonoBehaviour
 
     private void CheckForVictory()
     {
-        if (!combatStarted) return;
-        if (remainingEnemies != 0) return;
+        if (combatStarted)
+        {
+            if (remainingEnemies <= 0)
+            {
+                print("Player defeated all enemies, end combat");
+                playerRef.GetComponent<PlayerScript>().PackPlayer();
 
-        print("Player defeated all enemies, end combat");
-        playerRef.GetComponent<PlayerScript>().PackPlayer();
+                StartCoroutine(VictoryFadeOut());
+            }
+        }
+        
+
+        
+    }
+
+    private IEnumerator VictoryFadeOut()
+    {
+        VicFadeRef.GetComponent<VictoryScreen>().FadeOut();
+        yield return new WaitForSeconds(2.0f);
+
         SwitchToTimeLineScene();
     }
 }
