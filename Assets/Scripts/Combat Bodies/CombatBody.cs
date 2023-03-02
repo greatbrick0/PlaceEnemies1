@@ -15,17 +15,22 @@ public abstract class CombatBody : Placeable
     [Tooltip("Used for preventing friendly fire.")]
     public string team = "enemy";
     [SerializeField]
+    [Tooltip("The amount of currency this CombatBody will reward for being killed.")]
     int bounty = 0;
 
     [SerializeField]
+    [Tooltip("The amount of damage this CombatBody can take before dying.")]
     protected int health = 2;
 
     [SerializeField]
+    [Tooltip("This CombatBody's default move speed. This value is used as a base when calculating relative boosts and slows.")]
     protected float baseMoveSpeed = 3.0f;
     public float moveSpeed { get; protected set; }
     [SerializeField]
+    [Tooltip("The time it takes to accelerate to full speed from standing still.")]
     private float timeToFullSpeed = 0.3f;
     [SerializeField]
+    [Tooltip("The time it takes to completely stop from full speed.")]
     private float timeToFullStop = 0.3f;
 
     public Vector3 controlledVelocity { get; protected set; }
@@ -34,9 +39,11 @@ public abstract class CombatBody : Placeable
     public Vector3 forcedVelocity;
     public int sourcesPreventingAbilities = 0;
     [SerializeField]
+    [Tooltip("All of the abilities that this CombatBody could use.")]
     protected List<Ability> abilityList = new List<Ability>();
 
     [SerializeField]
+    [Tooltip("All of the effects that are currently attached to this CombatBody.")]
     public List<StatusEffect> effectList = new List<StatusEffect>();
     private List<StatusEffect> timedEffects = new List<StatusEffect>();
     private List<StatusEffect> movementEffects = new List<StatusEffect>();
