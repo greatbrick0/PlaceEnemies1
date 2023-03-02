@@ -75,8 +75,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -231,9 +231,12 @@ MonoBehaviour:
   managerRef: {fileID: 0}
   linkedObject: {fileID: 7965983472719064249, guid: 27a78680fa0f3ec4f8520f45fcb44ccf,
     type: 3}
+  enemyAmount: 1
   maxUses: 2
-  objectDescription: 
+  hoverSize: {x: 1.1, y: 1.1}
   hoverOffset: {x: 0, y: 20}
+  draggedOffset: {x: 0, y: -180}
+  hideOffset: {x: 0, y: -500}
 --- !u!1 &839351603599722853
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,8 +424,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
