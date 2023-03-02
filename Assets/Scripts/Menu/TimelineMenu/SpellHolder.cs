@@ -41,7 +41,13 @@ public class SpellHolder : MonoBehaviour
         abilityDescription = abilityRef.description;
         #endregion
 
-        if(SessionDataManager.playerLoadOut.Count > 0)
+        StartCoroutine(CheckSavedLoadout());
+    }
+
+    IEnumerator CheckSavedLoadout()
+    {
+        yield return new WaitForEndOfFrame();
+        if (SessionDataManager.playerLoadOut.Count > 0)
         {
             for (int ii = 0; ii < SessionDataManager.playerLoadOut.Count; ii++)
             {

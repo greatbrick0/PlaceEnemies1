@@ -7,31 +7,25 @@ public class EditSpellsManager : MonoBehaviour
     public List<Ability> currentLoadOut = new List<Ability>();
     public List<EquipSlotScript> loadOutSlots = new List<EquipSlotScript>();
 
-    private void OnEnable()
-    {
-        SessionDataManager.playerLoadOut.Add(new MagicArrowAbility());
-        SessionDataManager.playerLoadOut.Add(new BoulderAbility());
-        SessionDataManager.playerLoadOut.Add(new HomingMissileAbility());
-
-        for (int ii = 0; ii < loadOutSlots.Count; ii++)
-        {
-            loadOutSlots[ii].managerRef = this;
-        }
-    }
-
     private void Start()
     {
-        if (SessionDataManager.playerLoadOut.Count > 0)
+        if (SessionDataManager.playerLoadOut.Count == 0)
         {
-            currentLoadOut = SessionDataManager.playerLoadOut;
-        }
-        else
-        {
-            for (int ii = 0; ii < 4; ii++)
+            if (SessionDataManager.nightNum == 0)
             {
-                currentLoadOut.Add(new LockedAbility());
+                SessionDataManager.playerLoadOut.Add(new MagicArrowAbility());
+                SessionDataManager.playerLoadOut.Add(new BoulderAbility());
+                SessionDataManager.playerLoadOut.Add(new HomingMissileAbility());
+            }
+            else
+            {
+                for (int ii = 0; ii < 4; ii++)
+                {
+                    SessionDataManager.playerLoadOut.Add(new LockedAbility());
+                }
             }
         }
+        currentLoadOut = SessionDataManager.playerLoadOut;
 
         for (int ii = 0; ii < loadOutSlots.Count; ii++)
         {
