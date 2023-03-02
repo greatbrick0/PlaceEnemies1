@@ -39,9 +39,4 @@ public class ArenaBoundsScript : MonoBehaviour
             }
         }
     }
-
-    private void Start()
-    {
-        AddVisuals();
-    }
 }

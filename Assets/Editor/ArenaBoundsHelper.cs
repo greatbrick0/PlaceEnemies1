@@ -15,5 +15,7 @@ public class ArenaBoundsHelper : Editor
         if (GUILayout.Button("Add Visuals")) myScript.AddVisuals();
         if (GUILayout.Button("Remove Visuals")) myScript.RemoveVisuals();
         GUILayout.EndHorizontal();
+
+        if (GUI.changed) EditorUtility.SetDirty(myScript.gameObject);
     }
 }
