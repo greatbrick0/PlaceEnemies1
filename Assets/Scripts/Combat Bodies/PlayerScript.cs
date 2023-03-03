@@ -28,7 +28,7 @@ public class PlayerScript : CombatBody
         if (combatUIC != null)
         {
             combatUIC.ConnectSpellList(abilityList);
-            combatUIC.HealthUpdate(base.health);
+            combatUIC.HealthUpdate(health);
         }
         inputComponent.enabled = true;
     }

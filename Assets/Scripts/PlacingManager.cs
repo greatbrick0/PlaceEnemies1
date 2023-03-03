@@ -61,7 +61,7 @@ public class PlacingManager : MonoBehaviour
         {
             playerScriptRef.SetDefaultAbilities();
         }
-        playerScriptRef.SetHealth(SessionDataManager.savedPlayerHealth != 0 ? SessionDataManager.savedPlayerHealth : 6);
+        if(SessionDataManager.savedPlayerHealth != 0) playerScriptRef.SetHealth(SessionDataManager.savedPlayerHealth);
         #endregion
 
         cam.followTarget = groundHolderRef.transform;
