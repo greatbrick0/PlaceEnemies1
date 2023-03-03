@@ -639,6 +639,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1804397802}
+        m_TargetAssemblyTypeName: TransitionTimeLIne, Assembly-CSharp
+        m_MethodName: FadeOutCall
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 8115972}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -895,9 +907,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 489424547}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 262f3cd0134b78b4185eb62264608b2d, type: 3}
+  m_Script: {fileID: 11500000, guid: fec42d9f792c1684c8555014672c55aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionOut: {fileID: 8300000, guid: 62f495961bdc5ea44b409e0fb79e64a5, type: 3}
+  sceneExit: {fileID: 8300000, guid: 42446aa9b7788aa498d86814ca95c59d, type: 3}
+  sceneChangeTarget: CombatScene
 --- !u!1 &562660541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,6 +1316,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596430306}
   m_CullTransparentMesh: 1
+--- !u!1 &631442684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 631442686}
+  - component: {fileID: 631442685}
+  m_Layer: 0
+  m_Name: AudioRef
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &631442685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631442684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d85b87165e9d5f4a867eb27a91c5292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneString: TimelineScene
+--- !u!4 &631442686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631442684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1780, y: 210.90001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &767640905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,6 +1620,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 489424549}
+        m_TargetAssemblyTypeName: TransitionTimeLIne, Assembly-CSharp
+        m_MethodName: FadeOutCall
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1063653116}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -2521,7 +2593,7 @@ RectTransform:
   - {fileID: 8115973}
   - {fileID: 1063653117}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2748,16 +2820,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 489424549}
-        m_TargetAssemblyTypeName: TransitionTimeLIne1, Assembly-CSharp
-        m_MethodName: FadeToPlacing
-        m_Mode: 1
+        m_TargetAssemblyTypeName: TransitionTimeLIne, Assembly-CSharp
+        m_MethodName: FadeOutCall
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1572852134
 MonoBehaviour:
@@ -3117,7 +3189,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1777153298 stripped
 RectTransform:
@@ -3136,7 +3208,7 @@ GameObject:
   - component: {fileID: 1804397801}
   - component: {fileID: 1804397802}
   m_Layer: 5
-  m_Name: VictoryUI
+  m_Name: SpellSelectTransitioner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3175,6 +3247,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec42d9f792c1684c8555014672c55aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionOut: {fileID: 8300000, guid: 62f495961bdc5ea44b409e0fb79e64a5, type: 3}
+  sceneExit: {fileID: 8300000, guid: 42446aa9b7788aa498d86814ca95c59d, type: 3}
+  sceneChangeTarget: N/A
 --- !u!1 &1846135060
 GameObject:
   m_ObjectHideFlags: 0
@@ -3386,7 +3461,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &1912421404
 MonoBehaviour:

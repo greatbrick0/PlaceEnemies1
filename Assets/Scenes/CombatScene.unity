@@ -1611,6 +1611,7 @@ GameObject:
   - component: {fileID: 586905833}
   - component: {fileID: 586905832}
   - component: {fileID: 586905834}
+  - component: {fileID: 586905835}
   m_Layer: 0
   m_Name: ArenaSceneManager
   m_TagString: Untagged
@@ -1694,6 +1695,19 @@ MonoBehaviour:
   - entryName: BasicDemonBall
     entryGameObject: {fileID: 9159844377764210428, guid: b214c12139ec2f34f89bbbf9e53e343a,
       type: 3}
+--- !u!114 &586905835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586905831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d85b87165e9d5f4a867eb27a91c5292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneString: CombatScene
 --- !u!1 &603187657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1840,6 +1854,7 @@ GameObject:
   - component: {fileID: 628120434}
   - component: {fileID: 628120435}
   - component: {fileID: 628120436}
+  - component: {fileID: 628120437}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1987,6 +2002,14 @@ MonoBehaviour:
   followTarget: {fileID: 0}
   offset: {x: 0, y: 25, z: -25}
   defualtPosition: {x: 0, y: 35, z: -35}
+--- !u!81 &628120437
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628120430}
+  m_Enabled: 1
 --- !u!1001 &669919789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2435,9 +2458,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 772568702}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73ce071ba636c2c4194ddf1168d39811, type: 3}
+  m_Script: {fileID: 11500000, guid: fec42d9f792c1684c8555014672c55aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionOut: {fileID: 8300000, guid: 42446aa9b7788aa498d86814ca95c59d, type: 3}
+  sceneExit: {fileID: 8300000, guid: 62f495961bdc5ea44b409e0fb79e64a5, type: 3}
+  sceneChangeTarget: TimelineScene
 --- !u!1 &784009172
 GameObject:
   m_ObjectHideFlags: 0
