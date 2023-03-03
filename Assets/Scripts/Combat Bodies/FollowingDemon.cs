@@ -55,8 +55,13 @@ public class FollowingDemon : NPCController
                 }
                 else if(distanceToTarget > satisfiedRange)
                 {
-                    controlledVelocity = -directionToTarget * moveSpeed;
+                    controlledVelocity = directionToTarget * moveSpeed;
                 }
+                else
+                {
+                    controlledVelocity = Vector3.zero * moveSpeed;
+                }
+
                 if(distanceToTarget <= aggroRange)
                 {
                     UseAbility(0, targetList[0].transform.position);
