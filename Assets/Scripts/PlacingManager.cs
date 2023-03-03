@@ -144,7 +144,7 @@ public class PlacingManager : MonoBehaviour
 
     private IEnumerator VictoryFadeOut()
     {
-        VicFadeRef.GetComponent<VictoryScreen>().FadeOut();
+        VicFadeRef.GetComponent<Transitioner>().FadeOutCall(true);
         yield return new WaitForSeconds(2.0f);
 
         SwitchToTimeLineScene();
