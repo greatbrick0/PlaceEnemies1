@@ -19,7 +19,6 @@ public class VictoryScreen : MonoBehaviour
     public void FadeIn()
     {
         transform.GetChild(0).gameObject.SetActive(true);     
-        Debug.Log("Test2");
         transform.GetChild(0).GetComponent<Animator>().SetBool("FadeIn", true);
     }
 

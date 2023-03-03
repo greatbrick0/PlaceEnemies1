@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
+[DisallowMultipleComponent]
 public abstract class CombatBody : Placeable
 {
     protected Rigidbody rb;
@@ -33,10 +34,14 @@ public abstract class CombatBody : Placeable
     [Tooltip("The time it takes to completely stop from full speed.")]
     private float timeToFullStop = 0.3f;
 
+    [HideInInspector]
     public Vector3 controlledVelocity { get; protected set; }
     private Vector3 previousControlledVelocity;
+    [HideInInspector]
     public int sourcesPreventingMovement = 0;
+    [HideInInspector]
     public Vector3 forcedVelocity;
+    [HideInInspector]
     public int sourcesPreventingAbilities = 0;
     [SerializeField]
     [Tooltip("All of the abilities that this CombatBody could use.")]

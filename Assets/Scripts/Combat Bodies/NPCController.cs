@@ -42,4 +42,19 @@ public abstract class NPCController : CombatBody
         }
         base.Die();
     }
+
+    protected List<GameObject> CleanTargetList() //prevents null reference errors
+    {
+        List<GameObject> cleanedList = new List<GameObject>();
+
+        for (int ii = 0; ii < targetList.Count; ii++)
+        {
+            if (targetList[ii] != null)
+            {
+                cleanedList.Add(targetList[ii]);
+            }
+        }
+
+        return cleanedList;
+    }
 }

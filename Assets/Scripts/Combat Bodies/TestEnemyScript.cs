@@ -41,19 +41,4 @@ public class TestEnemyScript : NPCController
         //This example filter lets only rival teams be targeted
         return potentialTarget.GetComponent<CombatBody>().team != this.team;
     }
-
-    private List<GameObject> CleanTargetList() //prevents null reference errors
-    {
-        List<GameObject> cleanedList = new List<GameObject>();
-
-        for(int ii = 0; ii < targetList.Count; ii++)
-        {
-            if(targetList[ii] != null)
-            {
-                cleanedList.Add(targetList[ii]);
-            }
-        }
-
-        return cleanedList;
-    }
 }
