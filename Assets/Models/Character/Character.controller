@@ -173,10 +173,10 @@ AnimatorController:
   - serializedVersion: 5
     m_Name: Attack
     m_StateMachine: {fileID: -1032660068916938303}
-    m_Mask: {fileID: 0}
+    m_Mask: {fileID: 31900000, guid: 2231e7ad9d48fb74fb7e72f7e14b3aff, type: 2}
     m_Motions: []
     m_Behaviours: []
-    m_BlendingMode: 1
+    m_BlendingMode: 0
     m_SyncedLayerIndex: -1
     m_DefaultWeight: 1
     m_IKPass: 0
