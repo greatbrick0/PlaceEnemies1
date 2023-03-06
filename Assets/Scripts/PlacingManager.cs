@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlacingManager : MonoBehaviour
 {
+    [Header("Camera References")]
     [SerializeField]
     private CameraScript cam;
     [SerializeField]
@@ -22,13 +24,20 @@ public class PlacingManager : MonoBehaviour
     private GameObject mousePlaneRef;
     [SerializeField]
     private Vector3 mousePlaneUpperPos = Vector3.up;
-    
 
+    [Header("Placing UI References")]
+    [SerializeField]
+    private GameObject cardsPlacedLabel;
+    [SerializeField]
+    private GameObject readyButtonRef;
+
+    [Header("Player References")]
     [SerializeField]
     private GameObject playerPrefab;
     private GameObject playerRef;
     private PlayerScript playerScriptRef;
 
+    [Header("Other References")]
     [SerializeField]
     private GameObject groundHolderRef;
     [SerializeField]
@@ -36,6 +45,8 @@ public class PlacingManager : MonoBehaviour
     [SerializeField]
     private GameObject VicFadeRef;
 
+    [Space]
+    [SerializeField]
     private bool combatStarted = false;
     [field: SerializeField]
     public int remainingEnemies { get; private set; } = 0;
@@ -67,6 +78,8 @@ public class PlacingManager : MonoBehaviour
         cam.followTarget = groundHolderRef.transform;
         cam.offset = placingModeCamPos;
         unityCam = cam.GetComponent<Camera>();
+
+        UpdatePlacingUI();
     }
 
     private void Update()
@@ -111,6 +124,8 @@ public class PlacingManager : MonoBehaviour
         bool output = mouseHitObject.GetComponent<GroundScript>().AttachObject(Instantiate(placeObject, transform.parent));
         cardsPlaced += output ? 1 : 0;
         remainingEnemies += output ? enemyCount : 0;
+        UpdatePlacingUI();
+
         return output;
     }
 
@@ -137,9 +152,6 @@ public class PlacingManager : MonoBehaviour
                 StartCoroutine(VictoryFadeOut());
             }
         }
-        
-
-        
     }
 
     private IEnumerator VictoryFadeOut()
@@ -148,5 +160,11 @@ public class PlacingManager : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
 
         SwitchToTimeLineScene();
+    }
+
+    private void UpdatePlacingUI()
+    {
+        cardsPlacedLabel.GetComponent<TextMeshProUGUI>().text = cardsPlaced.ToString() + "/" + minimumCardsPlaced.ToString();
+        readyButtonRef.SetActive(cardsPlaced >= minimumCardsPlaced);
     }
 }
