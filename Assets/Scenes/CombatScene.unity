@@ -1734,6 +1734,9 @@ MonoBehaviour:
   - entryName: DemonSlash
     entryGameObject: {fileID: 9159844377764210428, guid: c0f71f99bfb9a7f44bdb69ec9e9dd615,
       type: 3}
+  - entryName: DemonChain
+    entryGameObject: {fileID: 9159844377764210428, guid: d9ef2032f3c14964c9e7bf6f2c3fba4e,
+      type: 3}
 --- !u!114 &586905835
 MonoBehaviour:
   m_ObjectHideFlags: 0

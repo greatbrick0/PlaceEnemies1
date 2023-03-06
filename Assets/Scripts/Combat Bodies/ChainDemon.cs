@@ -6,6 +6,6 @@ public class ChainDemon : FollowingDemon
 {
     protected override void SetFirstAbility()
     {
-        abilityList[0] = new BasicDemonBallAbility(gameObject);
+        abilityList[0] = new DemonChainAbility(gameObject);
     }
 }
