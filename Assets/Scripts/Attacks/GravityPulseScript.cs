@@ -40,7 +40,6 @@ public class GravityPulseScript : Attack
             attackStage = 1;
             canHit = false;
         }
-        
     }
 
     protected override bool FilterHitTarget(CombatBody hitTarget)

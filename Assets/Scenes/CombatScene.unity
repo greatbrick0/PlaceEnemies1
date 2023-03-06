@@ -1727,6 +1727,9 @@ MonoBehaviour:
   - entryName: GravityPulse
     entryGameObject: {fileID: 9159844377764210428, guid: 77f018690cea8514a90436f482642980,
       type: 3}
+  - entryName: Hammer
+    entryGameObject: {fileID: 9159844377764210428, guid: 168352d345c13d1468267474752e8fb0,
+      type: 3}
   enemyAttackEntries:
   - entryName: BasicDemonBall
     entryGameObject: {fileID: 9159844377764210428, guid: b214c12139ec2f34f89bbbf9e53e343a,
@@ -6674,6 +6677,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpellIDList:
   - {fileID: -1440874532, guid: 09319eeabb223b048bce2ab6b90d404d, type: 3}
+  - {fileID: -1440874532, guid: 09319eeabb223b048bce2ab6b90d404d, type: 3}
+  - {fileID: -159464579, guid: 09319eeabb223b048bce2ab6b90d404d, type: 3}
+  - {fileID: 1197551539, guid: 09319eeabb223b048bce2ab6b90d404d, type: 3}
+  - {fileID: -1440874532, guid: 09319eeabb223b048bce2ab6b90d404d, type: 3}
+  - {fileID: -159464579, guid: 09319eeabb223b048bce2ab6b90d404d, type: 3}
+  - {fileID: 1197551539, guid: 09319eeabb223b048bce2ab6b90d404d, type: 3}
   - {fileID: -1440874532, guid: 09319eeabb223b048bce2ab6b90d404d, type: 3}
   - {fileID: -159464579, guid: 09319eeabb223b048bce2ab6b90d404d, type: 3}
   - {fileID: 1197551539, guid: 09319eeabb223b048bce2ab6b90d404d, type: 3}
