@@ -16,4 +16,4 @@ public class AudioReference : MonoBehaviour
         else //could change if needed camera position in other scenes... what other scenes? idk.
             AudioPosition = Vector3.zero;
     }
-}
+} //is there a solution better than Camera.main? -Spencer

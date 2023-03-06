@@ -1718,6 +1718,9 @@ MonoBehaviour:
   - entryName: Boulder
     entryGameObject: {fileID: 9159844377764210428, guid: 7159e2722e2359a46b789b295b43bf57,
       type: 3}
+  - entryName: JumpWave
+    entryGameObject: {fileID: 9159844377764210428, guid: 9ccf2397a041c9c4c95a52070f523771,
+      type: 3}
   - entryName: GravityPulse
     entryGameObject: {fileID: 9159844377764210428, guid: 77f018690cea8514a90436f482642980,
       type: 3}

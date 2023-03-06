@@ -43,7 +43,6 @@ public class EnemyPanelSlotScript : MonoBehaviour
             output = Random.Range(0, panels.Count);
         }
 
-        print("output: " + output + " excluded: " + excluded);
         return output;
     }
 }

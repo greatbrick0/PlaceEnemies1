@@ -12,7 +12,7 @@ public class EveryAbilityDict : MonoBehaviour
         abilityDict.Add(new HomingMissileAbility());
         abilityDict.Add(new ShacklesAbility());
         abilityDict.Add(new BoulderAbility());
-        abilityDict.Add(new LockedAbility()); //future green ability goes here
+        abilityDict.Add(new JumpAbility()); //future green ability goes here
         abilityDict.Add(new GravityAbility());
     }
 }
