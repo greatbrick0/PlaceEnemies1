@@ -79,13 +79,14 @@ MonoBehaviour:
   released: 0
   team: enemy
   bounty: 0
-  health: 2
+  health: 20
   baseMoveSpeed: 1.5
   timeToFullSpeed: 0.4
   timeToFullStop: 0.3
   sourcesPreventingMovement: 0
   forcedVelocity: {x: 0, y: 0, z: 0}
   sourcesPreventingAbilities: 0
+  sourcesPreventingDamage: 0
   effectList: []
   targetDetectionRadius: 30
   minimumRange: 3
