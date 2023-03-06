@@ -33,6 +33,8 @@ public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
     private bool currentlyClicked = false;
     private bool currentlyHiding = false;
     private bool validToUse = true;
+    [HideInInspector]
+    public int panelTypeIndex = 0;
 
     private void Start()
     {
@@ -109,7 +111,7 @@ public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
             remainingUses--;
             if (remainingUses <= 0)
             {
-                validToUse = false;
+                MakePanelInvalid();
             }
         }
     }
@@ -121,5 +123,13 @@ public class EnemyPanelScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
             currentlyHiding = true;
             transform.localPosition = Vector2.Lerp(defaultPos, hideOffset, Mathf.Min(Mathf.Sqrt(timeSinceStart * 4), 1));
         }
+    }
+
+    private void MakePanelInvalid()
+    {
+        validToUse = false;
+        transform.parent.GetComponent<EnemyPanelSlotScript>().ReplacePanel(panelTypeIndex);
+
+        Destroy(this.gameObject);
     }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7965983472719064229}
   - component: {fileID: 7965983472719064230}
   - component: {fileID: 7965983472719064248}
-  - component: {fileID: 8022071544459792010}
+  - component: {fileID: 3434296676422604297}
   m_Layer: 8
   m_Name: ChainEnemy
   m_TagString: Untagged
@@ -64,7 +64,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.75
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8022071544459792010
+--- !u!114 &3434296676422604297
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,22 +73,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 7965983472719064249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fa8eece510d4e44e9ae9b4c0128953c, type: 3}
+  m_Script: {fileID: 11500000, guid: 54133d629a18bf4449f772cdb9531b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   released: 0
   team: enemy
-  bounty: 8
-  health: 30
-  baseMoveSpeed: 1
-  timeToFullSpeed: 0.2
+  bounty: 0
+  health: 2
+  baseMoveSpeed: 1.5
+  timeToFullSpeed: 0.4
   timeToFullStop: 0.3
   sourcesPreventingMovement: 0
   forcedVelocity: {x: 0, y: 0, z: 0}
   sourcesPreventingAbilities: 0
   effectList: []
   targetDetectionRadius: 30
-  minimumRange: 2
+  minimumRange: 3
   satisfiedRange: 1.1
   satisfiedRangeInRatio: 1
   aggroRange: 1

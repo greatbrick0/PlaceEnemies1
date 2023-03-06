@@ -13,7 +13,8 @@ public class SlotHolderScript : MonoBehaviour
 
         for(int ii = 0; ii < transform.childCount; ii++)
         {
-            transform.GetChild(ii).GetChild(0).GetComponent<EnemyPanelScript>().SlideOffScreen(timeSinceDragStart, ii);
+            if (transform.GetChild(ii).childCount > 0)
+                transform.GetChild(ii).GetChild(0).GetComponent<EnemyPanelScript>().SlideOffScreen(timeSinceDragStart, ii);
         }
     }
 
