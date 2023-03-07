@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Description aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  m_text: 'An enemy that shoots at the player from a distance. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -232,11 +232,12 @@ MonoBehaviour:
   linkedObject: {fileID: 7965983472719064249, guid: 27a78680fa0f3ec4f8520f45fcb44ccf,
     type: 3}
   enemyAmount: 1
-  maxUses: 2
+  maxUses: 1
   hoverSize: {x: 1.1, y: 1.1}
   hoverOffset: {x: 0, y: 20}
   draggedOffset: {x: 0, y: -180}
   hideOffset: {x: 0, y: -500}
+  panelTypeIndex: 0
 --- !u!1 &839351603599722853
 GameObject:
   m_ObjectHideFlags: 0

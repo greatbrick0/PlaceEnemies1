@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7596244289182659206
+--- !u!1 &821709190200486499
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7583929302364179708}
-  - component: {fileID: 6228684505202730372}
-  - component: {fileID: 7169747602910175189}
+  - component: {fileID: 5546942684747462098}
+  - component: {fileID: 2910896265473925670}
+  - component: {fileID: 63514960165322542}
   m_Layer: 7
-  m_Name: Sphere
+  m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7583929302364179708
+--- !u!4 &5546942684747462098
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7596244289182659206}
+  m_GameObject: {fileID: 821709190200486499}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.3, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_LocalScale: {x: 4, y: 0.01, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9159844377764210305}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6228684505202730372
+--- !u!33 &2910896265473925670
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7596244289182659206}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7169747602910175189
+  m_GameObject: {fileID: 821709190200486499}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &63514960165322542
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7596244289182659206}
+  m_GameObject: {fileID: 821709190200486499}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 32e734e9bfda9444696e5e5a36524825, type: 2}
+  - {fileID: 2100000, guid: 4d0d8c6793f3efc4abc5ae50f4b7cb92, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,9 +93,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9159844377764210305}
   - component: {fileID: 4010019983992688598}
-  - component: {fileID: 1997865456948574999}
+  - component: {fileID: 5435431730933540525}
   m_Layer: 7
-  m_Name: InnerGravityPulse
+  m_Name: JumpShockwave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,7 +113,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7583929302364179708}
+  - {fileID: 5546942684747462098}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -128,9 +128,9 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1997865456948574999
+--- !u!114 &5435431730933540525
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,13 +139,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 9159844377764210428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ac678a1401d9d240b2792440453e191, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a22f919f65ec7d488aec5f35123d6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   team: enemy
   speed: 0
   moveDirection: {x: 0, y: 0, z: 1}
-  lifetime: 0.5
+  lifetime: 0.2
   power: 5
   canHit: 1
-  stunEffect: {fileID: 11400000, guid: 8d4f496cb160639478db316bffd51b3b, type: 2}
+  movementEffect: {fileID: 11400000, guid: e2f6a57b22f14cb42bf8d65ff9f05fd0, type: 2}

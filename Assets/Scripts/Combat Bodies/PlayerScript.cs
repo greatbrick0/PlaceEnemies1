@@ -142,6 +142,7 @@ public class PlayerScript : CombatBody
     public override int Hurt(int damageAmount = 1) //Is this fine? i dont see a problem. slap me ig -Ethan.
     {
         if (combatUIC != null) combatUIC.HealthUpdate(health-damageAmount);
+        CameraShakeOnHitScript.instance.Shake();
         return base.Hurt(damageAmount);
     }
 }

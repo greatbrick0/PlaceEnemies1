@@ -84,6 +84,6 @@ public class FollowingDemon : NPCController
 
     protected virtual void SetFirstAbility()
     {
-        abilityList[0] = new BasicDemonBallAbility(gameObject);
+        abilityList[0] = new DemonSlashAbility(gameObject);
     }
 }

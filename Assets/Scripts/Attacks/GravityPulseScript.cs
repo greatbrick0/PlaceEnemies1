@@ -30,17 +30,16 @@ public class GravityPulseScript : Attack
 
         if (age >= lifetime * 0.75f && attackStage == 1)
         {
-            attackStage++;
+            attackStage = 2;
             innerPulseRef = Instantiate(innerPulsePrefab, transform.parent);
             innerPulseRef.GetComponent<Attack>().team = team;
             innerPulseRef.transform.position = transform.position;
         }
         if (age >= lifetime * 0.05f && attackStage == 0)
         {
-            attackStage++;
+            attackStage = 1;
             canHit = false;
         }
-        
     }
 
     protected override bool FilterHitTarget(CombatBody hitTarget)

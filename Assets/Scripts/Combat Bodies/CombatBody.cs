@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody)), RequireComponent(typeof(Collider))]
 [DisallowMultipleComponent]
 public abstract class CombatBody : Placeable
 {
@@ -43,6 +43,22 @@ public abstract class CombatBody : Placeable
     public Vector3 forcedVelocity;
     [HideInInspector]
     public int sourcesPreventingAbilities = 0;
+    private int _sourcesPreventingHits = 0;
+    [HideInInspector]
+    public int sourcesPreventingHits
+    {
+        get
+        {
+            return _sourcesPreventingHits;
+        }
+        set
+        {
+            _sourcesPreventingHits = value;
+            GetComponent<Collider>().enabled = _sourcesPreventingHits == 0;
+        }
+    }
+    [HideInInspector]
+    public int sourcesPreventingDamage = 0;
     [SerializeField]
     [Tooltip("All of the abilities that this CombatBody could use.")]
     protected List<Ability> abilityList = new List<Ability>();
@@ -73,10 +89,13 @@ public abstract class CombatBody : Placeable
     {
         int previousHealth = health;
 
-        health -= Mathf.Max(damageAmount, 0);
-        if(health <= 0)
+        if(sourcesPreventingDamage == 0)
         {
-            Die();
+            health -= Mathf.Max(damageAmount, 0);
+            if (health <= 0)
+            {
+                Die();
+            }
         }
 
         return Mathf.Max(previousHealth - health, 0);

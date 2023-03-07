@@ -58,7 +58,7 @@ public abstract class Attack : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (!canHit) return;
         if (other.gameObject.GetComponent<CombatBody>() == null) return;
