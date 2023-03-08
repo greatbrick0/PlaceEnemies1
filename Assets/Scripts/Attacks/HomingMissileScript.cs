@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class HomingMissileScript : Attack
 {
+
+    private GameObject smokeEffect; // a reference to the instantiated smoke effect
     private List<CombatBody> detectedTargets = new List<CombatBody>();
+    //animator stuff
+
     private CombatBody homingTarget;
     private bool hasValidHomingTarget = false;
     [SerializeField] [Tooltip("The speed that the projectile will rotate towards its target.")]
@@ -12,6 +16,8 @@ public class HomingMissileScript : Attack
 
     protected override void Apply(CombatBody recentHit)
     {
+     
+
         recentHit.Hurt(power);
         CompleteAttack();
     }
