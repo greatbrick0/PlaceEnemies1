@@ -96,7 +96,7 @@ Transform:
   - {fileID: 7229652270171706790}
   - {fileID: 4220969301233286029}
   m_Father: {fileID: 9159844377764210305}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: -26}
 --- !u!95 &978711503
 Animator:
@@ -441,7 +441,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9159844377764210305}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!198 &4864190166082019080
 ParticleSystem:
@@ -5779,7 +5779,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9159844377764210305}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &7327373496382827751
 SphereCollider:
@@ -5933,9 +5933,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4864190166082019086}
   - {fileID: 944090837420196014}
   - {fileID: 8728699986250303239}
-  - {fileID: 4864190166082019086}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5970,5 +5970,4 @@ MonoBehaviour:
   lifetime: 1.5
   power: 3
   canHit: 1
-  smokeEffectPrefab: {fileID: 0}
   homingPower: 6
