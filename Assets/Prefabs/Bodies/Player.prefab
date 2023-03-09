@@ -5181,6 +5181,7 @@ MonoBehaviour:
   sourcesPreventingMovement: 0
   forcedVelocity: {x: 0, y: 0, z: 0}
   sourcesPreventingAbilities: 0
+  sourcesPreventingDamage: 0
   effectList: []
   combatUIC: {fileID: 0}
   cam: {fileID: 0}
