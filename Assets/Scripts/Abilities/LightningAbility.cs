@@ -67,6 +67,7 @@ public class LightningAbility : Ability
     {
         boltRef = user.GetComponent<CombatBody>().Instantiater(boltPrefab, user.transform.parent);
         boltRef.transform.position = targetPosition;
+        boltRef.transform.eulerAngles = new Vector3(0, Random.Range(0, 360), 0);
         boltRef.GetComponent<Attack>().team = user.GetComponent<CombatBody>().team;
     }
 }

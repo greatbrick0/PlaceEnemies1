@@ -1824,6 +1824,12 @@ MonoBehaviour:
   - entryName: DashBlade
     entryGameObject: {fileID: 9159844377764210428, guid: 50e35bcc3c58c57489dd367cc1058778,
       type: 3}
+  - entryName: BigBomb
+    entryGameObject: {fileID: 9159844377764210428, guid: 21a6e0fd42280cb4c80a09401b3e2b49,
+      type: 3}
+  - entryName: MagicDash
+    entryGameObject: {fileID: 9159844377764210428, guid: 8cdb6073578bdbb4c85c0bcdcd01e8b2,
+      type: 3}
   enemyAttackEntries:
   - entryName: BasicDemonBall
     entryGameObject: {fileID: 9159844377764210428, guid: b214c12139ec2f34f89bbbf9e53e343a,
