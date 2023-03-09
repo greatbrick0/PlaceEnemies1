@@ -21,6 +21,7 @@ public abstract class Attack : MonoBehaviour
     [Tooltip("The amount of damage, healing applied, or any other primary stat.")]
     public int power = 10;
 
+    public Transform particleEffect;
     public bool hasParticles = false;
 
     protected Collider hitbox;
@@ -57,17 +58,21 @@ public abstract class Attack : MonoBehaviour
     protected virtual void CompleteAttack() //for when an attack has been used up. ex: a bullet disappears after damaging one enemy.
     {
         canHit = false;
-        if (hasParticles == true)
-        {
-            ParticleSystem[] particleSystems = GetComponentsInChildren<ParticleSystem>();
-            foreach (ParticleSystem ps in particleSystems)
-            {
-                ps.transform.parent = null;
-                ps.Stop();
-                Destroy(ps.gameObject, 2.0f);
-            }
-        }
+
+        if (hasParticles == true) DetachParticles();
+
         Destroy(this.gameObject);
+    }
+
+    private void DetachParticles()
+    {
+        ParticleSystem[] particleSystems = GetComponentsInChildren<ParticleSystem>();
+        foreach (ParticleSystem ps in particleSystems)
+        {
+            ps.transform.parent = null;
+            ps.Stop();
+            Destroy(ps.gameObject, 2.0f);
+        }
     }
 
     private void OnTriggerStay(Collider other)

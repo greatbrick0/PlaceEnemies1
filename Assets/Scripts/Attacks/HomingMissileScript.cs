@@ -4,20 +4,12 @@ using UnityEngine;
 
 public class HomingMissileScript : Attack
 {
-   
-   
     private List<CombatBody> detectedTargets = new List<CombatBody>();
-
-    public Transform smokeEffect;
     
-   
     private CombatBody homingTarget;
     private bool hasValidHomingTarget = false;
     [SerializeField] [Tooltip("The speed that the projectile will rotate towards its target.")]
     float homingPower = 8.0f;
-  
-
-   
 
     // Use this method to set up your reference to the child Transform component
     protected override void Start()
@@ -25,16 +17,12 @@ public class HomingMissileScript : Attack
         
         base.Start();
         hasParticles = true;
-        smokeEffect = transform.GetChild(0);
+        particleEffect = transform.GetChild(0);
     }
     protected override void Apply(CombatBody recentHit)
     {
-     
-
         recentHit.Hurt(power);
         CompleteAttack();
-      
-     
     }
 
     protected override bool FilterHitTarget(CombatBody hitTarget)
