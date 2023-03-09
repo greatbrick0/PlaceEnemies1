@@ -16,5 +16,9 @@ public class EveryAbilityDict : MonoBehaviour
         abilityDict.Add(new GravityAbility());
         abilityDict.Add(new HammerAbility());
         abilityDict.Add(new LightningAbility());
+        abilityDict.Add(new ConcoctionAbility());
+        //slice
+        abilityDict.Add(new BigBombAbility());
+        //imbued charge
     }
 }

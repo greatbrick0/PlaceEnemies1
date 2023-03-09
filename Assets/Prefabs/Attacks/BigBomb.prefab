@@ -65,7 +65,8 @@ MonoBehaviour:
   lifetime: 0.7
   power: 0
   canHit: 1
-  residueObject: {fileID: 0}
+  residueObject: {fileID: 9159844377764210428, guid: aa3bc8531a4e9a44d8f51a763dee4ff6,
+    type: 3}
   randomRotation: 1
 --- !u!1001 &7612825750794105185
 PrefabInstance:
