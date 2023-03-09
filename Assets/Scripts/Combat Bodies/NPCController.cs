@@ -39,6 +39,7 @@ public abstract class NPCController : CombatBody
         {
             GameObject managerRef = GameObject.Find("/ArenaSceneManager"); //i dont like this line
             if (managerRef != null) managerRef.GetComponent<PlacingManager>().DecrementEnemyCount();
+            SessionDataManager.currency += bounty;
         }
         base.Die();
     }
@@ -57,4 +58,5 @@ public abstract class NPCController : CombatBody
 
         return cleanedList;
     }
+
 }

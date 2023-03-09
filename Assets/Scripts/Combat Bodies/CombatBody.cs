@@ -17,7 +17,7 @@ public abstract class CombatBody : Placeable
     public string team = "enemy";
     [SerializeField]
     [Tooltip("The amount of currency this CombatBody will reward for being killed.")]
-    int bounty = 0;
+    public int bounty = 0 ;
 
     [SerializeField]
     [Tooltip("The amount of damage this CombatBody can take before dying.")]
