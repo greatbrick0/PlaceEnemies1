@@ -17,7 +17,6 @@ public class HomingMissileScript : Attack
         
         base.Start();
         hasParticles = true;
-        particleEffect = transform.GetChild(0);
     }
     protected override void Apply(CombatBody recentHit)
     {

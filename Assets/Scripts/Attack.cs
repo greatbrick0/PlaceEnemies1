@@ -21,8 +21,7 @@ public abstract class Attack : MonoBehaviour
     [Tooltip("The amount of damage, healing applied, or any other primary stat.")]
     public int power = 10;
 
-    public Transform particleEffect;
-    public bool hasParticles = false;
+    protected bool hasParticles = false;
 
     protected Collider hitbox;
     protected List<CombatBody> hitList = new List<CombatBody>();
