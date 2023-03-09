@@ -20,13 +20,13 @@ public class LightningAbility : Ability
     {
         boltPrefab = AttackDict.attacks["LightningBolt"];
         cooldownTime = 2.0f;
-        effectiveRange = 15.0f;
+        effectiveRange = 8.0f;
         SetDisplayVars();
         ID = 2;
         colour = ColourTypes.Green;
         projectileCount = 3;
         timeBetweenShots = 0.4f;
-        radiusFromCentre = 1.5f;
+        radiusFromCentre = 1.0f;
     }
 
     public override void SetDisplayVars()
