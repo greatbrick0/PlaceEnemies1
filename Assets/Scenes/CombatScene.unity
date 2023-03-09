@@ -2156,9 +2156,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shaking: 0
-  shakeTime: 1
+  shakeTime: 0.5
   shakeRemaining: 0
-  AmpValue: 1
+  AmpValue: 0.5
 --- !u!114 &628120439
 MonoBehaviour:
   m_ObjectHideFlags: 0
