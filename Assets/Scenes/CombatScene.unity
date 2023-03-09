@@ -1898,6 +1898,21 @@ MonoBehaviour:
   - entryName: Hammer
     entryGameObject: {fileID: 9159844377764210428, guid: 168352d345c13d1468267474752e8fb0,
       type: 3}
+  - entryName: LightningBolt
+    entryGameObject: {fileID: 9159844377764210428, guid: c26a12509a4e6414bba5733954e856f1,
+      type: 3}
+  - entryName: PotionBottle
+    entryGameObject: {fileID: 9159844377764210428, guid: 1f2efcd6b2c036146abe967980432178,
+      type: 3}
+  - entryName: DashBlade
+    entryGameObject: {fileID: 9159844377764210428, guid: 50e35bcc3c58c57489dd367cc1058778,
+      type: 3}
+  - entryName: BigBomb
+    entryGameObject: {fileID: 9159844377764210428, guid: 21a6e0fd42280cb4c80a09401b3e2b49,
+      type: 3}
+  - entryName: MagicDash
+    entryGameObject: {fileID: 9159844377764210428, guid: 8cdb6073578bdbb4c85c0bcdcd01e8b2,
+      type: 3}
   enemyAttackEntries:
   - entryName: BasicDemonBall
     entryGameObject: {fileID: 9159844377764210428, guid: b214c12139ec2f34f89bbbf9e53e343a,

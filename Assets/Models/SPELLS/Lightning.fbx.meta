@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 60dcbae7ec3a7044a832da327a2bb678
+guid: 9c3e2a3a3702c1d40ad904fe2c18468a
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,23 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: HammerHead1
-    second: {fileID: 2100000, guid: 811ca8e2af9a1344880fa82aa27d696d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: HammerHead2
-    second: {fileID: 2100000, guid: cbe572807e88b5045b7aa5bf77775e51, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: HammerWood1
-    second: {fileID: 2100000, guid: 7c6c0d311928de94d8763fb358b3d440, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: HammerWood2
-    second: {fileID: 2100000, guid: 822a7b1ccef474c4d9e3f4ac08af9a5d, type: 2}
+      name: Lightning
+    second: {fileID: 2100000, guid: 5e02c159a2c89094eaabd085f011b2cd, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
