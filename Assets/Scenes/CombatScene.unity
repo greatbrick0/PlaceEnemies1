@@ -1815,6 +1815,9 @@ MonoBehaviour:
   - entryName: Hammer
     entryGameObject: {fileID: 9159844377764210428, guid: 168352d345c13d1468267474752e8fb0,
       type: 3}
+  - entryName: LightningBolt
+    entryGameObject: {fileID: 9159844377764210428, guid: c26a12509a4e6414bba5733954e856f1,
+      type: 3}
   enemyAttackEntries:
   - entryName: BasicDemonBall
     entryGameObject: {fileID: 9159844377764210428, guid: b214c12139ec2f34f89bbbf9e53e343a,
