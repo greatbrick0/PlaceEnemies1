@@ -109,7 +109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697954384764865052}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.19, y: 31.43, z: 0.58}
+  m_LocalPosition: {x: 0, y: 31.43, z: 0.58}
   m_LocalScale: {x: 1.19354, y: 1.19354, z: 1.19354}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -125,7 +125,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1697954384764865052}
   serializedVersion: 8
   lengthInSec: 5
-  simulationSpeed: 10
+  simulationSpeed: 8.5
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -4980,7 +4980,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5006960992372664691}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.19, y: 31.43, z: 0.5799987}
+  m_LocalPosition: {x: 0, y: 31.43, z: 0}
   m_LocalScale: {x: 1.19354, y: 1.19354, z: 1.19354}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4996,7 +4996,7 @@ ParticleSystem:
   m_GameObject: {fileID: 5006960992372664691}
   serializedVersion: 8
   lengthInSec: 5
-  simulationSpeed: 10
+  simulationSpeed: 8.5
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -5177,7 +5177,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.7490566, g: 1, b: 0.9883822, a: 1}
+      maxColor: {r: 0.22075468, g: 1, b: 0.9634729, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5238,8 +5238,8 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     startSize:
       serializedVersion: 2
-      minMaxState: 3
-      scalar: 0.07
+      minMaxState: 0
+      scalar: 0.1
       minScalar: 0.09
       maxCurve:
         serializedVersion: 2
@@ -5291,7 +5291,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 0
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -5344,7 +5344,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 0
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -9842,7 +9842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3595471358237952875
 Transform:
   m_ObjectHideFlags: 0
@@ -9935,8 +9935,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8561967441737917321}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.19, y: -0.25999832, z: 0.5799987}
-  m_LocalScale: {x: 0.50355947, y: 0.50355947, z: 0.50355947}
+  m_LocalPosition: {x: 0, y: -0.25999832, z: 0}
+  m_LocalScale: {x: 0.56361973, y: 1.7406511, z: 1.845865}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9159844377764210305}
@@ -9951,7 +9951,7 @@ ParticleSystem:
   m_GameObject: {fileID: 8561967441737917321}
   serializedVersion: 8
   lengthInSec: 5
-  simulationSpeed: 10
+  simulationSpeed: 8.5
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -10078,7 +10078,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
+      scalar: 0.5298558
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -10570,8 +10570,8 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 2
-    angle: 0
+    type: 4
+    angle: 67.90672
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -10657,7 +10657,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.11483038
+      value: 0.14720486
       mode: 0
       spread: 0
       speed:
@@ -10886,7 +10886,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 5
+        scalar: 10
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -12651,7 +12651,7 @@ ParticleSystem:
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.75
+      scalar: 0.9
       minScalar: 1
       maxCurve:
         serializedVersion: 2
