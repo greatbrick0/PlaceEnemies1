@@ -7,6 +7,9 @@ public class ConcoctionAbility : Ability
     GameObject potionPrefab;
     GameObject potionRef;
 
+    private float maxTravelTime = 1.0f;
+    private float minTravelTime = 1.0f;
+
     public ConcoctionAbility(GameObject _user = null) : base(_user)
     {
 
@@ -14,12 +17,14 @@ public class ConcoctionAbility : Ability
 
     protected override void SetVars()
     {
-        potionPrefab = AttackDict.attacks["Potion"];
+        potionPrefab = AttackDict.attacks["PotionBottle"];
         cooldownTime = 4.0f;
-        effectiveRange = 10.0f;
+        effectiveRange = 13.5f;
         SetDisplayVars();
-        ID = 4;
+        ID = 6;
         colour = ColourTypes.Blue;
+        maxTravelTime = 1.1f;
+        minTravelTime = 0.3f;
     }
 
     public override void SetDisplayVars()
@@ -46,6 +51,7 @@ public class ConcoctionAbility : Ability
     {
         potionRef = user.GetComponent<CombatBody>().Instantiater(potionPrefab, user.transform.parent);
         potionRef.transform.position = user.transform.position;
+        potionRef.GetComponent<Attack>().lifetime = Mathf.Clamp((targetPosition - user.transform.position).magnitude / potionRef.GetComponent<Attack>().speed, minTravelTime, maxTravelTime);
         potionRef.GetComponent<Attack>().moveDirection = targetPosition - user.transform.position;
         potionRef.GetComponent<Attack>().team = user.GetComponent<CombatBody>().team;
         potionRef.GetComponent<Attack>().FaceForward();
