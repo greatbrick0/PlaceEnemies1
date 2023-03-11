@@ -50,6 +50,6 @@ public class JumpAbility : Ability
         Dash movementEffect = pulseRef.GetComponent<JumpWaveScript>().movementEffect;
         movementEffect.forcedVelocity = targetPosition.normalized * 9.0f;
         movementEffect.ChangeLifeTime(targetPosition.magnitude / 9.0f);
-        user.GetComponent<CombatBody>().AddStatusEffect(pulseRef.GetComponent<JumpWaveScript>().movementEffect);
+        user.GetComponent<CombatBody>().AddStatusEffect(movementEffect);
     }
 }

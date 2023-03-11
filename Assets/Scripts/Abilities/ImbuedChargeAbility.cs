@@ -30,7 +30,7 @@ public class ImbuedChargeAbility : Ability
     {
         if (offCooldown)
         {
-            MakeProjectile(targetPosition);
+            MakeProjectile(Vector3.ClampMagnitude(targetPosition - user.transform.position, effectiveRange));
             EnableCooldown();
             return true;
         }
@@ -43,9 +43,12 @@ public class ImbuedChargeAbility : Ability
     private void MakeProjectile(Vector3 targetPosition)
     {
         ramRef = user.GetComponent<CombatBody>().Instantiater(ramPrefab, user.transform.parent);
-        ramRef.transform.position = user.transform.position;
+        ramRef.GetComponent<MagicChargeScript>().followHost = user.transform;
         ramRef.GetComponent<Attack>().moveDirection = targetPosition - user.transform.position;
         ramRef.GetComponent<Attack>().team = user.GetComponent<CombatBody>().team;
         ramRef.GetComponent<Attack>().FaceForward();
+        Dash movementEffect = ramRef.GetComponent<MagicChargeScript>().movementEffect;
+        movementEffect.forcedVelocity = targetPosition.normalized * 9.0f;
+        user.GetComponent<CombatBody>().AddStatusEffect(movementEffect);
     }
 }

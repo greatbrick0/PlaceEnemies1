@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50cf668f427083e4ba38f7b2a1d27acf, type: 3}
-  m_Name: JumpDash
+  m_Name: SliceDash
   m_EditorClassIdentifier: 
   <icon>k__BackingField: {fileID: 0}
-  <effectName>k__BackingField: JumpDash
+  <effectName>k__BackingField: SliceDash
   <behaviour>k__BackingField: 2
   intensity: 1
   <affectsMoveSpeed>k__BackingField: 0
   <hasDuration>k__BackingField: 1
   age: 0
-  <lifeTime>k__BackingField: 0.7754646
+  <lifeTime>k__BackingField: 0.8
   preventsMovement: 1
   preventsAbilities: 1
-  forcedVelocity: {x: -4.553813, y: 0, z: -7.762911}
-  preventsHits: 1
-  preventsDamage: 0
+  forcedVelocity: {x: -1.3050146, y: 0, z: 8.904882}
+  preventsHits: 0
+  preventsDamage: 1

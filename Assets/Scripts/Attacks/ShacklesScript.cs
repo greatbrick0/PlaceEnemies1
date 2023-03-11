@@ -8,6 +8,13 @@ public class ShacklesScript : Attack
     [Tooltip("The reference to the effect appied on hit.")]
     public StatusEffect shacklesEffect;
 
+    protected override void Start()
+    {
+        base.Start();
+
+        shacklesEffect = Instantiate(shacklesEffect);
+    }
+
     protected override bool FilterHitTarget(CombatBody hitTarget)
     {
         return hitTarget.team != this.team;

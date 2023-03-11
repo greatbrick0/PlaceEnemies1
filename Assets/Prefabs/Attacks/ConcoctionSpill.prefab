@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9159844377764210305}
   - component: {fileID: 4010019983992688598}
-  - component: {fileID: 9179549657121043903}
+  - component: {fileID: -5335253155673622417}
   m_Layer: 7
   m_Name: ConcoctionSpill
   m_TagString: Untagged
@@ -130,7 +130,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9179549657121043903
+--- !u!114 &-5335253155673622417
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9159844377764210428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35198eead92582740afb901add75968a, type: 3}
+  m_Script: {fileID: 11500000, guid: 16c109c40b2891044bbe99d34ad694d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   team: enemy
@@ -148,3 +148,5 @@ MonoBehaviour:
   lifetime: 3
   power: 2
   canHit: 1
+  slowEffect: {fileID: 11400000, guid: 2492de38087f2cc4baae051dfc6a213f, type: 2}
+  reapplyTime: 0.6

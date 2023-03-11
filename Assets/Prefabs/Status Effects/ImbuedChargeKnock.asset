@@ -9,16 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b55e39dda955e8449eae59beb5245d5, type: 3}
-  m_Name: ChainLasso
+  m_Script: {fileID: 11500000, guid: 3bf758ba863e068468190231fa5342ec, type: 3}
+  m_Name: ImbuedChargeKnock
   m_EditorClassIdentifier: 
   <icon>k__BackingField: {fileID: 0}
-  <effectName>k__BackingField: ChainLasso
-  <behaviour>k__BackingField: 3
-  intensity: 0.9
-  <affectsMoveSpeed>k__BackingField: 1
+  <effectName>k__BackingField: ImbuedChargeKnock
+  <behaviour>k__BackingField: 6
+  intensity: 1
+  <affectsMoveSpeed>k__BackingField: 0
   <hasDuration>k__BackingField: 1
   age: 0
-  <lifeTime>k__BackingField: 5
-  trapPoint: {x: 0, y: 0, z: 0}
-  trapRadius: 6.5
+  <lifeTime>k__BackingField: 1
+  preventsMovement: 1
+  preventsAbilities: 1
+  forcedVelocity: {x: 0, y: 0, z: 0}
