@@ -437,7 +437,7 @@ Transform:
   m_GameObject: {fileID: 4864190166082019087}
   m_LocalRotation: {x: 1, y: 0.00000008195639, z: -0.00000013783574, w: 0.000000007450581}
   m_LocalPosition: {x: 0.1178701, y: -0.10723056, z: -0.44848883}
-  m_LocalScale: {x: 0.07160821, y: 0.0549826, z: 0.24779907}
+  m_LocalScale: {x: 0.06586606, y: 0.050573632, z: 0.22792846}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9159844377764210305}
@@ -1277,7 +1277,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 200
+      scalar: 150
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1733,7 +1733,7 @@ ParticleSystem:
         ctime7: 0
         atime0: 0
         atime1: 32960
-        atime2: 65535
+        atime2: 60716
         atime3: 0
         atime4: 0
         atime5: 0
@@ -3251,12 +3251,12 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.5
+    frequency: 0.2
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
     octaveScale: 2
-    quality: 2
+    quality: 0
     scrollSpeed:
       serializedVersion: 2
       minMaxState: 0
@@ -5465,7 +5465,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4d0d8c6793f3efc4abc5ae50f4b7cb92, type: 2}
+  - {fileID: 2100000, guid: 202ad22f7eca20243b0d76c96e5ca93b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
