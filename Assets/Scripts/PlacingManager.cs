@@ -140,6 +140,11 @@ public class PlacingManager : MonoBehaviour
         SceneManager.LoadScene("TimelineScene");
     }
 
+    public void PlayerHasDied()
+    {
+        StartCoroutine(DefeatFadeOut());
+    }
+
     private void CheckForVictory()
     {
         if (combatStarted)
@@ -160,6 +165,15 @@ public class PlacingManager : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
 
         SwitchToTimeLineScene();
+    }
+
+    private IEnumerator DefeatFadeOut()
+    {
+        yield return new WaitForSeconds(1.0f);
+        VicFadeRef.GetComponent<Transitioner>().FadeOutCall(true);
+        yield return new WaitForSeconds(2.0f);
+
+        SceneManager.LoadScene("LoseScene");
     }
 
     private void UpdatePlacingUI()

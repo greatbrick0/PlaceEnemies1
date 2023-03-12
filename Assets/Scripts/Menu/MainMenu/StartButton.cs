@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
-    public void LoadCombatScene()
+    public void SetTutorial(bool tutorial)
     {
-        SceneManager.LoadScene("TimelineScene");
+        SessionDataManager.usingTutorial = tutorial;
+    }
+
+    public void LoadCombatScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

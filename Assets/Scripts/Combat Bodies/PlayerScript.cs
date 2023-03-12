@@ -18,8 +18,6 @@ public class PlayerScript : CombatBody
     private RaycastHit hitData;
     private Ray mouseRay;
 
-    public LayerMask layerMask;
-
     public override void Release()
     {
         base.Release();
@@ -74,6 +72,7 @@ public class PlayerScript : CombatBody
     public void PackPlayer()
     {
         released = false;
+        GetComponent<Collider>().enabled = false;
         inputComponent.enabled = false;
         SessionDataManager.savedPlayerHealth = health;
     }
@@ -144,5 +143,13 @@ public class PlayerScript : CombatBody
         if (combatUIC != null) combatUIC.HealthUpdate(health-damageAmount);
         CameraShakeOnHitScript.instance.Shake();
         return base.Hurt(damageAmount);
+    }
+
+    protected override void Die()
+    {
+        GameObject managerRef = GameObject.Find("/ArenaSceneManager"); //i dont like this line
+        if (managerRef != null) managerRef.GetComponent<PlacingManager>().PlayerHasDied();
+
+        base.Die();
     }
 }
