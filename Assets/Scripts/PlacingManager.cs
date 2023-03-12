@@ -153,6 +153,7 @@ public class PlacingManager : MonoBehaviour
             {
                 print("Player defeated all enemies, end combat");
                 playerRef.GetComponent<PlayerScript>().PackPlayer();
+                SessionDataManager.nightNum += 1;
 
                 StartCoroutine(VictoryFadeOut());
             }
