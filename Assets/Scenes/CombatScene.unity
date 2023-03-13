@@ -2039,6 +2039,9 @@ MonoBehaviour:
   - entryName: FireBall
     entryGameObject: {fileID: 9159844377764210428, guid: 3f1fa87870e1bda45980667e5792e1d7,
       type: 3}
+  - entryName: DemonPotion
+    entryGameObject: {fileID: 9159844377764210428, guid: 8d5c67d39fe37c94594bf345106fae91,
+      type: 3}
 --- !u!114 &586905835
 MonoBehaviour:
   m_ObjectHideFlags: 0

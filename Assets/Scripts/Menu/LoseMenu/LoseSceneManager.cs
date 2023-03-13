@@ -18,7 +18,7 @@ public class LoseSceneManager : MonoBehaviour
 
     void Start()
     {
-        dayCountRef.text = "You made it to day " + SessionDataManager.nightNum + " of 5";
+        dayCountRef.text = "Day " + SessionDataManager.nightNum + " of 5 reached";
     }
 
     private void Update()
