@@ -29,7 +29,7 @@ public class ConcoctionAbility : Ability
 
     public override void SetDisplayVars()
     {
-        description = "Throw a bottle that spills corrosive liqued on the ground, slowing anything that thouches it. ";
+        description = "Throw a bottle that spills corrosive liquid on the ground, slowing anything that touches it. ";
         displayName = "Concoction";
     }
 

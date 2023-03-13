@@ -10,4 +10,8 @@ public class TimeLineManager : MonoBehaviour
         SceneManager.LoadScene("CombatScene");
     }
 
+    [SerializeField]
+    public AudioClip spellSelectSound;
+    [SerializeField]
+    public AudioClip spellReleaseSound;
 }
