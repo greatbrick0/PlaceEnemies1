@@ -83,9 +83,12 @@ MonoBehaviour:
   baseMoveSpeed: 0.6
   timeToFullSpeed: 0.5
   timeToFullStop: 0.3
+  deathSmoke: {fileID: 3895707014425098256, guid: c00463d14d762fe4b9f61ba64e322281,
+    type: 3}
   sourcesPreventingMovement: 0
   forcedVelocity: {x: 0, y: 0, z: 0}
   sourcesPreventingAbilities: 0
+  sourcesPreventingDamage: 0
   effectList: []
   targetDetectionRadius: 30
   minimumRange: 0.85

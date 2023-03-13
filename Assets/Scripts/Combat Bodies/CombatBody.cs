@@ -34,6 +34,9 @@ public abstract class CombatBody : Placeable
     [Tooltip("The time it takes to completely stop from full speed.")]
     private float timeToFullStop = 0.3f;
 
+    [SerializeField]
+    private GameObject deathSmoke ;
+
     [HideInInspector]
     public Vector3 controlledVelocity { get; protected set; }
     private Vector3 previousControlledVelocity;
@@ -166,6 +169,8 @@ public abstract class CombatBody : Placeable
 
     protected virtual void Die()
     {
+        if (deathSmoke != null)
+            Instantiate(deathSmoke, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 
