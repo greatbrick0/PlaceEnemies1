@@ -52,8 +52,12 @@ public class PlacingManager : MonoBehaviour
     public int remainingEnemies { get; private set; } = 0;
     [field: SerializeField]
     public int cardsPlaced { get; private set; } = 0;
-    [field: SerializeField]
-    public int minimumCardsPlaced { get; private set; } = 3;
+    public int minimumCardsPlaced { get; private set; }
+    public int maximumCardsPlaced { get; private set; }
+    [SerializeField]
+    List<int> minCardsEveryNight = new List<int> { 4, 5, 6, 6, 7 };
+    [SerializeField]
+    List<int> maxCardsEveryNight = new List<int> { 5, 6, 7, 8, 9 };
 
     private void Start()
     {
@@ -78,6 +82,17 @@ public class PlacingManager : MonoBehaviour
         cam.followTarget = groundHolderRef.transform;
         cam.offset = placingModeCamPos;
         unityCam = cam.GetComponent<Camera>();
+
+        if(SessionDataManager.nightNum < 5) //remove this when winning is implemented
+        {
+            minimumCardsPlaced = minCardsEveryNight[SessionDataManager.nightNum];
+            maximumCardsPlaced = maxCardsEveryNight[SessionDataManager.nightNum];
+        }
+        else
+        {
+            minimumCardsPlaced = 1;
+            maximumCardsPlaced = 20;
+        }
 
         UpdatePlacingUI();
     }
