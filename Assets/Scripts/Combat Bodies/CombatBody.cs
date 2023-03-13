@@ -74,6 +74,8 @@ public abstract class CombatBody : Placeable
 
     private Animator animator;
 
+
+   
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -125,27 +127,33 @@ public abstract class CombatBody : Placeable
 
     private void CalculateMovement(float delta)
     {
-        previousControlledVelocity = CalculateControlledAcceleration(controlledVelocity, previousControlledVelocity, delta);
+         previousControlledVelocity = CalculateControlledAcceleration(controlledVelocity, previousControlledVelocity, delta);
         rb.velocity = (sourcesPreventingMovement == 0 ? previousControlledVelocity : Vector3.zero) + forcedVelocity;
     }
 
     private Vector3 CalculateControlledAcceleration(Vector3 desiredVelocity, Vector3 currentVelocity, float delta) 
     {
-        if (desiredVelocity == currentVelocity) return currentVelocity;
+
+       if (desiredVelocity == currentVelocity) return currentVelocity;
         
         if(desiredVelocity.magnitude != 0)
         {
             currentVelocity += desiredVelocity.normalized * (moveSpeed / timeToFullSpeed) * delta;
             currentVelocity = Vector3.ClampMagnitude(currentVelocity, moveSpeed);
         }
-        else
-        {
-            currentVelocity -= currentVelocity.normalized * (moveSpeed / timeToFullStop) * delta;
-            if (currentVelocity.magnitude < 0.05f) currentVelocity = Vector3.zero;
+       else
+       {
+            //  currentVelocity -= currentVelocity.normalized * (moveSpeed / timeToFullStop) * delta;
+            //   if (currentVelocity.magnitude < 0.05f) currentVelocity = Vector3.zero;
+            currentVelocity -= currentVelocity.normalized * Mathf.Log10(currentVelocity.magnitude + 1) * (moveSpeed / timeToFullStop) * delta;
+            if (currentVelocity.sqrMagnitude < (0.05f * 0.05f))
+            {
+                currentVelocity = Vector3.zero;
+            }
         }
 
-        return currentVelocity;
-    }
+       return currentVelocity;
+}
 
     private void UpdateCooldowns(float delta)
     {
