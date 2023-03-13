@@ -1923,6 +1923,9 @@ MonoBehaviour:
   - entryName: DemonArrow
     entryGameObject: {fileID: 9159844377764210428, guid: 025b0cb3c38697b43b065244bf5d2923,
       type: 3}
+  - entryName: FireBall
+    entryGameObject: {fileID: 9159844377764210428, guid: 3f1fa87870e1bda45980667e5792e1d7,
+      type: 3}
 --- !u!114 &586905835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5755,7 +5758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panels:
   - {fileID: 329647597555306658, guid: 8fc2620c0ae9b4748b4815fe4a9ad969, type: 3}
-  - {fileID: 329647597555306658, guid: 8fc2620c0ae9b4748b4815fe4a9ad969, type: 3}
+  - {fileID: 5383819090332016392, guid: 5cd2d4caf692742409762c2b8be9ad9e, type: 3}
   maxUses: 3
 --- !u!4 &1599022366 stripped
 Transform:

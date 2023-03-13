@@ -162,6 +162,7 @@ public class PlacingManager : MonoBehaviour
 
     private IEnumerator VictoryFadeOut()
     {
+        VicFadeRef.SetActive(true);
         VicFadeRef.GetComponent<Transitioner>().FadeOutCall(true);
         yield return new WaitForSeconds(2.0f);
 
