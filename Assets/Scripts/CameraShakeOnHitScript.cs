@@ -30,11 +30,11 @@ public class CameraShakeOnHitScript : MonoBehaviour
     {
         Debug.Log("Start Shake");
         shaking = true;
-        noisePerlin.m_AmplitudeGain += AmpValue;
-        noisePerlin.m_FrequencyGain += AmpValue;
+        noisePerlin.m_AmplitudeGain = AmpValue;
+        noisePerlin.m_FrequencyGain = AmpValue;
         shakeRemaining = shakeTime;
     }
-    public void DeShake()
+    public void EndShake()
     {
         shaking = false;
         noisePerlin.m_AmplitudeGain = 0;
@@ -48,7 +48,7 @@ public class CameraShakeOnHitScript : MonoBehaviour
             shakeRemaining -= Time.deltaTime;
         }
         if (shaking && shakeRemaining <= 0)
-            DeShake();
+            EndShake();
             
 
     }
