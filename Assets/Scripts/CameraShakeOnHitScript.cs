@@ -16,8 +16,11 @@ public class CameraShakeOnHitScript : MonoBehaviour
     public float shakeTime;
     public float shakeRemaining;
     public float AmpValue;
-    
-    
+
+    [field:SerializeField]
+    public Vector3 cameraResetRef { get; private set; }
+
+
 
     private void Awake()
     {
@@ -39,6 +42,7 @@ public class CameraShakeOnHitScript : MonoBehaviour
         shaking = false;
         noisePerlin.m_AmplitudeGain = 0;
         noisePerlin.m_FrequencyGain = 0;
+        transform.rotation = Quaternion.Euler(cameraResetRef);
     }
 
     private void Update()
