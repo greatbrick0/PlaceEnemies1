@@ -16,8 +16,11 @@ public class CameraShakeOnHitScript : MonoBehaviour
     public float shakeTime;
     public float shakeRemaining;
     public float AmpValue;
-    
-    
+
+    [field:SerializeField]
+    public Vector3 cameraResetRef { get; private set; }
+
+
 
     private void Awake()
     {
@@ -30,15 +33,16 @@ public class CameraShakeOnHitScript : MonoBehaviour
     {
         Debug.Log("Start Shake");
         shaking = true;
-        noisePerlin.m_AmplitudeGain += AmpValue;
-        noisePerlin.m_FrequencyGain += AmpValue;
+        noisePerlin.m_AmplitudeGain = AmpValue;
+        noisePerlin.m_FrequencyGain = AmpValue;
         shakeRemaining = shakeTime;
     }
-    public void DeShake()
+    public void EndShake()
     {
         shaking = false;
         noisePerlin.m_AmplitudeGain = 0;
         noisePerlin.m_FrequencyGain = 0;
+        transform.rotation = Quaternion.Euler(cameraResetRef);
     }
 
     private void Update()
@@ -48,7 +52,7 @@ public class CameraShakeOnHitScript : MonoBehaviour
             shakeRemaining -= Time.deltaTime;
         }
         if (shaking && shakeRemaining <= 0)
-            DeShake();
+            EndShake();
             
 
     }
