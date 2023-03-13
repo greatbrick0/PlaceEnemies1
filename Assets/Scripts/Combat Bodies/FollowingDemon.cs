@@ -43,29 +43,7 @@ public class FollowingDemon : NPCController
             targetList = CleanTargetList();
             if (targetList.Count > 0)
             {
-                distanceToTarget = Vector3.Distance(transform.position, targetList[0].transform.position);
-                directionToTarget = (targetList[0].transform.position - transform.position).normalized;
-
-                transform.LookAt(targetList[0].transform.position);
-                controlledVelocity = Vector3.zero * moveSpeed;
-
-                if(distanceToTarget <= minimumRange)
-                {
-                    controlledVelocity = -directionToTarget * moveSpeed;
-                }
-                else if(distanceToTarget > satisfiedRange)
-                {
-                    controlledVelocity = directionToTarget * moveSpeed;
-                }
-                else
-                {
-                    controlledVelocity = Vector3.zero * moveSpeed;
-                }
-
-                if(distanceToTarget <= aggroRange)
-                {
-                    UseAbility(0, targetList[0].transform.position);
-                }
+                Behaviour();
             }
             else
             {
@@ -85,5 +63,32 @@ public class FollowingDemon : NPCController
     protected virtual void SetFirstAbility()
     {
         abilityList[0] = new DemonSlashAbility(gameObject);
+    }
+
+    private void Behaviour()
+    {
+        distanceToTarget = Vector3.Distance(transform.position, targetList[0].transform.position);
+        directionToTarget = (targetList[0].transform.position - transform.position).normalized;
+
+        transform.LookAt(targetList[0].transform.position);
+        controlledVelocity = Vector3.zero * moveSpeed;
+
+        if (distanceToTarget <= minimumRange)
+        {
+            controlledVelocity = -directionToTarget * moveSpeed;
+        }
+        else if (distanceToTarget > satisfiedRange)
+        {
+            controlledVelocity = directionToTarget * moveSpeed;
+        }
+        else
+        {
+            controlledVelocity = Vector3.zero * moveSpeed;
+        }
+
+        if (distanceToTarget <= aggroRange)
+        {
+            UseAbility(0, targetList[0].transform.position);
+        }
     }
 }

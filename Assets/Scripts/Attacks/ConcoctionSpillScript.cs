@@ -41,6 +41,5 @@ public class ConcoctionSpillScript : Attack
     {
         recentHit.Hurt(power);
         recentHit.AddStatusEffect(slowEffect);
-        print("applied");
     }
 }
