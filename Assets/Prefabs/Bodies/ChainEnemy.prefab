@@ -3871,6 +3871,8 @@ MonoBehaviour:
   baseMoveSpeed: 1.5
   timeToFullSpeed: 0.4
   timeToFullStop: 0.3
+  deathSmoke: {fileID: 3895707014425098256, guid: 64e1f8353764b7e4e98b3cd6f069f0b2,
+    type: 3}
   sourcesPreventingMovement: 0
   forcedVelocity: {x: 0, y: 0, z: 0}
   sourcesPreventingAbilities: 0

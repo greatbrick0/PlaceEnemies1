@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7965983472719064229}
   - component: {fileID: 7965983472719064230}
   - component: {fileID: 7965983472719064248}
-  - component: {fileID: 8022071544459792010}
+  - component: {fileID: 8892159077763334717}
   m_Layer: 8
-  m_Name: TankEnemy
+  m_Name: FireBallEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,9 +62,9 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8022071544459792010
+--- !u!114 &8892159077763334717
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,29 +73,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 7965983472719064249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fa8eece510d4e44e9ae9b4c0128953c, type: 3}
+  m_Script: {fileID: 11500000, guid: b4d90c8bc0f4d7440b36738f5359ed9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   released: 0
   team: enemy
-  bounty: 8
-  health: 61
-  baseMoveSpeed: 0.6
-  timeToFullSpeed: 0.5
+  bounty: 2
+  health: 20
+  baseMoveSpeed: 2
+  timeToFullSpeed: 2
   timeToFullStop: 0.3
-  deathSmoke: {fileID: 3895707014425098256, guid: c00463d14d762fe4b9f61ba64e322281,
-    type: 3}
   sourcesPreventingMovement: 0
   forcedVelocity: {x: 0, y: 0, z: 0}
   sourcesPreventingAbilities: 0
   sourcesPreventingDamage: 0
   effectList: []
   targetDetectionRadius: 30
-  minimumRange: 0.85
-  satisfiedRange: 2
-  satisfiedRangeInRatio: 0
-  aggroRange: 4
-  aggroRangeInRatio: 0
+  minimumRange: 7
+  satisfiedRange: 0.9
+  satisfiedRangeInRatio: 1
+  aggroRange: 1.1
+  aggroRangeInRatio: 1
 --- !u!1001 &4431957712517235389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -111,17 +109,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e5e2cae7384ff754ebd156ea9bd6ee2d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.492375
+      value: 0.32825
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e5e2cae7384ff754ebd156ea9bd6ee2d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3939
+      value: 0.32825
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e5e2cae7384ff754ebd156ea9bd6ee2d,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.492375
+      value: 0.32825
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e5e2cae7384ff754ebd156ea9bd6ee2d,
         type: 3}
@@ -192,7 +190,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 292e58033d153cc46ba7cdfb4a339215, type: 2}
+      objectReference: {fileID: 2100000, guid: 725089d9e948be140b15f7b961c0a2c5, type: 2}
+    - target: {fileID: 9009147241557508798, guid: e5e2cae7384ff754ebd156ea9bd6ee2d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 725089d9e948be140b15f7b961c0a2c5, type: 2}
+    - target: {fileID: 9009147241557508798, guid: e5e2cae7384ff754ebd156ea9bd6ee2d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 725089d9e948be140b15f7b961c0a2c5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5e2cae7384ff754ebd156ea9bd6ee2d, type: 3}
 --- !u!1 &3548858355909509100 stripped
