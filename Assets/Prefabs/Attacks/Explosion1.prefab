@@ -19327,7 +19327,7 @@ MonoBehaviour:
   team: enemy
   speed: 0
   moveDirection: {x: 0, y: 0, z: 1}
-  lifetime: 0.5
+  lifetime: 0.2
   power: 10
   canHit: 1
 --- !u!135 &3871621354482296072
