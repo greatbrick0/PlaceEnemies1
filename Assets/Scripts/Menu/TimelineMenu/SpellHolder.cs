@@ -95,4 +95,14 @@ public class SpellHolder : MonoBehaviour
     {
         holderGroupRef.DisplayDescription(abilityDescription, abilityName);
     }
+
+    public void Enlarge()
+    {
+        transform.localScale = transform.localScale * 1.1f;
+    }
+
+    public void Shrink()
+    {
+        transform.localScale = transform.localScale / 1.1f;
+    }
 }

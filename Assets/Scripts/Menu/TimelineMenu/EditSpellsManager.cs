@@ -13,9 +13,9 @@ public class EditSpellsManager : MonoBehaviour
         {
             if (SessionDataManager.nightNum == 0)
             {
-                SessionDataManager.playerLoadOut.Add(new MagicArrowAbility());
-                SessionDataManager.playerLoadOut.Add(new JumpAbility());
-                SessionDataManager.playerLoadOut.Add(new ShacklesAbility());
+                //SessionDataManager.playerLoadOut.Add(new MagicArrowAbility());
+                //SessionDataManager.playerLoadOut.Add(new JumpAbility());
+                //SessionDataManager.playerLoadOut.Add(new ShacklesAbility());
             }
             else
             {
