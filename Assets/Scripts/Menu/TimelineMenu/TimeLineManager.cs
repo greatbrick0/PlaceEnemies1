@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class TimeLineManager : MonoBehaviour
 {
+    
+
     public void LoadCombatScene()
     {
         SceneManager.LoadScene("CombatScene");
     }
 
-    [SerializeField]
-    public AudioClip spellSelectSound;
-    [SerializeField]
-    public AudioClip spellReleaseSound;
+   
 }

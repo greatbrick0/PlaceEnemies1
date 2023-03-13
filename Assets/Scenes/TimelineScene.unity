@@ -2012,6 +2012,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneString: TimelineScene
+  spellSelectHold: {fileID: 8300000, guid: 6ba636fa4280e4449b78a6a9a64768aa, type: 3}
+  spellReleaseHold: {fileID: 8300000, guid: e99785ac35d03a0419fe8e1d029340c8, type: 3}
 --- !u!4 &631442686
 Transform:
   m_ObjectHideFlags: 0

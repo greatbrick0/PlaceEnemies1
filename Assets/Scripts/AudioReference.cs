@@ -5,7 +5,23 @@ using UnityEngine;
 public class AudioReference : MonoBehaviour
 {
     public string sceneString;
-    public static Vector3 AudioPosition; 
+    public static Vector3 AudioPosition;
+
+    public static AudioClip spellSelectSound;
+
+    public static AudioClip spellReleaseSound;
+
+    [SerializeField]
+    public AudioClip spellSelectHold;
+
+    [SerializeField]
+    public AudioClip spellReleaseHold;
+
+    private void Awake()
+    {
+        spellSelectSound = spellSelectHold;
+        spellReleaseSound = spellReleaseHold;
+    }
     private void Start()
     {
         if (sceneString == "CombatScene")
