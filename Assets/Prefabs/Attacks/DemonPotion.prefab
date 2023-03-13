@@ -45,7 +45,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.25
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-7998576607869082975
 MonoBehaviour:
@@ -60,12 +60,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: enemy
-  speed: 12
+  speed: 8
   moveDirection: {x: 0, y: 0, z: 1}
-  lifetime: 0.7
-  power: 0
+  lifetime: 0.75
+  power: 1
   canHit: 1
-  residueObject: {fileID: 9159844377764210428, guid: c40eb21178f8feb4ea1c28c233f309ef,
+  residueObject: {fileID: 9159844377764210428, guid: 06e408c3a45d8974d96bfc18acd2a0a5,
     type: 3}
   randomRotation: 1
 --- !u!1001 &6377738584233733250
@@ -83,17 +83,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: eb7d3d369c7b1544fbff98b11b54f6b6,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 4
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb7d3d369c7b1544fbff98b11b54f6b6,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 4
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb7d3d369c7b1544fbff98b11b54f6b6,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 4
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb7d3d369c7b1544fbff98b11b54f6b6,
         type: 3}
