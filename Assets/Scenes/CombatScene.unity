@@ -1312,7 +1312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panels:
   - {fileID: 9108171363780900577, guid: c1245d107d8b0dd45b204a895925e4e1, type: 3}
-  - {fileID: 9108171363780900577, guid: c1245d107d8b0dd45b204a895925e4e1, type: 3}
+  - {fileID: 8938237887026557655, guid: ec420babbd76e684d856644528b31724, type: 3}
   maxUses: 3
 --- !u!4 &366862104 stripped
 Transform:

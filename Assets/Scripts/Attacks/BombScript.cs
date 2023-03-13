@@ -19,6 +19,7 @@ public class BombScript : Attack
 
     protected override void Apply(CombatBody recentHit)
     {
+        recentHit.Hurt(power);
         CompleteAttack();
     }
 
