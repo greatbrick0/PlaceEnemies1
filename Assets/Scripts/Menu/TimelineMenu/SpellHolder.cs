@@ -81,6 +81,7 @@ public class SpellHolder : MonoBehaviour
             currentlyDragged = true;
             transform.SetAsLastSibling();
             transform.parent.SetAsLastSibling();
+            //AudioSource.PlayClipAtPoint(AudioReference.spellSelectSound, Vector3.zero);
         }
     }
 
@@ -89,20 +90,11 @@ public class SpellHolder : MonoBehaviour
         currentlyDragged = false;
         mousePos = Mouse.current.position.ReadValue();
         holderGroupRef.SendEndDrag(mousePos, this);
+        //AudioSource.PlayClipAtPoint(AudioReference.spellReleaseSound, Vector3.zero);
     }
 
     public void SendDescription()
     {
         holderGroupRef.DisplayDescription(abilityDescription, abilityName);
-    }
-
-    public void Enlarge()
-    {
-        transform.localScale = transform.localScale * 1.1f;
-    }
-
-    public void Shrink()
-    {
-        transform.localScale = transform.localScale / 1.1f;
     }
 }
