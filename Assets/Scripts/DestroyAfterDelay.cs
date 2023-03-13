@@ -8,7 +8,6 @@ public class DestroyAfterDelay : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        Debug.Log("SMokeSpawned");
         Destroy(this.gameObject, delay);
     }
 }
