@@ -5177,7 +5177,8 @@ MonoBehaviour:
   health: 5
   baseMoveSpeed: 5
   timeToFullSpeed: 0.2
-  timeToFullStop: 0.13
+  timeToFullStop: 0.2
+  deathSmoke: {fileID: 0}
   sourcesPreventingMovement: 0
   forcedVelocity: {x: 0, y: 0, z: 0}
   sourcesPreventingAbilities: 0
@@ -5185,9 +5186,6 @@ MonoBehaviour:
   effectList: []
   combatUIC: {fileID: 0}
   cam: {fileID: 0}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!114 &6644624614402215560
 MonoBehaviour:
   m_ObjectHideFlags: 0

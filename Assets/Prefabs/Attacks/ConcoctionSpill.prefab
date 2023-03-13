@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 9159844377764210305}
   - component: {fileID: 4010019983992688598}
   - component: {fileID: -5335253155673622417}
+  - component: {fileID: 3689152763423225186}
   m_Layer: 7
   m_Name: ConcoctionSpill
   m_TagString: Untagged
@@ -150,3 +151,23 @@ MonoBehaviour:
   canHit: 1
   slowEffect: {fileID: 11400000, guid: 2492de38087f2cc4baae051dfc6a213f, type: 2}
   reapplyTime: 0.6
+--- !u!95 &3689152763423225186
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159844377764210428}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 56529bfa48eab1a41b51fd7e2423f343, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
