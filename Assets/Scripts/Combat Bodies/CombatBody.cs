@@ -57,7 +57,8 @@ public abstract class CombatBody : Placeable
         set
         {
             _sourcesPreventingHits = value;
-            GetComponent<Collider>().enabled = _sourcesPreventingHits == 0;
+            //GetComponent<Collider>().enabled = _sourcesPreventingHits == 0;
+            gameObject.layer = _sourcesPreventingHits == 0 ? LayerMask.NameToLayer("CombatBodies") : LayerMask.NameToLayer("Dodging");
         }
     }
     [HideInInspector]

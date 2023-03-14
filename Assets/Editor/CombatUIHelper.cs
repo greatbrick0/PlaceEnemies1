@@ -18,6 +18,7 @@ public class CombatUIHelper : Editor
             myScript.CycleUI(cycleNum);
             cycleNum++;
             if (cycleNum >= myScript.transform.parent.childCount) cycleNum = 0;
+            EditorUtility.SetDirty(myScript.gameObject);
         }
     }
 }
