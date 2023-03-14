@@ -5242,6 +5242,7 @@ MonoBehaviour:
   - {fileID: 358865412}
   - {fileID: 1309791177}
   - {fileID: 2066222605}
+  doneButtonRef: {fileID: 358984003}
   tutorialRef: {fileID: 35664241}
 --- !u!1 &1102832539
 GameObject:
