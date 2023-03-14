@@ -5702,8 +5702,9 @@ GameObject:
   - component: {fileID: 1204503928}
   - component: {fileID: 1204503930}
   - component: {fileID: 1204503929}
+  - component: {fileID: 1204503931}
   m_Layer: 5
-  m_Name: Prompt5
+  m_Name: Prompt4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5725,7 +5726,7 @@ RectTransform:
   - {fileID: 841266833}
   - {fileID: 2067399701}
   m_Father: {fileID: 1540531098}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -5770,6 +5771,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204503927}
   m_CullTransparentMesh: 1
+--- !u!114 &1204503931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204503927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632d9cd54c0e6fe4cb8f69ae27e6072c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dimmer: {fileID: 470405029}
 --- !u!1 &1208949267
 GameObject:
   m_ObjectHideFlags: 0
@@ -7254,8 +7268,8 @@ RectTransform:
   - {fileID: 1859948485}
   - {fileID: 1088114653}
   - {fileID: 1466774346}
-  - {fileID: 2045709754}
   - {fileID: 1204503928}
+  - {fileID: 2045709754}
   - {fileID: 1332091955}
   m_Father: {fileID: 1153897392}
   m_RootOrder: 3
@@ -9453,9 +9467,8 @@ GameObject:
   - component: {fileID: 2045709754}
   - component: {fileID: 2045709756}
   - component: {fileID: 2045709755}
-  - component: {fileID: 2045709757}
   m_Layer: 5
-  m_Name: Prompt4
+  m_Name: Prompt5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9477,7 +9490,7 @@ RectTransform:
   - {fileID: 951277105}
   - {fileID: 2095995554}
   m_Father: {fileID: 1540531098}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -9522,19 +9535,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045709753}
   m_CullTransparentMesh: 1
---- !u!114 &2045709757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045709753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 632d9cd54c0e6fe4cb8f69ae27e6072c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dimmer: {fileID: 470405029}
 --- !u!1 &2061192069
 GameObject:
   m_ObjectHideFlags: 0
@@ -9697,18 +9697,6 @@ MonoBehaviour:
       - m_Target: {fileID: 586905832}
         m_TargetAssemblyTypeName: PlacingManager, Assembly-CSharp
         m_MethodName: NextTutorialPrompt
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 470405028}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9979,6 +9967,18 @@ MonoBehaviour:
       - m_Target: {fileID: 586905832}
         m_TargetAssemblyTypeName: PlacingManager, Assembly-CSharp
         m_MethodName: NextTutorialPrompt
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 470405028}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

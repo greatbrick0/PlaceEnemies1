@@ -112,7 +112,6 @@ public class PlacingManager : MonoBehaviour
             maximumCardsPlaced = 20;
         }
         showTutorial = SessionDataManager.usingTutorial && SessionDataManager.nightNum == 0;
-        showTutorial = true;
         tutorialRef.SetActive(showTutorial);
 
         UpdatePlacingUI();
