@@ -9,7 +9,7 @@ public class HealBallScript : Attack
 
     protected override bool FilterHitTarget(CombatBody hitTarget)
     {
-        return hitTarget.team == this.team;
+        return hitTarget.team == this.team && hitTarget.gameObject.GetComponent<HealerDemon>() == null;
     }
 
     protected override void Apply(CombatBody recentHit)
