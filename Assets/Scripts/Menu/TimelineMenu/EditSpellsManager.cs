@@ -10,6 +10,7 @@ public class EditSpellsManager : MonoBehaviour
     [SerializeField]
     private GameObject tutorialRef;
     private int tutorialStage = 0;
+    private bool showTutorial = false;
 
     private void Start()
     {
@@ -26,6 +27,9 @@ public class EditSpellsManager : MonoBehaviour
         {
             loadOutSlots[ii].managerRef = this;
         }
+
+        showTutorial = SessionDataManager.usingTutorial && SessionDataManager.nightNum <= 1;
+        tutorialRef.SetActive(showTutorial);
     }
 
     public void DraggingSpell(Vector2 mousePos)
