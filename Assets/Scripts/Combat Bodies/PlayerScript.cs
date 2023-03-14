@@ -28,6 +28,12 @@ public class PlayerScript : CombatBody
             combatUIC.ConnectSpellList(abilityList);
             combatUIC.HealthUpdate(health);
         }
+        StartCoroutine(DelayActivateInput());
+    }
+
+    private IEnumerator DelayActivateInput()
+    {
+        yield return new WaitForSeconds(0.03f);
         inputComponent.enabled = true;
     }
 
@@ -123,9 +129,9 @@ public class PlayerScript : CombatBody
 
     public void SetDefaultAbilities()
     {
-        abilityList.Add(new GravityAbility(gameObject));
-        abilityList.Add(new HomingMissileAbility(gameObject));
         abilityList.Add(new BoulderAbility(gameObject));
+        abilityList.Add(new ImbuedChargeAbility(gameObject));
+        abilityList.Add(new HomingMissileAbility(gameObject));
 
         FillRemainingAbilities();
     }
