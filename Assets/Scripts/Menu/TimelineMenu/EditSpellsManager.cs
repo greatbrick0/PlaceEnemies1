@@ -33,8 +33,7 @@ public class EditSpellsManager : MonoBehaviour
 
         showTutorial = SessionDataManager.usingTutorial && SessionDataManager.nightNum <= 1;
         tutorialRef.SetActive(showTutorial);
-        doneButtonRef.SetActive(currentLoadOut.Count >= 3);
-        print(currentLoadOut.Count);
+        doneButtonRef.SetActive(CountValidSpells() >= 3);
     }
 
     public void DraggingSpell(Vector2 mousePos)
@@ -55,7 +54,7 @@ public class EditSpellsManager : MonoBehaviour
                 loadOutSlots[ii].AttemptAttachSpell(spellHolderRef);
             }
         }
-        doneButtonRef.SetActive(currentLoadOut.Count >= 3);
+        doneButtonRef.SetActive(CountValidSpells() >= 3);
     }
 
     public void SaveLoadout()
@@ -75,5 +74,15 @@ public class EditSpellsManager : MonoBehaviour
     {
         tutorialStage++;
         tutorialRef.GetComponent<TutorialManager>().SetTutorialStage(tutorialStage);
+    }
+
+    private int CountValidSpells()
+    {
+        int output = 0;
+        for(int ii = 0; ii < currentLoadOut.Count; ii++)
+        {
+            output += currentLoadOut[ii].GetType() != typeof(LockedAbility) ? 1 : 0;
+        }
+        return output;
     }
 }
