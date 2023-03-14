@@ -7,22 +7,17 @@ public class EditSpellsManager : MonoBehaviour
     public List<Ability> currentLoadOut = new List<Ability>();
     public List<EquipSlotScript> loadOutSlots = new List<EquipSlotScript>();
 
+    [SerializeField]
+    private GameObject tutorialRef;
+    private int tutorialStage = 0;
+
     private void Start()
     {
         if (SessionDataManager.playerLoadOut.Count == 0)
         {
-            if (/*SessionDataManager.nightNum == 0*/ false)
+            for (int ii = 0; ii < 4; ii++)
             {
-                SessionDataManager.playerLoadOut.Add(new MagicArrowAbility());
-                SessionDataManager.playerLoadOut.Add(new JumpAbility());
-                SessionDataManager.playerLoadOut.Add(new ShacklesAbility());
-            }
-            else
-            {
-                for (int ii = 0; ii < 4; ii++)
-                {
-                    SessionDataManager.playerLoadOut.Add(new LockedAbility());
-                }
+                SessionDataManager.playerLoadOut.Add(new LockedAbility());
             }
         }
         currentLoadOut = SessionDataManager.playerLoadOut;
@@ -64,5 +59,11 @@ public class EditSpellsManager : MonoBehaviour
         if (loadOutSlots[holderIndex].heldSpell != null) return;
 
         loadOutSlots[holderIndex].AttemptAttachSpell(spellHolderRef);
+    }
+
+    public void NextTutorialPrompt()
+    {
+        tutorialStage++;
+        tutorialRef.GetComponent<TutorialManager>().SetTutorialStage(tutorialStage);
     }
 }
