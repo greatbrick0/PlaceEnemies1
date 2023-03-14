@@ -22,7 +22,7 @@ public class HomingMissileAbility : Ability
         cooldownTime = 2.0f;
         effectiveRange = 15.0f;
         SetDisplayVars();
-        ID = 2;
+        ID = 12;
         colour = ColourTypes.Green;
         projectileCount = 2;
         timeBetweenShots = 0.2f;

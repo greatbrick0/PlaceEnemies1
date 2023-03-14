@@ -18,7 +18,7 @@ public class BoulderAbility : Ability
         cooldownTime = 5.0f;
         effectiveRange = 16.0f;
         SetDisplayVars();
-        ID = 4;
+        ID = 2;
         colour = ColourTypes.Red;
     }
 
