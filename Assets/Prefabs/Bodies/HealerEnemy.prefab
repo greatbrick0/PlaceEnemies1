@@ -3864,10 +3864,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdb0a787c12fe6468f3eca9d8e899f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  released: 0
   team: enemy
   bounty: 3
-  health: 40
+  <health>k__BackingField: 20
   baseMoveSpeed: 3
   timeToFullSpeed: 0.1
   timeToFullStop: 0.1

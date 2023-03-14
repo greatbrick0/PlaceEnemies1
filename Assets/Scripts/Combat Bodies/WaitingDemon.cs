@@ -48,9 +48,14 @@ public class WaitingDemon : NPCController
     {
         targetTransform = targetList[0].transform;
 
-        //if (Vector3.Distance())
-        distanceToTarget = Vector3.Distance(transform.position, targetList[0].transform.position);
-        directionToTarget = (targetList[0].transform.position - transform.position).normalized;
+        targetPosition = Quaternion.Euler(0, -100, 0) * targetTransform.forward;
+        distanceToTarget = Vector3.Distance(transform.position, targetPosition);
+        if (Vector3.Distance(Quaternion.Euler(0, 100, 0) * targetTransform.forward, transform.position) < distanceToTarget)
+        {
+            targetPosition = Quaternion.Euler(0, 100, 0) * targetTransform.forward;
+            distanceToTarget = Vector3.Distance(transform.position, targetPosition);
+        }
+        directionToTarget = (targetPosition - transform.position).normalized;
     }
 
     protected virtual void SetFirstAbility()

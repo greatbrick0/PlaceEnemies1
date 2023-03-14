@@ -7,17 +7,13 @@ public class HealBallScript : Attack
     [SerializeField]
     private int tooMuchHealth = 50;
 
-    // Start is called before the first frame update
-
- 
     protected override bool FilterHitTarget(CombatBody hitTarget)
     {
-        return hitTarget.team == this.team;
+        return hitTarget.team == this.team && hitTarget.gameObject.GetComponent<HealerDemon>() == null;
     }
 
     protected override void Apply(CombatBody recentHit)
     {
-     
-        if (recentHit.health < tooMuchHealth) recentHit.SetHealth(Mathf.Max(recentHit.health + power, tooMuchHealth));
+        if (recentHit.health < tooMuchHealth) recentHit.SetHealth(Mathf.Min(recentHit.health + power, tooMuchHealth));
     }
 }
