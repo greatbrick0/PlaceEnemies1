@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class BoulderScript : Attack
 {
+    protected override void Start()
+    {
+
+        base.Start();
+        hasParticles = true;
+    }
     protected override bool FilterHitTarget(CombatBody hitTarget)
     {
         return hitTarget.team != this.team;

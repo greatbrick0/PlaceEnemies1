@@ -1788,7 +1788,7 @@ PrefabInstance:
     - target: {fileID: 3841661475871673899, guid: d44811cebe5e2e143ab9848179037dab,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 66.2
+      value: 70.6
       objectReference: {fileID: 0}
     - target: {fileID: 3841661475871673899, guid: d44811cebe5e2e143ab9848179037dab,
         type: 3}
@@ -1798,7 +1798,7 @@ PrefabInstance:
     - target: {fileID: 3841661475871673899, guid: d44811cebe5e2e143ab9848179037dab,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.8
+      value: -34.8
       objectReference: {fileID: 0}
     - target: {fileID: 3841661475871673899, guid: d44811cebe5e2e143ab9848179037dab,
         type: 3}
@@ -1837,8 +1837,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3841661475871673941, guid: d44811cebe5e2e143ab9848179037dab,
         type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841661475871673941, guid: d44811cebe5e2e143ab9848179037dab,
+        type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d44811cebe5e2e143ab9848179037dab, type: 3}
@@ -4691,8 +4696,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3841661475871673941, guid: d44811cebe5e2e143ab9848179037dab,
         type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 71.61635
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841661475871673941, guid: d44811cebe5e2e143ab9848179037dab,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841661475871673941, guid: d44811cebe5e2e143ab9848179037dab,
+        type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d44811cebe5e2e143ab9848179037dab, type: 3}
@@ -7022,17 +7037,17 @@ PrefabInstance:
     - target: {fileID: 3841661475871673899, guid: d44811cebe5e2e143ab9848179037dab,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.6
+      value: 24.8
       objectReference: {fileID: 0}
     - target: {fileID: 3841661475871673899, guid: d44811cebe5e2e143ab9848179037dab,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -3.6
       objectReference: {fileID: 0}
     - target: {fileID: 3841661475871673899, guid: d44811cebe5e2e143ab9848179037dab,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -71.4
+      value: -65.4
       objectReference: {fileID: 0}
     - target: {fileID: 3841661475871673899, guid: d44811cebe5e2e143ab9848179037dab,
         type: 3}
@@ -7071,8 +7086,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3841661475871673941, guid: d44811cebe5e2e143ab9848179037dab,
         type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 73.23767
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841661475871673941, guid: d44811cebe5e2e143ab9848179037dab,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841661475871673941, guid: d44811cebe5e2e143ab9848179037dab,
+        type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d44811cebe5e2e143ab9848179037dab, type: 3}
@@ -8333,8 +8358,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3841661475871673941, guid: d44811cebe5e2e143ab9848179037dab,
         type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 70.7941
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841661475871673941, guid: d44811cebe5e2e143ab9848179037dab,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841661475871673941, guid: d44811cebe5e2e143ab9848179037dab,
+        type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d44811cebe5e2e143ab9848179037dab, type: 3}

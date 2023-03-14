@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 9159844377764210305}
   - component: {fileID: 4010019983992688598}
   - component: {fileID: 5435431730933540525}
+  - component: {fileID: 3385525525528733196}
   m_Layer: 7
   m_Name: JumpShockwave
   m_TagString: Untagged
@@ -149,3 +150,23 @@ MonoBehaviour:
   power: 5
   canHit: 1
   movementEffect: {fileID: 11400000, guid: e2f6a57b22f14cb42bf8d65ff9f05fd0, type: 2}
+--- !u!95 &3385525525528733196
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159844377764210428}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 431ac2c881202994a8245bf7a9196155, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
