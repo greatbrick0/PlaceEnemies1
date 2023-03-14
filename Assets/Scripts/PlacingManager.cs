@@ -59,6 +59,11 @@ public class PlacingManager : MonoBehaviour
     [SerializeField]
     List<int> maxCardsEveryNight = new List<int> { 5, 6, 7, 8, 9 };
 
+    bool showTutorial = false;
+    int tutorialStage = 0;
+    [SerializeField]
+    GameObject tutorialRef; 
+
     private void Start()
     {
         mouseHitObject = mousePlaneRef;
@@ -93,6 +98,8 @@ public class PlacingManager : MonoBehaviour
             minimumCardsPlaced = 1;
             maximumCardsPlaced = 20;
         }
+        showTutorial = SessionDataManager.usingTutorial && SessionDataManager.nightNum == 0;
+        tutorialRef.SetActive(showTutorial);
 
         UpdatePlacingUI();
     }
