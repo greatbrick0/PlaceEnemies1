@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4414352402542247083
+--- !u!1001 &4110279580213129976
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,12 +10,12 @@ PrefabInstance:
     - target: {fileID: 839351603310605764, guid: c8da1d48731079144b81704c9cf20024,
         type: 3}
       propertyPath: m_text
-      value: 'A demon that rapidly shoots arrows at you. Just as a hobby. '
+      value: 'A forgotten spirit that increases the strength of demons. '
       objectReference: {fileID: 0}
     - target: {fileID: 839351603572439588, guid: c8da1d48731079144b81704c9cf20024,
         type: 3}
       propertyPath: m_Name
-      value: ArcherDemonEnemyPanel Variant
+      value: HealerEnemyPanel Variant
       objectReference: {fileID: 0}
     - target: {fileID: 839351603572439589, guid: c8da1d48731079144b81704c9cf20024,
         type: 3}
@@ -126,27 +126,27 @@ PrefabInstance:
         type: 3}
       propertyPath: linkedObject
       value: 
-      objectReference: {fileID: 7965983472719064249, guid: 9764e137e22aa1e47a9e7c844af7c1cf,
+      objectReference: {fileID: 7965983472719064249, guid: 7fa1812ddbc75464089298674e3e05bb,
         type: 3}
     - target: {fileID: 839351603599722859, guid: c8da1d48731079144b81704c9cf20024,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.3999644
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 839351603599722859, guid: c8da1d48731079144b81704c9cf20024,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.7924528
+      value: 0.8168088
       objectReference: {fileID: 0}
     - target: {fileID: 839351603599722859, guid: c8da1d48731079144b81704c9cf20024,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.632428
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 839351604956857118, guid: c8da1d48731079144b81704c9cf20024,
         type: 3}
       propertyPath: m_text
-      value: Archer Demon
+      value: Ghost
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8da1d48731079144b81704c9cf20024, type: 3}

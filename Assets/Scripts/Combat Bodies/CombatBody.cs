@@ -19,9 +19,9 @@ public abstract class CombatBody : Placeable
     [Tooltip("The amount of currency this CombatBody will reward for being killed.")]
     public int bounty = 0 ;
 
-    [SerializeField]
-    [Tooltip("The amount of damage this CombatBody can take before dying.")]
-    protected int health = 2;
+    [field: SerializeField]
+    [field: Tooltip("The amount of damage this CombatBody can take before dying.")]
+    public int health { get; protected set; } = 2;
 
     [SerializeField]
     [Tooltip("This CombatBody's default move speed. This value is used as a base when calculating relative boosts and slows.")]
