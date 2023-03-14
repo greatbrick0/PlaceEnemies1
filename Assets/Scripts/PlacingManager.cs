@@ -54,13 +54,26 @@ public class PlacingManager : MonoBehaviour
     public int cardsPlaced { get; private set; } = 0;
     public int minimumCardsPlaced { get; private set; }
     public int maximumCardsPlaced { get; private set; }
+
     [SerializeField]
     List<int> minCardsEveryNight = new List<int> { 4, 5, 6, 6, 7 };
     [SerializeField]
     List<int> maxCardsEveryNight = new List<int> { 5, 6, 7, 8, 9 };
 
-    bool showTutorial = false;
-    int tutorialStage = 0;
+    private bool showTutorial = false;
+    private int _tutorialStage = 0;
+    private int tutorialStage { 
+        get 
+        {
+            return _tutorialStage;
+        }
+        set 
+        {
+            _tutorialStage = value;
+            tutorialRef.GetComponent<TutorialManager>().SetTutorialStage(_tutorialStage);
+            print("Tutorial prompt " + _tutorialStage);
+        } 
+    }
     [SerializeField]
     GameObject tutorialRef; 
 
@@ -121,6 +134,12 @@ public class PlacingManager : MonoBehaviour
         cam.offset = combatModeCamPos;
         mousePlaneRef.transform.position = mousePlaneUpperPos;
         ReleaseAllTiles();
+
+        if (showTutorial)
+        {
+            tutorialStage++;
+            Time.timeScale = 0.0f;
+        }
     }
 
     private void ReleaseAllTiles()
@@ -147,6 +166,9 @@ public class PlacingManager : MonoBehaviour
         cardsPlaced += output ? 1 : 0;
         remainingEnemies += output ? enemyCount : 0;
         UpdatePlacingUI();
+
+        if (showTutorial && cardsPlaced == 1) tutorialStage++;
+        if (showTutorial && cardsPlaced == 4) tutorialStage++;
 
         return output;
     }
@@ -204,5 +226,11 @@ public class PlacingManager : MonoBehaviour
     {
         cardsPlacedLabel.GetComponent<TextMeshProUGUI>().text = cardsPlaced.ToString() + "/" + minimumCardsPlaced.ToString();
         readyButtonRef.SetActive(cardsPlaced >= minimumCardsPlaced);
+    }
+
+    public void NextTutorialPrompt(bool unfreeze)
+    {
+        tutorialStage++;
+        if (unfreeze) Time.timeScale = 1.0f;
     }
 }
