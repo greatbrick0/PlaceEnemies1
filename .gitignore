@@ -10,9 +10,11 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 /[Uu]ser[Ss]ettings/
+/UserSettings/
 /UserSettings/Layouts/default-2021.dwlt
 [Uu]ser[Ss]ettings/
 UserSettings/EditorUserSettings.asset
+/UserSettings/EditorUserSettings.asset
 
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
