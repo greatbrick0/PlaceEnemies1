@@ -112,6 +112,7 @@ public class PlacingManager : MonoBehaviour
             maximumCardsPlaced = 20;
         }
         showTutorial = SessionDataManager.usingTutorial && SessionDataManager.nightNum == 0;
+        showTutorial = true;
         tutorialRef.SetActive(showTutorial);
 
         UpdatePlacingUI();
@@ -133,18 +134,19 @@ public class PlacingManager : MonoBehaviour
         cam.followTarget = playerRef.transform;
         cam.offset = combatModeCamPos;
         mousePlaneRef.transform.position = mousePlaneUpperPos;
-        ReleaseAllTiles();
 
         if (showTutorial)
         {
             tutorialStage++;
             Time.timeScale = 0.0f;
         }
+
+        ReleaseAllTiles();
     }
 
     private void ReleaseAllTiles()
     {
-        for(int ii = 0; ii < groundHolderRef.transform.childCount; ii++)
+        for (int ii = 0; ii < groundHolderRef.transform.childCount; ii++)
         {
             groundHolderRef.transform.GetChild(ii).GetComponent<GroundScript>().ReleaseObject();
         }

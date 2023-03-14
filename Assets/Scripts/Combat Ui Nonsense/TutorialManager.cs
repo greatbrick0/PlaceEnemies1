@@ -9,6 +9,7 @@ public class TutorialManager : MonoBehaviour
     public void SetTutorialStage(int newStage)
     {
         stage = newStage;
+        UpdatePrompts();
     }
 
     private void UpdatePrompts()
