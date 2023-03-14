@@ -8,8 +8,12 @@ public class EditSpellsManager : MonoBehaviour
     public List<EquipSlotScript> loadOutSlots = new List<EquipSlotScript>();
 
     [SerializeField]
+    GameObject doneButtonRef;
+
+    [SerializeField]
     private GameObject tutorialRef;
     private int tutorialStage = 0;
+    private bool showTutorial = false;
 
     private void Start()
     {
@@ -26,6 +30,11 @@ public class EditSpellsManager : MonoBehaviour
         {
             loadOutSlots[ii].managerRef = this;
         }
+
+        showTutorial = SessionDataManager.usingTutorial && SessionDataManager.nightNum <= 1;
+        tutorialRef.SetActive(showTutorial);
+        doneButtonRef.SetActive(currentLoadOut.Count >= 3);
+        print(currentLoadOut.Count);
     }
 
     public void DraggingSpell(Vector2 mousePos)
@@ -46,6 +55,7 @@ public class EditSpellsManager : MonoBehaviour
                 loadOutSlots[ii].AttemptAttachSpell(spellHolderRef);
             }
         }
+        doneButtonRef.SetActive(currentLoadOut.Count >= 3);
     }
 
     public void SaveLoadout()

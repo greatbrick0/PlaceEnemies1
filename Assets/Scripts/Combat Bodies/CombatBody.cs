@@ -10,7 +10,7 @@ public abstract class CombatBody : Placeable
 
     [SerializeField]
     [Tooltip("Whether the CombatBody has been released from its frozen state. Do not edit, this is in the inpsector for looking only.")]
-    protected bool released = false;
+    public bool released { get; protected set; } = false;
 
     [SerializeField]
     [Tooltip("Used for preventing friendly fire.")]

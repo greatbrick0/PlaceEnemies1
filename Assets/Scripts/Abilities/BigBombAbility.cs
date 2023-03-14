@@ -18,7 +18,7 @@ public class BigBombAbility : Ability
         cooldownTime = 4.0f;
         effectiveRange = 10.0f;
         SetDisplayVars();
-        ID = 5;
+        ID = 11;
         colour = ColourTypes.Green;
     }
 

@@ -18,7 +18,7 @@ public class HammerAbility : Ability
         cooldownTime = 4.3f;
         effectiveRange = 3.0f;
         SetDisplayVars();
-        ID = 7;
+        ID = 3;
         colour = ColourTypes.Red;
     }
 

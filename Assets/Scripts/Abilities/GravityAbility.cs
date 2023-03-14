@@ -18,7 +18,7 @@ public class GravityAbility : Ability
         cooldownTime = 6.0f;
         effectiveRange = 4.0f;
         SetDisplayVars();
-        ID = 6;
+        ID = 7;
         colour = ColourTypes.Blue;
     }
 

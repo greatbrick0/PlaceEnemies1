@@ -18,7 +18,7 @@ public class JumpAbility : Ability
         cooldownTime = 6.0f;
         effectiveRange = 7.0f;
         SetDisplayVars();
-        ID = 5;
+        ID = 9;
         colour = ColourTypes.Green;
     }
 

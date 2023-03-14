@@ -18,7 +18,7 @@ public class ShacklesAbility : Ability
         cooldownTime = 3.0f;
         effectiveRange = 12.0f;
         SetDisplayVars();
-        ID = 3;
+        ID = 8;
         colour = ColourTypes.Blue;
     }
 

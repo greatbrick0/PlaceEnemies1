@@ -22,7 +22,7 @@ public class LightningAbility : Ability
         cooldownTime = 2.0f;
         effectiveRange = 8.0f;
         SetDisplayVars();
-        ID = 2;
+        ID = 10;
         colour = ColourTypes.Green;
         projectileCount = 3;
         timeBetweenShots = 0.4f;

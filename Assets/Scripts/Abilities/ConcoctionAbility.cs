@@ -21,7 +21,7 @@ public class ConcoctionAbility : Ability
         cooldownTime = 4.0f;
         effectiveRange = 13.5f;
         SetDisplayVars();
-        ID = 6;
+        ID = 5;
         colour = ColourTypes.Blue;
         maxTravelTime = 1.1f;
         minTravelTime = 0.3f;
