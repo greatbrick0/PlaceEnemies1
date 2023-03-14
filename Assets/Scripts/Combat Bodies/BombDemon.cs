@@ -47,6 +47,8 @@ public class BombDemon : NPCController
     private void ChooseNewRandomPosition()
     {
         chosenPosition = targetList[0].transform.position + new Vector3(Random.Range(-5.0f, 5.0f), 0, Random.Range(-5.0f, 5.0f));
+        reachedPosition = false;
+        StartCoroutine(AttemptNewPosition());
     }
 
     private void Behaviour()
@@ -55,11 +57,7 @@ public class BombDemon : NPCController
 
         if (reachedPosition)
         {
-            if (UseAbility(0, transform.position))
-            {
-                ChooseNewRandomPosition();
-                reachedPosition = false;
-            }
+            if (UseAbility(0, transform.position)) ChooseNewRandomPosition(); 
             controlledVelocity = Vector3.zero;
         }
         else
@@ -67,7 +65,18 @@ public class BombDemon : NPCController
             directionToTarget = (chosenPosition - transform.position).normalized;
             distanceToTarget = Vector3.Distance(transform.position, chosenPosition);
             controlledVelocity = directionToTarget * moveSpeed;
-            if (distanceToTarget < 0.5f) reachedPosition = true;
+            if (distanceToTarget < 0.5f)
+            {
+                reachedPosition = true;
+                StopAllCoroutines();
+            }
         }
+    }
+
+    private IEnumerator AttemptNewPosition()
+    {
+        yield return new WaitForSeconds(12.0f);
+        print("RetryPosition");
+        ChooseNewRandomPosition();
     }
 }
