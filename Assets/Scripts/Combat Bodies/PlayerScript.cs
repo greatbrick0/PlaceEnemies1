@@ -33,7 +33,7 @@ public class PlayerScript : CombatBody
 
     private IEnumerator DelayActivateInput()
     {
-        yield return new WaitForSeconds(0.03f);
+        yield return new WaitForSeconds(0.01f);
         inputComponent.enabled = true;
     }
 
@@ -46,7 +46,7 @@ public class PlayerScript : CombatBody
 
     protected override void Update()
     {
-        if (released)
+        if (released && Time.timeScale != 0.0f)
         {
             inputVector = new Vector3(movementInput.ReadValue<Vector2>().x, 0, movementInput.ReadValue<Vector2>().y);
             controlledVelocity = inputVector * moveSpeed;
@@ -130,7 +130,7 @@ public class PlayerScript : CombatBody
     public void SetDefaultAbilities()
     {
         abilityList.Add(new BoulderAbility(gameObject));
-        abilityList.Add(new ImbuedChargeAbility(gameObject));
+        abilityList.Add(new ConcoctionAbility(gameObject));
         abilityList.Add(new HomingMissileAbility(gameObject));
 
         FillRemainingAbilities();
