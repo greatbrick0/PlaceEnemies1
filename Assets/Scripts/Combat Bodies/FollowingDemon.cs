@@ -6,21 +6,21 @@ public class FollowingDemon : NPCController
 {
     [SerializeField]
     [Tooltip("The range at which the enemy will back away from the player, measured in units. One hexagon tile is about 4 units wide.")]
-    private float minimumRange = 0.1f;
+    protected float minimumRange = 0.1f;
     [SerializeField]
     [Tooltip("The range at which the enemy will stop moving towards the player. ")]
-    private float satisfiedRange = 1.0f;
+    protected float satisfiedRange = 1.0f;
     [SerializeField]
     [Tooltip("Whether the \"Satisfied Range\" is measured in a ratio of the first abilities effective range or in units. ")]
     private bool satisfiedRangeInRatio = false;
     [SerializeField]
     [Tooltip("The range at which the enemy will start attacking the player. ")]
-    private float aggroRange = 1.0f;
+    protected float aggroRange = 1.0f;
     [SerializeField]
     [Tooltip("Whether the \"Aggro Range\" is measured in a ratio of the first abilities effective range or in units. ")]
     private bool aggroRangeInRatio = false;
-    private float distanceToTarget;
-    private Vector3 directionToTarget;
+    protected float distanceToTarget;
+    protected Vector3 directionToTarget;
 
     protected override void Start()
     {
@@ -65,7 +65,7 @@ public class FollowingDemon : NPCController
         abilityList[0] = new DemonSlashAbility(gameObject);
     }
 
-    private void Behaviour()
+    protected virtual void Behaviour()
     {
         distanceToTarget = Vector3.Distance(transform.position, targetList[0].transform.position);
         directionToTarget = (targetList[0].transform.position - transform.position).normalized;

@@ -1391,6 +1391,7 @@ MonoBehaviour:
   panels:
   - {fileID: 9108171363780900577, guid: c1245d107d8b0dd45b204a895925e4e1, type: 3}
   - {fileID: 8938237887026557655, guid: ec420babbd76e684d856644528b31724, type: 3}
+  - {fileID: 3652239348846545116, guid: 5cfac8ceb4dcf6249ac0a0d8136e70ff, type: 3}
   maxUses: 3
 --- !u!4 &366862104 stripped
 Transform:
@@ -2606,6 +2607,9 @@ MonoBehaviour:
       type: 3}
   - entryName: DemonBomb
     entryGameObject: {fileID: 9159844377764210428, guid: 5eca6f43a9121d840a7199f3409eb761,
+      type: 3}
+  - entryName: HealBall
+    entryGameObject: {fileID: 9159844377764210428, guid: 215c0772652efc240977aa9ec31ec474,
       type: 3}
 --- !u!114 &586905835
 MonoBehaviour:
