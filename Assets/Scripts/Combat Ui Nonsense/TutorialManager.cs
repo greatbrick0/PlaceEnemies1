@@ -12,6 +12,11 @@ public class TutorialManager : MonoBehaviour
         UpdatePrompts();
     }
 
+    private void Start()
+    {
+        UpdatePrompts();
+    }
+
     private void UpdatePrompts()
     {
         for(int ii = 0; ii < transform.childCount; ii++)

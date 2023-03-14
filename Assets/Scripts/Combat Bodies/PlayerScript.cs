@@ -130,7 +130,7 @@ public class PlayerScript : CombatBody
     public void SetDefaultAbilities()
     {
         abilityList.Add(new BoulderAbility(gameObject));
-        abilityList.Add(new ImbuedChargeAbility(gameObject));
+        abilityList.Add(new ConcoctionAbility(gameObject));
         abilityList.Add(new HomingMissileAbility(gameObject));
 
         FillRemainingAbilities();

@@ -120,6 +120,7 @@ public class PlacingManager : MonoBehaviour
 
     private void Update()
     {
+        if (showTutorial && tutorialStage == 0) tutorialRef.transform.GetChild(0).gameObject.SetActive(!Input.GetMouseButton(0));
         currentMousePos = Mouse.current.position.ReadValue() != null ? Mouse.current.position.ReadValue() : Vector2.zero;
         mouseRay = unityCam.ScreenPointToRay(currentMousePos);
         Physics.Raycast(cam.transform.position, mouseRay.direction, out hitData, 150.0f, 1 << 9);
@@ -217,6 +218,7 @@ public class PlacingManager : MonoBehaviour
 
     private IEnumerator DefeatFadeOut()
     {
+        VicFadeRef.SetActive(true);
         yield return new WaitForSeconds(1.0f);
         VicFadeRef.GetComponent<Transitioner>().FadeOutCall(true);
         yield return new WaitForSeconds(2.0f);
