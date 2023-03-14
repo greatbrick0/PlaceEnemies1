@@ -11,11 +11,11 @@ public class EditSpellsManager : MonoBehaviour
     {
         if (SessionDataManager.playerLoadOut.Count == 0)
         {
-            if (SessionDataManager.nightNum == 0)
+            if (/*SessionDataManager.nightNum == 0*/ false)
             {
-                //SessionDataManager.playerLoadOut.Add(new MagicArrowAbility());
-                //SessionDataManager.playerLoadOut.Add(new JumpAbility());
-                //SessionDataManager.playerLoadOut.Add(new ShacklesAbility());
+                SessionDataManager.playerLoadOut.Add(new MagicArrowAbility());
+                SessionDataManager.playerLoadOut.Add(new JumpAbility());
+                SessionDataManager.playerLoadOut.Add(new ShacklesAbility());
             }
             else
             {
