@@ -5174,7 +5174,7 @@ MonoBehaviour:
   released: 0
   team: player
   bounty: 0
-  health: 5
+  <health>k__BackingField: 5
   baseMoveSpeed: 5
   timeToFullSpeed: 0.2
   timeToFullStop: 0.2

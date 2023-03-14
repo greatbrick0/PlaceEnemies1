@@ -3799,9 +3799,9 @@ GameObject:
   - component: {fileID: 7965983472719064229}
   - component: {fileID: 7965983472719064230}
   - component: {fileID: 7965983472719064248}
-  - component: {fileID: 3434296676422604297}
+  - component: {fileID: 2205697844388953213}
   m_Layer: 8
-  m_Name: ChainEnemy
+  m_Name: HealerEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3852,7 +3852,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.75
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3434296676422604297
+--- !u!114 &2205697844388953213
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3861,28 +3861,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 7965983472719064249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54133d629a18bf4449f772cdb9531b8f, type: 3}
+  m_Script: {fileID: 11500000, guid: 7fdb0a787c12fe6468f3eca9d8e899f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   released: 0
   team: enemy
-  bounty: 0
-  <health>k__BackingField: 20
-  baseMoveSpeed: 1.5
-  timeToFullSpeed: 0.4
-  timeToFullStop: 0.3
-  deathSmoke: {fileID: 3895707014425098256, guid: 64e1f8353764b7e4e98b3cd6f069f0b2,
-    type: 3}
+  bounty: 3
+  health: 40
+  baseMoveSpeed: 3
+  timeToFullSpeed: 0.1
+  timeToFullStop: 0.1
+  deathSmoke: {fileID: 0}
   sourcesPreventingMovement: 0
   forcedVelocity: {x: 0, y: 0, z: 0}
   sourcesPreventingAbilities: 0
   sourcesPreventingDamage: 0
   effectList: []
   targetDetectionRadius: 30
-  minimumRange: 3
-  satisfiedRange: 1.1
-  satisfiedRangeInRatio: 1
-  aggroRange: 1
+  minimumRange: 1.5
+  satisfiedRange: 2.5
+  satisfiedRangeInRatio: 0
+  aggroRange: 0.7
   aggroRangeInRatio: 1
 --- !u!1 &8106199236171643792
 GameObject:
@@ -4864,17 +4863,17 @@ PrefabInstance:
     - target: {fileID: 2567054639012863238, guid: 55f4cc08dc8aebc49b059f13f3dcdadc,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.5188679
+      value: 0.13207549
       objectReference: {fileID: 0}
     - target: {fileID: 2567054639012863238, guid: 55f4cc08dc8aebc49b059f13f3dcdadc,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.5168146
+      value: 0.10731589
       objectReference: {fileID: 0}
     - target: {fileID: 2567054639012863238, guid: 55f4cc08dc8aebc49b059f13f3dcdadc,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.3201317
+      value: 0.07538271
       objectReference: {fileID: 0}
     - target: {fileID: 2567054639012863238, guid: 55f4cc08dc8aebc49b059f13f3dcdadc,
         type: 3}

@@ -10,7 +10,7 @@ public abstract class CombatBody : Placeable
 
     [SerializeField]
     [Tooltip("Whether the CombatBody has been released from its frozen state. Do not edit, this is in the inpsector for looking only.")]
-    protected bool released = false;
+    public bool released { get; protected set; } = false;
 
     [SerializeField]
     [Tooltip("Used for preventing friendly fire.")]
@@ -19,9 +19,9 @@ public abstract class CombatBody : Placeable
     [Tooltip("The amount of currency this CombatBody will reward for being killed.")]
     public int bounty = 0 ;
 
-    [SerializeField]
-    [Tooltip("The amount of damage this CombatBody can take before dying.")]
-    protected int health = 2;
+    [field: SerializeField]
+    [field: Tooltip("The amount of damage this CombatBody can take before dying.")]
+    public int health { get; protected set; } = 2;
 
     [SerializeField]
     [Tooltip("This CombatBody's default move speed. This value is used as a base when calculating relative boosts and slows.")]

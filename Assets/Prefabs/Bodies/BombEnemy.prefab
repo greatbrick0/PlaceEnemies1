@@ -79,7 +79,7 @@ MonoBehaviour:
   released: 0
   team: enemy
   bounty: 3
-  health: 25
+  <health>k__BackingField: 25
   baseMoveSpeed: 4
   timeToFullSpeed: 0.1
   timeToFullStop: 1
