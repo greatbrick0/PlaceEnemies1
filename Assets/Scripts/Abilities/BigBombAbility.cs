@@ -15,7 +15,7 @@ public class BigBombAbility : Ability
     protected override void SetVars()
     {
         bombPrefab = AttackDict.attacks["BigBomb"];
-        cooldownTime = 4.0f;
+        cooldownTime = 3.0f;
         effectiveRange = 10.0f;
         SetDisplayVars();
         ID = 11;
