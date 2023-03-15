@@ -15,7 +15,7 @@ public class ShacklesAbility : Ability
     protected override void SetVars()
     {
         shacklesPrefab = AttackDict.attacks["Shackles"];
-        cooldownTime = 3.0f;
+        cooldownTime = 3.4f;
         effectiveRange = 12.0f;
         SetDisplayVars();
         ID = 8;
