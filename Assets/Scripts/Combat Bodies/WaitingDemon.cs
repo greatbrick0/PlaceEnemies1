@@ -24,6 +24,9 @@ public class WaitingDemon : NPCController
     protected float aggroRange { get; private set; } = 2.0f;
     [field: SerializeField]
     protected float circleAngle { get; private set; } = 90;
+    [field: SerializeField]
+    protected bool runStraight { get; private set; } = true;
+
 
     protected override void Start()
     {
@@ -84,9 +87,11 @@ public class WaitingDemon : NPCController
         }
         else
         {
+            if (!runStraight) directionToTarget = (targetTransform.position - transform.position).normalized;
             controlledVelocity = directionToTarget * moveSpeed;
-            transform.LookAt(transform.position + directionToTarget);
+            transform.LookAt(targetTransform.position);
             distanceToTarget = Vector3.Distance(transform.position, targetTransform.position);
+
             if (stateTime > downTime + chargeTime + failedChargeTime || distanceToTarget < aggroRange)
             {
                 stateTime = 0.0f;

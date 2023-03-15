@@ -16832,8 +16832,8 @@ MonoBehaviour:
   team: enemy
   bounty: 1
   <health>k__BackingField: 18
-  baseMoveSpeed: 3.5
-  timeToFullSpeed: 0.5
+  baseMoveSpeed: 4.8
+  timeToFullSpeed: 0.1
   timeToFullStop: 0.1
   deathSmoke: {fileID: 0}
   sourcesPreventingMovement: 0
@@ -16844,11 +16844,12 @@ MonoBehaviour:
   targetDetectionRadius: 30
   <chargeTime>k__BackingField: 0.3
   <downTime>k__BackingField: 2
-  <failedChargeTime>k__BackingField: 1
+  <failedChargeTime>k__BackingField: 2.5
   <circleRange>k__BackingField: 4.5
   <circleWidth>k__BackingField: 0.3
-  <aggroRange>k__BackingField: 1.4
+  <aggroRange>k__BackingField: 1.8
   <circleAngle>k__BackingField: 90
+  <runStraight>k__BackingField: 0
 --- !u!1 &7971356685310268118
 GameObject:
   m_ObjectHideFlags: 0

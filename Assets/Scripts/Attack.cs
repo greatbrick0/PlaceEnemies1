@@ -52,6 +52,8 @@ public abstract class Attack : MonoBehaviour
 
     protected virtual void TooOld() //for when an attack has existed for too much time.
     {
+        if (hasParticles == true) DetachParticles();
+
         Destroy(this.gameObject);
     }
 
