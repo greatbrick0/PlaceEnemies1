@@ -55,6 +55,9 @@ public class EditSpellsManager : MonoBehaviour
             }
         }
         doneButtonRef.SetActive(CountValidSpells() >= 3);
+
+        if (showTutorial && tutorialStage == 4 && CountValidSpells() == 1) NextTutorialPrompt();
+        if (showTutorial && tutorialStage == 6 && CountValidSpells() == 3) NextTutorialPrompt();
     }
 
     public void SaveLoadout()
