@@ -16844,7 +16844,7 @@ MonoBehaviour:
   targetDetectionRadius: 30
   <chargeTime>k__BackingField: 0.3
   <downTime>k__BackingField: 2
-  <failedChargeTime>k__BackingField: 2.5
+  <failedChargeTime>k__BackingField: 1.5
   <circleRange>k__BackingField: 4.5
   <circleWidth>k__BackingField: 0.3
   <aggroRange>k__BackingField: 1.8
