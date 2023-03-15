@@ -25,7 +25,7 @@ public abstract class Attack : MonoBehaviour
 
     protected Collider hitbox;
     protected List<CombatBody> hitList = new List<CombatBody>();
-    [HideInInspector]
+    [Tooltip("Whether or not the projectile can hit targets. ")]
     public bool canHit = true;
 
     protected virtual void Start()

@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class HammerScript : Attack
 {
-    private int attackStage = 0;
     [HideInInspector]
     public GameObject followHost;
-    [HideInInspector]
-    public Vector3 followOffset = Vector3.forward * 1.5f;
+    public Vector3 followOffset = Vector3.forward * 1.7f;
 
-    [SerializeField]
-    [Tooltip("The speed at which the hammer visually falls. ")]
-    private float fallSpeed = 3.0f;
+    [Tooltip("Whether or not the hammer is moving with the body that summoned it. ")]
+    public bool followingOwner = true;
 
     protected override void Start()
     {
@@ -25,20 +22,7 @@ public class HammerScript : Attack
     {
         base.Update();
 
-        if(age < lifetime * 0.9f)
-        {
-            if(followHost != null) transform.position = followHost.transform.position + followOffset;
-        }
-        else if (attackStage == 0)
-        {
-            attackStage = 1;
-            canHit = true;
-        }
-
-      //  if(attackStage == 1)
-      //  {
-      //      transform.GetChild(0).position += Vector3.down * fallSpeed * Time.deltaTime;
-       // }
+        if(followingOwner && followHost != null) transform.position = followHost.transform.position + followOffset;
     }
 
     protected override bool FilterHitTarget(CombatBody hitTarget)
