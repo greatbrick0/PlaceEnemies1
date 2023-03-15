@@ -27,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 7974000270872826712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
+  m_LocalScale: {x: 1.75, y: 1.75, z: 1.75}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7974000272586625891}
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4a7091b56edd0824a990eaeef4917238, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8c5183023dcf91d498d4c2e8117ac5a9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
