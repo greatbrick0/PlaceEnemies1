@@ -15,7 +15,7 @@ public class BoulderAbility : Ability
     protected override void SetVars()
     {
         boulderPrefab = AttackDict.attacks["Boulder"];
-        cooldownTime = 5.0f;
+        cooldownTime = 6.5f;
         effectiveRange = 16.0f;
         SetDisplayVars();
         ID = 2;
