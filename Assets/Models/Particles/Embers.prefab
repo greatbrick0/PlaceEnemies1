@@ -602,7 +602,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 200
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -670,7 +670,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: -0.0000019043591, y: 28.04325, z: -0.000000006607984}
     m_Rotation: {x: -0, y: 0, z: 0}
-    m_Scale: {x: 136.67735, y: 18.818941, z: 0.9999996}
+    m_Scale: {x: 74.19081, y: 18.818941, z: 0.9999996}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -2860,7 +2860,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.5
+    frequency: 1
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
