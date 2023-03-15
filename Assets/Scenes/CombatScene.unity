@@ -2439,6 +2439,9 @@ MonoBehaviour:
   - entryName: HealBall
     entryGameObject: {fileID: 9159844377764210428, guid: 215c0772652efc240977aa9ec31ec474,
       type: 3}
+  - entryName: DemonStab
+    entryGameObject: {fileID: 9159844377764210428, guid: b3b117abad23aeb45a28dc1474a298f2,
+      type: 3}
 --- !u!114 &586905835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7835,6 +7838,7 @@ MonoBehaviour:
   panels:
   - {fileID: 329647597555306658, guid: 8fc2620c0ae9b4748b4815fe4a9ad969, type: 3}
   - {fileID: 5383819090332016392, guid: 5cd2d4caf692742409762c2b8be9ad9e, type: 3}
+  - {fileID: 7525773282799476742, guid: 8f4300be9cc6c6044a294e551cdb2b47, type: 3}
   maxUses: 3
 --- !u!4 &1599022366 stripped
 Transform:

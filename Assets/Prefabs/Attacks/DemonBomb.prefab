@@ -62,9 +62,9 @@ MonoBehaviour:
   team: enemy
   speed: 0
   moveDirection: {x: 0, y: 0, z: 1}
-  lifetime: 2
+  lifetime: 0.9
   power: 0
-  canHit: 1
+  canHit: 0
   residueObject: {fileID: 9159844377764210428, guid: b0c23f40448eb3d4d8fb4ab1f8d039ad,
     type: 3}
   randomRotation: 1
