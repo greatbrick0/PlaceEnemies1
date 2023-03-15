@@ -207,14 +207,7 @@ public class PlacingManager : MonoBehaviour
         VicFadeRef.GetComponent<Transitioner>().FadeOutCall(true);
         yield return new WaitForSeconds(2.0f);
 
-        if (SessionDataManager.nightNum == 4)
-        {
-            SceneManager.LoadScene("WinScene");
-        }
-        else
-        {
-            SceneManager.LoadScene("TimelineScene");
-        }
+        SceneManager.LoadScene(SessionDataManager.nightNum == 5 ? "WinScene" : "TimelineScene");
     }
 
     private IEnumerator DefeatFadeOut()
