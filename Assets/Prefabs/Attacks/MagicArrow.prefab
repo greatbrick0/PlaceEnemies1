@@ -9692,7 +9692,8 @@ MonoBehaviour:
   speed: 30
   moveDirection: {x: 0, y: 0, z: 1}
   lifetime: 0.5
-  power: 10
+  power: 20
+  hasParticles: 0
   canHit: 1
 --- !u!1001 &6795403792272141292
 PrefabInstance:
