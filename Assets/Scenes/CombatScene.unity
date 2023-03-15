@@ -1887,6 +1887,7 @@ MonoBehaviour:
   panels:
   - {fileID: 3956156950503933583, guid: 0671121324040b741870607ef6185757, type: 3}
   - {fileID: 4064047011595523753, guid: 7caddb8414759c147924bb66cf6aece9, type: 3}
+  - {fileID: 4235514307388481494, guid: 2e08f8d743ab17c4f9b3de6dde56814f, type: 3}
   maxUses: 3
 --- !u!4 &507111846 stripped
 Transform:
