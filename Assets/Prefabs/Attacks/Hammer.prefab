@@ -9671,7 +9671,6 @@ GameObject:
   - component: {fileID: 5289056484121332880}
   - component: {fileID: 9135933704345502517}
   - component: {fileID: 6425981381491865599}
-  - component: {fileID: 835807805909489176}
   - component: {fileID: 7491960674634411563}
   m_Layer: 0
   m_Name: HammerSmall
@@ -9752,26 +9751,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &835807805909489176
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4768556044428711466}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: df51b7ff87d1d0e46996913cf9dbcdb1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &7491960674634411563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9795,6 +9774,7 @@ GameObject:
   - component: {fileID: 9159844377764210305}
   - component: {fileID: 4010019983992688598}
   - component: {fileID: 5000325414724614879}
+  - component: {fileID: 3646861530213684393}
   m_Layer: 7
   m_Name: Hammer
   m_TagString: Untagged
@@ -9850,8 +9830,28 @@ MonoBehaviour:
   power: 60
   canHit: 1
   followHost: {fileID: 0}
-  followOffset: {x: 0, y: 0, z: 1.5}
-  fallSpeed: 5
+  followOffset: {x: 0, y: 0, z: 0}
+  followingOwner: 1
+--- !u!95 &3646861530213684393
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159844377764210428}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: df51b7ff87d1d0e46996913cf9dbcdb1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3212230339001383154
 PrefabInstance:
   m_ObjectHideFlags: 0
