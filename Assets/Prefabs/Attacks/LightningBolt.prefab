@@ -14836,7 +14836,8 @@ MonoBehaviour:
   speed: 0
   moveDirection: {x: 0, y: 0, z: 1}
   lifetime: 0.5
-  power: 5
+  power: 3
+  hasParticles: 0
   canHit: 1
 --- !u!135 &7796067639876593236
 SphereCollider:

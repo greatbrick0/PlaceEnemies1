@@ -19,7 +19,7 @@ public class LightningAbility : Ability
     protected override void SetVars()
     {
         boltPrefab = AttackDict.attacks["LightningBolt"];
-        cooldownTime = 2.0f;
+        cooldownTime = 3.0f;
         effectiveRange = 8.0f;
         SetDisplayVars();
         ID = 10;
