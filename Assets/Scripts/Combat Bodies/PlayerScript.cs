@@ -153,7 +153,7 @@ public class PlayerScript : CombatBody
             if (combatUIC != null) combatUIC.HealthUpdate(health - damageAmount);
             CameraShakeOnHitScript.instance.Shake();
         }
-        return base.Hurt(damageAmount);
+        return hurtStore;
     }
 
     protected override void Die()

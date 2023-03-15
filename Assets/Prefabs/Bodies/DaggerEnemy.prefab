@@ -16844,10 +16844,10 @@ MonoBehaviour:
   targetDetectionRadius: 30
   <chargeTime>k__BackingField: 0.3
   <downTime>k__BackingField: 2
-  <failedChargeTime>k__BackingField: 0.8
+  <failedChargeTime>k__BackingField: 1
   <circleRange>k__BackingField: 4.5
   <circleWidth>k__BackingField: 0.3
-  <aggroRange>k__BackingField: 1.7
+  <aggroRange>k__BackingField: 1.4
   <circleAngle>k__BackingField: 90
 --- !u!1 &7971356685310268118
 GameObject:

@@ -5171,10 +5171,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972c7bba40aec7c4fa9ca74fa711d35d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  released: 0
   team: player
   bounty: 0
-  <health>k__BackingField: 5
+  <health>k__BackingField: 6
   baseMoveSpeed: 5
   timeToFullSpeed: 0.2
   timeToFullStop: 0.2
