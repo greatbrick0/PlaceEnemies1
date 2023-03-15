@@ -35,10 +35,10 @@ public class HammerScript : Attack
             canHit = true;
         }
 
-        if(attackStage == 1)
-        {
-            transform.GetChild(0).position += Vector3.down * fallSpeed * Time.deltaTime;
-        }
+      //  if(attackStage == 1)
+      //  {
+      //      transform.GetChild(0).position += Vector3.down * fallSpeed * Time.deltaTime;
+       // }
     }
 
     protected override bool FilterHitTarget(CombatBody hitTarget)

@@ -19,4 +19,4 @@ MonoBehaviour:
   <affectsMoveSpeed>k__BackingField: 1
   <hasDuration>k__BackingField: 1
   age: 0
-  <lifeTime>k__BackingField: 0.35
+  <lifeTime>k__BackingField: 0.3

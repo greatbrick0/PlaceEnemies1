@@ -4471,11 +4471,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa8eece510d4e44e9ae9b4c0128953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  released: 0
   team: enemy
   bounty: 8
-  <health>k__BackingField: 61
-  baseMoveSpeed: 0.6
+  <health>k__BackingField: 70
+  baseMoveSpeed: 1.5
   timeToFullSpeed: 0.5
   timeToFullStop: 0.3
   deathSmoke: {fileID: 3895707014425098256, guid: c00463d14d762fe4b9f61ba64e322281,

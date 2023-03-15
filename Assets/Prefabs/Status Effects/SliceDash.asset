@@ -22,6 +22,6 @@ MonoBehaviour:
   <lifeTime>k__BackingField: 0.8
   preventsMovement: 1
   preventsAbilities: 1
-  forcedVelocity: {x: -1.3050146, y: 0, z: 8.904882}
+  forcedVelocity: {x: -6.2891326, y: 0.0000019173704, z: -6.4379196}
   preventsHits: 0
   preventsDamage: 1
