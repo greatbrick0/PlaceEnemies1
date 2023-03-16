@@ -23,6 +23,10 @@ public abstract class Attack : MonoBehaviour
 
     [SerializeField]
     protected bool hasParticles = false;
+    [SerializeField]
+    private AudioClip hitSound;
+    [SerializeField]
+    private AudioClip timeOutSound;
 
     protected Collider hitbox;
     protected List<CombatBody> hitList = new List<CombatBody>();
@@ -61,6 +65,7 @@ public abstract class Attack : MonoBehaviour
     {
         canHit = false;
 
+        if (timeOutSound != null) AudioReference.AudioAtCamera(timeOutSound);
         if (hasParticles == true) DetachParticles();
 
         Destroy(this.gameObject);
@@ -90,6 +95,7 @@ public abstract class Attack : MonoBehaviour
         {
             hitList.Add(otherCombatBody);
             Apply(otherCombatBody);
+            if(hitSound != null) AudioReference.AudioAtCamera(hitSound);
         }
     }
 
