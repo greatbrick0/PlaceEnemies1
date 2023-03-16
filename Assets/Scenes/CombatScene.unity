@@ -1312,6 +1312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec2dfa0b64785724a87b4faeea69b48c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  managerRef: {fileID: 586905832}
   panels:
   - {fileID: 9108171363780900577, guid: c1245d107d8b0dd45b204a895925e4e1, type: 3}
   - {fileID: 8938237887026557655, guid: ec420babbd76e684d856644528b31724, type: 3}
@@ -1884,6 +1885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec2dfa0b64785724a87b4faeea69b48c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  managerRef: {fileID: 586905832}
   panels:
   - {fileID: 3956156950503933583, guid: 0671121324040b741870607ef6185757, type: 3}
   - {fileID: 4064047011595523753, guid: 7caddb8414759c147924bb66cf6aece9, type: 3}
@@ -2457,6 +2459,7 @@ MonoBehaviour:
   sceneString: CombatScene
   spellSelectHold: {fileID: 0}
   spellReleaseHold: {fileID: 0}
+  spellSoundHold: []
 --- !u!1 &603187657
 GameObject:
   m_ObjectHideFlags: 0
@@ -7835,6 +7838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec2dfa0b64785724a87b4faeea69b48c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  managerRef: {fileID: 586905832}
   panels:
   - {fileID: 329647597555306658, guid: 8fc2620c0ae9b4748b4815fe4a9ad969, type: 3}
   - {fileID: 5383819090332016392, guid: 5cd2d4caf692742409762c2b8be9ad9e, type: 3}
