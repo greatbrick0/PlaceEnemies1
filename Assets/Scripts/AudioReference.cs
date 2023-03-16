@@ -11,16 +11,21 @@ public class AudioReference : MonoBehaviour
 
     public static AudioClip spellReleaseSound;
 
+    public static AudioClip [] spellSounds;
+
     [SerializeField]
     public AudioClip spellSelectHold;
 
     [SerializeField]
     public AudioClip spellReleaseHold;
 
+    [SerializeField]
+    public AudioClip [] spellSoundHold;
     private void Awake()
     {
         spellSelectSound = spellSelectHold;
         spellReleaseSound = spellReleaseHold;
+        spellSounds = spellSoundHold;
     }
     private void Start()
     {
