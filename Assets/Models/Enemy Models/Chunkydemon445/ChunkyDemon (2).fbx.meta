@@ -1,21 +1,59 @@
 fileFormatVersion: 2
-guid: 15346da231222304d8b859637fe52503
+guid: 567f0fbca5d4fcb40a9332acb88926b8
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable:
+  internalIDToNameTable: []
+  externalObjects:
   - first:
-      74: 5035030988882532426
-    second: ChunkyDemon|BalenRig.002Action.005
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ArmSpikes
+    second: {fileID: 2100000, guid: 00dd6af3b0e84c44588fba84c54a56df, type: 2}
   - first:
-      74: -6266269960047071880
-    second: ChunkyDemon|BalenRig.002Action.007
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ArmStraps
+    second: {fileID: 2100000, guid: 1a33d1aef376ad84198101a5cf2e0766, type: 2}
   - first:
-      74: 2517834334588331524
-    second: ChunkyDemon|BalenRig.002Action.008
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BigHammer
+    second: {fileID: 2100000, guid: 8accfeb64fe22ef4fa165d24d4637780, type: 2}
   - first:
-      74: -8618155804682354741
-    second: ChunkyDemon|BalenRig.002Action.009
-  externalObjects: {}
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BigHammerHandle
+    second: {fileID: 2100000, guid: 3557e2bd00919e4498aa445e5b43608a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BigPants
+    second: {fileID: 2100000, guid: 62e2e955f49d38b4b8e14d65567b9c40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DemonBody
+    second: {fileID: 2100000, guid: 0d3bb71d00f1a1649b8a345f46c6e144, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Horns
+    second: {fileID: 2100000, guid: 60416c6aa8eb5b842a2de2391cf1d4a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Knee Armor
+    second: {fileID: 2100000, guid: f32fe32fda1a0ac41acd05cac8cb7ad2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Spikes
+    second: {fileID: 2100000, guid: 90daa1cc288d08b4b8531002fdccf602, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Strap
+    second: {fileID: 2100000, guid: 2e41f6402484bca46a684e5c9e283b6c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
