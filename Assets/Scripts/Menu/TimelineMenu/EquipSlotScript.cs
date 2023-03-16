@@ -41,11 +41,12 @@ public class EquipSlotScript : MonoBehaviour
         managerRef.currentLoadOut[siblingIndex] = heldSpell.abilityRef;
     }
 
-    private void RemoveSpell()
+    public void RemoveSpell()
     {
         if (heldSpell == null) return;
         heldSpell.equipped = false;
         heldSpell.equippedSlotRef = null;
+        heldSpell = null;
     }
 
     public bool AttemptAttachSpell(SpellHolder spell)

@@ -9,6 +9,8 @@ public class EditSpellsManager : MonoBehaviour
 
     [SerializeField]
     GameObject doneButtonRef;
+    [SerializeField]
+    GameObject clearButtonRef;
 
     [SerializeField]
     private GameObject tutorialRef;
@@ -34,6 +36,7 @@ public class EditSpellsManager : MonoBehaviour
         showTutorial = SessionDataManager.usingTutorial && SessionDataManager.nightNum <= 1;
         tutorialRef.SetActive(showTutorial);
         doneButtonRef.SetActive(CountValidSpells() >= 3);
+        clearButtonRef.SetActive(CountValidSpells() >= 1);
     }
 
     public void DraggingSpell(Vector2 mousePos)
@@ -55,6 +58,7 @@ public class EditSpellsManager : MonoBehaviour
             }
         }
         doneButtonRef.SetActive(CountValidSpells() >= 3);
+        clearButtonRef.SetActive(CountValidSpells() >= 1);
 
         if (showTutorial && tutorialStage == 4 && CountValidSpells() == 1) NextTutorialPrompt();
         if (showTutorial && tutorialStage == 6 && CountValidSpells() == 3) NextTutorialPrompt();
@@ -85,7 +89,19 @@ public class EditSpellsManager : MonoBehaviour
         for(int ii = 0; ii < currentLoadOut.Count; ii++)
         {
             output += currentLoadOut[ii].GetType() != typeof(LockedAbility) ? 1 : 0;
+            output += currentLoadOut[ii] == null ? 1 : 0;
         }
         return output;
+    }
+
+    public void ClearLoadout()
+    {
+        for(int ii = 0; ii < loadOutSlots.Count; ii++)
+        {
+            loadOutSlots[ii].RemoveSpell();
+            currentLoadOut[ii] = new LockedAbility();
+        }
+        doneButtonRef.SetActive(false);
+        clearButtonRef.SetActive(false);
     }
 }
