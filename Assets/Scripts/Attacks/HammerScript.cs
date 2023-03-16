@@ -15,7 +15,7 @@ public class HammerScript : Attack
     {
         base.Start();
 
-        canHit = false;
+       
     }
 
     protected override void Update()
