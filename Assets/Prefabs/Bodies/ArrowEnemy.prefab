@@ -2310,7 +2310,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4339123660631341113}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.021216039, y: -0.551, z: -0.020637987}
+  m_LocalPosition: {x: 0.021216039, y: -0.486, z: -0.020637987}
   m_LocalScale: {x: 0.22218, y: 0.22218, z: 0.22218}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4599,7 +4599,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a727b1e5855114dbaada9089a8d343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  released: 0
   team: enemy
   bounty: 2
   <health>k__BackingField: 30

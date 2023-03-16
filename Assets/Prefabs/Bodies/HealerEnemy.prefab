@@ -4591,6 +4591,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2567054639012863238, guid: 55f4cc08dc8aebc49b059f13f3dcdadc,
         type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2567054639012863238, guid: 55f4cc08dc8aebc49b059f13f3dcdadc,
+        type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -4807,7 +4812,7 @@ PrefabInstance:
     - target: {fileID: 2567054639012863232, guid: 55f4cc08dc8aebc49b059f13f3dcdadc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.64
+      value: 2.44
       objectReference: {fileID: 0}
     - target: {fileID: 2567054639012863232, guid: 55f4cc08dc8aebc49b059f13f3dcdadc,
         type: 3}
@@ -4856,8 +4861,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2567054639012863238, guid: 55f4cc08dc8aebc49b059f13f3dcdadc,
         type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
+      propertyPath: InitialModule.maxNumParticles
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2567054639012863238, guid: 55f4cc08dc8aebc49b059f13f3dcdadc,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2567054639012863238, guid: 55f4cc08dc8aebc49b059f13f3dcdadc,
         type: 3}

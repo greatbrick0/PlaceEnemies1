@@ -9686,8 +9686,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4768556044428711466}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 2.99, z: -3.67}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 5.13, y: 8.699999, z: 1.04}
   m_LocalScale: {x: 20.792624, y: 52.696697, z: 52.696697}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9697,7 +9697,7 @@ Transform:
   - {fileID: 6119676368879667769}
   m_Father: {fileID: 9159844377764210305}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 90}
 --- !u!33 &9135933704345502517
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9809,7 +9809,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.25
+  m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5000325414724614879
 MonoBehaviour:
@@ -9828,6 +9828,7 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0, z: 1}
   lifetime: 1.5
   power: 60
+  hasParticles: 0
   canHit: 1
   followHost: {fileID: 0}
   followOffset: {x: 0, y: 0, z: 0}
