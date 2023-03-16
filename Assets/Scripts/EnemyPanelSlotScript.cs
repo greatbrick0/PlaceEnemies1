@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyPanelSlotScript : MonoBehaviour
 {
     [SerializeField]
+    PlacingManager managerRef;
+    [SerializeField]
     private List<GameObject> panels = new List<GameObject>();
     [SerializeField]
     private int maxUses = 2;
@@ -21,7 +23,7 @@ public class EnemyPanelSlotScript : MonoBehaviour
 
     private void Start()
     {
-        maxUses = panels.Count == 1 ? 1 : maxUses;
+        maxUses = panels.Count == 1 ? 1 : managerRef.minimumCardsPlaced;
 
         if (transform.childCount > 0) return;
 

@@ -75,7 +75,13 @@ public class PlacingManager : MonoBehaviour
         } 
     }
     [SerializeField]
-    GameObject tutorialRef; 
+    GameObject tutorialRef;
+
+    private void Awake()
+    {
+        minimumCardsPlaced = minCardsEveryNight[SessionDataManager.nightNum];
+        maximumCardsPlaced = maxCardsEveryNight[SessionDataManager.nightNum];
+    }
 
     private void Start()
     {
@@ -101,16 +107,6 @@ public class PlacingManager : MonoBehaviour
         cam.offset = placingModeCamPos;
         unityCam = cam.GetComponent<Camera>();
 
-        if(SessionDataManager.nightNum < 5) //remove this when winning is implemented
-        {
-            minimumCardsPlaced = minCardsEveryNight[SessionDataManager.nightNum];
-            maximumCardsPlaced = maxCardsEveryNight[SessionDataManager.nightNum];
-        }
-        else
-        {
-            minimumCardsPlaced = 1;
-            maximumCardsPlaced = 20;
-        }
         showTutorial = SessionDataManager.usingTutorial && SessionDataManager.nightNum == 0;
         tutorialRef.SetActive(showTutorial);
 
@@ -168,6 +164,8 @@ public class PlacingManager : MonoBehaviour
         cardsPlaced += output ? 1 : 0;
         remainingEnemies += output ? enemyCount : 0;
         UpdatePlacingUI();
+
+        if (cardsPlaced >= maximumCardsPlaced) Destroy(slotHolderRef.gameObject);
 
         if (showTutorial && cardsPlaced == 1) tutorialStage++;
         if (showTutorial && cardsPlaced == 4) tutorialStage++;
