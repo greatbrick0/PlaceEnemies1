@@ -30,6 +30,7 @@ public class SFXTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
     }
 
     public void Hammer()
@@ -39,7 +40,7 @@ public class SFXTest : MonoBehaviour
 
     public void Spill()
     {
-        AudioSource.PlayClipAtPoint(_spill, Vector3.zero, 1);
+        AudioSource.PlayClipAtPoint(_spill, Vector3.zero, 1f);
     }
     public void Bottle()
     {
@@ -56,12 +57,18 @@ public class SFXTest : MonoBehaviour
     
     public void GhostHands()
     {
+        AudioSource.PlayClipAtPoint(_ghostHands, Vector3.zero, 1f);
+        /*
         aud.clip = _ghostHands;
-        while (GameObject.Find("HomingMissile(Clone)") != null)
+        if (GameObject.Find("HomingMissile(Clone)") != null)
         {
             aud.Play();
         }
-        aud.Stop();
+        else
+        {
+            aud.Stop();
+        }
+        */
     }
     public void Chain()
     {
