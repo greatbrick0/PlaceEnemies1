@@ -41,6 +41,8 @@ public class PlacingManager : MonoBehaviour
     [SerializeField]
     private GameObject groundHolderRef;
     [SerializeField]
+    private GameObject floorModelPrefab;
+    [SerializeField]
     private SlotHolderScript slotHolderRef;
     [SerializeField]
     private GameObject VicFadeRef;
@@ -146,6 +148,7 @@ public class PlacingManager : MonoBehaviour
         {
             groundHolderRef.transform.GetChild(ii).GetComponent<GroundScript>().ReleaseObject();
         }
+        Destroy(groundHolderRef);
     }
 
     public void DraggingPanel(Vector2 panelEdge)
