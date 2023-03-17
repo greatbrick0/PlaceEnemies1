@@ -326,7 +326,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10224290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 989.4075, y: 582.85626, z: 432.62183}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3710,6 +3710,7 @@ MonoBehaviour:
   upgradeColour: blue
   upgradeButton: {fileID: 2129213995}
   upgradePrices: 0c00000018000000ffffffff
+  successSound: {fileID: 8300000, guid: dddb49229bfa3ab45909a32cc0fc3262, type: 3}
 --- !u!1 &697466649
 GameObject:
   m_ObjectHideFlags: 0
@@ -4109,6 +4110,7 @@ MonoBehaviour:
   upgradeColour: red
   upgradeButton: {fileID: 790029241}
   upgradePrices: 0c00000018000000ffffffff
+  successSound: {fileID: 8300000, guid: dddb49229bfa3ab45909a32cc0fc3262, type: 3}
 --- !u!1 &790029241
 GameObject:
   m_ObjectHideFlags: 0
@@ -9792,7 +9794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1804397801
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10657,6 +10659,7 @@ MonoBehaviour:
   upgradeColour: green
   upgradeButton: {fileID: 804590289}
   upgradePrices: 0c00000018000000ffffffff
+  successSound: {fileID: 8300000, guid: dddb49229bfa3ab45909a32cc0fc3262, type: 3}
 --- !u!1 &2044512826
 GameObject:
   m_ObjectHideFlags: 0

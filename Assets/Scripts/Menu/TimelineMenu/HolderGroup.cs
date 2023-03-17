@@ -15,6 +15,8 @@ public class HolderGroup : MonoBehaviour
     GameObject upgradeButton;
     [SerializeField]
     private List<int> upgradePrices;
+    [SerializeField]
+    private AudioClip successSound;
 
     public void DisplayDescription(string desc, string spellName)
     {
@@ -51,6 +53,7 @@ public class HolderGroup : MonoBehaviour
             {
                 transform.GetChild(ii).GetComponent<SpellHolder>().abilityRef.upgradeLevel += 1;
             }
+
             managerRef.UpdateCurrencyLabel();
             if (upgradePrices[SessionDataManager.upgrades[upgradeColour]] >= 0)
             {
@@ -61,6 +64,7 @@ public class HolderGroup : MonoBehaviour
             {
                 Destroy(upgradeButton);
             }
+            AudioReference.AudioAtCamera(successSound);
         }
     }
 }
