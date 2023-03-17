@@ -15,6 +15,9 @@ public class SFXTest : MonoBehaviour
     public AudioClip _storm;
     public AudioClip _blade;
     public AudioClip _gravity;
+    public AudioClip _jump;
+    public AudioClip _bomb;
+    public AudioClip _boulder;
 
     bool magicAttack;
     HammerSFXEvent hammer;
@@ -45,6 +48,10 @@ public class SFXTest : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(_magicAttack, Vector3.zero, 1f);
     }
+    public void Bomb()
+    {
+        AudioSource.PlayClipAtPoint(_bomb, Vector3.zero, 1f);
+    }
     /*
     public void GhostHands()
     {
@@ -72,6 +79,14 @@ public class SFXTest : MonoBehaviour
     public void Gravity()
     {
         AudioSource.PlayClipAtPoint(_gravity, Vector3.zero, 1f);
+    }
+    public void Jump()
+    {
+        AudioSource.PlayClipAtPoint(_jump, Vector3.zero, 1f);
+    }
+    public void Boulder()
+    {
+        AudioSource.PlayClipAtPoint(_boulder, Vector3.zero, 1f);
     }
 
 

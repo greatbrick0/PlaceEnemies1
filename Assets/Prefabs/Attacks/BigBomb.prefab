@@ -65,6 +65,8 @@ MonoBehaviour:
   lifetime: 0.7
   power: 0
   hasParticles: 0
+  hitSound: {fileID: 8300000, guid: 8a9bd2fc2a75ce94abe23d425d8eabe5, type: 3}
+  timeOutSound: {fileID: 0}
   canHit: 1
   residueObject: {fileID: 9159844377764210428, guid: aa3bc8531a4e9a44d8f51a763dee4ff6,
     type: 3}
@@ -574,6 +576,29 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &5014437870642085313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7306907320029170736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e1049cead313ba4985d595947214f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hammer: {fileID: 0}
+  _spill: {fileID: 0}
+  _bottle: {fileID: 0}
+  _magicAttack: {fileID: 0}
+  _ghostHands: {fileID: 0}
+  _chain: {fileID: 0}
+  _storm: {fileID: 0}
+  _blade: {fileID: 0}
+  _gravity: {fileID: 0}
+  _jump: {fileID: 0}
+  _bomb: {fileID: 8300000, guid: 8a9bd2fc2a75ce94abe23d425d8eabe5, type: 3}
 --- !u!4 &7938871782138320522 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9be36b2f548d202469e8c5169703a614,

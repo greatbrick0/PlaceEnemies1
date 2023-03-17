@@ -19404,6 +19404,7 @@ GameObject:
   - component: {fileID: 4010019983992688598}
   - component: {fileID: 5435431730933540525}
   - component: {fileID: 3385525525528733196}
+  - component: {fileID: 1824095697277851952}
   m_Layer: 7
   m_Name: JumpShockwave
   m_TagString: Untagged
@@ -19460,6 +19461,9 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0, z: 1}
   lifetime: 1.1
   power: 5
+  hasParticles: 0
+  hitSound: {fileID: 0}
+  timeOutSound: {fileID: 0}
   canHit: 1
   movementEffect: {fileID: 11400000, guid: e2f6a57b22f14cb42bf8d65ff9f05fd0, type: 2}
 --- !u!95 &3385525525528733196
@@ -19482,3 +19486,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1824095697277851952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159844377764210428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e1049cead313ba4985d595947214f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hammer: {fileID: 0}
+  _spill: {fileID: 0}
+  _bottle: {fileID: 0}
+  _magicAttack: {fileID: 0}
+  _ghostHands: {fileID: 0}
+  _chain: {fileID: 0}
+  _storm: {fileID: 0}
+  _blade: {fileID: 0}
+  _gravity: {fileID: 0}
+  _jump: {fileID: 8300000, guid: 17ee0298953138f42a12ad193fedf2ad, type: 3}
