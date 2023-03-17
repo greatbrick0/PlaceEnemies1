@@ -9788,7 +9788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9159844377764210428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9807,8 +9807,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4.6324224
-  m_Center: {x: 0, y: 0, z: 0.63242257}
+  m_Radius: 4.0131454
+  m_Center: {x: 0, y: 0, z: 0.013145447}
 --- !u!114 &9118515200097580124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9825,7 +9825,7 @@ MonoBehaviour:
   speed: 0
   moveDirection: {x: 0, y: 0, z: 1}
   lifetime: 2
-  power: 1
+  power: 7
   hasParticles: 0
   hitSound: {fileID: 8300000, guid: e7562c8a32e6bc94b91310e42a4c9cd4, type: 3}
   timeOutSound: {fileID: 0}
@@ -9875,3 +9875,7 @@ MonoBehaviour:
   _storm: {fileID: 0}
   _blade: {fileID: 0}
   _gravity: {fileID: 8300000, guid: e7562c8a32e6bc94b91310e42a4c9cd4, type: 3}
+  _jump: {fileID: 0}
+  _bomb: {fileID: 0}
+  _boulder: {fileID: 0}
+  _charge: {fileID: 0}

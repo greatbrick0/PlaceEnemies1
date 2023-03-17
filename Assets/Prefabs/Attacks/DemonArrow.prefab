@@ -48,10 +48,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: enemy
-  speed: 4
+  speed: 8
   moveDirection: {x: 0, y: 0, z: 1}
   lifetime: 3
   power: 1
+  hasParticles: 0
+  hitSound: {fileID: 0}
+  timeOutSound: {fileID: 0}
   canHit: 1
 --- !u!136 &9115375288913146925
 CapsuleCollider:
