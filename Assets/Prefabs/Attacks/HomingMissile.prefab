@@ -5973,7 +5973,7 @@ MonoBehaviour:
   power: 3
   hasParticles: 0
   hitSound: {fileID: 8300000, guid: 7e7401860681a02408a4bc05bb609e50, type: 3}
-  timeOutSound: {fileID: 8300000, guid: d7fb6cb826137bb489cb22a3ceb46ebe, type: 3}
+  timeOutSound: {fileID: 0}
   canHit: 1
   homingPower: 6
 --- !u!95 &552988719847868721
@@ -6003,7 +6003,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9159844377764210428}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e1049cead313ba4985d595947214f31, type: 3}
   m_Name: 
@@ -6012,5 +6012,12 @@ MonoBehaviour:
   _spill: {fileID: 0}
   _bottle: {fileID: 0}
   _magicAttack: {fileID: 8300000, guid: 7e7401860681a02408a4bc05bb609e50, type: 3}
-  _ghostHands: {fileID: 8300000, guid: d7fb6cb826137bb489cb22a3ceb46ebe, type: 3}
+  _ghostHands: {fileID: 8300000, guid: da6e0237321bbaf4ea2869d012c1db04, type: 3}
   _chain: {fileID: 0}
+  _storm: {fileID: 0}
+  _blade: {fileID: 0}
+  _gravity: {fileID: 0}
+  _jump: {fileID: 0}
+  _bomb: {fileID: 0}
+  _boulder: {fileID: 0}
+  _charge: {fileID: 0}

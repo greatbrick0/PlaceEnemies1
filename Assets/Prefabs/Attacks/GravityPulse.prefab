@@ -9772,6 +9772,7 @@ GameObject:
   - component: {fileID: 4010019983992688598}
   - component: {fileID: 9118515200097580124}
   - component: {fileID: 6457747611712725423}
+  - component: {fileID: -8420889570884041565}
   m_Layer: 7
   m_Name: GravityPulse
   m_TagString: Untagged
@@ -9787,7 +9788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9159844377764210428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9806,8 +9807,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4.6324224
-  m_Center: {x: 0, y: 0, z: 0.63242257}
+  m_Radius: 4.0131454
+  m_Center: {x: 0, y: 0, z: 0.013145447}
 --- !u!114 &9118515200097580124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9824,7 +9825,7 @@ MonoBehaviour:
   speed: 0
   moveDirection: {x: 0, y: 0, z: 1}
   lifetime: 2
-  power: 1
+  power: 7
   hasParticles: 0
   hitSound: {fileID: 8300000, guid: e7562c8a32e6bc94b91310e42a4c9cd4, type: 3}
   timeOutSound: {fileID: 0}
@@ -9853,3 +9854,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-8420889570884041565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159844377764210428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e1049cead313ba4985d595947214f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hammer: {fileID: 0}
+  _spill: {fileID: 0}
+  _bottle: {fileID: 0}
+  _magicAttack: {fileID: 8300000, guid: 7e7401860681a02408a4bc05bb609e50, type: 3}
+  _ghostHands: {fileID: 0}
+  _chain: {fileID: 0}
+  _storm: {fileID: 0}
+  _blade: {fileID: 0}
+  _gravity: {fileID: 8300000, guid: e7562c8a32e6bc94b91310e42a4c9cd4, type: 3}
+  _jump: {fileID: 0}
+  _bomb: {fileID: 0}
+  _boulder: {fileID: 0}
+  _charge: {fileID: 0}

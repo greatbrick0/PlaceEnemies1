@@ -13,17 +13,24 @@ public class SFXTest : MonoBehaviour
     public AudioClip _ghostHands;
     public AudioClip _chain;
     public AudioClip _storm;
+    public AudioClip _blade;
+    public AudioClip _gravity;
+    public AudioClip _jump;
+    public AudioClip _bomb;
+    public AudioClip _boulder;
+    public AudioClip _charge;
 
     bool magicAttack;
     HammerSFXEvent hammer;
     void Start()
     {
-        aud = GameObject.Find("SFX Audio Source").GetComponent<AudioSource>();
+        aud = GameObject.Find("SFXAudioSource").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        
     }
 
     public void Hammer()
@@ -33,24 +40,36 @@ public class SFXTest : MonoBehaviour
 
     public void Spill()
     {
-        AudioSource.PlayClipAtPoint(_spill, Vector3.zero, 1);
+        AudioSource.PlayClipAtPoint(_spill, Vector3.zero, 1f);
     }
     public void Bottle()
     {
         AudioSource.PlayClipAtPoint(_bottle, Vector3.zero, 1f);
     }
-
+    public void MagicDamage()
+    {
+        AudioSource.PlayClipAtPoint(_magicAttack, Vector3.zero, 1f);
+    }
+    public void Bomb()
+    {
+        AudioSource.PlayClipAtPoint(_bomb, Vector3.zero, 1f);
+    }
+    
     public void GhostHands()
     {
+        AudioSource.PlayClipAtPoint(_ghostHands, Vector3.zero, 1f);
+        /*
         aud.clip = _ghostHands;
-        aud.Play();
-        if (magicAttack)
+        if (GameObject.Find("HomingMissile(Clone)") != null)
+        {
+            aud.Play();
+        }
+        else
         {
             aud.Stop();
-            AudioSource.PlayClipAtPoint(_magicAttack, Vector3.zero, 1f);
         }
+        */
     }
-
     public void Chain()
     {
         AudioSource.PlayClipAtPoint(_chain, Vector3.zero, 1f);
@@ -59,14 +78,24 @@ public class SFXTest : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(_storm, Vector3.zero, 1f);
     }
-    private void OnCollisionEnter(Collision collision)
+    public void Blade()
     {
-        if(this.gameObject.name == "HomingMissile(Clone)")
-        {
-            if(collision.gameObject.GetComponent<Rigidbody>() != null)
-            {
-                magicAttack = true;
-            }
-        }
+        AudioSource.PlayClipAtPoint(_blade, Vector3.zero, 1f);
+    }
+    public void Gravity()
+    {
+        AudioSource.PlayClipAtPoint(_gravity, Vector3.zero, 1f);
+    }
+    public void Jump()
+    {
+        AudioSource.PlayClipAtPoint(_jump, Vector3.zero, 1f);
+    }
+    public void Boulder()
+    {
+        AudioSource.PlayClipAtPoint(_boulder, Vector3.zero, 1f);
+    }
+    public void Charge()
+    {
+        AudioSource.PlayClipAtPoint(_charge, Vector3.zero, 1f);
     }
 }

@@ -4824,6 +4824,8 @@ GameObject:
   - component: {fileID: 9159844377764210305}
   - component: {fileID: 4258402140158910670}
   - component: {fileID: -6311784420915549151}
+  - component: {fileID: 7993040837289642082}
+  - component: {fileID: 9047117655726338904}
   m_Layer: 7
   m_Name: MagicRam
   m_TagString: Untagged
@@ -4877,8 +4879,56 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0, z: 1}
   lifetime: 1
   power: 10
+  hasParticles: 0
+  hitSound: {fileID: 8300000, guid: 7e7401860681a02408a4bc05bb609e50, type: 3}
+  timeOutSound: {fileID: 0}
   canHit: 1
   movementEffect: {fileID: 11400000, guid: 2ab56f4c53848dd4abcd71aa14537423, type: 2}
   knockBackEffect: {fileID: 11400000, guid: bf43089aa67844b41bf5aa9bffa15709, type: 2}
   slowEffect: {fileID: 11400000, guid: 1d80a070588462e498c132078d6b2b86, type: 2}
   followHost: {fileID: 0}
+--- !u!95 &7993040837289642082
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159844377764210428}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d54f261b2f15b154a8d8ef3764db9837, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &9047117655726338904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159844377764210428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e1049cead313ba4985d595947214f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hammer: {fileID: 0}
+  _spill: {fileID: 0}
+  _bottle: {fileID: 0}
+  _magicAttack: {fileID: 0}
+  _ghostHands: {fileID: 0}
+  _chain: {fileID: 0}
+  _storm: {fileID: 0}
+  _blade: {fileID: 0}
+  _gravity: {fileID: 0}
+  _jump: {fileID: 0}
+  _bomb: {fileID: 0}
+  _boulder: {fileID: 0}
+  _charge: {fileID: 8300000, guid: 0f703bd5973558049925ba371f0fc65e, type: 3}

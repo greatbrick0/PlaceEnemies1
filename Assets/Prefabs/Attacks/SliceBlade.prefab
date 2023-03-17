@@ -94,6 +94,8 @@ GameObject:
   - component: {fileID: 9159844377764210305}
   - component: {fileID: 4258402140158910670}
   - component: {fileID: -839111287715418057}
+  - component: {fileID: 8606942219434005801}
+  - component: {fileID: 7109426389843253053}
   m_Layer: 7
   m_Name: SliceBlade
   m_TagString: Untagged
@@ -149,11 +151,56 @@ MonoBehaviour:
   lifetime: 0.9
   power: 35
   hasParticles: 0
-  hitSound: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 7e7401860681a02408a4bc05bb609e50, type: 3}
   timeOutSound: {fileID: 0}
   canHit: 1
   movementEffect: {fileID: 11400000, guid: 2ab56f4c53848dd4abcd71aa14537423, type: 2}
   followHost: {fileID: 0}
+--- !u!95 &8606942219434005801
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159844377764210428}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2759d9764d0d9ed4597e387e1358a9e1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7109426389843253053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159844377764210428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e1049cead313ba4985d595947214f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hammer: {fileID: 0}
+  _spill: {fileID: 0}
+  _bottle: {fileID: 0}
+  _magicAttack: {fileID: 0}
+  _ghostHands: {fileID: 0}
+  _chain: {fileID: 0}
+  _storm: {fileID: 0}
+  _blade: {fileID: 8300000, guid: a0d930ffd8b0c734e8003004c8138bf1, type: 3}
+  _gravity: {fileID: 0}
+  _jump: {fileID: 0}
+  _bomb: {fileID: 0}
+  _boulder: {fileID: 0}
+  _charge: {fileID: 0}
 --- !u!1001 &7420671724467591441
 PrefabInstance:
   m_ObjectHideFlags: 0

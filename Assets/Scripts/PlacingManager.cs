@@ -60,6 +60,9 @@ public class PlacingManager : MonoBehaviour
     [SerializeField]
     List<int> maxCardsEveryNight = new List<int> { 5, 6, 7, 8, 9 };
 
+    [Space]
+    [SerializeField]
+    GameObject tutorialRef;
     private bool showTutorial = false;
     private int _tutorialStage = 0;
     private int tutorialStage { 
@@ -74,8 +77,6 @@ public class PlacingManager : MonoBehaviour
             print("Tutorial prompt " + _tutorialStage);
         } 
     }
-    [SerializeField]
-    GameObject tutorialRef;
 
     private void Awake()
     {
@@ -138,6 +139,7 @@ public class PlacingManager : MonoBehaviour
         }
 
         ReleaseAllTiles();
+        cam.RemoveCameraChild(1);
     }
 
     private void ReleaseAllTiles()
@@ -146,6 +148,7 @@ public class PlacingManager : MonoBehaviour
         {
             groundHolderRef.transform.GetChild(ii).GetComponent<GroundScript>().ReleaseObject();
         }
+        Destroy(groundHolderRef);
     }
 
     public void DraggingPanel(Vector2 panelEdge)

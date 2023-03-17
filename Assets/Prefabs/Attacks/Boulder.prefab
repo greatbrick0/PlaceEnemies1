@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4010019983992688598}
   - component: {fileID: 5840677472169199830}
   - component: {fileID: 4466424579221133484}
+  - component: {fileID: 8491403691833521411}
   m_Layer: 7
   m_Name: Boulder
   m_TagString: Untagged
@@ -89,6 +90,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8491403691833521411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159844377764210428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e1049cead313ba4985d595947214f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hammer: {fileID: 0}
+  _spill: {fileID: 0}
+  _bottle: {fileID: 0}
+  _magicAttack: {fileID: 0}
+  _ghostHands: {fileID: 0}
+  _chain: {fileID: 0}
+  _storm: {fileID: 0}
+  _blade: {fileID: 0}
+  _gravity: {fileID: 0}
+  _jump: {fileID: 0}
+  _bomb: {fileID: 0}
+  _boulder: {fileID: 8300000, guid: 00396664abb5ad54db350e34439b2f84, type: 3}
 --- !u!1001 &2825462435371006061
 PrefabInstance:
   m_ObjectHideFlags: 0

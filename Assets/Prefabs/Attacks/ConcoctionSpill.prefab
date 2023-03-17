@@ -19453,6 +19453,8 @@ MonoBehaviour:
   lifetime: 3
   power: 2
   hasParticles: 0
+  hitSound: {fileID: 0}
+  timeOutSound: {fileID: 0}
   canHit: 1
   slowEffect: {fileID: 11400000, guid: 2492de38087f2cc4baae051dfc6a213f, type: 2}
   reapplyTime: 0.6
@@ -19489,7 +19491,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hammer: {fileID: 8300000, guid: 3416fa8e208b11f428bd0554150a50e1, type: 3}
-  _spill: {fileID: 8300000, guid: e5a4065a6b027ec48bfa337496dda276, type: 3}
+  _spill: {fileID: 8300000, guid: 618fcf4446b14fe41b16ace0a83fe619, type: 3}
   _bottle: {fileID: 8300000, guid: 18166e1ab1d4abf4883a3109a3d1c606, type: 3}
   _magicAttack: {fileID: 8300000, guid: 7e7401860681a02408a4bc05bb609e50, type: 3}
   _ghostHands: {fileID: 8300000, guid: d7fb6cb826137bb489cb22a3ceb46ebe, type: 3}
+  _chain: {fileID: 0}
+  _storm: {fileID: 0}
+  _blade: {fileID: 0}
+  _gravity: {fileID: 0}

@@ -33,6 +33,8 @@ public class AudioReference : MonoBehaviour
         {
             Debug.Log("GetAudioPosition of Camera");
             AudioPosition = Camera.main.transform.position;
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null) AudioPosition = playerObj.transform.position;
         }
         else //could change if needed camera position in other scenes... what other scenes? idk.
             AudioPosition = Vector3.zero;
@@ -42,4 +44,9 @@ public class AudioReference : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(clip, AudioPosition);
     }
-} //is there a solution better than Camera.main? -Spencer
+
+    public static void AudioAtVector3(AudioClip clip, Vector3 pos)
+    {
+        AudioSource.PlayClipAtPoint(clip, pos);
+    }
+}
