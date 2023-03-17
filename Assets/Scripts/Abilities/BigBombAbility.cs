@@ -15,6 +15,7 @@ public class BigBombAbility : Ability
     protected override void SetVars()
     {
         bombPrefab = AttackDict.attacks["BigBomb"];
+        upgradeLevel = SessionDataManager.upgrades["green"];
         cooldownTime = 3.0f;
         effectiveRange = 10.0f;
         SetDisplayVars();
@@ -42,6 +43,11 @@ public class BigBombAbility : Ability
         }
     }
 
+    private float CalculateUpgradeStat(int level)
+    {
+        return 8 + (level * 5);
+    }
+
     private void MakeProjectile(Vector3 targetPosition)
     {
         bombRef = user.GetComponent<CombatBody>().Instantiater(bombPrefab, user.transform.parent);
@@ -49,5 +55,6 @@ public class BigBombAbility : Ability
         bombRef.GetComponent<Attack>().moveDirection = targetPosition - user.transform.position;
         bombRef.GetComponent<Attack>().team = user.GetComponent<CombatBody>().team;
         bombRef.GetComponent<Attack>().FaceForward();
+        bombRef.GetComponent<Attack>().power = (int)CalculateUpgradeStat(upgradeLevel);
     }
 }

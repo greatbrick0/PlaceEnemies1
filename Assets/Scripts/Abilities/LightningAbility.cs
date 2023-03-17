@@ -19,7 +19,8 @@ public class LightningAbility : Ability
     protected override void SetVars()
     {
         boltPrefab = AttackDict.attacks["LightningBolt"];
-        cooldownTime = 3.0f;
+        upgradeLevel = SessionDataManager.upgrades["green"];
+        cooldownTime = CalculateUpgradeStat(upgradeLevel);
         effectiveRange = 8.0f;
         SetDisplayVars();
         ID = 10;
@@ -49,6 +50,11 @@ public class LightningAbility : Ability
         {
             return false;
         }
+    }
+
+    private float CalculateUpgradeStat(int level)
+    {
+        return 3.0f - (level * 0.4f);
     }
 
     IEnumerator MakeMultipleProjectiles(Vector3 targetPosition)

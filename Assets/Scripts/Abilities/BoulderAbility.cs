@@ -15,6 +15,7 @@ public class BoulderAbility : Ability
     protected override void SetVars()
     {
         boulderPrefab = AttackDict.attacks["Boulder"];
+        upgradeLevel = SessionDataManager.upgrades["red"];
         cooldownTime = 6.5f;
         effectiveRange = 16.0f;
         SetDisplayVars();
@@ -42,6 +43,11 @@ public class BoulderAbility : Ability
         }
     }
 
+    private float CalculateUpgradeStat(int level)
+    {
+        return 6 + (level * 3);
+    }
+
     private void MakeProjectile(Vector3 targetPosition)
     {
         boulderRef = user.GetComponent<CombatBody>().Instantiater(boulderPrefab, user.transform.parent);
@@ -49,5 +55,6 @@ public class BoulderAbility : Ability
         boulderRef.GetComponent<Attack>().moveDirection = targetPosition - user.transform.position;
         boulderRef.GetComponent<Attack>().team = user.GetComponent<CombatBody>().team;
         boulderRef.GetComponent<Attack>().FaceForward();
+        boulderRef.GetComponent<Attack>().speed = CalculateUpgradeStat(upgradeLevel);
     }
 }

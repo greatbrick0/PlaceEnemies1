@@ -15,6 +15,7 @@ public class SliceAbility : Ability
     protected override void SetVars()
     {
         swordPrefab = AttackDict.attacks["DashBlade"];
+        upgradeLevel = SessionDataManager.upgrades["red"];
         cooldownTime = 5.5f;
         effectiveRange = 7.2f;
         SetDisplayVars();
@@ -40,6 +41,11 @@ public class SliceAbility : Ability
         }
     }
 
+    private float CalculateUpgradeStat(int level)
+    {
+        return 35 + (level * 10);
+    }
+
     private void MakeProjectile(Vector3 targetPosition)
     {
         swordRef = user.GetComponent<CombatBody>().Instantiater(swordPrefab, user.transform.parent);
@@ -50,5 +56,6 @@ public class SliceAbility : Ability
         Dash movementEffect = swordRef.GetComponent<SliceSwordScript>().movementEffect;
         movementEffect.forcedVelocity = targetPosition.normalized * 9.0f;
         user.GetComponent<CombatBody>().AddStatusEffect(movementEffect);
+        swordRef.GetComponent<Attack>().power = (int)CalculateUpgradeStat(upgradeLevel);
     }
 }

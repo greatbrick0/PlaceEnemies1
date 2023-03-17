@@ -19,12 +19,13 @@ public class HomingMissileAbility : Ability
     protected override void SetVars()
     {
         homingPrefab = AttackDict.attacks["GhostHand"];
+        upgradeLevel = SessionDataManager.upgrades["green"];
         cooldownTime = 2.0f;
         effectiveRange = 15.0f;
         SetDisplayVars();
         ID = 12;
         colour = ColourTypes.Green;
-        projectileCount = 2;
+        projectileCount = (int)CalculateUpgradeStat(upgradeLevel);
         timeBetweenShots = 0.2f;
         degreesFromStraight = 15;
     }
@@ -48,6 +49,11 @@ public class HomingMissileAbility : Ability
         {
             return false;
         }
+    }
+
+    private float CalculateUpgradeStat(int level)
+    {
+        return 2 + (level * 1);
     }
 
     private void MakeProjectile(Vector3 targetPosition)

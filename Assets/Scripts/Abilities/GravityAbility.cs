@@ -15,6 +15,7 @@ public class GravityAbility : Ability
     protected override void SetVars()
     {
         pulsePrefab = AttackDict.attacks["GravityPulse"];
+        upgradeLevel = SessionDataManager.upgrades["blue"];
         cooldownTime = 6.0f;
         effectiveRange = 4.0f;
         SetDisplayVars();
@@ -42,11 +43,17 @@ public class GravityAbility : Ability
         }
     }
 
+    private float CalculateUpgradeStat(int level)
+    {
+        return 7 + (level * 12);
+    }
+
     private void MakeProjectile(Vector3 targetPosition)
     {
         pulseRef = user.GetComponent<CombatBody>().Instantiater(pulsePrefab, user.transform.parent);
         pulseRef.transform.position = user.transform.position;
         pulseRef.GetComponent<Attack>().team = user.GetComponent<CombatBody>().team;
         user.GetComponent<CombatBody>().AddStatusEffect(pulseRef.GetComponent<GravityPulseScript>().costEffect);
+        pulseRef.GetComponent<Attack>().power = (int)CalculateUpgradeStat(upgradeLevel);
     }
 }
