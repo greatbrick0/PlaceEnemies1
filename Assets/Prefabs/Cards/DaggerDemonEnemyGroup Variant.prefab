@@ -13,6 +13,41 @@ PrefabInstance:
       value: 'A group of frail demons that will frequently try to stab you in the
         face. '
       objectReference: {fileID: 0}
+    - target: {fileID: 839351603310605764, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 25.00354
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603310605764, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 7.609741
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603310605764, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603310605764, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603310605764, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603310605764, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603310605764, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 839351603572439588, guid: c8da1d48731079144b81704c9cf20024,
         type: 3}
       propertyPath: m_Name
@@ -134,6 +169,48 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8698544621404885954, guid: 4014ca0c2c15d464b804bdd387470bf8,
         type: 3}
+    - target: {fileID: 839351603572439595, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603572439595, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59d58fbf56605b345992d7f42fdd1199,
+        type: 3}
+    - target: {fileID: 839351603572439595, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603599722858, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -63.599
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603599722858, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 177.5005
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603599722858, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.50050354
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603599722858, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603599722859, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d982261696dcb246b527898da89931d,
+        type: 3}
     - target: {fileID: 839351603599722859, guid: c8da1d48731079144b81704c9cf20024,
         type: 3}
       propertyPath: m_Color.b
@@ -149,10 +226,50 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.764151
       objectReference: {fileID: 0}
+    - target: {fileID: 839351603599722859, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351604956857113, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351604956857113, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17
+      objectReference: {fileID: 0}
     - target: {fileID: 839351604956857118, guid: c8da1d48731079144b81704c9cf20024,
         type: 3}
       propertyPath: m_text
       value: Dagger Demons
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351604956857118, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351604956857118, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351604956857118, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351604956857118, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351604956857118, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8da1d48731079144b81704c9cf20024, type: 3}

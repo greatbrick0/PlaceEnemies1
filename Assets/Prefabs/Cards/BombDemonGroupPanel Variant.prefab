@@ -12,6 +12,46 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Unstable demons that leave a trail of bombs in their path. '
       objectReference: {fileID: 0}
+    - target: {fileID: 839351603310605764, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 16.237976
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603310605764, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 9.742767
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603310605764, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 7.307129
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603310605764, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603310605764, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603310605764, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603310605764, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603310605764, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 839351603572439588, guid: c8da1d48731079144b81704c9cf20024,
         type: 3}
       propertyPath: m_Name
@@ -133,6 +173,48 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2399372129248716368, guid: 7c54243d3f9c98f42917ab6688e9b8fb,
         type: 3}
+    - target: {fileID: 839351603572439595, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603572439595, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59d58fbf56605b345992d7f42fdd1199,
+        type: 3}
+    - target: {fileID: 839351603572439595, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603599722858, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -65.0884
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603599722858, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 188.4165
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603599722858, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.1880951
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603599722858, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -60.600006
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351603599722859, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d982261696dcb246b527898da89931d,
+        type: 3}
     - target: {fileID: 839351603599722859, guid: c8da1d48731079144b81704c9cf20024,
         type: 3}
       propertyPath: m_Color.b
@@ -148,10 +230,45 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.6004274
       objectReference: {fileID: 0}
+    - target: {fileID: 839351603599722859, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351604956857113, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17
+      objectReference: {fileID: 0}
     - target: {fileID: 839351604956857118, guid: c8da1d48731079144b81704c9cf20024,
         type: 3}
       propertyPath: m_text
       value: Bomber Demons
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351604956857118, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351604956857118, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351604956857118, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351604956857118, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 839351604956857118, guid: c8da1d48731079144b81704c9cf20024,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8da1d48731079144b81704c9cf20024, type: 3}

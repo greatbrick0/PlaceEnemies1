@@ -2658,7 +2658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionOut: {fileID: 8300000, guid: 62f495961bdc5ea44b409e0fb79e64a5, type: 3}
-  sceneExit: {fileID: 8300000, guid: 42446aa9b7788aa498d86814ca95c59d, type: 3}
+  sceneExit: {fileID: 8300000, guid: 7e7401860681a02408a4bc05bb609e50, type: 3}
   sceneChangeTarget: CombatScene
 --- !u!1 &497095466
 GameObject:
