@@ -151,7 +151,7 @@ MonoBehaviour:
   lifetime: 0.9
   power: 35
   hasParticles: 0
-  hitSound: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 7e7401860681a02408a4bc05bb609e50, type: 3}
   timeOutSound: {fileID: 0}
   canHit: 1
   movementEffect: {fileID: 11400000, guid: 2ab56f4c53848dd4abcd71aa14537423, type: 2}
@@ -196,6 +196,11 @@ MonoBehaviour:
   _chain: {fileID: 0}
   _storm: {fileID: 0}
   _blade: {fileID: 8300000, guid: a0d930ffd8b0c734e8003004c8138bf1, type: 3}
+  _gravity: {fileID: 0}
+  _jump: {fileID: 0}
+  _bomb: {fileID: 0}
+  _boulder: {fileID: 0}
+  _charge: {fileID: 0}
 --- !u!1001 &7420671724467591441
 PrefabInstance:
   m_ObjectHideFlags: 0
