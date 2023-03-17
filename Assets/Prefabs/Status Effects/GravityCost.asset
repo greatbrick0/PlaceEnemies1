@@ -15,8 +15,8 @@ MonoBehaviour:
   <icon>k__BackingField: {fileID: 0}
   <effectName>k__BackingField: GravityCost
   <behaviour>k__BackingField: 3
-  intensity: 0.4
+  intensity: 0.1
   <affectsMoveSpeed>k__BackingField: 1
   <hasDuration>k__BackingField: 1
   age: 0
-  <lifeTime>k__BackingField: 0.4
+  <lifeTime>k__BackingField: 0.8
