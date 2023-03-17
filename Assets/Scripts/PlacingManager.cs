@@ -139,6 +139,7 @@ public class PlacingManager : MonoBehaviour
         }
 
         ReleaseAllTiles();
+        cam.RemoveCameraChild(1);
     }
 
     private void ReleaseAllTiles()

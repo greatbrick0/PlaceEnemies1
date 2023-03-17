@@ -20,4 +20,9 @@ public class CameraScript : MonoBehaviour
         }
         transform.position = followTarget.position + offset;
     }
+
+    public void RemoveCameraChild(int childIndex)
+    {
+        Destroy(transform.GetChild(childIndex).gameObject);
+    }
 }
