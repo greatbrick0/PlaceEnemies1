@@ -41,8 +41,6 @@ public class PlacingManager : MonoBehaviour
     [SerializeField]
     private GameObject groundHolderRef;
     [SerializeField]
-    private GameObject floorModelPrefab;
-    [SerializeField]
     private SlotHolderScript slotHolderRef;
     [SerializeField]
     private GameObject VicFadeRef;
@@ -62,6 +60,9 @@ public class PlacingManager : MonoBehaviour
     [SerializeField]
     List<int> maxCardsEveryNight = new List<int> { 5, 6, 7, 8, 9 };
 
+    [Space]
+    [SerializeField]
+    GameObject tutorialRef;
     private bool showTutorial = false;
     private int _tutorialStage = 0;
     private int tutorialStage { 
@@ -76,8 +77,6 @@ public class PlacingManager : MonoBehaviour
             print("Tutorial prompt " + _tutorialStage);
         } 
     }
-    [SerializeField]
-    GameObject tutorialRef;
 
     private void Awake()
     {
