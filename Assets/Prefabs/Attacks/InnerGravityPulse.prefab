@@ -147,5 +147,8 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0, z: 1}
   lifetime: 0.5
   power: 5
+  hasParticles: 0
+  hitSound: {fileID: 0}
+  timeOutSound: {fileID: 0}
   canHit: 1
   stunEffect: {fileID: 11400000, guid: 8d4f496cb160639478db316bffd51b3b, type: 2}

@@ -12,6 +12,7 @@ public class SFXTest : MonoBehaviour
     public AudioClip _magicAttack;
     public AudioClip _ghostHands;
     public AudioClip _chain;
+    public AudioClip _storm;
 
     bool magicAttack;
     HammerSFXEvent hammer;
@@ -53,6 +54,10 @@ public class SFXTest : MonoBehaviour
     public void Chain()
     {
         AudioSource.PlayClipAtPoint(_chain, Vector3.zero, 1f);
+    }
+    public void LightingStorm()
+    {
+        AudioSource.PlayClipAtPoint(_storm, Vector3.zero, 1f);
     }
     private void OnCollisionEnter(Collision collision)
     {

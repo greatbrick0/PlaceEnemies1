@@ -14791,6 +14791,8 @@ GameObject:
   - component: {fileID: 9159844377764210305}
   - component: {fileID: 9159844377764210307}
   - component: {fileID: 7796067639876593236}
+  - component: {fileID: 387921565387339347}
+  - component: {fileID: 301799398298921037}
   m_Layer: 7
   m_Name: LightningBolt
   m_TagString: Untagged
@@ -14838,6 +14840,8 @@ MonoBehaviour:
   lifetime: 0.5
   power: 3
   hasParticles: 0
+  hitSound: {fileID: 0}
+  timeOutSound: {fileID: 0}
   canHit: 1
 --- !u!135 &7796067639876593236
 SphereCollider:
@@ -14852,6 +14856,45 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.4
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &387921565387339347
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159844377764210428}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9ffbd217058911a4db66d5830e0e0433, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &301799398298921037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159844377764210428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e1049cead313ba4985d595947214f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hammer: {fileID: 0}
+  _spill: {fileID: 0}
+  _bottle: {fileID: 0}
+  _magicAttack: {fileID: 0}
+  _ghostHands: {fileID: 0}
+  _chain: {fileID: 0}
+  _storm: {fileID: 8300000, guid: aa66333167d3d4248832f54b741ff6c9, type: 3}
 --- !u!1001 &2699419003928615161
 PrefabInstance:
   m_ObjectHideFlags: 0

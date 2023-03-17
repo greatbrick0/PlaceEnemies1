@@ -147,6 +147,9 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0, z: 1}
   lifetime: 2
   power: 7
+  hasParticles: 0
+  hitSound: {fileID: 8300000, guid: e7562c8a32e6bc94b91310e42a4c9cd4, type: 3}
+  timeOutSound: {fileID: 0}
   canHit: 1
   pullEffect: {fileID: 11400000, guid: 7a4202d232d910647a64ba9699580990, type: 2}
   costEffect: {fileID: 11400000, guid: 619d2902bc39b1f469ca6b9bc381b495, type: 2}
