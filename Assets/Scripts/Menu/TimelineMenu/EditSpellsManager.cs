@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EditSpellsManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class EditSpellsManager : MonoBehaviour
     GameObject doneButtonRef;
     [SerializeField]
     GameObject clearButtonRef;
+    [SerializeField]
+    TextMeshProUGUI currencyLabelRef;
 
     [SerializeField]
     private GameObject tutorialRef;
@@ -37,6 +40,7 @@ public class EditSpellsManager : MonoBehaviour
         tutorialRef.SetActive(showTutorial);
         doneButtonRef.SetActive(CountValidSpells() >= 3);
         clearButtonRef.SetActive(CountValidSpells() >= 1);
+        UpdateCurrencyLabel();
     }
 
     public void DraggingSpell(Vector2 mousePos)
@@ -103,5 +107,10 @@ public class EditSpellsManager : MonoBehaviour
         }
         doneButtonRef.SetActive(false);
         clearButtonRef.SetActive(false);
+    }
+
+    public void UpdateCurrencyLabel()
+    {
+        currencyLabelRef.text = SessionDataManager.currency.ToString() + " Blood Essence";
     }
 }

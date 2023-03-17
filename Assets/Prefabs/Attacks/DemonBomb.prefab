@@ -65,10 +65,13 @@ MonoBehaviour:
   lifetime: 0.9
   power: 0
   hasParticles: 0
+  hitSound: {fileID: 0}
+  timeOutSound: {fileID: 0}
   canHit: 0
   residueObject: {fileID: 9159844377764210428, guid: b0c23f40448eb3d4d8fb4ab1f8d039ad,
     type: 3}
   randomRotation: 1
+  residuePower: 1
 --- !u!1001 &2368057177731502832
 PrefabInstance:
   m_ObjectHideFlags: 0

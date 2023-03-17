@@ -15,6 +15,7 @@ public class MagicArrowAbility : Ability
     protected override void SetVars()
     {
         arrowPrefab = AttackDict.attacks["PiercingArrow"];
+        upgradeLevel = SessionDataManager.upgrades["red"];
         cooldownTime = 3.5f;
         effectiveRange = 15.0f;
         SetDisplayVars();
@@ -42,6 +43,11 @@ public class MagicArrowAbility : Ability
         }
     }
 
+    private float CalculateUpgradeStat(int level)
+    {
+        return 20 + (level * 5);
+    }
+
     private void MakeProjectile(Vector3 targetPosition)
     {
         arrowRef = user.GetComponent<CombatBody>().Instantiater(arrowPrefab, user.transform.parent);
@@ -49,5 +55,6 @@ public class MagicArrowAbility : Ability
         arrowRef.GetComponent<Attack>().moveDirection = targetPosition - user.transform.position;
         arrowRef.GetComponent<Attack>().team = user.GetComponent<CombatBody>().team;
         arrowRef.GetComponent<Attack>().FaceForward();
+        arrowRef.GetComponent<Attack>().power = (int)CalculateUpgradeStat(upgradeLevel);
     }
 }

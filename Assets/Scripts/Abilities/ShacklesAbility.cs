@@ -15,7 +15,8 @@ public class ShacklesAbility : Ability
     protected override void SetVars()
     {
         shacklesPrefab = AttackDict.attacks["Shackles"];
-        cooldownTime = 3.4f;
+        upgradeLevel = SessionDataManager.upgrades["blue"];
+        cooldownTime = CalculateUpgradeStat(upgradeLevel);
         effectiveRange = 12.0f;
         SetDisplayVars();
         ID = 8;
@@ -40,6 +41,11 @@ public class ShacklesAbility : Ability
         {
             return false;
         }
+    }
+
+    private float CalculateUpgradeStat(int level)
+    {
+        return 3.4f - (level * 0.3f);
     }
 
     private void MakeProjectile(Vector3 targetPosition)
