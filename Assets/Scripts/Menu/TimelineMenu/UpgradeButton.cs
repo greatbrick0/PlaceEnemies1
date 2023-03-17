@@ -8,8 +8,8 @@ public class UpgradeButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 {
     [SerializeField] string color;
 
-    TextMeshProUGUI buttonText;
-    int upgradeCost;
+    public TextMeshProUGUI buttonText;
+    public int upgradeCost;
 
     private void Awake()
     {
