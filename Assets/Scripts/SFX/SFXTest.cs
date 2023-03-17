@@ -13,6 +13,8 @@ public class SFXTest : MonoBehaviour
     public AudioClip _ghostHands;
     public AudioClip _chain;
     public AudioClip _storm;
+    public AudioClip _blade;
+    public AudioClip _gravity;
 
     bool magicAttack;
     HammerSFXEvent hammer;
@@ -39,7 +41,11 @@ public class SFXTest : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(_bottle, Vector3.zero, 1f);
     }
-
+    public void MagicDamage()
+    {
+        AudioSource.PlayClipAtPoint(_magicAttack, Vector3.zero, 1f);
+    }
+    /*
     public void GhostHands()
     {
         aud.clip = _ghostHands;
@@ -47,10 +53,10 @@ public class SFXTest : MonoBehaviour
         if (magicAttack)
         {
             aud.Stop();
-            AudioSource.PlayClipAtPoint(_magicAttack, Vector3.zero, 1f);
+            
         }
     }
-
+    */
     public void Chain()
     {
         AudioSource.PlayClipAtPoint(_chain, Vector3.zero, 1f);
@@ -59,6 +65,16 @@ public class SFXTest : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(_storm, Vector3.zero, 1f);
     }
+    public void Blade()
+    {
+        AudioSource.PlayClipAtPoint(_blade, Vector3.zero, 1f);
+    }
+    public void Gravity()
+    {
+        AudioSource.PlayClipAtPoint(_gravity, Vector3.zero, 1f);
+    }
+
+
     private void OnCollisionEnter(Collision collision)
     {
         if(this.gameObject.name == "HomingMissile(Clone)")
