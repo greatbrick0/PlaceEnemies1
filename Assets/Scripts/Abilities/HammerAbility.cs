@@ -15,7 +15,8 @@ public class HammerAbility : Ability
     protected override void SetVars()
     {
         weaponPrefab = AttackDict.attacks["Hammer"];
-        cooldownTime = 4.3f;
+        upgradeLevel = SessionDataManager.upgrades["red"];
+        cooldownTime = CalculateUpgradeStat(upgradeLevel);
         effectiveRange = 3.0f;
         SetDisplayVars();
         ID = 3;
@@ -40,6 +41,11 @@ public class HammerAbility : Ability
         {
             return false;
         }
+    }
+
+    private float CalculateUpgradeStat(int level)
+    {
+        return 4.3f - (level * 0.5f);
     }
 
     private void MakeProjectile(Vector3 targetPosition)

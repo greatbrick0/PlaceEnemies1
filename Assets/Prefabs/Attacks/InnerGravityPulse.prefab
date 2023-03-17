@@ -9931,7 +9931,7 @@ MonoBehaviour:
   speed: 0
   moveDirection: {x: 0, y: 0, z: 1}
   lifetime: 1
-  power: 15
+  power: 5
   hasParticles: 0
   hitSound: {fileID: 0}
   timeOutSound: {fileID: 0}

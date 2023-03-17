@@ -71,6 +71,7 @@ MonoBehaviour:
   residueObject: {fileID: 9159844377764210428, guid: aa3bc8531a4e9a44d8f51a763dee4ff6,
     type: 3}
   randomRotation: 1
+  residuePower: 8
 --- !u!1001 &2368057177731502832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -599,6 +600,8 @@ MonoBehaviour:
   _gravity: {fileID: 0}
   _jump: {fileID: 0}
   _bomb: {fileID: 8300000, guid: 8a9bd2fc2a75ce94abe23d425d8eabe5, type: 3}
+  _boulder: {fileID: 0}
+  _charge: {fileID: 0}
 --- !u!4 &7938871782138320522 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9be36b2f548d202469e8c5169703a614,

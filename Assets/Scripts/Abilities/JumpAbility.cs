@@ -15,8 +15,9 @@ public class JumpAbility : Ability
     protected override void SetVars()
     {
         pulsePrefab = AttackDict.attacks["JumpWave"];
+        upgradeLevel = SessionDataManager.upgrades["green"];
         cooldownTime = 6.0f;
-        effectiveRange = 7.0f;
+        effectiveRange = CalculateUpgradeStat(upgradeLevel);
         SetDisplayVars();
         ID = 9;
         colour = ColourTypes.Green;
@@ -40,6 +41,11 @@ public class JumpAbility : Ability
         {
             return false;
         }
+    }
+
+    private float CalculateUpgradeStat(int level)
+    {
+        return 7.0f + (level * 1.5f);
     }
 
     private void MakeProjectile(Vector3 targetPosition)

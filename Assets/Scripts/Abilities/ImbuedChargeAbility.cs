@@ -15,11 +15,12 @@ public class ImbuedChargeAbility : Ability
     protected override void SetVars()
     {
         ramPrefab = AttackDict.attacks["MagicDash"];
-        cooldownTime = 5.5f;
+        upgradeLevel = SessionDataManager.upgrades["blue"];
+        cooldownTime = CalculateUpgradeStat(upgradeLevel);
         effectiveRange = 10.0f;
         SetDisplayVars();
         ID = 6;
-        colour = ColourTypes.Red;
+        colour = ColourTypes.Blue;
     }
     public override void SetDisplayVars()
     {
@@ -38,6 +39,11 @@ public class ImbuedChargeAbility : Ability
         {
             return false;
         }
+    }
+
+    private float CalculateUpgradeStat(int level)
+    {
+        return 5.5f - (level * 0.6f);
     }
 
     private void MakeProjectile(Vector3 targetPosition)

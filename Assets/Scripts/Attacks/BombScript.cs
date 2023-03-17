@@ -11,6 +11,8 @@ public class BombScript : Attack
     [SerializeField]
     [Tooltip("Whether the instanced game object should be randomly rotated or always face forward. ")]
     private bool randomRotation = true;
+    [SerializeField]
+    public int residuePower;
 
     protected override bool FilterHitTarget(CombatBody hitTarget)
     {
@@ -43,5 +45,6 @@ public class BombScript : Attack
         residueRef.transform.position = this.transform.position;
         if (randomRotation) residueRef.transform.eulerAngles = new Vector3(0, Random.Range(0, 360), 0);
         residueRef.GetComponent<Attack>().team = this.team;
+        residueRef.GetComponent<Attack>().power = residuePower;
     }
 }

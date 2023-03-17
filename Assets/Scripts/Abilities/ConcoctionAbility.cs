@@ -18,6 +18,7 @@ public class ConcoctionAbility : Ability
     protected override void SetVars()
     {
         potionPrefab = AttackDict.attacks["PotionBottle"];
+        upgradeLevel = SessionDataManager.upgrades["blue"];
         cooldownTime = 4.0f;
         effectiveRange = 13.5f;
         SetDisplayVars();
@@ -47,6 +48,11 @@ public class ConcoctionAbility : Ability
         }
     }
 
+    private float CalculateUpgradeStat(int level)
+    {
+        return 2 + (level * 1);
+    }
+
     private void MakeProjectile(Vector3 targetPosition)
     {
         potionRef = user.GetComponent<CombatBody>().Instantiater(potionPrefab, user.transform.parent);
@@ -55,5 +61,6 @@ public class ConcoctionAbility : Ability
         potionRef.GetComponent<Attack>().moveDirection = targetPosition - user.transform.position;
         potionRef.GetComponent<Attack>().team = user.GetComponent<CombatBody>().team;
         potionRef.GetComponent<Attack>().FaceForward();
+        potionRef.GetComponent<BombScript>().residuePower = (int)CalculateUpgradeStat(upgradeLevel);
     }
 }
