@@ -9838,8 +9838,10 @@ MonoBehaviour:
   speed: 0
   moveDirection: {x: 0, y: 0, z: 1}
   lifetime: 2
-  power: 60
+  power: 20
   hasParticles: 0
+  hitSound: {fileID: 0}
+  timeOutSound: {fileID: 0}
   canHit: 1
   followHost: {fileID: 0}
   followOffset: {x: 0, y: 0, z: 0}
@@ -9881,6 +9883,8 @@ MonoBehaviour:
   _bottle: {fileID: 8300000, guid: 18166e1ab1d4abf4883a3109a3d1c606, type: 3}
   _magicAttack: {fileID: 8300000, guid: 7e7401860681a02408a4bc05bb609e50, type: 3}
   _ghostHands: {fileID: 8300000, guid: d7fb6cb826137bb489cb22a3ceb46ebe, type: 3}
+  _chain: {fileID: 0}
+  _storm: {fileID: 0}
 --- !u!114 &1170511679456946336
 MonoBehaviour:
   m_ObjectHideFlags: 0
