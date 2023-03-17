@@ -65,7 +65,7 @@ public abstract class Attack : MonoBehaviour
     {
         canHit = false;
 
-        if (timeOutSound != null) AudioReference.AudioAtCamera(timeOutSound);
+        if (timeOutSound != null) AudioReference.AudioAtVector3(timeOutSound, transform.position);
         if (hasParticles == true) DetachParticles();
 
         Destroy(this.gameObject);
@@ -95,7 +95,7 @@ public abstract class Attack : MonoBehaviour
         {
             hitList.Add(otherCombatBody);
             Apply(otherCombatBody);
-            if(hitSound != null) AudioReference.AudioAtCamera(hitSound);
+            if(hitSound != null) AudioReference.AudioAtVector3(hitSound, transform.position);
         }
     }
 
