@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SFXTest : MonoBehaviour
 {
+    [SerializeField]
     AudioSource aud;
 
     public AudioClip _hammer;
@@ -18,12 +19,13 @@ public class SFXTest : MonoBehaviour
     public AudioClip _jump;
     public AudioClip _bomb;
     public AudioClip _boulder;
+    public AudioClip _charge;
 
     bool magicAttack;
     HammerSFXEvent hammer;
     void Start()
     {
-        aud = GameObject.Find("SFX Audio Source").GetComponent<AudioSource>();
+        aud = GameObject.Find("SFXAudioSource").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -52,18 +54,16 @@ public class SFXTest : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(_bomb, Vector3.zero, 1f);
     }
-    /*
+    
     public void GhostHands()
     {
         aud.clip = _ghostHands;
-        aud.Play();
-        if (magicAttack)
+        while (GameObject.Find("HomingMissile(Clone)") != null)
         {
-            aud.Stop();
-            
+            aud.Play();
         }
+        aud.Stop();
     }
-    */
     public void Chain()
     {
         AudioSource.PlayClipAtPoint(_chain, Vector3.zero, 1f);
@@ -88,16 +88,8 @@ public class SFXTest : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(_boulder, Vector3.zero, 1f);
     }
-
-
-    private void OnCollisionEnter(Collision collision)
+    public void Charge()
     {
-        if(this.gameObject.name == "HomingMissile(Clone)")
-        {
-            if(collision.gameObject.GetComponent<Rigidbody>() != null)
-            {
-                magicAttack = true;
-            }
-        }
+        AudioSource.PlayClipAtPoint(_charge, Vector3.zero, 1f);
     }
 }

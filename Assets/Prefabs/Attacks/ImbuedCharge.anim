@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GhostHand
+  m_Name: ImbuedCharge
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -52,7 +52,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.016666668
-    functionName: GhostHands
+    functionName: Charge
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
