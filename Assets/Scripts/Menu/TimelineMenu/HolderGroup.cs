@@ -40,7 +40,8 @@ public class HolderGroup : MonoBehaviour
 
     private void Start()
     {
-        upgradeButton.GetComponent<UpgradeButton>().upgradeCost = upgradePrices[SessionDataManager.upgrades[upgradeColour]];
+        SessionDataManager.currency = 30;
+        upgradeButton.GetComponent<UpgradeButton>().SetNewPrice(upgradePrices[SessionDataManager.upgrades[upgradeColour]]);
     }
 
     public void AttemptUpgrade()
@@ -55,15 +56,8 @@ public class HolderGroup : MonoBehaviour
             }
 
             managerRef.UpdateCurrencyLabel();
-            if (upgradePrices[SessionDataManager.upgrades[upgradeColour]] >= 0)
-            {
-                upgradeButton.GetComponent<UpgradeButton>().upgradeCost = upgradePrices[SessionDataManager.upgrades[upgradeColour]];
-                upgradeButton.GetComponent<UpgradeButton>().buttonText.text = "Success";
-            }
-            else
-            {
-                Destroy(upgradeButton);
-            }
+            upgradeButton.GetComponent<UpgradeButton>().buttonText.text = "Success";
+            upgradeButton.GetComponent<UpgradeButton>().SetNewPrice(upgradePrices[SessionDataManager.upgrades[upgradeColour]]);
             AudioReference.AudioAtCamera(successSound);
         }
     }

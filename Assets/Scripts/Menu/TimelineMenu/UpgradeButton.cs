@@ -25,4 +25,16 @@ public class UpgradeButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         buttonText.text = "Upgrade " + color + " Spells";
     }
+
+    public void SetNewPrice(int newCost)
+    {
+        if (newCost >= 0)
+        {
+            upgradeCost = newCost;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
