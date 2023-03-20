@@ -211,38 +211,38 @@ public abstract class CombatBody : Placeable
     //someone please clean this function, im too tired
     public void AddStatusEffect(StatusEffect newEffectType)
     {
-        if (newEffectType.behaviour == StatusEffect.DuplicateBahviours.Preserve) return;
-
         StatusEffect previousEffect = CheckForDuplicateEffects(newEffectType.effectName);
 
-        if (previousEffect == null || newEffectType.behaviour == StatusEffect.DuplicateBahviours.Share)
+        if (previousEffect == null) InstantiateEffect(newEffectType);
+        else
         {
-            InstantiateEffect(newEffectType);
-        }
-        else if (previousEffect == null && newEffectType.behaviour == StatusEffect.DuplicateBahviours.Preserve)
-        {
-            InstantiateEffect(newEffectType);
-        }
-        else if (newEffectType.behaviour == StatusEffect.DuplicateBahviours.Overwrite)
-        {
-            previousEffect.RemoveEffect();
-            Instantiate(newEffectType);
-        }
-        else if (newEffectType.behaviour == StatusEffect.DuplicateBahviours.RefreshTime)
-        {
-            previousEffect.age = 0.0f;
-        }
-        else if (newEffectType.behaviour == StatusEffect.DuplicateBahviours.SumTime)
-        {
-            previousEffect.IncreaseTime(newEffectType.lifeTime);
-        }
-        else if (newEffectType.behaviour == StatusEffect.DuplicateBahviours.MultiplyIntensity)
-        {
-            previousEffect.intensity *= newEffectType.intensity;
-        }
-        else if (newEffectType.behaviour == StatusEffect.DuplicateBahviours.SumIntensity)
-        {
-            previousEffect.intensity += newEffectType.intensity;
+            switch (newEffectType.behaviour)
+            {
+                case StatusEffect.DuplicateBahviours.Share:
+                    InstantiateEffect(newEffectType);
+                    break;
+                case StatusEffect.DuplicateBahviours.Preserve:
+                    //do nothing
+                    break;
+                case StatusEffect.DuplicateBahviours.Overwrite:
+                    previousEffect.RemoveEffect(); Instantiate(newEffectType);
+                    break;
+                case StatusEffect.DuplicateBahviours.RefreshTime:
+                    previousEffect.age = 0.0f;
+                    break;
+                case StatusEffect.DuplicateBahviours.SumTime:
+                    previousEffect.IncreaseTime(newEffectType.lifeTime);
+                    break;
+                case StatusEffect.DuplicateBahviours.MultiplyIntensity:
+                    previousEffect.intensity *= newEffectType.intensity;
+                    break;
+                case StatusEffect.DuplicateBahviours.SumIntensity:
+                    previousEffect.intensity += newEffectType.intensity;
+                    break;
+                default:
+                    previousEffect.RemoveEffect(); Instantiate(newEffectType);
+                    break;
+            }
         }
 
         if (newEffectType.affectsMoveSpeed) moveSpeed = CalculateMoveSpeed();

@@ -31,7 +31,6 @@ public class CameraShakeOnHitScript : MonoBehaviour
 
     public void Shake()
     {
-        Debug.Log("Start Shake");
         shaking = true;
         noisePerlin.m_AmplitudeGain = AmpValue;
         noisePerlin.m_FrequencyGain = AmpValue;

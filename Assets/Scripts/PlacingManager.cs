@@ -184,6 +184,7 @@ public class PlacingManager : MonoBehaviour
 
     public void PlayerHasDied()
     {
+        cam.gameObject.GetComponent<AudioListener>().enabled = true;
         StartCoroutine(DefeatFadeOut());
     }
 

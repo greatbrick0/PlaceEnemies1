@@ -17,6 +17,9 @@ public class PlayerScript : CombatBody
     private Camera cam;
     private RaycastHit hitData;
     private Ray mouseRay;
+    [Tooltip("The effect that is applied to this CombatBody when it is hurt. ")]
+    [SerializeField]
+    private StatusEffect hurtEffect;
 
     public override void Release()
     {
@@ -144,12 +147,14 @@ public class PlayerScript : CombatBody
         }
     }
 
-    public override int Hurt(int damageAmount = 1) //Is this fine? i dont see a problem. slap me ig -Ethan.
+    public override int Hurt(int damageAmount = 1)
     {
         int hurtStore;
         hurtStore = base.Hurt(damageAmount);
         if (hurtStore > 0)
-        { 
+        {
+            AddStatusEffect(hurtEffect);
+            print(effectList.Count);
             if (combatUIC != null) combatUIC.HealthUpdate(health - damageAmount);
             CameraShakeOnHitScript.instance.Shake();
         }

@@ -40,7 +40,6 @@ public class HolderGroup : MonoBehaviour
 
     private void Start()
     {
-        SessionDataManager.currency = 30;
         upgradeButton.GetComponent<UpgradeButton>().SetNewPrice(upgradePrices[SessionDataManager.upgrades[upgradeColour]]);
     }
 

@@ -9,16 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b55e39dda955e8449eae59beb5245d5, type: 3}
-  m_Name: ChainLasso
+  m_Script: {fileID: 11500000, guid: 8c0e8dd18a5378e47a0387a2a0c5b5a1, type: 3}
+  m_Name: IFrames
   m_EditorClassIdentifier: 
   <icon>k__BackingField: {fileID: 0}
-  <effectName>k__BackingField: ChainLasso
+  <effectName>k__BackingField: IFrames
   <behaviour>k__BackingField: 1
-  intensity: 0.9
-  <affectsMoveSpeed>k__BackingField: 1
+  intensity: 1
+  <affectsMoveSpeed>k__BackingField: 0
   <hasDuration>k__BackingField: 1
   age: 0
-  <lifeTime>k__BackingField: 5
-  trapPoint: {x: 0, y: 0, z: 0}
-  trapRadius: 6.5
+  <lifeTime>k__BackingField: 0.8
+  preventsHits: 0
+  preventsDamage: 1
