@@ -8,6 +8,8 @@ public class BombDemon : NPCController
     private bool reachedPosition = false;
     private Vector3 directionToTarget;
     private float distanceToTarget;
+    [SerializeField]
+    private float reattemptTime = 6.0f;
 
     protected override void Start()
     {
@@ -18,6 +20,8 @@ public class BombDemon : NPCController
         {
             abilty.EnableCooldown();
         }
+
+        chosenPosition = new Vector3(Random.Range(-5.0f, 5.0f), 0, Random.Range(-5.0f, 5.0f));
     }
 
     protected override bool FilterTarget(GameObject potentialTarget)
@@ -75,7 +79,7 @@ public class BombDemon : NPCController
 
     private IEnumerator AttemptNewPosition()
     {
-        yield return new WaitForSeconds(12.0f);
+        yield return new WaitForSeconds(reattemptTime);
         print("RetryPosition");
         ChooseNewRandomPosition();
     }

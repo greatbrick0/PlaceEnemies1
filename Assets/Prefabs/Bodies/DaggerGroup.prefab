@@ -152,6 +152,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3142895091176219727, guid: fd7db8600c1ae0c45ad86090831096f5,
         type: 3}
+      propertyPath: baseMoveSpeed
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142895091176219727, guid: fd7db8600c1ae0c45ad86090831096f5,
+        type: 3}
       propertyPath: <circleAngle>k__BackingField
       value: 70
       objectReference: {fileID: 0}
@@ -242,6 +247,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2898285274177744995}
     m_Modifications:
+    - target: {fileID: 3142895091176219727, guid: fd7db8600c1ae0c45ad86090831096f5,
+        type: 3}
+      propertyPath: baseMoveSpeed
+      value: 4.6
+      objectReference: {fileID: 0}
     - target: {fileID: 3142895091176219727, guid: fd7db8600c1ae0c45ad86090831096f5,
         type: 3}
       propertyPath: <circleAngle>k__BackingField
