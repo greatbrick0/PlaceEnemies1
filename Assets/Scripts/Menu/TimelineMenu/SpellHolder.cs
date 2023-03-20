@@ -26,6 +26,8 @@ public class SpellHolder : MonoBehaviour
     private HolderGroup holderGroupRef;
     private Vector2 mousePos = Vector2.zero;
     private bool currentlyDragged = false;
+    private bool currentlyHovered = false;
+    private float timeHovered = 0.0f;
     public bool equipped = false;
     public EquipSlotScript equippedSlotRef;
 
@@ -72,10 +74,18 @@ public class SpellHolder : MonoBehaviour
         {
             transform.position = equipped ? equippedPos : originalPos;
         }
+
+        if (currentlyHovered)
+        {
+            timeHovered += 1.0f * Time.deltaTime;
+            transform.localScale = Vector2.one * Mathf.Min(0.6f * Mathf.Sqrt(timeHovered) + 1.1f, 1.25f);
+        }
+
     }
 
     public void BeginDrag()
     {
+        Shrink();
         if (!equipped)
         {
             currentlyDragged = true;
@@ -96,5 +106,17 @@ public class SpellHolder : MonoBehaviour
     public void SendDescription()
     {
         holderGroupRef.DisplayDescription(abilityDescription, abilityName);
+    }
+
+    public void Enlarge()
+    {
+        if (!equipped) currentlyHovered = true;
+    }
+
+    public void Shrink()
+    {
+        currentlyHovered = false;
+        timeHovered = 0.0f;
+        transform.localScale = Vector2.one * 1.1f;
     }
 }
