@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <icon>k__BackingField: {fileID: 0}
   <effectName>k__BackingField: Shackles
+  visualsPrefab: {fileID: 6728352059079195570, guid: 4eeb659d60a9df448b9e638f3925d831,
+    type: 3}
   <behaviour>k__BackingField: 3
   intensity: 1
   <affectsMoveSpeed>k__BackingField: 0
