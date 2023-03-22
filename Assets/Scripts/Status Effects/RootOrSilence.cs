@@ -12,6 +12,7 @@ public class RootOrSilence : StatusEffect
 
     public override void ApplyInitialAffect()
     {
+        base.ApplyInitialAffect();
         host.sourcesPreventingMovement += preventsMovement ? 1 : 0;
         host.sourcesPreventingAbilities += preventsAbilities ? 1 : 0;
     }

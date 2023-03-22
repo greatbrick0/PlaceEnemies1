@@ -12,6 +12,7 @@ public class IgnoreDamage : StatusEffect
 
     public override void ApplyInitialAffect()
     {
+        base.ApplyInitialAffect();
         host.sourcesPreventingHits += preventsHits ? 1 : 0;
         host.sourcesPreventingDamage += preventsDamage ? 1 : 0;
     }

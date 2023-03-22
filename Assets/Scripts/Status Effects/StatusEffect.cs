@@ -7,8 +7,12 @@ public abstract class StatusEffect : ScriptableObject
     [field: SerializeField]
     public Sprite icon { get; private set; }
     [field: SerializeField]
-    [field: Tooltip("Used to identify other copies of this effect when added to a CombatBody")]
+    [field: Tooltip("Used to identify other copies of this effect when added to a CombatBody. ")]
     public string effectName { get; protected set; } = "";
+    [SerializeField]
+    [Tooltip("The prefab that will be instantiated to visualize the status effect. ")]
+    private GameObject visualsPrefab;
+    private GameObject visualsRef;
     public enum DuplicateBahviours
     {
         Share, //share lets multiple effects stay on the host
@@ -53,7 +57,11 @@ public abstract class StatusEffect : ScriptableObject
 
     public virtual void ApplyInitialAffect() 
     {
-
+        if(visualsPrefab != null)
+        {
+            visualsRef = Instantiate(visualsPrefab);
+            visualsRef.GetComponent<EffectVisual>().Initialize(this);
+        }
     }
     
     public virtual void IncreaseTime(float timePassed)
@@ -67,6 +75,7 @@ public abstract class StatusEffect : ScriptableObject
 
     public virtual void RemoveEffect()
     {
+        if (visualsRef != null) Destroy(visualsRef);
         host.RemoveEffectFromLists(this);
         Destroy(this);
     }
