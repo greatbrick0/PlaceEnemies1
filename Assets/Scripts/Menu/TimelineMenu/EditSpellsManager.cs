@@ -65,7 +65,7 @@ public class EditSpellsManager : MonoBehaviour
         clearButtonRef.SetActive(CountValidSpells() >= 1);
 
         if (showTutorial && tutorialStage == 4 && CountValidSpells() == 1) NextTutorialPrompt();
-        if (showTutorial && tutorialStage == 6 && CountValidSpells() == 3) NextTutorialPrompt();
+        if (showTutorial && tutorialStage == 7 && CountValidSpells() == 3) NextTutorialPrompt();
     }
 
     public void SaveLoadout()
