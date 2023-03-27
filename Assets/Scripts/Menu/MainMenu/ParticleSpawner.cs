@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ParticleSpawner : MonoBehaviour
 {
     [SerializeField] private Image emberImage;
+    float fadeOutTime;
 
     private void Start()
     {
@@ -16,6 +17,6 @@ public class ParticleSpawner : MonoBehaviour
     {
         Image emberInstance = Instantiate(emberImage, transform);
         emberInstance.GetComponent<Transform>().position = new Vector3(Random.Range(0, 1920), -15f, 0);
-        Destroy(emberInstance, 2f);
+        
     }
 }
