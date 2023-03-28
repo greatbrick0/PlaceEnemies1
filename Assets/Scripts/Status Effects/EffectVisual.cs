@@ -20,6 +20,7 @@ public class EffectVisual : MonoBehaviour
 
     private void Update()
     {
-        transform.position = linkedTransform.position + offset;
+        if (linkedTransform == null) Destroy(this.gameObject);
+        else transform.position = linkedTransform.position + offset;
     }
 }
