@@ -78,7 +78,22 @@ ModelImporter:
   - first:
       74: -8415801772079254876
     second: BOW.001|Torus.009Action
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BowHandle
+    second: {fileID: 2100000, guid: 67745ea4b064a464fb0d13c0d37ae409, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BowString
+    second: {fileID: 2100000, guid: 9bda0b8c7d08ef8418527e07da178aed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BowWood
+    second: {fileID: 2100000, guid: f0946c0332e2478498da6b1785c25bf8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
