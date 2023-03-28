@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7bca1d69944c7944295c99c7ae05aa68
+guid: df2e2f7c9c9191e45b3e5ea267d5e526
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CardPortraits1-3_0
+      name: CardPortraitsAll_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30f94f75ff8187544b515f9c9ff50558
-      internalID: -540254811
+      spriteID: 9be00a828d22f80419aa9b5288d80fad
+      internalID: -1884911648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CardPortraits1-3_1
+      name: CardPortraitsAll_1
       rect:
         serializedVersion: 2
         x: 48
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23024029eb84a0c48b6d3a8d549265c6
-      internalID: 1487949609
+      spriteID: 4e1ac54a20ddca649acc9d40d0b52328
+      internalID: 1783617350
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CardPortraits1-3_2
+      name: CardPortraitsAll_2
       rect:
         serializedVersion: 2
         x: 96
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 792aa8edaea175c4887d350f6e102bcc
-      internalID: 612630119
+      spriteID: 7053af0ea9db6d04e97e70f1ab06a24c
+      internalID: -1073106675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CardPortraits1-3_3
+      name: CardPortraitsAll_3
       rect:
         serializedVersion: 2
         x: 144
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8c861eb3b4aabb459e60868dda02114
-      internalID: -1522473195
+      spriteID: 31eac2d284538104085c934473f83a35
+      internalID: -1979744736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CardPortraits1-3_4
+      name: CardPortraitsAll_4
       rect:
         serializedVersion: 2
         x: 192
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b02cc3463c5313478a5f2be1f9c61dc
-      internalID: -1399295
+      spriteID: 88159760ca8ff6d48a3eebe451ff2864
+      internalID: -883744967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CardPortraits1-3_5
+      name: CardPortraitsAll_5
       rect:
         serializedVersion: 2
         x: 240
@@ -224,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62ca71d37e9dbcf4596302aa999cb76a
-      internalID: 2115136377
+      spriteID: 0320d7b36b0136e44b90620c055fb69e
+      internalID: 751719202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CardPortraits1-3_6
+      name: CardPortraitsAll_6
       rect:
         serializedVersion: 2
         x: 288
@@ -245,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fe75dae04f046c4b80f2314b113cefa
-      internalID: 1782177969
+      spriteID: e572eeb1fb2e7504e976df2a9144c386
+      internalID: -1834033818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CardPortraits1-3_7
+      name: CardPortraitsAll_7
       rect:
         serializedVersion: 2
         x: 336
@@ -266,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0a102ae517f44e4ab9ef5344fd6d052
-      internalID: -1077227731
+      spriteID: 0c1647145399f9441bbd8955274c4664
+      internalID: 1512423474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CardPortraits1-3_8
+      name: CardPortraitsAll_8
       rect:
         serializedVersion: 2
         x: 384
@@ -287,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 170e549087163c74db0149ec2523c15a
-      internalID: -1486834978
+      spriteID: 3c8e9dbbd7bf013489dc70219d7ed300
+      internalID: 778617499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CardPortraits1-3_9
+      name: CardPortraitsAll_9
       rect:
         serializedVersion: 2
         x: 432
@@ -308,8 +308,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd6fdbdec885c204a8a3e7cd71bf611d
-      internalID: 489544629
+      spriteID: 03650270d5239404eaf5d4e26d77f4c1
+      internalID: -233754515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardPortraitsAll_10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 48
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa23ac96257f2164c83722e493856130
+      internalID: 875698357
       vertices: []
       indices: 
       edges: []
@@ -317,7 +338,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: dde12c691a85e1e43abdf35102ef0b56
+    spriteID: 868b388346e2c924489f22706c322f3d
     internalID: 0
     vertices: []
     indices: 
@@ -325,16 +346,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CardPortraits1-3_5: 2115136377
-      CardPortraits1-3_8: -1486834978
-      CardPortraits1-3_9: 489544629
-      CardPortraits1-3_0: -540254811
-      CardPortraits1-3_4: -1399295
-      CardPortraits1-3_1: 1487949609
-      CardPortraits1-3_2: 612630119
-      CardPortraits1-3_7: -1077227731
-      CardPortraits1-3_6: 1782177969
-      CardPortraits1-3_3: -1522473195
+      CardPortraitsAll_8: 778617499
+      CardPortraitsAll_3: -1979744736
+      CardPortraitsAll_7: 1512423474
+      CardPortraitsAll_6: -1834033818
+      CardPortraitsAll_1: 1783617350
+      CardPortraitsAll_4: -883744967
+      CardPortraitsAll_5: 751719202
+      CardPortraitsAll_9: -233754515
+      CardPortraitsAll_10: 875698357
+      CardPortraitsAll_2: -1073106675
+      CardPortraitsAll_0: -1884911648
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
