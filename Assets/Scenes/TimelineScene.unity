@@ -216,7 +216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8115973
 RectTransform:
   m_ObjectHideFlags: 0
@@ -261,6 +261,7 @@ MonoBehaviour:
   crossesRef: {fileID: 1881367892}
   arrowRef: {fileID: 697466649}
   nightNum: 0
+  transitionerRef: {fileID: 489424549}
 --- !u!95 &8115975
 Animator:
   serializedVersion: 4
@@ -6235,7 +6236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1063653117
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8995,10 +8996,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 489424549}
-        m_TargetAssemblyTypeName: TransitionTimeLIne, Assembly-CSharp
-        m_MethodName: FadeOutCall
-        m_Mode: 6
+      - m_Target: {fileID: 8115974}
+        m_TargetAssemblyTypeName: TimeLineManager, Assembly-CSharp
+        m_MethodName: FadeOut
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

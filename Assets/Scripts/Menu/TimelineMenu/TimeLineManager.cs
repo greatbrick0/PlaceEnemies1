@@ -14,6 +14,9 @@ public class TimeLineManager : MonoBehaviour
     [SerializeField]
     private int nightNum;
     private float distanceBetweenNights = 168.75f;
+    [Space]
+    [SerializeField]
+    private Transitioner transitionerRef;
 
     private void OnEnable()
     {
@@ -31,10 +34,14 @@ public class TimeLineManager : MonoBehaviour
             {
                 arrowRef.transform.localPosition = new Vector3((nightNum - 3) * distanceBetweenNights, 200, 0);
                 GetComponent<Animator>().SetTrigger("ChangeNights");
+                Invoke("FadeOut", 4.05f);
+                Invoke("GoToCombatScene", 5.5f);
             }
             else
             {
                 arrowRef.transform.localPosition = new Vector3((nightNum - 2) * distanceBetweenNights, 200, 0);
+                Invoke("FadeOut", 2.05f);
+                Invoke("GoToCombatScene", 3.5f);
             }
         }
 
@@ -46,5 +53,14 @@ public class TimeLineManager : MonoBehaviour
         SceneManager.LoadScene("CombatScene");
     }
 
-   
+    public void FadeOut()
+    {
+        transitionerRef.transform.GetChild(0).gameObject.SetActive(true);
+        transitionerRef.FadeOut();
+    }
+
+    private void GoToCombatScene()
+    {
+        SceneManager.LoadScene("CombatScene");
+    }
 }
