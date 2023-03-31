@@ -27,6 +27,7 @@ public class ShacklesAbility : Ability
     {
         description = "Shoot a set of shackles that prevent an enemy from moving for a short time.";
         displayName = "Shackles";
+        upgradeType = "Cooldown:";
     }
 
     public override bool Use(Vector3 targetPosition)

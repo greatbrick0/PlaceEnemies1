@@ -23,6 +23,7 @@ public abstract class Ability
 
     public string displayName { get; protected set; } = "";
     public string description { get; protected set; } = "No description";
+    public string upgradeType { get; protected set; } = "";
 
     public enum ColourTypes
     {

@@ -27,6 +27,7 @@ public class MagicArrowAbility : Ability
     {
         description = "Shoot an arrow that passes through enemies.";
         displayName = "Piercing Arrow";
+        upgradeType = "Damage:";
     }
 
     public override bool Use(Vector3 targetPosition)

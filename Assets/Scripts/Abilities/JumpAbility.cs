@@ -27,6 +27,7 @@ public class JumpAbility : Ability
     {
         description = "Damage enemies around you, then jump to a new location. ";
         displayName = "Jump";
+        upgradeType = "Range:";
     }
 
     public override bool Use(Vector3 targetPosition)

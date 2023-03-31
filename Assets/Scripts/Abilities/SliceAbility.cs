@@ -26,6 +26,7 @@ public class SliceAbility : Ability
     {
         description = "Dash forward with a sword, damaging enemies on contact. ";
         displayName = "Slice";
+        upgradeType = "Damage:";
     }
     public override bool Use(Vector3 targetPosition)
     {
