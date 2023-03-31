@@ -9,7 +9,7 @@ public static class SessionDataManager
     public static int savedPlayerHealth = 0;
     public static int currency = 0;
     public static bool usingTutorial = false;
-    public static Dictionary<string, int> upgrades = new Dictionary<string, int>() { ["red"] = 0, ["blue"] = 0, ["green"] = 0 };
+    public static Dictionary<string, int> upgrades = new Dictionary<string, int>() { ["red"] = 0, ["blue"] = 0, ["green"] = 0, ["placeholder"] = 0 };
 
     public static void ResetSession()
     {
@@ -19,6 +19,6 @@ public static class SessionDataManager
         savedPlayerHealth = 0;
         currency = 0;
         usingTutorial = false;
-        upgrades = new Dictionary<string, int>() { ["red"] = 0, ["blue"] = 0, ["green"] = 0 };
+        upgrades = new Dictionary<string, int>() { ["red"] = 0, ["blue"] = 0, ["green"] = 0, ["placeholder"] = 0 };
     }
 }

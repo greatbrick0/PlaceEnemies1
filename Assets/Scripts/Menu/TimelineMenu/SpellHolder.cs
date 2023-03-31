@@ -21,6 +21,8 @@ public class SpellHolder : MonoBehaviour
     [TextArea]
     private string abilityDescription = "";
     [SerializeField]
+    private string abilityUpgradeType = "";
+    [SerializeField]
     public string spellTypeGroup { get; private set; } = "rgb";
 
     private HolderGroup holderGroupRef;
@@ -41,6 +43,7 @@ public class SpellHolder : MonoBehaviour
         abilityRef.SetDisplayVars();
         abilityName = abilityRef.displayName;
         abilityDescription = abilityRef.description;
+        abilityUpgradeType = abilityRef.upgradeType;
         #endregion
 
         StartCoroutine(CheckSavedLoadout());
@@ -105,7 +108,7 @@ public class SpellHolder : MonoBehaviour
 
     public void SendDescription()
     {
-        holderGroupRef.DisplayDescription(abilityDescription, abilityName);
+        holderGroupRef.DisplayDescription(abilityDescription, abilityName, abilityUpgradeType);
     }
 
     public void Enlarge()

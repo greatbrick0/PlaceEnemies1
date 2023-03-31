@@ -32,6 +32,7 @@ public class ConcoctionAbility : Ability
     {
         description = "Throw a bottle that spills corrosive liquid on the ground, slowing anything that touches it. ";
         displayName = "Concoction";
+        upgradeType = "Damage:";
     }
 
     public override bool Use(Vector3 targetPosition)

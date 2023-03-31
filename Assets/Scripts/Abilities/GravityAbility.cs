@@ -27,6 +27,7 @@ public class GravityAbility : Ability
     {
         description = "Create a pulse that brings enemies towards you, then stun them.";
         displayName = "Gravitic Pulse";
+        upgradeType = "Damage:";
     }
 
     public override bool Use(Vector3 targetPosition)

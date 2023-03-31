@@ -27,6 +27,7 @@ public class BigBombAbility : Ability
     {
         description = "Throw a bomb that explodes on contact. ";
         displayName = "Bomb";
+        upgradeType = "Damage:";
     }
 
     public override bool Use(Vector3 targetPosition)

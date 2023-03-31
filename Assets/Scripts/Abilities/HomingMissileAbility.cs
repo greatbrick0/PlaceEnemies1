@@ -34,6 +34,7 @@ public class HomingMissileAbility : Ability
     {
         description = "Shoot hands that home in on nearby enemies.";
         displayName = "Ghost Hands";
+        upgradeType = "Amount:";
     }
 
     public override bool Use(Vector3 targetPosition)

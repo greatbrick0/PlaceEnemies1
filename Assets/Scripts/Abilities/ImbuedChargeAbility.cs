@@ -26,6 +26,7 @@ public class ImbuedChargeAbility : Ability
     {
         description = "Dash forward with a ram, damaging enemies on contact. ";
         displayName = "Imbued Charge";
+        upgradeType = "Cooldown:";
     }
     public override bool Use(Vector3 targetPosition)
     {

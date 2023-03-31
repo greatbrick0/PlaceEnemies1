@@ -34,6 +34,7 @@ public class LightningAbility : Ability
     {
         description = "Strike multiple lightning bolts in a small area. ";
         displayName = "Lightning";
+        upgradeType = "Cooldown:";
     }
 
     public override bool Use(Vector3 targetPosition)

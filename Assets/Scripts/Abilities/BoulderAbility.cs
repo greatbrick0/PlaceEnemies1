@@ -27,6 +27,7 @@ public class BoulderAbility : Ability
     {
         description = "Shoot a large boulder that slowly rolls down the arena.";
         displayName = "Boulder";
+        upgradeType = "Speed:";
     }
 
     public override bool Use(Vector3 targetPosition)

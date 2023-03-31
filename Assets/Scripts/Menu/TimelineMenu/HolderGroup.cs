@@ -18,9 +18,9 @@ public class HolderGroup : MonoBehaviour
     [SerializeField]
     private AudioClip successSound;
 
-    public void DisplayDescription(string desc, string spellName)
+    public void DisplayDescription(string desc, string spellName, string upgradeType)
     {
-        descBoxRef.DisplaySpellInfo(spellName, desc);
+        descBoxRef.DisplaySpellInfo(spellName, desc, upgradeType, upgradeColour);
     }
 
     public void SendDragInfo(Vector2 mousePos)

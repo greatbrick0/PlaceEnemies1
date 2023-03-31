@@ -27,6 +27,7 @@ public class HammerAbility : Ability
     {
         description = "Summon a hammer that smashes the area in front of you. ";
         displayName = "Hammer";
+        upgradeType = "Cooldown:";
     }
 
     public override bool Use(Vector3 targetPosition)
