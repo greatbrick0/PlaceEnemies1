@@ -561,6 +561,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &135170248 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5207296790570921739, guid: 228ffd5c76de6a942a6af31515377b4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1992886474957699562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &135170250
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135170248}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4579454407841743219, guid: d50d0308687d3cc48a2cf7f85c45ba38, type: 3}
 --- !u!1 &145019518
 GameObject:
   m_ObjectHideFlags: 0
@@ -14413,6 +14433,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: THEMAP
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207296790570921739, guid: 228ffd5c76de6a942a6af31515377b4a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8751689599780679731, guid: 228ffd5c76de6a942a6af31515377b4a,
         type: 3}
