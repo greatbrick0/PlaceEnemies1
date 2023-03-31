@@ -34,8 +34,12 @@ public class Animationcontroller : MonoBehaviour
     //called from the parent CombatBody when an ability is successfully used
     //abilityType can be used later for more types of animations (heavy attack, light attack, dash)
     //this function is not called if the ability is used while on cooldown, or fails for some other reason
-    public void AbilityUsed(int abilityType=0) 
+    public void AbilityUsed(int abilityType = 0)
     {
         animator.SetTrigger("Trigger2");
+
+
     }
+
+
 }
