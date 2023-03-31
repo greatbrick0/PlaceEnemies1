@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <icon>k__BackingField: {fileID: 0}
   <effectName>k__BackingField: ChainLasso
+  visualsPrefab: {fileID: 0}
   <behaviour>k__BackingField: 1
   intensity: 0.9
   <affectsMoveSpeed>k__BackingField: 1
