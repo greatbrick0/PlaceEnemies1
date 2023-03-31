@@ -3145,7 +3145,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Upgrade Blue Spells
+  m_text: 'Upgrade
+
+    Blue'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0d6a6e52c9e3cf447bbb59905f690fde, type: 2}
   m_sharedMaterial: {fileID: 7881981641105940868, guid: 0d6a6e52c9e3cf447bbb59905f690fde,
@@ -3456,7 +3458,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Example Description asf ewgnjo wl;ejnfo aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+  m_text: Example Description
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0d6a6e52c9e3cf447bbb59905f690fde, type: 2}
   m_sharedMaterial: {fileID: 7881981641105940868, guid: 0d6a6e52c9e3cf447bbb59905f690fde,
@@ -4399,7 +4401,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: aabc2ef73ec37f640b23fe070360a0ec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7095,7 +7097,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Upgrade Red Spells
+  m_text: 'Upgrade
+
+    Red'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0d6a6e52c9e3cf447bbb59905f690fde, type: 2}
   m_sharedMaterial: {fileID: 7881981641105940868, guid: 0d6a6e52c9e3cf447bbb59905f690fde,
@@ -7655,7 +7659,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Upgrade Green Spells
+  m_text: 'Upgrade
+
+    Green'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0d6a6e52c9e3cf447bbb59905f690fde, type: 2}
   m_sharedMaterial: {fileID: 7881981641105940868, guid: 0d6a6e52c9e3cf447bbb59905f690fde,
@@ -8331,7 +8337,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -20}
-  m_SizeDelta: {x: 500, y: 80}
+  m_SizeDelta: {x: 600, y: 80}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1487397100
 MonoBehaviour:
@@ -9427,7 +9433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 517a395fb4a871d499a39adcb68c95a2, type: 2}
   m_Color: {r: 0.6666667, g: 0.44705883, b: 0.78431374, a: 0.6117647}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
