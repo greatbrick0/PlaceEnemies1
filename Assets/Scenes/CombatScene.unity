@@ -2439,6 +2439,9 @@ MonoBehaviour:
   - entryName: MagicDash
     entryGameObject: {fileID: 9159844377764210428, guid: 8cdb6073578bdbb4c85c0bcdcd01e8b2,
       type: 3}
+  - entryName: Sickle
+    entryGameObject: {fileID: 9159844377764210428, guid: 2116f2cd01864e14a841e6c2f855b368,
+      type: 3}
   enemyAttackEntries:
   - entryName: BasicDemonBall
     entryGameObject: {fileID: 9159844377764210428, guid: b214c12139ec2f34f89bbbf9e53e343a,

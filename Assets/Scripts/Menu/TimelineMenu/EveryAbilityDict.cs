@@ -20,5 +20,6 @@ public class EveryAbilityDict : MonoBehaviour
         abilityDict.Add(new SliceAbility());
         abilityDict.Add(new BigBombAbility());
         abilityDict.Add(new ImbuedChargeAbility());
+        abilityDict.Add(new SickleAbility());
     }
 }

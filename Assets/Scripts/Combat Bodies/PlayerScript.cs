@@ -154,7 +154,6 @@ public class PlayerScript : CombatBody
         if (hurtStore > 0)
         {
             AddStatusEffect(hurtEffect);
-            print(effectList.Count);
             if (combatUIC != null) combatUIC.HealthUpdate(health - damageAmount);
             CameraShakeOnHitScript.instance.Shake();
         }

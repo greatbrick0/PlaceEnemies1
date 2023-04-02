@@ -14,10 +14,10 @@ public class HomingMissileScript : Attack
     // Use this method to set up your reference to the child Transform component
     protected override void Start()
     {
-        
         base.Start();
         hasParticles = true;
     }
+
     protected override void Apply(CombatBody recentHit)
     {
         recentHit.Hurt(power);

@@ -6371,7 +6371,7 @@ MonoBehaviour:
   clearButtonRef: {fileID: 1761709833}
   currencyLabelRef: {fileID: 171449505}
   tutorialRef: {fileID: 35664241}
-  give300Currency: 0
+  give300Currency: 1
 --- !u!1 &1100091073
 GameObject:
   m_ObjectHideFlags: 0
@@ -6794,8 +6794,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -95}
-  m_SizeDelta: {x: 500, y: 60}
+  m_AnchoredPosition: {x: 50, y: -65}
+  m_SizeDelta: {x: 400, y: 120}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1239490817
 MonoBehaviour:
