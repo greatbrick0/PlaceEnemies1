@@ -30,7 +30,6 @@ public class DescBoxScript : MonoBehaviour
         stars.sprite = starSprites[0];
         stars.gameObject.SetActive(false);
         starBackground.SetActive(false);
-        SessionDataManager.currency = 50;
     }
 
     private void Update()
@@ -38,6 +37,7 @@ public class DescBoxScript : MonoBehaviour
         if (SessionDataManager.upgrades[colour] != visibleUpgrade)
         {
             stars.sprite = starSprites[SessionDataManager.upgrades[colour]];
+            visibleUpgrade = SessionDataManager.upgrades[colour];
         }
     }
 

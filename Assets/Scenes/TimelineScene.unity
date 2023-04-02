@@ -4076,7 +4076,7 @@ MonoBehaviour:
   descBoxRef: {fileID: 596430308}
   upgradeColour: blue
   upgradeButton: {fileID: 2129213995}
-  upgradePrices: 0c00000018000000ffffffff
+  upgradePrices: 0c0000001800000030000000ffffffff
   successSound: {fileID: 8300000, guid: dddb49229bfa3ab45909a32cc0fc3262, type: 3}
 --- !u!1 &697466649
 GameObject:
@@ -4552,7 +4552,7 @@ MonoBehaviour:
   descBoxRef: {fileID: 596430308}
   upgradeColour: red
   upgradeButton: {fileID: 790029241}
-  upgradePrices: 0c00000018000000ffffffff
+  upgradePrices: 0c0000001800000030000000ffffffff
   successSound: {fileID: 8300000, guid: dddb49229bfa3ab45909a32cc0fc3262, type: 3}
 --- !u!1 &790029241
 GameObject:
@@ -6371,6 +6371,7 @@ MonoBehaviour:
   clearButtonRef: {fileID: 1761709833}
   currencyLabelRef: {fileID: 171449505}
   tutorialRef: {fileID: 35664241}
+  give300Currency: 0
 --- !u!1 &1100091073
 GameObject:
   m_ObjectHideFlags: 0
@@ -10836,7 +10837,7 @@ MonoBehaviour:
   descBoxRef: {fileID: 596430308}
   upgradeColour: green
   upgradeButton: {fileID: 804590289}
-  upgradePrices: 0c00000018000000ffffffff
+  upgradePrices: 0c0000001800000030000000ffffffff
   successSound: {fileID: 8300000, guid: dddb49229bfa3ab45909a32cc0fc3262, type: 3}
 --- !u!1 &2044512826
 GameObject:

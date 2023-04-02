@@ -23,7 +23,7 @@ public class UpgradeButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        buttonText.text = "Upgrade " + color + " Spells";
+        buttonText.text = "Upgrade\n" + color;
     }
 
     public void SetNewPrice(int newCost)

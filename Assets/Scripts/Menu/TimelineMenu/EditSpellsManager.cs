@@ -8,6 +8,7 @@ public class EditSpellsManager : MonoBehaviour
     public List<Ability> currentLoadOut = new List<Ability>();
     public List<EquipSlotScript> loadOutSlots = new List<EquipSlotScript>();
 
+    [Header("References")]
     [SerializeField]
     GameObject doneButtonRef;
     [SerializeField]
@@ -20,8 +21,14 @@ public class EditSpellsManager : MonoBehaviour
     private int tutorialStage = 0;
     private bool showTutorial = false;
 
+    [Header("Debugging options")]
+    [SerializeField]
+    bool give300Currency = false;
+
     private void Start()
     {
+        if (give300Currency) SessionDataManager.currency += 300;
+
         if (SessionDataManager.playerLoadOut.Count == 0)
         {
             for (int ii = 0; ii < 4; ii++)
