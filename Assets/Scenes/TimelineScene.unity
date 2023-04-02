@@ -6371,7 +6371,7 @@ MonoBehaviour:
   clearButtonRef: {fileID: 1761709833}
   currencyLabelRef: {fileID: 171449505}
   tutorialRef: {fileID: 35664241}
-  give300Currency: 1
+  give300Currency: 0
 --- !u!1 &1100091073
 GameObject:
   m_ObjectHideFlags: 0
