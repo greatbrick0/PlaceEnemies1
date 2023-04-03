@@ -9040,6 +9040,7 @@ MonoBehaviour:
   sourcesPreventingAbilities: 0
   sourcesPreventingDamage: 0
   effectList: []
+  abilityAnimationType: armourdemon
   targetDetectionRadius: 30
   minimumRange: 0.85
   satisfiedRange: 2

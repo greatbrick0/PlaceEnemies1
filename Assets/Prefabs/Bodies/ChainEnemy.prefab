@@ -10020,6 +10020,7 @@ MonoBehaviour:
   sourcesPreventingAbilities: 0
   sourcesPreventingDamage: 0
   effectList: []
+  abilityAnimationType: chaindemon
   targetDetectionRadius: 30
   minimumRange: 3
   satisfiedRange: 1.1

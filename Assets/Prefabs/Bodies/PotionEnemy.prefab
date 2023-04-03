@@ -3832,6 +3832,7 @@ MonoBehaviour:
   sourcesPreventingAbilities: 0
   sourcesPreventingDamage: 0
   effectList: []
+  abilityAnimationType: potiondemon
   targetDetectionRadius: 30
   minimumRange: 1.5
   satisfiedRange: 0.5

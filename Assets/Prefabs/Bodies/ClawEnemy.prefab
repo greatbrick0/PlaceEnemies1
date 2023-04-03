@@ -88,6 +88,7 @@ MonoBehaviour:
   sourcesPreventingAbilities: 0
   sourcesPreventingDamage: 0
   effectList: []
+  abilityAnimationType: clawdemon
   targetDetectionRadius: 30
   <chargeTime>k__BackingField: 0.7
   <downTime>k__BackingField: 4

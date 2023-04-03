@@ -8063,6 +8063,7 @@ MonoBehaviour:
   sourcesPreventingAbilities: 0
   sourcesPreventingDamage: 0
   effectList: []
+  abilityAnimationType: daggerdemon
   targetDetectionRadius: 30
   <chargeTime>k__BackingField: 0.3
   <downTime>k__BackingField: 2

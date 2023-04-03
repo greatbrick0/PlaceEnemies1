@@ -16830,7 +16830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d90c8bc0f4d7440b36738f5359ed9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: enemy
+  team: firedemon
   bounty: 2
   <health>k__BackingField: 20
   baseMoveSpeed: 2
@@ -16842,6 +16842,7 @@ MonoBehaviour:
   sourcesPreventingAbilities: 0
   sourcesPreventingDamage: 0
   effectList: []
+  abilityAnimationType: default
   targetDetectionRadius: 30
   minimumRange: 7
   satisfiedRange: 0.9

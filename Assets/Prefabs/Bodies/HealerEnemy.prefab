@@ -3876,6 +3876,7 @@ MonoBehaviour:
   sourcesPreventingAbilities: 0
   sourcesPreventingDamage: 0
   effectList: []
+  abilityAnimationType: ghostdemon
   targetDetectionRadius: 30
   minimumRange: 1.5
   satisfiedRange: 2.5

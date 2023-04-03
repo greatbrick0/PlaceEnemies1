@@ -3454,7 +3454,9 @@ MonoBehaviour:
   sourcesPreventingAbilities: 0
   sourcesPreventingDamage: 0
   effectList: []
+  abilityAnimationType: bombdemon
   targetDetectionRadius: 30
+  reattemptTime: 6
 --- !u!1 &8071670993298925308
 GameObject:
   m_ObjectHideFlags: 0

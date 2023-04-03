@@ -6,6 +6,7 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public abstract class CombatBody : Placeable
 {
+    [Header("Combat Body Properties")]
     protected Rigidbody rb;
 
     [SerializeField]
@@ -57,7 +58,6 @@ public abstract class CombatBody : Placeable
         set
         {
             _sourcesPreventingHits = value;
-            //GetComponent<Collider>().enabled = _sourcesPreventingHits == 0;
             gameObject.layer = _sourcesPreventingHits == 0 ? LayerMask.NameToLayer("CombatBodies") : LayerMask.NameToLayer("Dodging");
         }
     }
@@ -74,6 +74,9 @@ public abstract class CombatBody : Placeable
     private List<StatusEffect> movementEffects = new List<StatusEffect>();
 
     private Animator animator;
+    [SerializeField]
+    [Tooltip("A string that specifies which animation should be used when this combat body casts an ability. ")]
+    private string abilityAnimationType = "default";
 
 
    
@@ -198,7 +201,7 @@ public abstract class CombatBody : Placeable
             }
             else if (transform.GetChild(0).GetComponent<Animationcontroller>() != null)
             {
-                transform.GetChild(0).GetComponent<Animationcontroller>().AbilityUsed();
+                transform.GetChild(0).GetComponent<Animationcontroller>().AbilityUsed(abilityAnimationType);
             }
             return true;
         }
@@ -208,7 +211,6 @@ public abstract class CombatBody : Placeable
         }
     }
 
-    //someone please clean this function, im too tired
     public void AddStatusEffect(StatusEffect newEffectType)
     {
         StatusEffect previousEffect = CheckForDuplicateEffects(newEffectType.effectName);
