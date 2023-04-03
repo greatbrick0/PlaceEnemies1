@@ -8,7 +8,8 @@ public class HealthVisualManager : MonoBehaviour
     [SerializeField]
     private List<Image> shards;
     private Image shield;
-
+    [SerializeField]
+    private Image blood;
     private int health;
     private bool shielded;
 
@@ -22,21 +23,35 @@ public class HealthVisualManager : MonoBehaviour
     }
 
 
-    public void SetHealth(int x)
+    public void SetHealth(int x, bool hurt)
     {
         health = x;
-
+        if (hurt)
+        {
+            Debug.Log("Charlie");
+            blood.GetComponent<Animator>().ResetTrigger("HurtTrigger");
+            blood.GetComponent<Animator>().SetTrigger("HurtTrigger");
+        }
         UpdateHealthVisual();
     }
     public void TakeDamage()
     {
+        
         health--;
+       
+        
         UpdateHealthVisual();
     }
 
     public void TakeDamage(int x) //overload for if player needs to take more then 1, or a scuffed way to heal.
     {
         health -= x;
+        if (x > 0)
+        {
+            blood.GetComponent<Animator>().ResetTrigger("HurtTrigger");
+            blood.GetComponent<Animator>().SetTrigger("HurtTrigger");
+            Debug.Log("Charlie");
+        }
         UpdateHealthVisual();
     }
 

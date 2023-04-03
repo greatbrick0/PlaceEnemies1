@@ -29,7 +29,7 @@ public class PlayerScript : CombatBody
         if (combatUIC != null)
         {
             combatUIC.ConnectSpellList(abilityList);
-            combatUIC.HealthUpdate(health);
+            combatUIC.HealthUpdate(health, false);
         }
         StartCoroutine(DelayActivateInput());
     }
@@ -154,7 +154,7 @@ public class PlayerScript : CombatBody
         if (hurtStore > 0)
         {
             AddStatusEffect(hurtEffect);
-            if (combatUIC != null) combatUIC.HealthUpdate(health - damageAmount);
+            if (combatUIC != null) combatUIC.HealthUpdate(health - damageAmount, true);
             CameraShakeOnHitScript.instance.Shake();
         }
         return hurtStore;

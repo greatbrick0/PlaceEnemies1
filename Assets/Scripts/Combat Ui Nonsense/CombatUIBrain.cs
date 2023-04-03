@@ -33,9 +33,9 @@ public class CombatUIBrain : MonoBehaviour
         _healthUI.GetComponent<HealthVisualManager>().TakeDamage();
     }
 
-    public void HealthUpdate(int x)
+    public void HealthUpdate(int x,bool y)
     {
-        _healthUI.GetComponent<HealthVisualManager>().SetHealth(x); 
+        _healthUI.GetComponent<HealthVisualManager>().SetHealth(x,y); 
     }
     public void ConnectSpellList(List<Ability> PlayerSpellList)
     {
