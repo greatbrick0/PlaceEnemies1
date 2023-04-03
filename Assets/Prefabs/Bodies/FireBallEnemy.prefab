@@ -16831,7 +16831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d90c8bc0f4d7440b36738f5359ed9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: firedemon
+  team: enemy
   bounty: 2
   <health>k__BackingField: 20
   baseMoveSpeed: 2
