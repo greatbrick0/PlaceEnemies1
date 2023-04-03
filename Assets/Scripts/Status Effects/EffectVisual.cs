@@ -18,9 +18,13 @@ public class EffectVisual : MonoBehaviour
         transform.position = linkedTransform.position + offset;
     }
 
-    private void Update()
+    protected virtual void Update()
     {
-        if (linkedTransform == null) Destroy(this.gameObject);
-        else transform.position = linkedTransform.position + offset;
+        if (linkedTransform == null)
+        {
+            Destroy(this.gameObject); 
+            return;
+        }
+        transform.position = linkedTransform.position + offset;
     }
 }
