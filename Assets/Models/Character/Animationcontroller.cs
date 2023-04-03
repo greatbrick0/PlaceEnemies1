@@ -23,25 +23,31 @@ public class Animationcontroller : MonoBehaviour
         {
 
             case "Fireballdemon":
-                animator.SetBool("bTreevalue", true);
+                animator.SetInteger(blendTreevalue, 2);
                 break;
             case "Daggerdemon":
                 animator.SetInteger(blendTreevalue, 1);
                 break;
             case "Clawdemon":
-                animator.SetInteger(blendTreevalue, 1);
+                animator.SetInteger(blendTreevalue, 5);
                 break;
             case "Chunkydemon":
+                animator.SetInteger(blendTreevalue, 9);
                 break;
             case "Potiondemon":
+                animator.SetInteger(blendTreevalue, 6);
                 break;
             case "Healerdemon":
+                animator.SetInteger(blendTreevalue, 4);
                 break;
             case "Chaindemon":
+                animator.SetInteger(blendTreevalue, 8);
                 break;
             case "Skeledemon":
+                animator.SetInteger(blendTreevalue, 3);
                 break;
             case "Archerdemon":
+                animator.SetInteger(blendTreevalue, 7);
                 break;
             default:
                 // Do something if the prefab name doesn't match any of the cases above
@@ -73,6 +79,14 @@ public class Animationcontroller : MonoBehaviour
     public void AbilityUsed(string abilityType = "default")
     {
      
+        switch(abilityType)
+        {
+            case "fgA":
+
+                break;
+
+                    
+        }
 
     }
 
