@@ -10487,6 +10487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a865eb1cedc47fa41893ea73beb5c53a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabName: Fireballdemon
   parentIsMoving: 0
 --- !u!1 &2252614906900554555
 GameObject:
@@ -16842,7 +16843,7 @@ MonoBehaviour:
   sourcesPreventingAbilities: 0
   sourcesPreventingDamage: 0
   effectList: []
-  abilityAnimationType: default
+  abilityAnimationType: fgA
   targetDetectionRadius: 30
   minimumRange: 7
   satisfiedRange: 0.9
@@ -22560,4 +22561,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a865eb1cedc47fa41893ea73beb5c53a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabName: Fireballdemon
   parentIsMoving: 0

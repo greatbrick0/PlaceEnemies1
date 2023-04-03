@@ -545,6 +545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a865eb1cedc47fa41893ea73beb5c53a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabName: Skeledemon
   parentIsMoving: 0
 --- !u!1 &2561189657544436491
 GameObject:
@@ -3454,7 +3455,7 @@ MonoBehaviour:
   sourcesPreventingAbilities: 0
   sourcesPreventingDamage: 0
   effectList: []
-  abilityAnimationType: bombdemon
+  abilityAnimationType: sgA
   targetDetectionRadius: 30
   reattemptTime: 6
 --- !u!1 &8071670993298925308

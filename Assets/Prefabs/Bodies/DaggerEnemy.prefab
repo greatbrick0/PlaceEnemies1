@@ -2903,6 +2903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a865eb1cedc47fa41893ea73beb5c53a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabName: Daggerdemon
   parentIsMoving: 0
 --- !u!1 &3865683318728588805
 GameObject:
@@ -6058,6 +6059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a865eb1cedc47fa41893ea73beb5c53a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabName: Daggerdemon
   parentIsMoving: 0
 --- !u!1 &5677227047681652095
 GameObject:
@@ -8063,7 +8065,7 @@ MonoBehaviour:
   sourcesPreventingAbilities: 0
   sourcesPreventingDamage: 0
   effectList: []
-  abilityAnimationType: daggerdemon
+  abilityAnimationType: dgA
   targetDetectionRadius: 30
   <chargeTime>k__BackingField: 0.3
   <downTime>k__BackingField: 2

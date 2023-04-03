@@ -88,7 +88,7 @@ MonoBehaviour:
   sourcesPreventingAbilities: 0
   sourcesPreventingDamage: 0
   effectList: []
-  abilityAnimationType: clawdemon
+  abilityAnimationType: cgA
   targetDetectionRadius: 30
   <chargeTime>k__BackingField: 0.7
   <downTime>k__BackingField: 4
@@ -570,6 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a865eb1cedc47fa41893ea73beb5c53a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabName: Clawdemon
   parentIsMoving: 0
 --- !u!4 &6555333804113108230 stripped
 Transform:

@@ -4,17 +4,53 @@ using UnityEngine;
 
 public class Animationcontroller : MonoBehaviour
 {
+
     private Animator animator;
     private int blendValue;
-
+    private int blendTreevalue;
+    private bool bTreevalue = false;
+  
+    public string prefabName;
     [SerializeField]
     private bool parentIsMoving = false;
-
-    void Start()
+    private void Awake()
     {
         animator = GetComponent<Animator>();
         blendValue = Animator.StringToHash("Blend");
-  
+        blendTreevalue = Animator.StringToHash("blendTreevalue");
+        bTreevalue = animator.GetBool("bTreevalue");
+        switch (prefabName)
+        {
+
+            case "Fireballdemon":
+                animator.SetBool("bTreevalue", true);
+                break;
+            case "Daggerdemon":
+                animator.SetInteger(blendTreevalue, 1);
+                break;
+            case "Clawdemon":
+                animator.SetInteger(blendTreevalue, 1);
+                break;
+            case "Chunkydemon":
+                break;
+            case "Potiondemon":
+                break;
+            case "Healerdemon":
+                break;
+            case "Chaindemon":
+                break;
+            case "Skeledemon":
+                break;
+            case "Archerdemon":
+                break;
+            default:
+                // Do something if the prefab name doesn't match any of the cases above
+                break;
+        }
+    }
+    void Start()
+    {
+       
     }
 
     void Update()
@@ -36,7 +72,7 @@ public class Animationcontroller : MonoBehaviour
     //this function is not called if the ability is used while on cooldown, or fails for some other reason
     public void AbilityUsed(string abilityType = "default")
     {
-        animator.SetTrigger("Trigger2");
+     
 
     }
 

@@ -2814,6 +2814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a865eb1cedc47fa41893ea73beb5c53a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabName: Healerdemon
   parentIsMoving: 0
 --- !u!1 &5805017393212444567
 GameObject:
@@ -3876,7 +3877,7 @@ MonoBehaviour:
   sourcesPreventingAbilities: 0
   sourcesPreventingDamage: 0
   effectList: []
-  abilityAnimationType: ghostdemon
+  abilityAnimationType: hgA
   targetDetectionRadius: 30
   minimumRange: 1.5
   satisfiedRange: 2.5

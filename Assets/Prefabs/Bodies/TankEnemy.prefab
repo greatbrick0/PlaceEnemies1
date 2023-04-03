@@ -1226,6 +1226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a865eb1cedc47fa41893ea73beb5c53a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabName: Chunkydemon
   parentIsMoving: 0
 --- !u!1 &976114366260747156
 GameObject:
@@ -8545,6 +8546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a865eb1cedc47fa41893ea73beb5c53a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabName: 
   parentIsMoving: 0
 --- !u!1 &7470331516351799308
 GameObject:
@@ -9040,7 +9042,7 @@ MonoBehaviour:
   sourcesPreventingAbilities: 0
   sourcesPreventingDamage: 0
   effectList: []
-  abilityAnimationType: armourdemon
+  abilityAnimationType: agA
   targetDetectionRadius: 30
   minimumRange: 0.85
   satisfiedRange: 2
