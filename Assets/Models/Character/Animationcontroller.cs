@@ -9,7 +9,7 @@ public class Animationcontroller : MonoBehaviour
     private int blendValue;
     private int blendTreevalue;
     private bool bTreevalue = false;
-  
+   
     public string prefabName;
     [SerializeField]
     private bool parentIsMoving = false;
@@ -78,14 +78,43 @@ public class Animationcontroller : MonoBehaviour
     //this function is not called if the ability is used while on cooldown, or fails for some other reason
     public void AbilityUsed(string abilityType = "default")
     {
-     
+
+        print(abilityType);
+       
         switch(abilityType)
         {
-            case "fgA":
+            //fireball
+            case "fgA": 
+                animator.SetTrigger("fireballA");
+
+                //dagger
+                break;
+            case "dgA":
+                //claw 
+                break;
+            case "cgA":
+                //tank
+                break;
+            case "agA":
+                //potion
+                break;
+            case "pgA":
+                //healer
+                break;
+            case "hgA":
+                //chain
+                break;
+            case "jgA":
+                //skeleton
+                break;
+            case "sgA":
+                //archer
+                break;
+            case "rgA":
 
                 break;
-
-                    
+            default:
+                break;
         }
 
     }
