@@ -21,6 +21,7 @@ public class PlayerScript : CombatBody
     [SerializeField]
     private StatusEffect hurtEffect;
 
+    public bool _hurt;
     public override void Release()
     {
         base.Release();
@@ -149,6 +150,7 @@ public class PlayerScript : CombatBody
 
     public override int Hurt(int damageAmount = 1)
     {
+        _hurt = true;
         int hurtStore;
         hurtStore = base.Hurt(damageAmount);
         if (hurtStore > 0)

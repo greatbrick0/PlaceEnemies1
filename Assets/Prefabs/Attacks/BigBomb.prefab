@@ -66,7 +66,7 @@ MonoBehaviour:
   power: 0
   hasParticles: 0
   hitSound: {fileID: 8300000, guid: 8a9bd2fc2a75ce94abe23d425d8eabe5, type: 3}
-  timeOutSound: {fileID: 0}
+  timeOutSound: {fileID: 8300000, guid: 8a9bd2fc2a75ce94abe23d425d8eabe5, type: 3}
   canHit: 1
   residueObject: {fileID: 9159844377764210428, guid: aa3bc8531a4e9a44d8f51a763dee4ff6,
     type: 3}

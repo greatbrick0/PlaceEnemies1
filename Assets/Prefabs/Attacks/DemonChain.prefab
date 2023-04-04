@@ -65,6 +65,9 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0, z: 1}
   lifetime: 0.5
   power: 1
+  hasParticles: 0
+  hitSound: {fileID: 8300000, guid: 886cf520dea6865469ebdbb0dba5e7b9, type: 3}
+  timeOutSound: {fileID: 8300000, guid: 886cf520dea6865469ebdbb0dba5e7b9, type: 3}
   canHit: 1
   lassoEffect: {fileID: 11400000, guid: 30e3c6064b999aa45a09167452e0e092, type: 2}
 --- !u!1001 &6206973813688767236

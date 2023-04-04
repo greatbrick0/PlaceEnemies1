@@ -48,6 +48,7 @@ public class PlacingManager : MonoBehaviour
     [Space]
     [SerializeField]
     private bool combatStarted = false;
+    public bool combatStart;
     [field: SerializeField]
     public int remainingEnemies { get; private set; } = 0;
     [field: SerializeField]
@@ -128,6 +129,7 @@ public class PlacingManager : MonoBehaviour
         if (cardsPlaced < minimumCardsPlaced) return;
 
         combatStarted = true;
+        combatStart = true;
         cam.followTarget = playerRef.transform;
         cam.offset = combatModeCamPos;
         mousePlaneRef.transform.position = mousePlaneUpperPos;

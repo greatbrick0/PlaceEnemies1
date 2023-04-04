@@ -65,8 +65,8 @@ MonoBehaviour:
   lifetime: 0.9
   power: 0
   hasParticles: 0
-  hitSound: {fileID: 0}
-  timeOutSound: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 8a9bd2fc2a75ce94abe23d425d8eabe5, type: 3}
+  timeOutSound: {fileID: 8300000, guid: 8a9bd2fc2a75ce94abe23d425d8eabe5, type: 3}
   canHit: 0
   residueObject: {fileID: 9159844377764210428, guid: b0c23f40448eb3d4d8fb4ab1f8d039ad,
     type: 3}
