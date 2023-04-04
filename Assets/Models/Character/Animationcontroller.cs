@@ -9,12 +9,13 @@ public class Animationcontroller : MonoBehaviour
     private int blendValue;
     private int blendTreevalue;
     private bool bTreevalue = false;
-
+    private Rigidbody dd;
     public string prefabName;
     [SerializeField]
     private bool parentIsMoving = false;
     private void Awake()
     {
+        dd = FindObjectOfType<Rigidbody>();
         animator = GetComponent<Animator>();
         blendValue = Animator.StringToHash("Blend");
         blendTreevalue = Animator.StringToHash("blendTreevalue");
@@ -64,13 +65,24 @@ public class Animationcontroller : MonoBehaviour
     void Update()
     {
         parentIsMoving = transform.parent.GetComponent<Rigidbody>().velocity.magnitude >= 0.1f;
+        Vector3 localVelocity = Vector3.zero;
+        if (transform.parent != null)
+        {
+           localVelocity = transform.parent.TransformDirection(dd.velocity);
+        }
+        else
+        {
 
+        }
+        float xSpeed1 = localVelocity.x;
+        float ySpeed1 = localVelocity.z;
 
-        Vector3 localVelocity = transform.InverseTransformDirection(transform.parent.GetComponent<Rigidbody>().velocity);
+        animator.SetFloat("XSpeed", xSpeed1);
+        animator.SetFloat("YSpeed", ySpeed1);
         //Converts global velocity vector to a local vector
         float forawrdVelocity = localVelocity.z;
         //Players total local forward velocity = forwardVelocity, can be used for dash animations or being slowed
-        animator.SetFloat(blendValue, forawrdVelocity >= 0.1f ? 1 : 0);
+        
         //if forward velocity is greater than or equal to 0.1f, blendValue is set to 1, else its set to 0
 
     }
@@ -90,29 +102,34 @@ public class Animationcontroller : MonoBehaviour
 
                 //dagger
                 break;
-            case "dgA":
+            case "dgA": animator.SetTrigger("daggerA");
                 //claw 
                 break;
             case "cgA":
+                animator.SetTrigger("clawA");
                 //tank
                 break;
             case "agA":
+                animator.SetTrigger("chunkyA");
                 //potion
                 break;
             case "pgA": animator.SetTrigger("potionA");
                 //healer
                 break;
             case "hgA":
+                animator.SetTrigger("healerA");
                 //chain
                 break;
             case "jgA":
+                animator.SetTrigger("chainA");
                 //skeleton
                 break;
             case "sgA":
+                animator.SetTrigger("bombA");
                 //archer
                 break;
             case "rgA":
-
+                animator.SetTrigger("archerA");
                 break;
             case "fgA":
                 Debug.Log("Itworks:)");

@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2309338447848395419}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.0896, y: 0.0896, z: 0.0896}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7637404293824880157}
@@ -4838,7 +4838,7 @@ Transform:
   m_GameObject: {fileID: 4066302748288377683}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 80, y: 62, z: 7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.32825, y: 0.32825, z: 0.32825}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1319055704968451854}
@@ -4875,7 +4875,7 @@ Transform:
   m_GameObject: {fileID: 5455226865749916929}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.0896, y: 0.0896, z: 0.0896}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7637404293824880157}
@@ -9687,7 +9687,7 @@ Transform:
   m_GameObject: {fileID: 6384622834699975199}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.0896, y: 0.0896, z: 0.0896}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7637404293824880157}
@@ -14524,6 +14524,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869478673906706845, guid: 61203d22b36f9764eb936e099342b741,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0896
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869478673906706845, guid: 61203d22b36f9764eb936e099342b741,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0896
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869478673906706845, guid: 61203d22b36f9764eb936e099342b741,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0896
       objectReference: {fileID: 0}
     - target: {fileID: 4869478673906706845, guid: 61203d22b36f9764eb936e099342b741,
         type: 3}

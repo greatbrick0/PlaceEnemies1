@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6521339557876870423}
   - component: {fileID: 6521339557876870408}
   - component: {fileID: 6521339557876870422}
+  - component: {fileID: 2508065143553286838}
   m_Layer: 5
   m_Name: Ember
   m_TagString: Untagged
@@ -91,3 +92,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeOutTime: 0
   speedModifier: 13
+--- !u!111 &2508065143553286838
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6521339557876870410}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 3e66fb263d9338e4cab46d18a54229f1, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 3e66fb263d9338e4cab46d18a54229f1, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
