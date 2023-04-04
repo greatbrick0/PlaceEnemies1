@@ -973,7 +973,7 @@ Transform:
   m_Children:
   - {fileID: 1540581713730137674}
   m_Father: {fileID: 4998939280876071040}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1181001887403820853
 GameObject:
@@ -1963,91 +1963,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000034205616, y: 0.017485209, z: 0.00023055472}
     m_Extent: {x: 0.0070481338, y: 0.002691804, z: 0.0032882253}
   m_DirtyAABB: 0
---- !u!1 &2075000750366269794
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1693409108993014744}
-  - component: {fileID: 2319328560516396157}
-  - component: {fileID: 561575840860569783}
-  m_Layer: 0
-  m_Name: BalenScythe
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1693409108993014744
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075000750366269794}
-  m_LocalRotation: {x: -0.369926, y: -0.28443843, z: 0.8685839, w: 0.166768}
-  m_LocalPosition: {x: -0.00856, y: 0.00239, z: 0.00119}
-  m_LocalScale: {x: -1.5239935, y: -1.5239935, z: -1.5239935}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4998939280876071040}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -201.761, y: 127.431, z: -32.583008}
---- !u!33 &2319328560516396157
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075000750366269794}
-  m_Mesh: {fileID: 1568016432510859342, guid: 19fe7446f9dcb764b8ac7c6a575ffeb7, type: 3}
---- !u!23 &561575840860569783
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075000750366269794}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 6ba50e8a5dc315141945b059ca78d7ea, type: 2}
-  - {fileID: 2100000, guid: 92f7c8f3aded4f84ea1add47291d7e64, type: 2}
-  - {fileID: 2100000, guid: a97d202762124d14f8a8326ea309ec95, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &2145579412006036393
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,7 +2329,7 @@ Transform:
   m_Children:
   - {fileID: 6396237323752555343}
   m_Father: {fileID: 4998939280876071040}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2966602097023674674
 GameObject:
@@ -3535,7 +3450,7 @@ Transform:
   - {fileID: 8549508091102160475}
   - {fileID: 6014438503668792208}
   m_Father: {fileID: 4998939280876071040}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4937744300574736680
 GameObject:
@@ -5284,6 +5199,7 @@ MonoBehaviour:
   sourcesPreventingAbilities: 0
   sourcesPreventingDamage: 0
   effectList: []
+  abilityAnimationType: default
   combatUIC: {fileID: 0}
   cam: {fileID: 0}
   hurtEffect: {fileID: 11400000, guid: 29b37335f3ec6ff499d60f04221cfb2d, type: 2}
@@ -6116,7 +6032,6 @@ Transform:
   m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1693409108993014744}
   - {fileID: 8148823563334526964}
   - {fileID: 6853287621923605929}
   - {fileID: 991571809135885295}
@@ -6775,7 +6690,7 @@ Transform:
   m_Children:
   - {fileID: 2569227066764332232}
   m_Father: {fileID: 4998939280876071040}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8472900440429290177
 GameObject:

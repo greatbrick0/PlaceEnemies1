@@ -9,7 +9,7 @@ public class Animationcontroller : MonoBehaviour
     private int blendValue;
     private int blendTreevalue;
     private bool bTreevalue = false;
-   
+
     public string prefabName;
     [SerializeField]
     private bool parentIsMoving = false;
@@ -24,6 +24,7 @@ public class Animationcontroller : MonoBehaviour
 
             case "Fireballdemon":
                 animator.SetInteger(blendTreevalue, 2);
+
                 break;
             case "Daggerdemon":
                 animator.SetInteger(blendTreevalue, 1);
@@ -50,19 +51,20 @@ public class Animationcontroller : MonoBehaviour
                 animator.SetInteger(blendTreevalue, 7);
                 break;
             default:
-                // Do something if the prefab name doesn't match any of the cases above
+
                 break;
         }
+        //switch statement to set the default blend tree per prefab
     }
     void Start()
     {
-       
+
     }
 
     void Update()
     {
         parentIsMoving = transform.parent.GetComponent<Rigidbody>().velocity.magnitude >= 0.1f;
-        
+
 
         Vector3 localVelocity = transform.InverseTransformDirection(transform.parent.GetComponent<Rigidbody>().velocity);
         //Converts global velocity vector to a local vector
@@ -80,12 +82,11 @@ public class Animationcontroller : MonoBehaviour
     {
 
         print(abilityType);
-       
-        switch(abilityType)
+
+        switch (abilityType)
         {
             //fireball
-            case "fgA": 
-                animator.SetTrigger("fireballA");
+            case "default":
 
                 //dagger
                 break;
@@ -112,6 +113,10 @@ public class Animationcontroller : MonoBehaviour
                 break;
             case "rgA":
 
+                break;
+            case "fgA":
+                Debug.Log("Itworks:)");
+                animator.SetTrigger("fireballA");
                 break;
             default:
                 break;

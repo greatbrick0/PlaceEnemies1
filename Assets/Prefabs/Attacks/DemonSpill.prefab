@@ -223,7 +223,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.10196079, g: 0.21176472, b: 0.21176472, a: 1}
+      maxColor: {r: 0.0145247225, g: 0.6415094, b: 0.5624303, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5044,7 +5044,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.10196079, g: 0.21176472, b: 0.21176472, a: 1}
+      maxColor: {r: 0.0145247225, g: 0.6415094, b: 0.5624303, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9917,7 +9917,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.10196079, g: 0.21176472, b: 0.21176472, a: 1}
+      maxColor: {r: 0.0145247225, g: 0.6415094, b: 0.5624303, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -14580,6 +14580,9 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0, z: 1}
   lifetime: 4
   power: 0
+  hasParticles: 0
+  hitSound: {fileID: 0}
+  timeOutSound: {fileID: 0}
   canHit: 1
   slowEffect: {fileID: 11400000, guid: efbb99d4f4ffe3247bb48c86649be3cc, type: 2}
   reapplyTime: 0.3

@@ -114,6 +114,7 @@ MonoBehaviour:
   _jump: {fileID: 0}
   _bomb: {fileID: 0}
   _boulder: {fileID: 8300000, guid: 00396664abb5ad54db350e34439b2f84, type: 3}
+  _charge: {fileID: 0}
 --- !u!1001 &2825462435371006061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -205,12 +206,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: f85436cb3c2dce24d969c10038315656, type: 2}
+      objectReference: {fileID: 2100000, guid: 303d9b5d4135bc64986b4e3d8a06be40, type: 2}
     - target: {fileID: -7511558181221131132, guid: d430376717fa5ee47b4c0e8393c67865,
         type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: f85436cb3c2dce24d969c10038315656, type: 2}
+      objectReference: {fileID: 2100000, guid: 303d9b5d4135bc64986b4e3d8a06be40, type: 2}
     - target: {fileID: -7511558181221131132, guid: d430376717fa5ee47b4c0e8393c67865,
         type: 3}
       propertyPath: m_Materials.Array.data[3]
