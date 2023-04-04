@@ -1810,7 +1810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.49803922}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2362,6 +2362,7 @@ MonoBehaviour:
   groundHolderRef: {fileID: 1817536930}
   slotHolderRef: {fileID: 188113613}
   VicFadeRef: {fileID: 772568702}
+  tutorialEndRef: {fileID: 0}
   combatStarted: 0
   <remainingEnemies>k__BackingField: 0
   <cardsPlaced>k__BackingField: 0
@@ -2856,6 +2857,7 @@ GameObject:
   - component: {fileID: 641662863}
   - component: {fileID: 641662865}
   - component: {fileID: 641662864}
+  - component: {fileID: 641662866}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2980,6 +2982,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641662862}
   m_CullTransparentMesh: 1
+--- !u!111 &641662866
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641662862}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 8a313a3b6bac89442946ba5921584fad, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 8a313a3b6bac89442946ba5921584fad, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &669919789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6682,6 +6700,7 @@ GameObject:
   - component: {fileID: 1332091955}
   - component: {fileID: 1332091957}
   - component: {fileID: 1332091956}
+  - component: {fileID: 1332091958}
   m_Layer: 5
   m_Name: Prompt6
   m_TagString: Untagged
@@ -6748,6 +6767,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332091954}
   m_CullTransparentMesh: 1
+--- !u!114 &1332091958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332091954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42912f43d494cb3408aa3882f5161cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 586905832}
+  dimmer: {fileID: 470405028}
 --- !u!1 &1374565107
 GameObject:
   m_ObjectHideFlags: 0
@@ -10322,18 +10355,6 @@ MonoBehaviour:
       - m_Target: {fileID: 586905832}
         m_TargetAssemblyTypeName: PlacingManager, Assembly-CSharp
         m_MethodName: NextTutorialPrompt
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 470405028}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

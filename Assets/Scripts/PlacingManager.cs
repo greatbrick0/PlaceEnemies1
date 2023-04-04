@@ -44,6 +44,8 @@ public class PlacingManager : MonoBehaviour
     private SlotHolderScript slotHolderRef;
     [SerializeField]
     private GameObject VicFadeRef;
+    [SerializeField]
+    private TutorialEnd tutorialEndRef;
 
     [Space]
     [SerializeField]
@@ -230,7 +232,9 @@ public class PlacingManager : MonoBehaviour
 
     public void NextTutorialPrompt(bool unfreeze)
     {
-        tutorialStage++;
-        if (unfreeze) Time.timeScale = 1.0f;
+        if (unfreeze)
+            Time.timeScale = 1.0f;
+        else
+            tutorialStage++;
     }
 }
