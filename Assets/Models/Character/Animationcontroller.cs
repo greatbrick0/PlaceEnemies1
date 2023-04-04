@@ -65,7 +65,11 @@ public class Animationcontroller : MonoBehaviour
     void Update()
     {
         parentIsMoving = transform.parent.GetComponent<Rigidbody>().velocity.magnitude >= 0.1f;
-        Vector3 localVelocity = transform.parent.TransformDirection(dd.velocity);
+        Vector3 localVelocity = Vector3.zero;
+        if (transform.parent != null)
+        {
+           localVelocity = transform.parent.TransformDirection(dd.velocity);
+        }
         float xSpeed1 = localVelocity.x;
         float ySpeed1 = localVelocity.z;
 
@@ -74,7 +78,7 @@ public class Animationcontroller : MonoBehaviour
         //Converts global velocity vector to a local vector
         float forawrdVelocity = localVelocity.z;
         //Players total local forward velocity = forwardVelocity, can be used for dash animations or being slowed
-        animator.SetFloat(blendValue, forawrdVelocity >= 0.1f ? 1 : 0);
+        
         //if forward velocity is greater than or equal to 0.1f, blendValue is set to 1, else its set to 0
 
     }
@@ -98,25 +102,30 @@ public class Animationcontroller : MonoBehaviour
                 //claw 
                 break;
             case "cgA":
+                animator.SetTrigger("clawA");
                 //tank
                 break;
             case "agA":
+                animator.SetTrigger("chunkyA");
                 //potion
                 break;
             case "pgA": animator.SetTrigger("potionA");
                 //healer
                 break;
             case "hgA":
+                animator.SetTrigger("healerA");
                 //chain
                 break;
             case "jgA":
+                animator.SetTrigger("chainA");
                 //skeleton
                 break;
             case "sgA":
+                animator.SetTrigger("bombA");
                 //archer
                 break;
             case "rgA":
-
+                animator.SetTrigger("archerA");
                 break;
             case "fgA":
                 Debug.Log("Itworks:)");
