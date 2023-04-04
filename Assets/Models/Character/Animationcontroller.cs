@@ -9,12 +9,13 @@ public class Animationcontroller : MonoBehaviour
     private int blendValue;
     private int blendTreevalue;
     private bool bTreevalue = false;
-
+    private Rigidbody dd;
     public string prefabName;
     [SerializeField]
     private bool parentIsMoving = false;
     private void Awake()
     {
+        dd = FindObjectOfType<Rigidbody>();
         animator = GetComponent<Animator>();
         blendValue = Animator.StringToHash("Blend");
         blendTreevalue = Animator.StringToHash("blendTreevalue");
@@ -64,9 +65,12 @@ public class Animationcontroller : MonoBehaviour
     void Update()
     {
         parentIsMoving = transform.parent.GetComponent<Rigidbody>().velocity.magnitude >= 0.1f;
+        Vector3 localVelocity = transform.parent.TransformDirection(dd.velocity);
+        float xSpeed1 = localVelocity.x;
+        float ySpeed1 = localVelocity.z;
 
-
-        Vector3 localVelocity = transform.InverseTransformDirection(transform.parent.GetComponent<Rigidbody>().velocity);
+        animator.SetFloat("XSpeed", xSpeed1);
+        animator.SetFloat("YSpeed", ySpeed1);
         //Converts global velocity vector to a local vector
         float forawrdVelocity = localVelocity.z;
         //Players total local forward velocity = forwardVelocity, can be used for dash animations or being slowed
@@ -90,7 +94,7 @@ public class Animationcontroller : MonoBehaviour
 
                 //dagger
                 break;
-            case "dgA":
+            case "dgA": animator.SetTrigger("daggerA");
                 //claw 
                 break;
             case "cgA":
