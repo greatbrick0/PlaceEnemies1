@@ -60,7 +60,7 @@ ModelImporter:
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
-      mirror: 0
+      mirror: 1
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
@@ -634,7 +634,8 @@ ModelImporter:
     - name: f_index.03.L_end
       parentName: f_index.03.L
       position: {x: 2.9802322e-10, y: 0.0005785224, z: 7.45058e-10}
-      rotation: {x: 0.000000089406946, y: 0.00000005960463, z: -0.000000092200914, w: 1}
+      rotation: {x: 0.000000089406946, y: 0.00000005960463, z: -0.000000092200914,
+        w: 1}
       scale: {x: 1.0000001, y: 1.0000002, z: 1.0000002}
     - name: thumb.01.L
       parentName: palm.01.L
@@ -679,7 +680,8 @@ ModelImporter:
     - name: f_middle.03.L_end
       parentName: f_middle.03.L
       position: {x: -0.0000000011920929, y: 0.00066302775, z: 0.0000000010803342}
-      rotation: {x: 0.00000004470347, y: -0.00000009685751, z: -0.000000013038512, w: 1}
+      rotation: {x: 0.00000004470347, y: -0.00000009685751, z: -0.000000013038512,
+        w: 1}
       scale: {x: 1.0000004, y: 1, z: 1.0000002}
     - name: palm.03.L
       parentName: hand.L
@@ -704,7 +706,8 @@ ModelImporter:
     - name: f_ring.03.L_end
       parentName: f_ring.03.L
       position: {x: 4.842877e-10, y: 0.00047029436, z: -0.0000000013411044}
-      rotation: {x: -0.00000008940694, y: -0.00000010430809, z: 0.000000018626444, w: 1}
+      rotation: {x: -0.00000008940694, y: -0.00000010430809, z: 0.000000018626444,
+        w: 1}
       scale: {x: 1.0000002, y: 1.0000005, z: 1.0000002}
     - name: palm.04.L
       parentName: hand.L
@@ -794,7 +797,8 @@ ModelImporter:
     - name: thumb.03.R_end
       parentName: thumb.03.R
       position: {x: -6.61239e-10, y: 0.0005271007, z: 1.4901161e-10}
-      rotation: {x: -0.00000002887099, y: -0.000000018859275, z: -0.00000007459491, w: 1}
+      rotation: {x: -0.00000002887099, y: -0.000000018859275, z: -0.00000007459491,
+        w: 1}
       scale: {x: 1.0000004, y: 1.0000002, z: 1}
     - name: palm.02.R
       parentName: hand.R
@@ -819,7 +823,8 @@ ModelImporter:
     - name: f_middle.03.R_end
       parentName: f_middle.03.R
       position: {x: -1.4901161e-10, y: 0.0006630281, z: 6.1467287e-10}
-      rotation: {x: -0.000000007450579, y: 0.000000096857526, z: -0.000000117346616, w: 1}
+      rotation: {x: -0.000000007450579, y: 0.000000096857526, z: -0.000000117346616,
+        w: 1}
       scale: {x: 1, y: 1.0000001, z: 0.99999976}
     - name: palm.03.R
       parentName: hand.R
@@ -844,7 +849,8 @@ ModelImporter:
     - name: f_ring.03.R_end
       parentName: f_ring.03.R
       position: {x: 2.9802322e-10, y: 0.00047029465, z: -9.49949e-10}
-      rotation: {x: -0.00000016391276, y: 0.000000014901159, z: -0.000000014901159, w: 1}
+      rotation: {x: -0.00000016391276, y: 0.000000014901159, z: -0.000000014901159,
+        w: 1}
       scale: {x: 0.9999999, y: 1.0000001, z: 1}
     - name: palm.04.R
       parentName: hand.R
@@ -869,7 +875,8 @@ ModelImporter:
     - name: f_pinky.03.R_end
       parentName: f_pinky.03.R
       position: {x: 3.352761e-10, y: 0.000421371, z: -4.4703483e-10}
-      rotation: {x: 0.000000029802312, y: 0.000000026077023, z: 0.00000007171181, w: 1}
+      rotation: {x: 0.000000029802312, y: 0.000000026077023, z: 0.00000007171181,
+        w: 1}
       scale: {x: 1.0000002, y: 1.0000002, z: 1.0000006}
     - name: breast.L
       parentName: spine.003
@@ -899,7 +906,8 @@ ModelImporter:
     - name: pelvis.L_end
       parentName: pelvis.L
       position: {x: 1.862645e-10, y: 0.0049109445, z: 1.11758706e-10}
-      rotation: {x: 0.00000013411044, y: 0.000000029802319, z: 0.000000052154057, w: 1}
+      rotation: {x: 0.00000013411044, y: 0.000000029802319, z: 0.000000052154057,
+        w: 1}
       scale: {x: 1.0000006, y: 1.0000002, z: 1.0000001}
     - name: pelvis.R
       parentName: spine
@@ -909,7 +917,8 @@ ModelImporter:
     - name: pelvis.R_end
       parentName: pelvis.R
       position: {x: 3.7252902e-11, y: 0.004910944, z: 3.7252902e-11}
-      rotation: {x: -0.00000013411045, y: -0.00000023841858, z: 0.00000008940697, w: 1}
+      rotation: {x: -0.00000013411045, y: -0.00000023841858, z: 0.00000008940697,
+        w: 1}
       scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
     - name: thigh.L
       parentName: spine
