@@ -349,10 +349,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5278063312826332017}
     m_Modifications:
+    - target: {fileID: 232809601819405786, guid: 4bfca7bb7c8f4c342b5d7cc90f603d88,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5056235716722218642, guid: 4bfca7bb7c8f4c342b5d7cc90f603d88,
         type: 3}
       propertyPath: m_Name
       value: GroundTile (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056235716722218644, guid: 4bfca7bb7c8f4c342b5d7cc90f603d88,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5056235716722218645, guid: 4bfca7bb7c8f4c342b5d7cc90f603d88,
         type: 3}
