@@ -99,7 +99,7 @@ public class Animationcontroller : MonoBehaviour
             case "agA":
                 //potion
                 break;
-            case "pgA":
+            case "pgA": animator.SetTrigger("potionA");
                 //healer
                 break;
             case "hgA":
