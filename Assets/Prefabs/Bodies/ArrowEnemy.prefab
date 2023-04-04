@@ -3680,11 +3680,11 @@ MonoBehaviour:
   effectList: []
   abilityAnimationType: rgA
   targetDetectionRadius: 30
-  minimumRange: 0.1
+  minimumRange: 3
   satisfiedRange: 1
-  satisfiedRangeInRatio: 0
+  satisfiedRangeInRatio: 1
   aggroRange: 1
-  aggroRangeInRatio: 0
+  aggroRangeInRatio: 1
 --- !u!1 &5458746935402474731
 GameObject:
   m_ObjectHideFlags: 0
