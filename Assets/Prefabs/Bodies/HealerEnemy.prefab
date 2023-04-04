@@ -3879,7 +3879,7 @@ MonoBehaviour:
   effectList: []
   abilityAnimationType: hgA
   targetDetectionRadius: 30
-  minimumRange: 1.5
+  minimumRange: 2
   satisfiedRange: 2.5
   satisfiedRangeInRatio: 0
   aggroRange: 0.7

@@ -70,10 +70,7 @@ public class Animationcontroller : MonoBehaviour
         {
            localVelocity = transform.parent.TransformDirection(dd.velocity);
         }
-        else
-        {
-
-        }
+      
         float xSpeed1 = localVelocity.x;
         float ySpeed1 = localVelocity.z;
 
