@@ -5000,7 +5000,8 @@ GameObject:
   - component: {fileID: 9159844377764210305}
   - component: {fileID: 8126252584135971754}
   - component: {fileID: -7140146683056984927}
-  - component: {fileID: 6811301376289553591}
+  - component: {fileID: 8977614744646639810}
+  - component: {fileID: 7221906743158848967}
   m_Layer: 7
   m_Name: Sickle
   m_TagString: Untagged
@@ -5062,7 +5063,23 @@ MonoBehaviour:
   forwardTime: 0.8
   stillTime: 0.7
   backSpeed: 10
---- !u!95 &6811301376289553591
+--- !u!111 &8977614744646639810
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159844377764210428}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 8e7a5de507241544f8158816dadec78b, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 8e7a5de507241544f8158816dadec78b, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &7221906743158848967
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
