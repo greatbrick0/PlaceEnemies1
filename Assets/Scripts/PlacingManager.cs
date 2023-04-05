@@ -51,6 +51,7 @@ public class PlacingManager : MonoBehaviour
     [SerializeField]
     private bool combatStarted = false;
     public bool combatStart;
+    public bool combatEnded;
     [field: SerializeField]
     public int remainingEnemies { get; private set; } = 0;
     [field: SerializeField]
@@ -188,6 +189,7 @@ public class PlacingManager : MonoBehaviour
 
     public void PlayerHasDied()
     {
+        combatEnded = true;
         cam.gameObject.GetComponent<AudioListener>().enabled = true;
         StartCoroutine(DefeatFadeOut());
     }
@@ -198,6 +200,7 @@ public class PlacingManager : MonoBehaviour
         {
             if (remainingEnemies <= 0)
             {
+                combatEnded = true;
                 print("Player defeated all enemies, end combat");
                 playerRef.GetComponent<PlayerScript>().PackPlayer();
                 SessionDataManager.nightNum += 1;
@@ -209,6 +212,7 @@ public class PlacingManager : MonoBehaviour
 
     private IEnumerator VictoryFadeOut()
     {
+        
         VicFadeRef.SetActive(true);
         VicFadeRef.GetComponent<Transitioner>().FadeOutCall(true);
         yield return new WaitForSeconds(2.0f);
@@ -218,6 +222,7 @@ public class PlacingManager : MonoBehaviour
 
     private IEnumerator DefeatFadeOut()
     {
+        
         VicFadeRef.SetActive(true);
         yield return new WaitForSeconds(1.0f);
         VicFadeRef.GetComponent<Transitioner>().FadeOutCall(true);
