@@ -22,6 +22,7 @@ public class PlayerScript : CombatBody
     private StatusEffect hurtEffect;
 
     public bool _hurt;
+    public bool _hurtSFX;
     public override void Release()
     {
         base.Release();
@@ -151,10 +152,12 @@ public class PlayerScript : CombatBody
     public override int Hurt(int damageAmount = 1)
     {
         _hurt = true;
+        _hurtSFX = true;
         int hurtStore;
         hurtStore = base.Hurt(damageAmount);
         if (hurtStore > 0)
         {
+            
             AddStatusEffect(hurtEffect);
             if (combatUIC != null) combatUIC.HealthUpdate(health - damageAmount, true);
             CameraShakeOnHitScript.instance.Shake();

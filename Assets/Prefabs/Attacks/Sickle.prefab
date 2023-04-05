@@ -5002,6 +5002,7 @@ GameObject:
   - component: {fileID: -7140146683056984927}
   - component: {fileID: 8977614744646639810}
   - component: {fileID: 7221906743158848967}
+  - component: {fileID: -7444107718377352242}
   m_Layer: 7
   m_Name: Sickle
   m_TagString: Untagged
@@ -5099,3 +5100,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-7444107718377352242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159844377764210428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e1049cead313ba4985d595947214f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hammer: {fileID: 0}
+  _spill: {fileID: 0}
+  _bottle: {fileID: 0}
+  _magicAttack: {fileID: 0}
+  _ghostHands: {fileID: 0}
+  _chain: {fileID: 0}
+  _storm: {fileID: 0}
+  _blade: {fileID: 8300000, guid: 50201fba5ed7cbe47a4fe017dd020106, type: 3}
+  _gravity: {fileID: 0}
+  _jump: {fileID: 0}
+  _bomb: {fileID: 0}
+  _boulder: {fileID: 0}
+  _charge: {fileID: 0}
