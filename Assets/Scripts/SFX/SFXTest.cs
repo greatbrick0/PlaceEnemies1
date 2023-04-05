@@ -76,7 +76,7 @@ public class SFXTest : MonoBehaviour
     }
     public void LightingStorm()
     {
-        AudioSource.PlayClipAtPoint(_storm, Vector3.zero, 1f);
+        AudioSource.PlayClipAtPoint(_storm, Vector3.zero, 0.7f);
     }
     public void Blade()
     {
@@ -84,7 +84,7 @@ public class SFXTest : MonoBehaviour
     }
     public void Gravity()
     {
-        AudioSource.PlayClipAtPoint(_gravity, Vector3.zero, 1f);
+        AudioSource.PlayClipAtPoint(_gravity, Vector3.zero, 0.3f);
     }
     public void Jump()
     {
