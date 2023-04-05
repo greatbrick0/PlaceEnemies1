@@ -43,6 +43,7 @@ public class BoomerangScript : Attack
             moveDirection = (homeTarget.position - transform.position).normalized;
             if(Vector3.SqrMagnitude(transform.position - homeTarget.position) <= 0.5f) CompleteAttack();
         }
+        transform.GetChild(0).Rotate(0, 720 * Time.deltaTime, 0);
 
         base.Update();
     }
