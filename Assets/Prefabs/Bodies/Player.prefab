@@ -5319,6 +5319,7 @@ MonoBehaviour:
   combatUIC: {fileID: 0}
   cam: {fileID: 0}
   hurtEffect: {fileID: 11400000, guid: 29b37335f3ec6ff499d60f04221cfb2d, type: 2}
+  _hurt: 0
 --- !u!114 &6644624614402215560
 MonoBehaviour:
   m_ObjectHideFlags: 0
