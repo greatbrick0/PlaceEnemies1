@@ -5519,7 +5519,7 @@ GameObject:
   - component: {fileID: 1030167517}
   - component: {fileID: 1030167516}
   - component: {fileID: 1030167518}
-  - component: {fileID: 1030167519}
+  - component: {fileID: 1030167520}
   m_Layer: 5
   m_Name: HealthFragment3
   m_TagString: Untagged
@@ -5605,21 +5605,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1030167519
+--- !u!114 &1030167520
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030167513}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.78431374}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 0
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1066553180
 GameObject:
   m_ObjectHideFlags: 0
@@ -8769,7 +8769,7 @@ GameObject:
   - component: {fileID: 1624736809}
   - component: {fileID: 1624736808}
   - component: {fileID: 1624736810}
-  - component: {fileID: 1624736811}
+  - component: {fileID: 1624736812}
   m_Layer: 5
   m_Name: HealthFragment4
   m_TagString: Untagged
@@ -8855,21 +8855,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1624736811
+--- !u!114 &1624736812
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624736805}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.78431374}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 0
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1657535863
 GameObject:
   m_ObjectHideFlags: 3
@@ -9392,7 +9392,7 @@ GameObject:
   - component: {fileID: 1808568824}
   - component: {fileID: 1808568823}
   - component: {fileID: 1808568825}
-  - component: {fileID: 1808568826}
+  - component: {fileID: 1808568827}
   m_Layer: 5
   m_Name: HealthFragment2
   m_TagString: Untagged
@@ -9478,21 +9478,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1808568826
+--- !u!114 &1808568827
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808568820}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.78431374}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 0
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1817536930 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5278063312826332030, guid: 900695cbe84cd7649a6dff40d0e6de87,
@@ -10172,7 +10172,7 @@ GameObject:
   - component: {fileID: 1973701455}
   - component: {fileID: 1973701454}
   - component: {fileID: 1973701456}
-  - component: {fileID: 1973701457}
+  - component: {fileID: 1973701458}
   m_Layer: 5
   m_Name: HealthFragment5
   m_TagString: Untagged
@@ -10258,21 +10258,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1973701457
+--- !u!114 &1973701458
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973701451}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.78431374}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 0
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1977181175
 GameObject:
   m_ObjectHideFlags: 0
