@@ -10,7 +10,7 @@ public class HealthVisualManager : MonoBehaviour
     private Image shield;
     [SerializeField]
     private Image blood;
-    private int health;
+    public int health { get; private set; }
     private bool shielded;
 
     private void ResetHealthVisual()
