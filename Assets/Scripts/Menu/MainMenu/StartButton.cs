@@ -14,4 +14,9 @@ public class StartButton : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public void ResetProgress()
+    {
+        SessionDataManager.ResetSession();
+    }
 }
