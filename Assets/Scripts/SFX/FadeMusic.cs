@@ -25,7 +25,7 @@ public class FadeMusic : MonoBehaviour
     {
         fade = true;
         float startAudio = 0.5f;
-        source.volume -= startAudio * Time.deltaTime / 0.5f;
+        source.volume -= startAudio * Time.deltaTime / 0.4f;
         
     }
 }
