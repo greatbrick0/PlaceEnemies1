@@ -3795,7 +3795,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Options
+  m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0d6a6e52c9e3cf447bbb59905f690fde, type: 2}
   m_sharedMaterial: {fileID: 7881981641105940868, guid: 0d6a6e52c9e3cf447bbb59905f690fde,
@@ -4382,7 +4382,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Adam Thane of Fife
 
-    Conor
+    almonds
 
     Goober
 
